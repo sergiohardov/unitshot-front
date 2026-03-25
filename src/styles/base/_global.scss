@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  min-height: 100%;
+  height: fit-content;
+  margin: 0;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--unitshot-gray-light);
+  font-family: "NeueMontreal", sans-serif;
+  color: var(--unitshot-gray-main);
+}
+
+main {
+  flex: 1;
+}

@@ -1,0 +1,17 @@
+{% extends '@layouts/demo.twig' %}
+
+{% block content %}
+    <h1>Components</h1>
+
+    <br>
+    <h2>Checkbox</h2>
+    {% include '@components/checkbox.twig' with {
+        'label': 'Підкатегорія 1',
+        'id': 'check-1'
+    } %}
+    {% include '@components/checkbox.twig' with {
+        'label': 'Підкатегорія 2',
+        'id': 'check-2'
+    } %}
+
+{% endblock %}
