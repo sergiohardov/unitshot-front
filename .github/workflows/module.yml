@@ -27,7 +27,7 @@ jobs:
         run: |
           npm i
           npm run build # Замените на npm build, если именно так указано в ваших скриптах package.json
-          
+
       # 4. Удаляем лишнее
       - name: Remove html files from dist
         run: rm -rf dist/*.html
@@ -36,5 +36,7 @@ jobs:
       - name: Deploy dist to preview branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: module # Название целевой ветки
-          folder: dist    # Папка, содержимое которой нужно запушить
+          branch: module        # Название целевой ветки
+          folder: dist          # Папка, содержимое которой нужно запушить
+          clean: true           # Явно удаляет файлы в целевой ветке, которых нет в папке dist
+          single-commit: true   # Перезаписывает ветку preview одним коммитом (затирая всё, что было добавлено вручную)
