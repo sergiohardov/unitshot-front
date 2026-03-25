@@ -1,0 +1,99 @@
+{% extends '@layouts/demo.twig' %}
+
+{% block content %}
+    <h1>Components</h1>
+
+    <br>
+    <h2>Checkbox</h2>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        {% include '@components/checkbox.twig' with {
+            'label': 'Підкатегорія 1',
+            'id': 'check-1'
+        } %}
+        {% include '@components/checkbox.twig' with {
+            'label': 'Підкатегорія 2',
+            'id': 'check-2'
+        } %}
+    </div>
+
+    <br>
+    <h2>Button v1</h2>
+    <h3>Type: Button</h3>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        {% include '@components/button-v1.twig' with {
+            'text': '220v',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'text': '220v',
+            'modify': 'primary'
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'text': '220v',
+            'modify': 'outline',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'text': '220v',
+            'modify': 'primary',
+            'disabled': true
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'text': '1',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'text': '1',
+            'modify': 'primary'
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'text': '1',
+            'modify': 'outline',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'text': '1',
+            'modify': 'primary',
+            'disabled': true
+        } %}
+    </div>
+    <h3>Type: Link</h3>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '220v',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '220v',
+            'modify': 'primary'
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '220v',
+            'modify': 'outline',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '220v',
+            'modify': 'primary',
+            'disabled': true
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '1',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '1',
+            'modify': 'primary'
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '1',
+            'modify': 'outline',
+        } %}
+        {% include '@components/button-v1.twig' with {
+            'type': 'link',
+            'text': '1',
+            'modify': 'primary',
+            'disabled': true
+        } %}
+    </div>
+{% endblock %}
