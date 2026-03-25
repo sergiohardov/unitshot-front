@@ -19,8 +19,9 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--unitshot-gray-light);
-  font-family: "NeueMontreal", sans-serif;
+  font-family: var(--unishot-font-family-base);
   color: var(--unitshot-gray-main);
+  font-size: 16px;
 }
 
 main {
