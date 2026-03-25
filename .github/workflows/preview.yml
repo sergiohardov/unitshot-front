@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  push-to-preview:
     # Разворачивает Ubuntu
     runs-on: ubuntu-latest
 
@@ -27,8 +27,12 @@ jobs:
         run: |
           npm i
           npm run build # Замените на npm build, если именно так указано в ваших скриптах package.json
+          
+      # 4. Удаляем лишнее
+      - name: Remove twig folder from dist
+        run: rm -rf dist/twig
 
-      # 4. Перемещает содержимое папки dist в ветку preview
+      # 5. Перемещает содержимое папки dist в ветку preview
       - name: Deploy dist to preview branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
