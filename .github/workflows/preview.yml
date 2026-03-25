@@ -31,7 +31,6 @@ jobs:
         run: |
           mkdir /tmp/build_content
           cp -r dist/* /tmp/build_content/
-          cp -r README.md /tmp/build_content/
 
       - name: Checkout preview
         run: git checkout preview
