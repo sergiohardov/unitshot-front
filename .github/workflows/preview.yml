@@ -1,0 +1,52 @@
+name: Prepare preview front-end
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Get commit message
+        id: get_commit
+        run: |
+          echo "COMMIT_MESSAGE<<EOF" >> $GITHUB_ENV
+          git log -1 --pretty=%B >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Save build to temporary location
+        run: |
+          mkdir /tmp/build_content
+          cp -r dist/* /tmp/build_content/
+          cp -r README.md /tmp/build_content/
+
+      - name: Checkout preview
+        run: git checkout preview
+
+      - name: Remove all files in working directory
+        run: rm -rf *
+
+      - name: Copy build content to root
+        run: |
+          cp -r /tmp/build_content/* .
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add --all
+          git commit -m "${{ env.COMMIT_MESSAGE }}" || echo "No changes to commit"
+          git push origin preview
