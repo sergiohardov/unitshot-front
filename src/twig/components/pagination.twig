@@ -1,0 +1,32 @@
+{% if prev and next and pages %}
+    <ul class="us-pagination">
+        <li>
+            {% include '@components/button-arrow.twig' with {
+                'type': 'link',
+                'version': 'v2',
+                'class': 'us-pagination__prev',
+                'link': prev
+            } %}
+        </li>
+
+        {% for page in pages %}
+            <li>
+                {% include '@components/button-round.twig' with {
+                    'type': 'link',
+                    'version': page.is_current ? 'v3' : 'v4',
+                    'text': page.number,
+                    'link': page.link
+                } %}
+            </li>
+        {% endfor %}
+
+        <li>
+            {% include '@components/button-arrow.twig' with {
+                'type': 'link',
+                'version': 'v2',
+                'class': 'us-pagination__next',
+                'link': next
+            } %}
+        </li>
+    </ul>
+{% endif %}
