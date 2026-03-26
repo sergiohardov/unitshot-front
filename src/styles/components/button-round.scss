@@ -1,0 +1,163 @@
+@use '@styles/base/mixins' as *;
+
+.us-button-round {
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+
+  &--v1 {
+    width: 40px;
+    height: 40px;
+    background-color: var(--unitshot-white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding-left: 1px;
+    border: 2px solid transparent;
+
+    @include media-md() {
+      width: 34px;
+      height: 34px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-image: none;
+      background-color: var(--unitshot-gray-main);
+      mask-image: url('@images/icons/arrow-dark.svg');
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: 100%;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      border-color: var(--unitshot-accent-pink);
+
+      &:after {
+        background-color: var(--unitshot-accent-pink);
+      }
+    }
+  }
+
+  &--v2 {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding-left: 1px;
+    border: 2px solid var(--unitshot-accent-pink);
+
+    @include media-md() {
+      width: 34px;
+      height: 34px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-image: none;
+      background-color: var(--unitshot-accent-pink);
+      mask-image: url('@images/icons/arrow-dark.svg');
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: 100%;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      background-color: var(--unitshot-white);
+
+      &:after {
+        background-color: var(--unitshot-accent-pink);
+      }
+    }
+  }
+
+  &--v3 {
+    width: 40px;
+    height: 40px;
+    background-color: var(--unitshot-white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 2px;
+    font-family: var(--unishot-font-family-base);
+    font-size: 16px;
+
+    @include media-md() {
+      width: 34px;
+      height: 34px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: var(--unitshot-accent-pink);
+      color: var(--unitshot-white);
+    }
+  }
+
+  &--v4 {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--unitshot-accent-pink);
+    padding: 2px;
+    font-family: var(--unishot-font-family-base);
+    font-size: 16px;
+
+    @include media-md() {
+      width: 34px;
+      height: 34px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: var(--unitshot-accent-pink);
+      color: var(--unitshot-white);
+    }
+  }
+
+  &--v5 {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 2px;
+    font-family: var(--unishot-font-family-base);
+    font-size: 16px;
+    color: var(--unitshot-white);
+
+    @include media-md() {
+      width: 34px;
+      height: 34px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: var(--unitshot-accent-pink);
+    }
+  }
+}
