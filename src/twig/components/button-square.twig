@@ -1,0 +1,11 @@
+{% if text %}
+    {% if type == 'link' %}
+        <a href="{{ href }}" class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %} {% if disabled %} us-button-square--link-disabled {% endif %}">
+            {{ text }}
+        </a>
+    {% else %}
+        <button class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %}" {% if disabled %} disabled {% endif %}>
+            {{ text }}
+        </button>
+    {% endif %}
+{% endif %}
