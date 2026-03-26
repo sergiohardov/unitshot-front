@@ -1,0 +1,43 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1774523253558,
+    "data": [
+        {
+            "type": "folder",
+            "name": "css"
+        },
+        {
+            "type": "folder",
+            "name": "fonts"
+        },
+        {
+            "type": "folder",
+            "name": "js"
+        },
+        {
+            "type": "file",
+            "name": "ui.html",
+            "size": 2979,
+            "hash": "dbe1f0a1c0dfd35d16238f9a14f92dfbb808e5bf60494c300e2018449a753655"
+        },
+        {
+            "type": "file",
+            "name": "css/ui.css",
+            "size": 4722,
+            "hash": "fec637d91824535b63c1169faaf635a1b4cd1a7cf6ae4edabc1d86e368871e42"
+        },
+        {
+            "type": "file",
+            "name": "fonts/NeueMontreal-Medium.woff2",
+            "size": 21728,
+            "hash": "dc03253687c1502ad19d78e2981e04a7c42b59e9157b5591ab6d216d8faff135"
+        },
+        {
+            "type": "file",
+            "name": "js/ui.twig.js",
+            "size": 721,
+            "hash": "530ee3286f50e2c384c4d8fc76c98a7d7dc9c5d07be3197feb0c81e69c42fbe4"
+        }
+    ]
+}
