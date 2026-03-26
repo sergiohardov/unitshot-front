@@ -193,5 +193,16 @@
         } %}
     </div>
 
+    <br>
+    <h2>1.5 Breadcrumbs</h2>
+    {% include '@components/breadcrumbs.twig' with {
+        'links': [
+            {'src': '#', 'title': 'Головна', 'is_current': false},
+            {'src': '#', 'title': 'Головна', 'is_current': false},
+            {'src': '#', 'title': 'Головна', 'is_current': false},
+            {'src': '#', 'title': 'Кавомашини', 'is_current': true},
+        ],
+    } %}
+
 {% endblock %}
 
