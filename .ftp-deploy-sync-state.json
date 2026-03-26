@@ -1,21 +1,15 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1774532833500,
+    "generatedTime": 1774535448375,
     "data": [
-        {
-            "type": "folder",
-            "name": "css"
-        },
         {
             "type": "folder",
             "name": "fonts"
         },
         {
-            "type": "file",
-            "name": "ui.html",
-            "size": 5272,
-            "hash": "51678d97c8bb0e109025d5f75365c400c64e5c530305b6b280e7e6ed7bfdfe04"
+            "type": "folder",
+            "name": "css"
         },
         {
             "type": "folder",
@@ -23,15 +17,21 @@
         },
         {
             "type": "file",
-            "name": "css/ui.css",
-            "size": 13809,
-            "hash": "d27bf0682e3545c419ea1e6be8d151dbfc9a153f5f6089b9b52c889d3c472d28"
+            "name": "ui.html",
+            "size": 5998,
+            "hash": "6937980a075b228b7c76d41c5922702df809f2bb068fa5b64d76eeb08aa1897e"
         },
         {
             "type": "file",
             "name": "fonts/NeueMontreal-Medium.woff2",
             "size": 21728,
             "hash": "dc03253687c1502ad19d78e2981e04a7c42b59e9157b5591ab6d216d8faff135"
+        },
+        {
+            "type": "file",
+            "name": "css/ui.css",
+            "size": 15421,
+            "hash": "c4eb0a6b9b8d73061f0adcad3658d9b13199f88b7de82cc2fe529369b99b2477"
         },
         {
             "type": "file",
