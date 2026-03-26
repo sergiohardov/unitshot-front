@@ -40,7 +40,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/ # ВАЖНО: загружаем только папку dist, а не весь исходный код
-          server-dir: /home/creastep/unitshot.creastep.com
+          server-dir: /home/creastep/unitshot.creastep.com/
 
       # 6. Перемещает содержимое папки dist в ветку preview
       - name: Deploy dist to preview branch
