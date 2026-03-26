@@ -10,10 +10,27 @@
 <body>
 
 <main>
-        <h1>Components</h1>
+        <style>
+        h1 {
+            font-size: 26px;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+    </style>
+
+    <h1>1. Components</h1>
 
     <br>
-    <h2>Checkbox</h2>
+    <h2>1.1 Checkbox</h2>
     <div style="display: flex; gap: 10px; align-items: flex-start;">
         <div class="us-checkbox">
     <input type="checkbox" class="us-checkbox__input" id="check-1" name="" value="">
@@ -28,63 +45,116 @@
     </div>
 
     <br>
-    <h2>Button v1</h2>
+    <h2>1.2 Button Square</h2>
     <h3>Type: Button</h3>
     <div style="display: flex; gap: 10px; align-items: flex-start;">
-                    <button class="us-button-v1 " >
+                    <button class="us-button-square  us-button-square--v1 " >
+            Перейти
+        </button>
+                        <button class="us-button-square  us-button-square--v2 " >
+            Перейти
+        </button>
+                        <button class="us-button-square  us-button-square--v3 " >
+            Перейти
+        </button>
+                        <button class="us-button-square  us-button-square--v4 " >
+            Перейти
+        </button>
+                        <button class="us-button-square  us-button-square--v5 " >
             220v
         </button>
-                        <button class="us-button-v1  us-button-v1--primary " >
+                        <button class="us-button-square  us-button-square--v6 " >
             220v
         </button>
-                        <button class="us-button-v1  us-button-v1--outline " >
+                        <button class="us-button-square  us-button-square--v7 " >
             220v
         </button>
-                        <button class="us-button-v1  us-button-v1--primary "  disabled >
+                        <button class="us-button-square  us-button-square--v5 "  disabled >
             220v
         </button>
-                        <button class="us-button-v1 " >
+                        <button class="us-button-square  us-button-square--v5 " >
             1
         </button>
-                        <button class="us-button-v1  us-button-v1--primary " >
+                        <button class="us-button-square  us-button-square--v6 " >
             1
         </button>
-                        <button class="us-button-v1  us-button-v1--outline " >
+                        <button class="us-button-square  us-button-square--v7 " >
             1
         </button>
-                        <button class="us-button-v1  us-button-v1--primary "  disabled >
+                        <button class="us-button-square  us-button-square--v5 "  disabled >
             1
         </button>
         </div>
     <h3>Type: Link</h3>
     <div style="display: flex; gap: 10px; align-items: flex-start;">
-                    <a href="" class="us-button-v1  ">
+                    <a href="" class="us-button-square  us-button-square--v1  ">
+            Перейти
+        </a>
+                        <a href="" class="us-button-square  us-button-square--v2  ">
+            Перейти
+        </a>
+                        <a href="" class="us-button-square  us-button-square--v3  ">
+            Перейти
+        </a>
+                        <a href="" class="us-button-square  us-button-square--v4  ">
+            Перейти
+        </a>
+                        <a href="" class="us-button-square  us-button-square--v5  ">
             220v
         </a>
-                        <a href="" class="us-button-v1  us-button-v1--primary  ">
+                        <a href="" class="us-button-square  us-button-square--v6  ">
             220v
         </a>
-                        <a href="" class="us-button-v1  us-button-v1--outline  ">
+                        <a href="" class="us-button-square  us-button-square--v7  ">
             220v
         </a>
-                        <a href="" class="us-button-v1  us-button-v1--primary   us-button-v1--link-disabled ">
+                        <a href="" class="us-button-square  us-button-square--v5   us-button-square--link-disabled ">
             220v
         </a>
-                        <a href="" class="us-button-v1  ">
+                        <a href="" class="us-button-square  us-button-square--v5  ">
             1
         </a>
-                        <a href="" class="us-button-v1  us-button-v1--primary  ">
+                        <a href="" class="us-button-square  us-button-square--v6  ">
             1
         </a>
-                        <a href="" class="us-button-v1  us-button-v1--outline  ">
+                        <a href="" class="us-button-square  us-button-square--v7  ">
             1
         </a>
-                        <a href="" class="us-button-v1  us-button-v1--primary   us-button-v1--link-disabled ">
+                        <a href="" class="us-button-square  us-button-square--v5   us-button-square--link-disabled ">
             1
         </a>
         </div>
 
-    <p>test deploy</p>
+    <br>
+    <h2>1.3 Button Round</h2>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        <button class="us-button-round  us-button-round--v1 " >
+    
+</button>
+        <button class="us-button-round  us-button-round--v2 " >
+    
+</button>
+        <button class="us-button-round  us-button-round--v3 " >
+    1
+</button>
+        <button class="us-button-round  us-button-round--v4 " >
+    1
+</button>
+        <button class="us-button-round  us-button-round--v5 " >
+    1
+</button>
+    </div>
+
+    <br>
+    <h2>1.4 Button Arrow</h2>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        <button class="us-button-arrow  us-button-arrow--v1 " ></button>
+
+        <button class="us-button-arrow  us-button-arrow--v2 " ></button>
+
+        <button class="us-button-arrow  us-button-arrow--v3 " ></button>
+    </div>
+
 </main>
 
 </body>
