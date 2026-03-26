@@ -1,3 +1,9 @@
-<button class="us-button-round {% if version %} us-button-round--{{ version }} {% endif %}" {% if disabled %} disabled {% endif %}>
-    {{ text }}
-</button>
+{% if type == 'link' %}
+    <a href="{{ link }}" class="us-button-round {% if version %} us-button-round--{{ version }} {% endif %} {% if disabled %} us-button-round--link-disabled {% endif %}">
+        {{ text }}
+    </a>
+{% else %}
+    <button class="us-button-round {% if version %} us-button-round--{{ version }} {% endif %}" {% if disabled %} disabled {% endif %}>
+        {{ text }}
+    </button>
+{% endif %}
