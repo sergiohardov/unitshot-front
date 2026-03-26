@@ -1,10 +1,27 @@
 {% extends '@layouts/demo.twig' %}
 
 {% block content %}
-    <h1>Components</h1>
+    <style>
+        h1 {
+            font-size: 26px;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+    </style>
+
+    <h1>1. Components</h1>
 
     <br>
-    <h2>Checkbox</h2>
+    <h2>1.1 Checkbox</h2>
     <div style="display: flex; gap: 10px; align-items: flex-start;">
         {% include '@components/checkbox.twig' with {
             'label': 'Підкатегорія 1',
@@ -17,86 +34,164 @@
     </div>
 
     <br>
-    <h2>Button v1</h2>
+    <h2>1.2 Button Square</h2>
     <h3>Type: Button</h3>
     <div style="display: flex; gap: 10px; align-items: flex-start;">
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v1',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'version': 'v2',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'version': 'v3',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'version': 'v4',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'version': 'v5',
             'text': '220v',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v6',
             'text': '220v',
-            'modify': 'primary'
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v7',
             'text': '220v',
-            'modify': 'outline',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v5',
             'text': '220v',
-            'modify': 'primary',
             'disabled': true
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v5',
             'text': '1',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v6',
             'text': '1',
-            'modify': 'primary'
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v7',
             'text': '1',
-            'modify': 'outline',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v5',
             'text': '1',
-            'modify': 'primary',
             'disabled': true
         } %}
     </div>
     <h3>Type: Link</h3>
     <div style="display: flex; gap: 10px; align-items: flex-start;">
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
+            'version': 'v1',
             'type': 'link',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'version': 'v2',
+            'type': 'link',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'version': 'v3',
+            'type': 'link',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'version': 'v4',
+            'type': 'link',
+            'text': 'Перейти',
+        } %}
+        {% include '@components/button-square.twig' with {
+            'type': 'link',
+            'version': 'v5',
             'text': '220v',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
             'type': 'link',
+            'version': 'v6',
             'text': '220v',
-            'modify': 'primary'
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
             'type': 'link',
+            'version': 'v7',
             'text': '220v',
-            'modify': 'outline',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
             'type': 'link',
+            'version': 'v5',
             'text': '220v',
-            'modify': 'primary',
             'disabled': true
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
             'type': 'link',
+            'version': 'v5',
             'text': '1',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
             'type': 'link',
+            'version': 'v6',
             'text': '1',
-            'modify': 'primary'
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
             'type': 'link',
+            'version': 'v7',
             'text': '1',
-            'modify': 'outline',
         } %}
-        {% include '@components/button-v1.twig' with {
+        {% include '@components/button-square.twig' with {
             'type': 'link',
+            'version': 'v5',
             'text': '1',
-            'modify': 'primary',
             'disabled': true
         } %}
     </div>
 
-    <p>test deploy</p>
+    <br>
+    <h2>1.3 Button Round</h2>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        {% include '@components/button-round.twig' with {
+            'version': 'v1',
+        } %}
+        {% include '@components/button-round.twig' with {
+            'version': 'v2',
+        } %}
+        {% include '@components/button-round.twig' with {
+            'version': 'v3',
+            'text': '1'
+        } %}
+        {% include '@components/button-round.twig' with {
+            'version': 'v4',
+            'text': '1'
+        } %}
+        {% include '@components/button-round.twig' with {
+            'version': 'v5',
+            'text': '1'
+        } %}
+    </div>
+
+    <br>
+    <h2>1.4 Button Arrow</h2>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        {% include '@components/button-arrow.twig' with {
+            'version': 'v1',
+        } %}
+
+        {% include '@components/button-arrow.twig' with {
+            'version': 'v2',
+        } %}
+
+        {% include '@components/button-arrow.twig' with {
+            'version': 'v3',
+        } %}
+    </div>
+
 {% endblock %}
 
