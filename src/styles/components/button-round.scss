@@ -1,26 +1,28 @@
 @use '@styles/base/mixins' as *;
 
 .us-button-round {
-  background: transparent;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+
+  background-color: transparent;
   border: none;
   transition: all 0.3s ease;
 
+  @include media-md() {
+    width: 34px;
+    height: 34px;
+  }
+
   &--v1 {
-    width: 40px;
-    height: 40px;
     background-color: var(--unitshot-white);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     padding-left: 1px;
     border: 2px solid transparent;
-
-    @include media-md() {
-      width: 34px;
-      height: 34px;
-    }
 
     &:after {
       content: '';
@@ -46,21 +48,9 @@
   }
 
   &--v2 {
-    width: 40px;
-    height: 40px;
     background-color: transparent;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     padding-left: 1px;
     border: 2px solid var(--unitshot-accent-pink);
-
-    @include media-md() {
-      width: 34px;
-      height: 34px;
-    }
 
     &:after {
       content: '';
@@ -86,21 +76,11 @@
   }
 
   &--v3 {
-    width: 40px;
-    height: 40px;
     background-color: var(--unitshot-white);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     padding: 2px;
-    font-family: var(--unishot-font-family-base);
     font-size: 16px;
 
     @include media-md() {
-      width: 34px;
-      height: 34px;
       font-size: 14px;
     }
 
@@ -111,22 +91,13 @@
   }
 
   &--v4 {
-    width: 40px;
-    height: 40px;
     background-color: transparent;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     border: 2px solid var(--unitshot-accent-pink);
     padding: 2px;
     font-family: var(--unishot-font-family-base);
     font-size: 16px;
 
     @include media-md() {
-      width: 34px;
-      height: 34px;
       font-size: 14px;
     }
 
@@ -137,22 +108,13 @@
   }
 
   &--v5 {
-    width: 40px;
-    height: 40px;
     background-color: transparent;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     padding: 2px;
     font-family: var(--unishot-font-family-base);
     font-size: 16px;
     color: var(--unitshot-white);
 
     @include media-md() {
-      width: 34px;
-      height: 34px;
       font-size: 14px;
     }
 
