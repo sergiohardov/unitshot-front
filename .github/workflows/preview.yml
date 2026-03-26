@@ -32,7 +32,17 @@ jobs:
       - name: Remove twig folder from dist
         run: rm -rf dist/twig
 
-      # 5. Перемещает содержимое папки dist в ветку preview
+      # 5. Загружаем содержимое папки dist на хостинг по FTP
+      - name: Upload files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/ # ВАЖНО: загружаем только папку dist, а не весь исходный код
+          server-dir: /home/creastep/unitshot.creastep.com
+
+      # 6. Перемещает содержимое папки dist в ветку preview
       - name: Deploy dist to preview branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
