@@ -119,5 +119,22 @@
             'text': '1'
         } %}
     </div>
+
+    <br>
+    <h2>1.4 Button Arrow</h2>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        {% include '@components/button-arrow.twig' with {
+            'version': 'v1',
+        } %}
+
+        {% include '@components/button-arrow.twig' with {
+            'version': 'v2',
+        } %}
+
+        {% include '@components/button-arrow.twig' with {
+            'version': 'v3',
+        } %}
+    </div>
+
 {% endblock %}
 
