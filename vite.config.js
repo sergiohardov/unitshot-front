@@ -16,6 +16,9 @@ export default defineConfig({
     },
     plugins: [
         vituum({
+            input: [
+                path.resolve(__dirname, './src/twig/pages'),
+            ],
             pages: {
                 dir: path.resolve(__dirname, './src/twig/pages'),
             },
@@ -42,16 +45,16 @@ export default defineConfig({
                 },
 
             ]
-        })
+        }),
     ],
     build: {
-        rolldownOptions: {
-            input: ['./src/twig/pages/**/*.twig'],
+        rollupOptions: {
             output: {
-                // JS-файлы → папка js/
-                entryFileNames: 'js/[name].js',
-                chunkFileNames: 'js/[name].js',
-                // Стили, шрифты, картинки → по типу
+                // Настройка для JS файлов (точки входа)
+                entryFileNames: `js/[name].js`,
+                // Настройка для чанков (разделенных файлов)
+                chunkFileNames: `js/[name].js`,
+                // Настройка для CSS, изображений и шрифтов
                 assetFileNames: (assetInfo) => {
                     const ext = assetInfo.name?.split('.').pop()
 
@@ -61,8 +64,8 @@ export default defineConfig({
 
                     // всё остальное в assets
                     return 'assets/[name][extname]'
-                }
-            }
-        }
-    }
+                },
+            },
+        },
+    },
 })
