@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1774615924545,
+    "generatedTime": 1774626651006,
     "data": [
         {
             "type": "folder",
@@ -12,20 +12,26 @@
             "name": "fonts"
         },
         {
+            "type": "file",
+            "name": "index.html",
+            "size": 637,
+            "hash": "ab9612de9dba47dac4d6f5a862979cd4dbdcc62c3c897743c008c11f2250b4b7"
+        },
+        {
             "type": "folder",
             "name": "js"
         },
         {
             "type": "file",
             "name": "ui.html",
-            "size": 8886,
-            "hash": "38a73388623080cb4d2b16b5e359a74aafc614cc380ba277cf5c30639d2845b6"
+            "size": 11874,
+            "hash": "3c199cf185203bdc3843705fbec8dd12935eea89a9b749c3f18c062156775f3d"
         },
         {
             "type": "file",
-            "name": "css/ui.css",
-            "size": 15820,
-            "hash": "bdf9a026bf971b3dcf0ba28bf7c38444ae966d5ca9dcd80901b4954a1a281517"
+            "name": "css/main.css",
+            "size": 17705,
+            "hash": "de07722e395d2fec35b9b2e5e59df85a07934bb90370915da134df1a19613a0f"
         },
         {
             "type": "file",
@@ -35,7 +41,13 @@
         },
         {
             "type": "file",
-            "name": "js/ui.twig.js",
+            "name": "fonts/SuisseIntl-Bold.woff",
+            "size": 81652,
+            "hash": "fde2705627c9e38930cbce7982aa35c16f8a72479b968e9654ec818088899004"
+        },
+        {
+            "type": "file",
+            "name": "js/main.js",
             "size": 721,
             "hash": "530ee3286f50e2c384c4d8fc76c98a7d7dc9c5d07be3197feb0c81e69c42fbe4"
         }
