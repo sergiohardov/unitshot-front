@@ -27,3 +27,22 @@ body {
 main {
   flex: 1;
 }
+
+.us-container {
+  margin: 0 auto;
+  max-width: 1320px; // 1290px + 30px (padding)
+  padding: 0 15px;
+  width: 100%;
+}
+
+.us-title-h1 {
+  font-size: 46px;
+  font-family: var(--unishot-font-family-title);
+  text-transform: uppercase;
+}
+
+.us-title-h2 {
+  font-size: 32px;
+  font-family: var(--unishot-font-family-title);
+  text-transform: uppercase;
+}
