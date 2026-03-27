@@ -23,9 +23,59 @@
 
         h3 {
             font-size: 18px;
-            padding-bottom: 10px 0;
+            padding: 10px 0;
         }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: var(--unitshot-gray-main);
+            color: var(--unitshot-white);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            border-radius: 12px;
+            cursor: pointer;
+            -webkit-transition-property: background-color;
+            transition-property: background-color;
+            -webkit-transition-timing-function: ease;
+                    transition-timing-function: ease;
+        }
+
+        .box:hover {
+            background: var(--unitshot-accent-pink);
+        }
+
+        .t50  { -webkit-transition-duration: 50ms; transition-duration: 50ms; }
+
+        .t100 { -webkit-transition-duration: 100ms; transition-duration: 100ms; }
+
+        .t150 { -webkit-transition-duration: 150ms; transition-duration: 150ms; }
+
+        .t200 { -webkit-transition-duration: 200ms; transition-duration: 200ms; }
+
+        .t250 { -webkit-transition-duration: 250ms; transition-duration: 250ms; }
+
+        .t300 { -webkit-transition-duration: 300ms; transition-duration: 300ms; }
+
+       
     </style>
+
+    <h1>0. Test Transition</h1>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <div class="box t50"><div class="label">50ms</div></div>
+        <div class="box t100"><div class="label">100ms</div></div>
+        <div class="box t150"><div class="label">150ms</div></div>
+        <div class="box t200"><div class="label">200ms</div></div>
+        <div class="box t250"><div class="label">250ms</div></div>
+        <div class="box t300"><div class="label">300ms</div></div>
+    </div>
 
     <h1>1. Components</h1>
 
@@ -152,7 +202,8 @@
     </div>
 
     <h2>1.5 Breadcrumbs</h2>
-        <ul class="us-breadcrumbs">
+    <div>
+            <ul class="us-breadcrumbs">
                     <li class="us-breadcrumbs__item">
                 <a href="#" class="us-breadcrumbs__link ">Головна</a>
             </li>
@@ -166,9 +217,11 @@
                 <a href="#" class="us-breadcrumbs__link  us-breadcrumbs__link--current ">Кавомашини</a>
             </li>
             </ul>
+    </div>
 
     <h2>1.6 Pagination</h2>
-        <ul class="us-pagination">
+    <div>
+            <ul class="us-pagination">
         <li>
                 <a href="#prev" class="us-button-arrow  us-button-arrow--v2  us-pagination__prev "></a>
         </li>
@@ -198,6 +251,7 @@
                 <a href="#next" class="us-button-arrow  us-button-arrow--v2  us-pagination__next "></a>
         </li>
     </ul>
+    </div>
 
 </main>
 
