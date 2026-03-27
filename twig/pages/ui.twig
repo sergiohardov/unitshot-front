@@ -14,9 +14,46 @@
 
         h3 {
             font-size: 18px;
-            padding-bottom: 10px 0;
+            padding: 10px 0;
         }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: var(--unitshot-gray-main);
+            color: var(--unitshot-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition-property: background-color;
+            transition-timing-function: ease;
+        }
+
+        .box:hover {
+            background: var(--unitshot-accent-pink);
+        }
+
+        .t50  { transition-duration: 50ms; }
+        .t100 { transition-duration: 100ms; }
+        .t150 { transition-duration: 150ms; }
+        .t200 { transition-duration: 200ms; }
+        .t250 { transition-duration: 250ms; }
+        .t300 { transition-duration: 300ms; }
+
+       
     </style>
+
+    <h1>0. Test Transition</h1>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <div class="box t50"><div class="label">50ms</div></div>
+        <div class="box t100"><div class="label">100ms</div></div>
+        <div class="box t150"><div class="label">150ms</div></div>
+        <div class="box t200"><div class="label">200ms</div></div>
+        <div class="box t250"><div class="label">250ms</div></div>
+        <div class="box t300"><div class="label">300ms</div></div>
+    </div>
 
     <h1>1. Components</h1>
 
@@ -190,26 +227,30 @@
     </div>
 
     <h2>1.5 Breadcrumbs</h2>
-    {% include '@components/breadcrumbs.twig' with {
-        'links': [
-            {'src': '#', 'title': 'Головна', 'is_current': false},
-            {'src': '#', 'title': 'Головна', 'is_current': false},
-            {'src': '#', 'title': 'Головна', 'is_current': false},
-            {'src': '#', 'title': 'Кавомашини', 'is_current': true},
-        ],
-    } %}
+    <div>
+        {% include '@components/breadcrumbs.twig' with {
+            'links': [
+                {'src': '#', 'title': 'Головна', 'is_current': false},
+                {'src': '#', 'title': 'Головна', 'is_current': false},
+                {'src': '#', 'title': 'Головна', 'is_current': false},
+                {'src': '#', 'title': 'Кавомашини', 'is_current': true},
+            ],
+        } %}
+    </div>
 
     <h2>1.6 Pagination</h2>
-    {% include '@components/pagination.twig' with {
-        'prev': '#prev',
-        'next': '#next',
-        'pages': [
-            {'number': 1, 'link': '#1', 'is_current': true},
-            {'number': 2, 'link': '#2', 'is_current': false},
-            {'number': 3, 'link': '#3', 'is_current': false},
-            {'number': 4, 'link': '#4', 'is_current': false},
-        ]
-    } %}
+    <div>
+        {% include '@components/pagination.twig' with {
+            'prev': '#prev',
+            'next': '#next',
+            'pages': [
+                {'number': 1, 'link': '#1', 'is_current': true},
+                {'number': 2, 'link': '#2', 'is_current': false},
+                {'number': 3, 'link': '#3', 'is_current': false},
+                {'number': 4, 'link': '#4', 'is_current': false},
+            ]
+        } %}
+    </div>
 
 {% endblock %}
 
