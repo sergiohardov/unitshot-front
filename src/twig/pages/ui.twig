@@ -34,7 +34,7 @@
         }
     </style>
 
-    <div class="us-container" style="padding: 20px 0">
+    <div class="us-container" style="padding-top: 20px; pbd-bottom: 20px;">
         <ol>
             <li>
                 <span class="ui-title">Colors</span>
@@ -96,7 +96,7 @@
                         <span class="ui-title">Button Square</span>
                         <div class="ui-content">
                             <h3>Type: Button</h3>
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
                                 {% include '@components/button-square.twig' with {
                                     'version': 'v1',
                                     'text': 'Перейти',
@@ -149,7 +149,7 @@
                                 } %}
                             </div>
                             <h3>Type: Link</h3>
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
                                 {% include '@components/button-square.twig' with {
                                     'version': 'v1',
                                     'type': 'link',
