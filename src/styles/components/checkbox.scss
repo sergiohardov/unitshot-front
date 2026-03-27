@@ -18,7 +18,7 @@
     background-size: 24px;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: color var(--unishot-transition-speed) ease-in-out, background-color var(--unishot-transition-speed) ease-in-out, border-color var(--unishot-transition-speed) ease-in-out, box-shadow var(--unishot-transition-speed) ease-in-out;
+    transition: color var(--unitshot-transition-speed) ease-in-out, background-color var(--unitshot-transition-speed) ease-in-out, border-color var(--unitshot-transition-speed) ease-in-out, box-shadow var(--unitshot-transition-speed) ease-in-out;
     margin: 0;
 
     @include media-md() {
@@ -67,7 +67,7 @@
     cursor: pointer;
     user-select: none;
     color: var(--unitshot-black);
-    font-family: var(--unishot-font-family-base);
+    font-family: var(--unitshot-font-family-base);
     font-size: 16px;
 
     @include media-md() {
