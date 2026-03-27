@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--unitshot-gray-light);
-  font-family: var(--unitshot-font-family-base);
+  font-family: var(--unitshot-font-family-body);
   color: var(--unitshot-gray-main);
   font-size: 16px;
 }
@@ -37,17 +37,20 @@ main {
 
 .us-title-h1 {
   font-size: 46px;
-  font-family: var(--unitshot-font-family-title);
+  font-family: var(--unitshot-font-family-body);
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .us-title-h2 {
   font-size: 32px;
-  font-family: var(--unitshot-font-family-title);
+  font-family: var(--unitshot-font-family-body);
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .us-title-h3 {
   font-size: 20px;
-  font-family: var(--unitshot-font-family-title);
+  font-family: var(--unitshot-font-family-body);
+  font-weight: 700;
 }

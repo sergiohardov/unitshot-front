@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --unitshot-white: #FFFFFF;
   --unitshot-black: #000000;
   --unitshot-gray-main: #393939;
@@ -8,8 +9,10 @@
   --unitshot-gray-darker: #CFCFCF;
   --unitshot-accent-pink: #ED81B5;
 
-  --unitshot-font-family-base: 'PPNeueMontrealMono', 'sans-serif';
-  --unitshot-font-family-title: 'SuisseIntl', 'sans-serif';
+  /* Fonts */
+  --unitshot-font-family-body: 'SuisseIntl', 'sans-serif';
+  --unitshot-font-family-blog: 'PPNeueMontrealMono', 'sans-serif';
 
+  /* Transition */
   --unitshot-transition-speed: 100ms;
 }
