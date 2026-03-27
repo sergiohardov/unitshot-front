@@ -290,6 +290,18 @@
                             } %}
                         </div>
                     </li>
+
+                    <li>
+                        <span class="ui-title">Phone Number</span>
+                        <div class="ui-content">
+                            {% include '@components/phone-number.twig' with {
+                                'number': '+380731111111',
+                            } %}
+                            {% include '@components/phone-number.twig' with {
+                                'number': '+380732222222',
+                            } %}
+                        </div>
+                    </li>
                 </ol>
             </li>
         </ol>

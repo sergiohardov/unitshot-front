@@ -1,0 +1,6 @@
+{% if number %}
+    <span class="us-phone-number" data-us-phone-number="{{ number }}">
+        {# TODO: Добавить перевод на кнопку "Показати номер" #}
+        {{ number|slice(0, 6) }}<span class="us-phone-number__show-btn">[Показати номер]</span>
+    </span>
+{% endif %}

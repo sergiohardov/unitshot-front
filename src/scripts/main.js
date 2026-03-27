@@ -1,2 +1,7 @@
 import '@styles/main.scss'
-console.log('main.js')
+import PhoneNumberComponent from "@scripts/components/phone-number.js";
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    PhoneNumberComponent.init();
+})
