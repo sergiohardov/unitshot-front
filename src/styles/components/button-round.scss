@@ -12,7 +12,7 @@
 
   background-color: transparent;
   border: none;
-  transition: all 0.3s ease;
+  transition: all var(--unishot-transition-speed) ease;
 
   @include media-md() {
     width: 34px;
@@ -35,7 +35,7 @@
       mask-repeat: no-repeat;
       mask-position: center center;
       mask-size: 100%;
-      transition: all 0.3s ease;
+      transition: all var(--unishot-transition-speed) ease;
     }
 
     &:hover {
@@ -63,7 +63,7 @@
       mask-repeat: no-repeat;
       mask-position: center center;
       mask-size: 100%;
-      transition: all 0.3s ease;
+      transition: all var(--unishot-transition-speed) ease;
     }
 
     &:hover {

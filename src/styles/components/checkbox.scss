@@ -18,7 +18,7 @@
     background-size: 24px;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color var(--unishot-transition-speed) ease-in-out, background-color var(--unishot-transition-speed) ease-in-out, border-color var(--unishot-transition-speed) ease-in-out, box-shadow var(--unishot-transition-speed) ease-in-out;
     margin: 0;
 
     @include media-md() {

@@ -6,7 +6,7 @@
   justify-content: center;
   background: transparent;
   border: none;
-  transition: all 0.3s ease;
+  transition: all var(--unishot-transition-speed) ease;
 
   &--v1 {
     width: 44px;
