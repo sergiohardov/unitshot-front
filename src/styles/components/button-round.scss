@@ -12,7 +12,7 @@
 
   background-color: transparent;
   border: none;
-  transition: all 0.3s ease;
+  transition: all var(--unitshot-transition-speed) ease;
 
   @include media-md() {
     width: 34px;
@@ -35,7 +35,7 @@
       mask-repeat: no-repeat;
       mask-position: center center;
       mask-size: 100%;
-      transition: all 0.3s ease;
+      transition: all var(--unitshot-transition-speed) ease;
     }
 
     &:hover {
@@ -63,7 +63,7 @@
       mask-repeat: no-repeat;
       mask-position: center center;
       mask-size: 100%;
-      transition: all 0.3s ease;
+      transition: all var(--unitshot-transition-speed) ease;
     }
 
     &:hover {
@@ -94,7 +94,7 @@
     background-color: transparent;
     border: 2px solid var(--unitshot-accent-pink);
     padding: 2px;
-    font-family: var(--unishot-font-family-base);
+    font-family: var(--unitshot-font-family-base);
     font-size: 16px;
 
     @include media-md() {
@@ -110,7 +110,7 @@
   &--v5 {
     background-color: transparent;
     padding: 2px;
-    font-family: var(--unishot-font-family-base);
+    font-family: var(--unitshot-font-family-base);
     font-size: 16px;
     color: var(--unitshot-white);
 
