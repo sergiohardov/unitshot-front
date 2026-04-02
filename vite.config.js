@@ -6,6 +6,11 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
 
 export default defineConfig({
+    server: {
+        watch: {
+            ignored: ['**/json-server-db.json']
+        }
+    },
     resolve: {
         alias: {
             '@images'   : path.resolve(__dirname, './src/images/'),
