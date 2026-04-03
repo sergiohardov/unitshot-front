@@ -368,59 +368,6 @@
                     </li>
                 </ol>
             </li>
-
-            <li>
-                <span class="ui-title">Blocks</span>
-                <ol>
-                    <li>
-                        <span class="ui-title">Footer</span>
-                        <div class="ui-content">
-                            {% include '@blocks/footer.twig' with {
-                                'home_url': '/home.html',
-                                'logo': {
-                                    'src': '/src/images/pictures/logo.png',
-                                    'alt': 'Site Logo'
-                                },
-                                'menu_1': {
-                                    'title': 'Каталог',
-                                    'menu': [
-                                        {'link': '#', 'title': 'Кавомашини'},
-                                        {'link': '#', 'title': 'Кавомолки'},
-                                        {'link': '#', 'title': 'Водопідготовка'},
-                                        {'link': '#', 'title': 'Інструменти бариста'},
-                                        {'link': '#', 'title': 'Термопоти'},
-                                        {'link': '#', 'title': 'Комплекти'},
-                                        {'link': '#', 'title': 'Вживане обладнання'},
-                                        {'link': '#', 'title': 'Сервіс'},
-                                    ]
-                                },
-                                'menu_2': {
-                                    'title': 'Інформація',
-                                    'menu': [
-                                        {'link': '#', 'title': 'Доставка та оплата'},
-                                        {'link': '#', 'title': 'Про нас'},
-                                        {'link': '#', 'title': 'Гарантія'},
-                                        {'link': '#', 'title': 'Політика конфіденційності'},
-                                        {'link': '#', 'title': 'Публічна оферта'},
-                                        {'link': '#', 'title': 'Мапа сайту'},
-                                    ]
-                                },
-                                'contact_title': 'Контактна інформація',
-                                'numbers': ['380731111111', '380732222222'],
-                                'socials': [
-                                    {'link': '#', 'icon': {'src': '/src/images/icons/social-telegram.svg', 'alt': 'telegram'}},
-                                    {'link': '#', 'icon': {'src': '/src/images/icons/social-viber.svg', 'alt': 'telegram'}},
-                                    {'link': '#', 'icon': {'src': '/src/images/icons/social-whatsapp.svg', 'alt': 'telegram'}},
-                                    {'link': '#', 'icon': {'src': '/src/images/icons/social-instagram.svg', 'alt': 'telegram'}},
-                                    {'link': '#', 'icon': {'src': '/src/images/icons/social-tiktok.svg', 'alt': 'telegram'}},
-                                ],
-                                'email': 'admin@mail.com',
-                                'address': 'м.Дніпро вул. Центральна 2А'
-                            } %}
-                        </div>
-                    </li>
-                </ol>
-            </li>
         </ol>
     </div>
 {% endblock %}
