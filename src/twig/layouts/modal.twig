@@ -1,0 +1,41 @@
+<div class="us-modal {{ class }}" id="{{ id }}" role="dialog" aria-modal="true" {{ data }}>
+    <div class="us-modal__overlay" data-modal-close></div>
+
+    <div class="us-modal__window">
+        <div class="us-modal__header">
+            {% block header %}
+                {% if title %}
+                    <h2 class="us-modal__title">{{ title }}</h2>
+                {% endif %}
+
+                <button class="us-modal__close" data-modal-close aria-label="Закрыть"></button>
+            {% endblock %}
+        </div>
+        <div class="us-modal__body">
+            {% block body %}
+                {% if text %}
+                    <div class="us-modal__text">{{ text }}</div>
+                {% endif %}
+            {% endblock %}
+        </div>
+        <div class="us-modal__footer">
+            {% block footer %}
+                {% if buttons.secondary.text %}
+                    {% include '@components/button-square.twig' with {
+                        'version': 'v4',
+                        'text': buttons.secondary.text,
+                        'id': buttons.secondary.id
+                    } %}
+                {% endif %}
+
+                {% if buttons.primary.text %}
+                    {% include '@components/button-square.twig' with {
+                        'version': 'v3',
+                        'text': buttons.primary.text,
+                        'id': buttons.primary.id
+                    } %}
+                {% endif %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
