@@ -11,7 +11,8 @@ class ModalCallComponent extends ModalLayout {
         this.sended = false
 
         if (!this.form || !this.message || !this.acceptBtn || !this.restUrl) {
-            throw new Error(`Modal Call - Ошибка: отсутствует один из елементов формы`)
+            return undefined;
+            // throw new Error(`Modal Call - Ошибка: отсутствует один из елементов формы`)
         }
 
         this.form.addEventListener('submit', e => e.preventDefault())
