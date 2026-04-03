@@ -1,0 +1,126 @@
+@use '@styles/base/mixins' as *;
+
+.us-header {
+  background-color: var(--unitshot-gray-main);
+  color: var(--unitshot-white);
+  padding-top: 37px;
+  padding-bottom: 32px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+
+    &-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+      height: 34px;
+      width: auto;
+    }
+  }
+
+  &__settings, &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__currency, &__lang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--unitshot-font-family-blog);
+      font-weight: 300;
+      font-size: 12px;
+
+      &:not(:first-child):before {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: var(--unitshot-gray-light);
+        border-radius: 2px;
+
+        @include media-md() {
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      &--current {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__search {
+    background-color: var(--unitshot-gray-light);
+  }
+
+  &__cart {
+    background-color: var(--unitshot-accent-pink);
+  }
+
+  &__search, &__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    &-img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__number {
+    flex-shrink: 0;
+
+    .us-phone-number {
+      color: var(--unitshot-gray-light);
+    }
+  }
+}

@@ -7,6 +7,13 @@
     <script src="/src/scripts/main.js" type="module"></script>
 </head>
 <body>
+{% include '@blocks/header.twig' with {
+    'home_url': '/home.html',
+    'logo': {
+        'src': '/src/images/pictures/logo.png',
+        'alt': 'Site Logo'
+    }
+} %}
 
 <main>{% block content %}{% endblock %}</main>
 

@@ -1,0 +1,59 @@
+<header class="us-header">
+    <div class="us-container">
+        <div class="us-header__inner">
+            <div class="us-header__top">
+                {% if logo.src and home_url %}
+                    <a href="{{ home_url }}" class="us-header__logo">
+                        <img src="{{ logo.src }}" alt="" class="{{ logo.alt }}">
+                    </a>
+                {% endif %}
+
+               <div class="us-header__top-right">
+                   <div class="us-header__settings">
+                       <div class="us-header__currency">
+                           <a href="#" class="us-header__currency-item">UAH</a>
+                           <a href="#" class="us-header__currency-item us-header__currency-item--current">EUR</a>
+                       </div>
+
+                       <div class="us-header__lang">
+                           <a href="#" class="us-header__lang-item">UA</a>
+                           <a href="#" class="us-header__lang-item us-header__lang-item--current">RU</a>
+                       </div>
+                   </div>
+
+                   <div class="us-header__buttons">
+                       <button class="us-header__search">
+                           <img class="us-header__search-img" src="/src/images/icons/search.svg" alt="search">
+                       </button>
+
+                       <button class="us-header__cart">
+                           <img class="us-header__cart-img" src="/src/images/icons/cart.svg" alt="cart">
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="us-header__bottom">
+
+                <nav class="us-header__nav">
+                    <button class="us-header__burger">
+                        <img src="/src/images/icons/burger.svg" alt="burger">
+                    </button>
+
+                    <ul class="us-header__menu">
+                        <li class="us-header__menu-item"><a href="#">Кавомашини</a></li>
+                        <li class="us-header__menu-item"><a href="#">Кавомашини</a></li>
+                        <li class="us-header__menu-item"><a href="#">Доставка та оплата</a></li>
+                        <li class="us-header__menu-item"><a href="#">Сервіс</a></li>
+                        <li class="us-header__menu-item"><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <div class="us-header__number">
+                    {% include '@components/phone-number.twig' with {
+                        'number': '+380731111111'
+                    } %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
