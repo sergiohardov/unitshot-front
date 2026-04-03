@@ -302,6 +302,73 @@
                             } %}
                         </div>
                     </li>
+
+                    <li>
+                        <span class="ui-title">Modals</span>
+                        <div class="ui-content" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            {% include '@components/button-square.twig' with {
+                                'version': 'v2',
+                                'text': 'Modal Add Cart',
+                                'data': 'data-us-modal-id="us-modal-add-cart"'
+                            } %}
+                            {% include '@components/button-square.twig' with {
+                                'version': 'v2',
+                                'text': 'Modal Remove Cart',
+                                'data': 'data-us-modal-id="us-modal-remove-cart"'
+                            } %}
+                            {% include '@components/button-square.twig' with {
+                                'version': 'v2',
+                                'text': 'Modal Lang',
+                                'data': 'data-us-modal-id="us-modal-lang"'
+                            } %}
+                            {% include '@components/button-square.twig' with {
+                                'version': 'v2',
+                                'text': 'Modal Call',
+                                'data': 'data-us-modal-id="us-modal-call"'
+                            } %}
+                        </div>
+                        {% include '@components/modal-add-cart.twig' with {
+                            'id': 'us-modal-add-cart',
+                            'class': 'us-modal-add-cart',
+                            'title': 'Товар додано до кошика',
+                        } %}
+
+                        {% include '@components/modal-remove-cart.twig' with {
+                            'id': 'us-modal-remove-cart',
+                            'class': 'us-modal-remove-cart',
+                            'title': 'Товар видалено з кошика',
+                        } %}
+
+                        {% include '@components/modal-lang.twig' with {
+                            'id': 'us-modal-lang',
+                            'class': 'us-modal-lang',
+                            'title': 'Чи бажаєте переглядати сайт українською мовою?',
+                            'buttons': {
+                                'secondary': {
+                                    'text': 'Ні',
+                                },
+                                'primary': {
+                                    'text': 'Так',
+                                }
+                            }
+                        } %}
+
+                        {% include '@components/modal-call.twig' with {
+                            'id': 'us-modal-call',
+                            'class': 'us-modal-call',
+                            'title': 'Оформлення зворотнього дзінка',
+                            'data': 'data-us-modal-call-rest-url="http://localhost:3000/call/"',
+                            'buttons': {
+                                'primary': {
+                                    'text': 'Передзвоніть мені',
+                                    'id': 'us-modal-call-accept-btn'
+                                }
+                            }
+                        } %}
+                    </li>
+                </ol>
+            </li>
+
             <li>
                 <span class="ui-title">Blocks</span>
                 <ol>
