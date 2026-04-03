@@ -1,0 +1,152 @@
+@use '@styles/base/mixins' as *;
+
+.us-footer {
+  background-color: var(--unitshot-gray-main);
+  padding: 32px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    @include media-md() {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    flex-shrink: 0;
+
+    @include media-lg() {
+      width: 100%;
+    }
+
+    @include media-md() {
+      justify-content: center;
+      height: 27px;
+    }
+
+    &__img {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      @include media-md() {
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    &-link {
+      color: var(--unitshot-gray-light);
+      font-family: var(--unitshot-font-family-body);
+      font-weight: 500;
+      font-size: 16px;
+
+      @include media-md() {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @include media-md() {
+        gap: 20px;
+      }
+    }
+
+    &-phones {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      @include media-md() {
+        align-items: center;
+      }
+
+      .us-phone-number {
+        color: var(--unitshot-gray-light);
+        font-size: 16px;
+
+        @include media-md() {
+          font-size: 14px;
+        }
+      }
+    }
+
+    // TODO: Не единый стиль кнопок
+    &-btn {
+      padding: 2px 4px;
+      height: 34px;
+      width: 100%;
+      background-color: var(--unitshot-gray-light);
+      border-radius: 6px;
+      color: var(--unitshot-gray-main);
+      font-family: var(--unitshot-font-family-body);
+      font-weight: 500;
+      font-size: 16px;
+
+      @include media-md() {
+        font-size: 14px;
+      }
+    }
+
+    &-social {
+      display: flex;
+      gap: 10px;
+
+      @include media-md() {
+        justify-content: center;
+      }
+    }
+
+    &-email {
+      color: var(--unitshot-gray-light);
+      font-family: var(--unitshot-font-family-body);
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 16px;
+
+      @include media-md() {
+        align-items: center;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__title {
+    color: var(--unitshot-gray-light);
+    margin-bottom: 16px;
+    font-family: var(--unitshot-font-family-body);
+    font-size: 20px;
+
+    @include media-md() {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}

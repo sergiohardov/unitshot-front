@@ -1,0 +1,86 @@
+<footer class="us-footer">
+    <div class="us-container">
+        <div class="us-footer__inner">
+            {% if home_url and logo.src %}
+               <a class="us-footer__logo" href="{{ home_url }}">
+                   <img class="us-footer__logo__img" src="{{ logo.src }}" alt="{{ logo.alt }}" />
+               </a>
+            {% endif %}
+
+            {% if menu_1.menu %}
+                <nav class="us-footer__nav">
+                    {% if menu_1.title %}
+                        <h2 class="us-footer__title">{{ menu_1.title }}</h2>
+                    {% endif %}
+
+                    <ul class="us-footer__nav-menu">
+                        {% for item in menu_1.menu %}
+                            <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
+
+            {% if menu_2.menu %}
+                <nav class="us-footer__nav">
+                    {% if menu_2.title %}
+                        <h2 class="us-footer__title">{{ menu_2.title }}</h2>
+                    {% endif %}
+
+                    <ul class="us-footer__nav-menu">
+                        {% for item in menu_2.menu %}
+                            <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
+
+            {% if numbers or socials or email or address %}
+                <div class="us-footer__contact">
+                    {% if contact_title %}
+                        <h2 class="us-footer__title">{{ contact_title }}</h2>
+                    {% endif %}
+
+                    <div class="us-footer__contact-content">
+                        {% if numbers %}
+                            <div class="us-footer__contact-phones">
+                                {% for number in numbers %}
+                                    {% include '@components/phone-number.twig' with {
+                                        'number': number,
+                                    } %}
+                                {% endfor %}
+
+                                {# TODO: сделать модалку, добавить данные #}
+                                <button class="us-footer__contact-btn" data-us-modal-id="us-modal-call">Замовити дзвінок</button>
+                            </div>
+                        {% endif %}
+
+                        {% if socials %}
+                            <div class="us-footer__contact-social">
+                                {% for social in socials %}
+                                    <a class="us-footer__contact-social__link" href="{{ social.link }}">
+                                        <img class="us-footer-contact__social__img" src="{{ social.icon.src }}" alt="{{ social.icon.alt }}" />
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="us-footer__contact-email">
+                            {% if email %}
+                                <a href="mailto:{{ email }}">{{ email }}</a>
+                            {% endif %}
+
+                            {% if address %}
+                                <p>{{ address }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</footer>
