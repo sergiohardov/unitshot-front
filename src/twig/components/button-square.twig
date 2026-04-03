@@ -4,7 +4,7 @@
             {{ text }}
         </a>
     {% else %}
-        <button id="{{ id }}" class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %}" {% if disabled %} disabled {% endif %} {{ data }}>
+        <button id="{{ id }}" class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %}" {% if disabled %} disabled {% endif %} {{ data }} type="button">
             {{ text }}
         </button>
     {% endif %}
