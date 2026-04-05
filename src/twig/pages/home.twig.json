@@ -757,5 +757,196 @@
         }
       }
     ]
+  },
+  "category_links": {
+    "title": "ІНШЕ",
+    "categories": [
+      {
+        "title": "Водопідготовка",
+        "brands": [
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-1.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-2.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-3.png",
+              "alt": "Brand Logo 1"
+            }
+          }
+        ],
+        "link": "#",
+        "image": {
+          "src": "/src/images/pictures/category-links-1.png",
+          "alt": "Category 1"
+        }
+      },
+      {
+        "title": "Інструменти бариста",
+        "brands": [
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-1.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-2.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-3.png",
+              "alt": "Brand Logo 1"
+            }
+          }
+        ],
+        "link": "#",
+        "image": {
+          "src": "/src/images/pictures/category-links-4.png",
+          "alt": "Category 1"
+        }
+      },
+      {
+        "title": "Термопоти",
+        "brands": [
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-1.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-2.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-3.png",
+              "alt": "Brand Logo 1"
+            }
+          }
+        ],
+        "link": "#",
+        "image": {
+          "src": "/src/images/pictures/category-links-2.png",
+          "alt": "Category 1"
+        }
+      },
+      {
+        "title": "Сервіс",
+        "brands": [
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-1.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-2.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-3.png",
+              "alt": "Brand Logo 1"
+            }
+          }
+        ],
+        "link": "#",
+        "image": {
+          "src": "/src/images/pictures/category-links-5.png",
+          "alt": "Category 1"
+        }
+      },
+      {
+        "title": "Вживане обладнання",
+        "brands": [
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-1.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-2.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-3.png",
+              "alt": "Brand Logo 1"
+            }
+          }
+        ],
+        "link": "#",
+        "image": {
+          "src": "/src/images/pictures/category-links-3.png",
+          "alt": "Category 1"
+        }
+      },
+      {
+        "title": "Комплекти",
+        "brands": [
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-1.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-2.png",
+              "alt": "Brand Logo 1"
+            }
+          },
+          {
+            "link": "#",
+            "image": {
+              "src": "/src/images/pictures/brand-logos-3.png",
+              "alt": "Brand Logo 1"
+            }
+          }
+        ],
+        "link": "#",
+        "image": {
+          "src": "/src/images/pictures/category-links-6.png",
+          "alt": "Category 1"
+        }
+      }
+    ]
   }
 }

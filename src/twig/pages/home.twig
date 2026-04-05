@@ -23,5 +23,10 @@
         'brands': category_showcase_2.brands,
         'products': category_showcase_2.products,
     } %}
+
+    {% include '@blocks/category-links.twig' with {
+        'title': category_links.title,
+        'categories': category_links.categories
+    } %}
 {% endblock %}
 
