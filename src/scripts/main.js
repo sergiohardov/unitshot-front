@@ -5,6 +5,7 @@ import ModalAddCartComponent from "@scripts/components/modal-add-cart.js";
 import ModalLangComponent from "@scripts/components/modal-lang.js";
 import ModalRemoveCartComponent from "@scripts/components/modal-remove-cart.js";
 import BrandLogosBlock from "@scripts/blocks/brand-logos.js";
+import SliderProductCardsComponent from "@scripts/components/slider-product-cards.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     ModalCallComponent.init();
     ModalLangComponent.init()
     BrandLogosBlock.init()
+    SliderProductCardsComponent.init()
 })

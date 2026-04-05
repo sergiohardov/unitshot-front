@@ -1,0 +1,30 @@
+<div class="us-slider-product-cards">
+    {% include '@components/button-arrow.twig' with {
+        'version': 'v2',
+        'class': 'us-slider-product-cards__prev'
+    } %}
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            {% for product in products %}
+                <div class="swiper-slide">
+                    {% include '@components/product-card.twig' with {
+                        'tags': product.tags,
+                        'image': product.image,
+                        'title': product.title,
+                        'brand': product.brand,
+                        'category': product.category,
+                        'price': product.price
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include '@components/button-arrow.twig' with {
+        'version': 'v2',
+        'class': 'us-slider-product-cards__next'
+    } %}
+
+    <div class="us-slider-product-cards__pagination"></div>
+</div>
