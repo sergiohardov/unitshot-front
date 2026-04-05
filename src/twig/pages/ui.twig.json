@@ -433,5 +433,55 @@
       },
       "link": "#"
     }
+  ],
+  "slider_categories": [
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-1.png",
+        "alt": "Category 1"
+      },
+      "title": "Під еспресо"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-2.png",
+        "alt": "Category 2"
+      },
+      "title": "Під фільтр"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-3.png",
+        "alt": "Category 3"
+      },
+      "title": "З вагами"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-4.png",
+        "alt": "Category 4"
+      },
+      "title": "Без вагів"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-5.png",
+        "alt": "Category 5"
+      },
+      "title": "Без вагів"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-1.png",
+        "alt": "Category 1"
+      },
+      "title": "Під еспресо"
+    }
   ]
 }

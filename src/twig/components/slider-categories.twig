@@ -1,0 +1,21 @@
+<div class="us-slider-categories">
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            {% for slide in slides %}
+                <div class="swiper-slide us-slider-categories__slide">
+                    <a class="us-slider-categories__slide-link" href="{{ slide.link }}">
+                        {% if not slide.image.src %}
+                            <img class="us-slider-categories__slide-img" src="/src/images/pictures/placeholder-image.jpg" alt="{{ slide.image.alt }}">
+                        {% else %}
+                            <img class="us-slider-categories__slide-img" src="{{ slide.image.src }}" alt="{{ slide.image.alt }}">
+                        {% endif %}
+                        <span class="us-slider-categories__slide-title">{{ slide.title }}</span>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="us-slider-categories__pagination"></div>
+</div>

@@ -271,6 +271,15 @@
                             } %}
                         </div>
                     </li>
+
+                    <li>
+                        <span class="ui-title">Slider Categories</span>
+                        <div class="ui-content">
+                            {% include '@components/slider-categories.twig' with {
+                                'slides': slider_categories
+                            } %}
+                        </div>
+                    </li>
                 </ol>
             </li>
         </ol>
