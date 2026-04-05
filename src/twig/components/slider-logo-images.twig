@@ -1,0 +1,16 @@
+<div class="us-slider-logo-images">
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            {% for logo in logotypes %}
+                <div class="swiper-slide">
+                    <a class="us-slider-logo-images__slider-link" href="{{ logo.link }}">
+                        <img class="us-slider-logo-images__slider-img" src="{{ logo.image.src }}" alt="{{ logo.image.alt }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="us-slider-logo-images__pagination"></div>
+</div>
