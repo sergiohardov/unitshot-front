@@ -35,6 +35,11 @@
         'image': text_image_1.image
     } %}
 
+    {% include '@blocks/client-logos.twig' with {
+        'title': client_logos.title,
+        'clients': client_logos.clients
+    } %}
+
     {% include '@blocks/text-image.twig' with {
         'title': text_image_2.title,
         'description': text_image_2.description,
