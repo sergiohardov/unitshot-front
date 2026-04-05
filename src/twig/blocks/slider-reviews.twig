@@ -1,0 +1,41 @@
+<div class="us-slider-reviews">
+    <div class="us-container">
+        <div class="us-slider-reviews__inner">
+            {% if title %}
+                <h2 class="us-slider-reviews__title">{{ title }}</h2>
+            {% endif %}
+
+            <div class="us-slider-reviews__slider">
+                {% include '@components/button-arrow.twig' with {
+                    'version': 'v2',
+                    'class': 'us-slider-reviews__slider-prev'
+                } %}
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        {% for slide in slides %}
+                            <div class="swiper-slide">
+                                <div class="us-slider-reviews__slider-slide">
+                                    <div class="us-slider-reviews__slider-image">
+                                        <img src="{{ slide.image.src }}" alt="{{ slide.image.alt }}">
+                                    </div>
+                                    <div class="us-slider-reviews__slider-text">
+                                        <p class="us-slider-reviews__slider-name">{{ slide.name }}</p>
+                                        <p class="us-slider-reviews__slider-position">{{ slide.position }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                {% include '@components/button-arrow.twig' with {
+                    'version': 'v2',
+                    'class': 'us-slider-reviews__slider-next'
+                } %}
+            </div>
+
+            <div class="us-slider-reviews__slider-pagination"></div>
+        </div>
+    </div>
+</div>

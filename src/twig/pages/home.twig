@@ -40,6 +40,11 @@
         'clients': client_logos.clients
     } %}
 
+    {% include '@blocks/slider-reviews.twig' with {
+        'title': slider_reviews.title,
+        'slides': slider_reviews.slides,
+    } %}
+
     {% include '@blocks/text-image.twig' with {
         'title': text_image_2.title,
         'description': text_image_2.description,
