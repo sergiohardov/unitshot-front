@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'DRKrapkaRound';
+  src: url('@fonts/DRKrapkaRound-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'PPNeueMontrealMono';
   src: url('@fonts/PPNeueMontrealMono-Medium.woff') format('woff');
   font-weight: 500;
