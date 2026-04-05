@@ -9,5 +9,19 @@
         'title': popular_products.title,
         'products': popular_products.products
     } %}
+
+    {% include '@blocks/category-showcase.twig' with {
+        'title': category_showcase_1.title,
+        'categories': category_showcase_1.categories,
+        'brands': category_showcase_1.brands,
+        'products': category_showcase_1.products,
+    } %}
+
+    {% include '@blocks/category-showcase.twig' with {
+        'title': category_showcase_2.title,
+        'categories': category_showcase_2.categories,
+        'brands': category_showcase_2.brands,
+        'products': category_showcase_2.products,
+    } %}
 {% endblock %}
 
