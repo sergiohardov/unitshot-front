@@ -3,9 +3,9 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             {% for logo in logotypes %}
-                <div class="swiper-slide">
-                    <a class="us-slider-logo-images__slider-link" href="{{ logo.link }}">
-                        <img class="us-slider-logo-images__slider-img" src="{{ logo.image.src }}" alt="{{ logo.image.alt }}">
+                <div class="swiper-slide us-slider-logo-images__slide">
+                    <a class="us-slider-logo-images__slide-link" href="{{ logo.link }}">
+                        <img class="us-slider-logo-images__slide-img" src="{{ logo.image.src }}" alt="{{ logo.image.alt }}">
                     </a>
                 </div>
             {% endfor %}
