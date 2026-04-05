@@ -8,6 +8,7 @@ import BrandLogosBlock from "@scripts/blocks/brand-logos.js";
 import SliderProductCardsComponent from "@scripts/components/slider-product-cards.js";
 import SliderLogoImagesComponent from "@scripts/components/slider-logo-images.js";
 import SliderCategoriesComponent from "@scripts/components/slider-categories.js";
+import TextImageBlock from "@scripts/blocks/text-image.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     SliderProductCardsComponent.init()
     SliderLogoImagesComponent.init()
     SliderCategoriesComponent.init()
+    TextImageBlock.init()
 })

@@ -30,9 +30,16 @@
     } %}
 
     {% include '@blocks/text-image.twig' with {
-        'title': text_image.title,
-        'description': text_image.description,
-        'image': text_image.image
+        'title': text_image_1.title,
+        'description': text_image_1.description,
+        'image': text_image_1.image
+    } %}
+
+    {% include '@blocks/text-image.twig' with {
+        'title': text_image_2.title,
+        'description': text_image_2.description,
+        'image': text_image_2.image,
+        'hide_text': text_image_2.hide_text,
     } %}
 {% endblock %}
 
