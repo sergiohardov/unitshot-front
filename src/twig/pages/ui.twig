@@ -366,6 +366,58 @@
                             }
                         } %}
                     </li>
+
+                    <li>
+                        <span class="ui-title">Product Card</span>
+                        <div class="ui-content">
+                            <style>
+                                .ui-cards {
+                                    display: grid;
+                                    grid-template-columns: repeat(4, 1fr);
+                                    gap: 40px;
+                                }
+                                @media (max-width: 768px) {
+                                    .ui-cards {
+                                        grid-template-columns: repeat(2, 1fr);
+                                    }
+                                }
+                            </style>
+                            <div class="ui-cards">
+                                {% include '@components/product-card.twig' with {
+                                    'tags': [
+                                        {
+                                            'status': 'discount',
+                                            'text': '-18%'
+                                        },
+                                        {
+                                            'status': 'info',
+                                            'text': 'На складі в Європі'
+                                        }
+                                    ],
+                                    'image': {
+                                        'src': '/src/images/pictures/product-card-1.png',
+                                        'alt': 'Product Card 1'
+                                    },
+                                    'title': {
+                                        'link': '#',
+                                        'text': 'Nuova Simonelli'
+                                    },
+                                    'brand': {
+                                        'link': '#',
+                                        'text': 'APPIA'
+                                    },
+                                    'category': {
+                                        'link': '#',
+                                        'text': 'Кавомашина'
+                                    },
+                                    'price': {
+                                        'old': '198 789 грн.',
+                                        'new': '198 789 грн.'
+                                    }
+                                } %}
+                            </div>
+                        </div>
+                    </li>
                 </ol>
             </li>
         </ol>
