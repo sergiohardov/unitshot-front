@@ -1,0 +1,379 @@
+{
+  "colors": [
+    {
+      "name": "--unitshot-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "--unitshot-black",
+      "hex": "#000000"
+    },
+    {
+      "name": "--unitshot-gray-main",
+      "hex": "#393939"
+    },
+    {
+      "name": "--unitshot-gray-light",
+      "hex": "#F5F5F5"
+    },
+    {
+      "name": "--unitshot-gray-dark",
+      "hex": "#9D9D9D"
+    },
+    {
+      "name": "--unitshot-gray-darker",
+      "hex": "#CFCFCF"
+    },
+    {
+      "name": "--unitshot-accent-pink",
+      "hex": "#ED81B5"
+    }
+  ],
+  "checkbox": [
+    {
+      "label": "Підкатегорія 1",
+      "id": "check-1"
+    },
+    {
+      "label": "Підкатегорія 2",
+      "id": "check-2"
+    }
+  ],
+  "button_square": [
+    {
+      "version": "v1",
+      "text": "Перейти"
+    },
+    {
+      "version": "v2",
+      "text": "Перейти"
+    },
+    {
+      "version": "v3",
+      "text": "Перейти"
+    },
+    {
+      "version": "v4",
+      "text": "Перейти"
+    },
+    {
+      "version": "v5",
+      "text": "220v"
+    },
+    {
+      "version": "v6",
+      "text": "220v"
+    },
+    {
+      "version": "v7",
+      "text": "220v"
+    },
+    {
+      "version": "v5",
+      "text": "220v",
+      "disabled": true
+    },
+    {
+      "version": "v5",
+      "text": "1"
+    },
+    {
+      "version": "v6",
+      "text": "1"
+    },
+    {
+      "version": "v7",
+      "text": "1"
+    },
+    {
+      "version": "v5",
+      "text": "1",
+      "disabled": true
+    }
+  ],
+  "button_round": [
+    {
+      "version": "v1"
+    },
+    {
+      "version": "v2"
+    },
+    {
+      "version": "v3",
+      "text": "1"
+    },
+    {
+      "version": "v4",
+      "text": "1"
+    },
+    {
+      "version": "v5",
+      "text": "1"
+    }
+  ],
+  "button_arrow": [
+    {
+      "version": "v1"
+    },
+    {
+      "version": "v2"
+    },
+    {
+      "version": "v3"
+    }
+  ],
+  "breadcrumbs": {
+    "links": [
+      {
+        "src": "#",
+        "title": "Головна",
+        "is_current": false
+      },
+      {
+        "src": "#",
+        "title": "Головна",
+        "is_current": false
+      },
+      {
+        "src": "#",
+        "title": "Головна",
+        "is_current": false
+      },
+      {
+        "src": "#",
+        "title": "Кавомашини",
+        "is_current": true
+      }
+    ]
+  },
+  "pagination": {
+    "prev": "#prev",
+    "next": "#next",
+    "pages": [
+      {
+        "number": 1,
+        "link": "#1",
+        "is_current": true
+      },
+      {
+        "number": 2,
+        "link": "#2",
+        "is_current": false
+      },
+      {
+        "number": 3,
+        "link": "#3",
+        "is_current": false
+      },
+      {
+        "number": 4,
+        "link": "#4",
+        "is_current": false
+      }
+    ]
+  },
+  "phone_number": [
+    {
+      "number": "+380731111111"
+    },
+    {
+      "number": "+380732222222"
+    }
+  ],
+  "product_card": {
+    "tags": [
+      {
+        "status": "discount",
+        "text": "-18%"
+      },
+      {
+        "status": "info",
+        "text": "На складі в Європі"
+      }
+    ],
+    "image": {
+      "src": "/src/images/pictures/product-card-1.png",
+      "alt": "Product Card 1"
+    },
+    "title": {
+      "link": "#",
+      "text": "Nuova Simonelli"
+    },
+    "brand": {
+      "link": "#",
+      "text": "APPIA"
+    },
+    "category": {
+      "link": "#",
+      "text": "Кавомашина"
+    },
+    "price": {
+      "old": "198 789 грн.",
+      "new": "198 789 грн."
+    }
+  },
+  "slider_product_cards": {
+    "products": [
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          },
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-1.png",
+          "alt": "Product Card 1"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          },
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-1.png",
+          "alt": "Product Card 1"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          },
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-1.png",
+          "alt": "Product Card 1"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          },
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-1.png",
+          "alt": "Product Card 1"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          },
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-1.png",
+          "alt": "Product Card 1"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      }
+    ]
+  }
+}

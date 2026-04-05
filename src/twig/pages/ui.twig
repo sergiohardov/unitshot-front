@@ -39,13 +39,9 @@
             <li>
                 <span class="ui-title">Colors</span>
                 <div class="ui-content" style="color: black; text-shadow: 0 0 5px white;">
-                    <div style="background-color: var(--unitshot-white);">--unitshot-white: #FFFFFF;</div>
-                    <div style="background-color: var(--unitshot-black);">--unitshot-black: #000000;</div>
-                    <div style="background-color: var(--unitshot-gray-main);">--unitshot-gray-main: #393939;</div>
-                    <div style="background-color: var(--unitshot-gray-light);">--unitshot-gray-light: #F5F5F5;</div>
-                    <div style="background-color: var(--unitshot-gray-dark);">--unitshot-gray-dark: #9D9D9D;</div>
-                    <div style="background-color: var(--unitshot-gray-darker);">--unitshot-gray-darker: #CFCFCF;</div>
-                    <div style="background-color: var(--unitshot-accent-pink);">--unitshot-accent-pink: #ED81B5;</div>
+                    {% for item in colors %}
+                        <div style="background-color: var({{ item.name }});">{{ item.name }}: {{ item.hex }};</div>
+                    {% endfor %}
                 </div>
             </li>
 
@@ -80,14 +76,12 @@
                         <span class="ui-title">Checkbox</span>
                         <div class="ui-content">
                             <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% include '@components/checkbox.twig' with {
-                                    'label': 'Підкатегорія 1',
-                                    'id': 'check-1'
-                                } %}
-                                {% include '@components/checkbox.twig' with {
-                                    'label': 'Підкатегорія 2',
-                                    'id': 'check-2'
-                                } %}
+                                {% for item in checkbox %}
+                                    {% include '@components/checkbox.twig' with {
+                                        'label': item.label,
+                                        'id': item.id
+                                    } %}
+                                {% endfor %}
                             </div>
                         </div>
                     </li>
@@ -95,123 +89,16 @@
                     <li>
                         <span class="ui-title">Button Square</span>
                         <div class="ui-content">
-                            <h3>Type: Button</h3>
                             <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v1',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v2',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v3',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v4',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v6',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v7',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '220v',
-                                    'disabled': true
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v6',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v7',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '1',
-                                    'disabled': true
-                                } %}
-                            </div>
-                            <h3>Type: Link</h3>
-                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v1',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v2',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v3',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v4',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v6',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v7',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '220v',
-                                    'disabled': true
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v6',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v7',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '1',
-                                    'disabled': true
-                                } %}
+                                {% for item in button_square %}
+                                    {# для переключения тега кнопки type = link || button #}
+                                    {% include '@components/button-square.twig' with {
+                                        'version': item.version,
+                                        'text': item.text,
+                                        'disabled': item.disabled,
+                                        'type': 'link'
+                                    } %}
+                                {% endfor %}
                             </div>
                         </div>
                     </li>
@@ -220,24 +107,12 @@
                         <span class="ui-title">Button Round</span>
                         <div class="ui-content">
                             <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v1',
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v2',
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v3',
-                                    'text': '1'
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v4',
-                                    'text': '1'
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v5',
-                                    'text': '1'
-                                } %}
+                                {% for item in button_round %}
+                                    {% include '@components/button-round.twig' with {
+                                        'version': item.version,
+                                        'text': item.text
+                                    } %}
+                                {% endfor %}
                             </div>
                         </div>
                     </li>
@@ -246,17 +121,12 @@
                         <span class="ui-title">Button Arrow</span>
                         <div class="ui-content">
                             <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% include '@components/button-arrow.twig' with {
-                                    'version': 'v1',
-                                } %}
-
-                                {% include '@components/button-arrow.twig' with {
-                                    'version': 'v2',
-                                } %}
-
-                                {% include '@components/button-arrow.twig' with {
-                                    'version': 'v3',
-                                } %}
+                                {% for item in button_arrow %}
+                                    {% include '@components/button-arrow.twig' with {
+                                        'version': item.version,
+                                        'text': item.text
+                                    } %}
+                                {% endfor %}
                             </div>
                         </div>
                     </li>
@@ -265,12 +135,7 @@
                         <span class="ui-title">Breadcrumbs</span>
                         <div class="ui-content">
                             {% include '@components/breadcrumbs.twig' with {
-                                'links': [
-                                    {'src': '#', 'title': 'Головна', 'is_current': false},
-                                    {'src': '#', 'title': 'Головна', 'is_current': false},
-                                    {'src': '#', 'title': 'Головна', 'is_current': false},
-                                    {'src': '#', 'title': 'Кавомашини', 'is_current': true},
-                                ],
+                                'links': breadcrumbs.links,
                             } %}
                         </div>
                     </li>
@@ -279,14 +144,9 @@
                         <span class="ui-title">Pagination</span>
                         <div class="ui-content">
                             {% include '@components/pagination.twig' with {
-                                'prev': '#prev',
-                                'next': '#next',
-                                'pages': [
-                                    {'number': 1, 'link': '#1', 'is_current': true},
-                                    {'number': 2, 'link': '#2', 'is_current': false},
-                                    {'number': 3, 'link': '#3', 'is_current': false},
-                                    {'number': 4, 'link': '#4', 'is_current': false},
-                                ]
+                                'prev': pagination.prev,
+                                'next': pagination.next,
+                                'pages': pagination.pages
                             } %}
                         </div>
                     </li>
@@ -294,12 +154,11 @@
                     <li>
                         <span class="ui-title">Phone Number</span>
                         <div class="ui-content">
-                            {% include '@components/phone-number.twig' with {
-                                'number': '+380731111111',
-                            } %}
-                            {% include '@components/phone-number.twig' with {
-                                'number': '+380732222222',
-                            } %}
+                            {% for item in phone_number %}
+                                {% include '@components/phone-number.twig' with {
+                                    'number': item.number,
+                                } %}
+                            {% endfor %}
                         </div>
                     </li>
 
@@ -384,36 +243,12 @@
                             </style>
                             <div class="ui-cards">
                                 {% include '@components/product-card.twig' with {
-                                    'tags': [
-                                        {
-                                            'status': 'discount',
-                                            'text': '-18%'
-                                        },
-                                        {
-                                            'status': 'info',
-                                            'text': 'На складі в Європі'
-                                        }
-                                    ],
-                                    'image': {
-                                        'src': '/src/images/pictures/product-card-1.png',
-                                        'alt': 'Product Card 1'
-                                    },
-                                    'title': {
-                                        'link': '#',
-                                        'text': 'Nuova Simonelli'
-                                    },
-                                    'brand': {
-                                        'link': '#',
-                                        'text': 'APPIA'
-                                    },
-                                    'category': {
-                                        'link': '#',
-                                        'text': 'Кавомашина'
-                                    },
-                                    'price': {
-                                        'old': '198 789 грн.',
-                                        'new': '198 789 грн.'
-                                    }
+                                    'tags': product_card.tags,
+                                    'image': product_card.image,
+                                    'title': product_card.title,
+                                    'brand': product_card.brand,
+                                    'category': product_card.category,
+                                    'price': product_card.price
                                 } %}
                             </div>
                         </div>
@@ -423,168 +258,7 @@
                         <span class="ui-title">Slider Product Cards</span>
                         <div class="ui-content">
                             {% include '@components/slider-product-cards.twig' with {
-                                'products': [
-                                    {
-                                        'tags': [
-                                            {
-                                                'status': 'discount',
-                                                'text': '-18%'
-                                            },
-                                            {
-                                                'status': 'info',
-                                                'text': 'На складі в Європі'
-                                            }
-                                        ],
-                                        'image': {
-                                            'src': '/src/images/pictures/product-card-1.png',
-                                            'alt': 'Product Card 1'
-                                        },
-                                        'title': {
-                                            'link': '#',
-                                            'text': 'Nuova Simonelli'
-                                        },
-                                        'brand': {
-                                            'link': '#',
-                                            'text': 'APPIA'
-                                        },
-                                        'category': {
-                                            'link': '#',
-                                            'text': 'Кавомашина'
-                                        },
-                                        'price': {
-                                            'old': '198 789 грн.',
-                                            'new': '198 789 грн.'
-                                        }
-                                    },
-                                    {
-                                        'tags': [
-                                        {
-                                            'status': 'discount',
-                                            'text': '-18%'
-                                        },
-                                        {
-                                            'status': 'info',
-                                            'text': 'На складі в Європі'
-                                        }
-                                    ],
-                                        'image': {
-                                        'src': '/src/images/pictures/product-card-1.png',
-                                        'alt': 'Product Card 1'
-                                    },
-                                        'title': {
-                                        'link': '#',
-                                        'text': 'Nuova Simonelli'
-                                    },
-                                        'brand': {
-                                        'link': '#',
-                                        'text': 'APPIA'
-                                    },
-                                        'category': {
-                                        'link': '#',
-                                        'text': 'Кавомашина'
-                                    },
-                                        'price': {
-                                        'old': '198 789 грн.',
-                                        'new': '198 789 грн.'
-                                    }
-                                    },
-                                    {
-                                        'tags': [
-                                        {
-                                            'status': 'discount',
-                                            'text': '-18%'
-                                        },
-                                        {
-                                            'status': 'info',
-                                            'text': 'На складі в Європі'
-                                        }
-                                    ],
-                                        'image': {
-                                        'src': '/src/images/pictures/product-card-1.png',
-                                        'alt': 'Product Card 1'
-                                    },
-                                        'title': {
-                                        'link': '#',
-                                        'text': 'Nuova Simonelli'
-                                    },
-                                        'brand': {
-                                        'link': '#',
-                                        'text': 'APPIA'
-                                    },
-                                        'category': {
-                                        'link': '#',
-                                        'text': 'Кавомашина'
-                                    },
-                                        'price': {
-                                        'old': '198 789 грн.',
-                                        'new': '198 789 грн.'
-                                    }
-                                    },
-                                    {
-                                        'tags': [
-                                        {
-                                            'status': 'discount',
-                                            'text': '-18%'
-                                        },
-                                        {
-                                            'status': 'info',
-                                            'text': 'На складі в Європі'
-                                        }
-                                    ],
-                                        'image': {
-                                        'src': '/src/images/pictures/product-card-1.png',
-                                        'alt': 'Product Card 1'
-                                    },
-                                        'title': {
-                                        'link': '#',
-                                        'text': 'Nuova Simonelli'
-                                    },
-                                        'brand': {
-                                        'link': '#',
-                                        'text': 'APPIA'
-                                    },
-                                        'category': {
-                                        'link': '#',
-                                        'text': 'Кавомашина'
-                                    },
-                                        'price': {
-                                        'old': '198 789 грн.',
-                                        'new': '198 789 грн.'
-                                    }
-                                    },
-                                    {
-                                        'tags': [
-                                        {
-                                            'status': 'discount',
-                                            'text': '-18%'
-                                        },
-                                        {
-                                            'status': 'info',
-                                            'text': 'На складі в Європі'
-                                        }
-                                    ],
-                                        'image': {
-                                        'src': '/src/images/pictures/product-card-1.png',
-                                        'alt': 'Product Card 1'
-                                    },
-                                        'title': {
-                                        'link': '#',
-                                        'text': 'Nuova Simonelli'
-                                    },
-                                        'brand': {
-                                        'link': '#',
-                                        'text': 'APPIA'
-                                    },
-                                        'category': {
-                                        'link': '#',
-                                        'text': 'Кавомашина'
-                                    },
-                                        'price': {
-                                        'old': '198 789 грн.',
-                                        'new': '198 789 грн.'
-                                    }
-                                    }
-                                ]
+                                'products': slider_product_cards.products
                             } %}
                         </div>
                     </li>
