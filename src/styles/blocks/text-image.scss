@@ -1,0 +1,86 @@
+@use '@styles/base/mixins' as *;
+
+.us-text-image {
+  &__inner {
+    display: flex;
+    gap: 32px;
+
+    @include media-md() {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1;
+
+    @include media-md() {
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    font-family: var(--unitshot-font-family-body);
+    font-size: 46px;
+    color: var(--unitshot-gray-main);
+    text-transform: uppercase;
+
+    @include media-md() {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    p {
+      font-family: var(--unitshot-font-family-blog);
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--unitshot-gray-main);
+      margin-bottom: 16px;
+
+      @include media-md() {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+    }
+
+    strong {
+      color: var(--unitshot-accent-pink);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      list-style: disc;
+
+      &::marker {
+        color: var(--unitshot-accent-pink);
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 514px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    @include media-md() {
+      width: 100%;
+      aspect-ratio: calc(335/260);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

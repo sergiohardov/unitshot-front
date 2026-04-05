@@ -28,5 +28,11 @@
         'title': category_links.title,
         'categories': category_links.categories
     } %}
+
+    {% include '@blocks/text-image.twig' with {
+        'title': text_image.title,
+        'description': text_image.description,
+        'image': text_image.image
+    } %}
 {% endblock %}
 

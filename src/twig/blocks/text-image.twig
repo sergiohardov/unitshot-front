@@ -1,0 +1,21 @@
+<div class="us-text-image">
+    <div class="us-container">
+        <div class="us-text-image__inner">
+            <div class="us-text-image__text">
+                {% if title %}
+                    <h2 class="us-text-image__title">{{ title }}</h2>
+                {% endif %}
+
+                {% if description %}
+                    <div class="us-text-image__description">{{ description|raw }}</div>
+                {% endif %}
+            </div>
+
+            <div class="us-text-image__image">
+                {% if image.src %}
+                    <img src="{{ image.src }}" alt="{{ image.alt }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
