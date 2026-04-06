@@ -1,0 +1,25 @@
+{
+  "template": "./src/twig/components/breadcrumbs.twig",
+  "links": [
+    {
+      "src": "#",
+      "title": "Головна",
+      "is_current": false
+    },
+    {
+      "src": "#",
+      "title": "Головна",
+      "is_current": false
+    },
+    {
+      "src": "#",
+      "title": "Головна",
+      "is_current": false
+    },
+    {
+      "src": "#",
+      "title": "Кавомашини",
+      "is_current": true
+    }
+  ]
+}

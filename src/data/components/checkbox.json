@@ -1,0 +1,7 @@
+{
+  "template": "./src/twig/components/checkbox.twig",
+  "id": "custom-id",
+  "name": "custom-name",
+  "value": "some-value",
+  "label": "Custom checkbox label"
+}

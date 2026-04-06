@@ -1,0 +1,64 @@
+{
+  "template": "./src/twig/pages/ui.twig",
+  "colors": [
+    {
+      "name": "--unitshot-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "--unitshot-black",
+      "hex": "#000000"
+    },
+    {
+      "name": "--unitshot-gray-main",
+      "hex": "#393939"
+    },
+    {
+      "name": "--unitshot-gray-light",
+      "hex": "#F5F5F5"
+    },
+    {
+      "name": "--unitshot-gray-dark",
+      "hex": "#9D9D9D"
+    },
+    {
+      "name": "--unitshot-gray-darker",
+      "hex": "#CFCFCF"
+    },
+    {
+      "name": "--unitshot-accent-pink",
+      "hex": "#ED81B5"
+    }
+  ],
+  "components": [
+    "breadcrumbs",
+    "button-arrow",
+    "button-round",
+    "button-square",
+    "checkbox",
+    "modal-add-cart",
+    "modal-call",
+    "modal-lang",
+    "modal-remove-cart",
+    "page-title",
+    "pagination",
+    "phone-number",
+    "product-card",
+    "slider-categories",
+    "slider-logo-images",
+    "slider-product-cards"
+  ],
+  "blocks": [
+    "brand-logos",
+    "category-links",
+    "category-showcase",
+    "client-logos",
+    "feedback-info",
+    "footer",
+    "header",
+    "popular-products",
+    "slider-posts",
+    "slider-reviews",
+    "text-image"
+  ]
+}

@@ -4,6 +4,36 @@ import twig from '@vituum/vite-plugin-twig'
 import postcss from '@vituum/vite-plugin-postcss'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
+function injectAssetsIntoComponents() {
+    let isBuild = false
+
+    return {
+        name: 'inject-assets-into-components',
+        configResolved(config) {
+            isBuild = config.command === 'build'
+        },
+        transformIndexHtml: {
+            order: 'post',
+            handler(html, ctx) {
+                const id = ctx.path || ctx.filename || ''
+                const isComponent = id.includes('/components/') || id.includes('/blocks/')
+
+                if (!isComponent) return html
+
+                const head = isBuild ? '<head><meta charset="UTF-8"/><link rel="stylesheet" href="/css/main.css"></head>' : '<head><meta charset="UTF-8"/></head>'
+                const script = isBuild ? '<script src="/js/main.js"></script>' : '<script src="/src/scripts/main.js" type="module"></script>'
+
+                let result = head
+                result += '<body>'
+                result += html
+                result += script
+                result += '</body>'
+
+                return result
+            }
+        }
+    }
+}
 
 export default defineConfig({
     server: {
@@ -51,6 +81,7 @@ export default defineConfig({
 
             ]
         }),
+        injectAssetsIntoComponents()
     ],
     build: {
         rollupOptions: {

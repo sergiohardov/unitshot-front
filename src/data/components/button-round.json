@@ -1,0 +1,7 @@
+{
+  "template": "./src/twig/components/button-round.twig",
+  "type": "link",
+  "link": "#",
+  "version": "v1",
+  "disabled": false
+}

@@ -1,0 +1,11 @@
+{
+  "template": "./src/twig/components/button-square.twig",
+  "text": "Button",
+  "type": "link",
+  "href": "#",
+  "version": "v1",
+  "id": "custom-id",
+  "class": "custom-class",
+  "data": "custom-data",
+  "disabled": false
+}
