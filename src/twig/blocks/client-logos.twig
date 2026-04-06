@@ -1,9 +1,9 @@
 <div class="us-client-logos">
     <div class="us-container">
         <div class="us-client-logos__inner">
-            {% if title %}
-                <h2 class="us-client-logos__title">{{ title }}</h2>
-            {% endif %}
+            {% include '@components/page-title.twig' with {
+                'title': title
+            } %}
 
             {% if clients %}
                 <ul class="us-client-logos__list us-client-logos__list--collapsed">

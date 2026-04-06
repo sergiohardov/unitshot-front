@@ -4,9 +4,10 @@
 
 {% block before_slider %}
 <div class="us-container">
-    {% if title %}
-        <h2 class="us-slider-reviews__title">{{ title }}</h2>
-    {% endif %}
+    {% include '@components/page-title.twig' with {
+        'title': title,
+        'class': 'us-slider-reviews__title'
+    } %}
 
     {% endblock %}
 

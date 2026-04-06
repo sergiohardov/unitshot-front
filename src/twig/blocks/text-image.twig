@@ -2,9 +2,9 @@
     <div class="us-container">
         <div class="us-text-image__inner">
             <div class="us-text-image__text">
-                {% if title %}
-                    <h2 class="us-text-image__title">{{ title }}</h2>
-                {% endif %}
+                {% include '@components/page-title.twig' with {
+                    'title': title
+                } %}
 
                 {% if description %}
                     <div class="us-text-image__description {% if hide_text %} us-text-image__description--hidden {% endif %}">

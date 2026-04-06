@@ -11,17 +11,6 @@
     }
   }
 
-  &__title {
-    font-family: var(--unitshot-font-family-body);
-    font-weight: 700;
-    font-size: 46px;
-    text-transform: uppercase;
-
-    @include media-md() {
-      font-size: 24px;
-    }
-  }
-
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

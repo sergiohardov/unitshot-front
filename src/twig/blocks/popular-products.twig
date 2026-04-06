@@ -1,9 +1,9 @@
 <div class="us-popular-products">
     <div class="us-container">
         <div class="us-popular-products__inner">
-            {% if title %}
-                <h2 class="us-popular-products__title">{{ title }}</h2>
-            {% endif %}
+            {% include '@components/page-title.twig' with {
+                'title': title
+            } %}
 
             {% if products %}
                 {% include '@components/slider-product-cards.twig' with {

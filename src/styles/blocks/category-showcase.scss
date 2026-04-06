@@ -10,15 +10,4 @@
       gap: 12px;
     }
   }
-
-  &__title {
-    font-family: var(--unitshot-font-family-body);
-    font-weight: 700;
-    font-size: 46px;
-    text-transform: uppercase;
-
-    @include media-md() {
-      font-size: 24px;
-    }
-  }
 }

@@ -1,0 +1,13 @@
+@use '@styles/base/mixins' as *;
+
+.us-page-title {
+  font-family: var(--unitshot-font-family-body);
+  font-size: 46px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--unitshot-gray-main);
+
+  @include media-md() {
+    font-size: 24px;
+  }
+}

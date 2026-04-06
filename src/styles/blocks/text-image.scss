@@ -22,17 +22,6 @@
     }
   }
 
-  &__title {
-    font-family: var(--unitshot-font-family-body);
-    font-size: 46px;
-    color: var(--unitshot-gray-main);
-    text-transform: uppercase;
-
-    @include media-md() {
-      font-size: 24px;
-    }
-  }
-
   &__description {
     display: grid;
     grid-template-rows: 1fr;

@@ -2,15 +2,9 @@
 
 .us-slider-reviews {
   &__title {
-    font-family: var(--unitshot-font-family-body);
-    font-size: 46px;
-    font-weight: 700;
-    color: var(--unitshot-gray-main);
-    text-transform: uppercase;
     margin-bottom: 32px;
 
     @include media-md() {
-      font-size: 24px;
       margin-bottom: 12px;
     }
   }
