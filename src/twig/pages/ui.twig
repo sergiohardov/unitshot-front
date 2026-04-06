@@ -53,38 +53,16 @@
                     <h2 class="ui-section__title">Типографика</h2>
                 </div>
 
-{#                <div class="ui-typo">#}
-{#                    <div class="ui-typo-row">#}
-{#                        <span class="ui-typo-label">H1 / 48px / 300</span>#}
-{#                        <p class="ui-typo-sample ui-typo-sample--h1">Заголовок першого рівня</p>#}
-{#                    </div>#}
-{#                    <div class="ui-typo-row">#}
-{#                        <span class="ui-typo-label">H2 / 36px / 400</span>#}
-{#                        <p class="ui-typo-sample ui-typo-sample--h2">Заголовок другого рівня</p>#}
-{#                    </div>#}
-{#                    <div class="ui-typo-row">#}
-{#                        <span class="ui-typo-label">H3 / 28px / 400</span>#}
-{#                        <p class="ui-typo-sample ui-typo-sample--h3">Заголовок третього рівня</p>#}
-{#                    </div>#}
-{#                    <div class="ui-typo-row">#}
-{#                        <span class="ui-typo-label">H4 / 22px / 500</span>#}
-{#                        <p class="ui-typo-sample ui-typo-sample--h4">Заголовок четвертого рівня</p>#}
-{#                    </div>#}
-{#                    <div class="ui-typo-row">#}
-{#                        <span class="ui-typo-label">Body / 16px / 400</span>#}
-{#                        <p class="ui-typo-sample ui-typo-sample--body">Основний текст сторінки. Використовується для#}
-{#                            параграфів та загального контенту.</p>#}
-{#                    </div>#}
-{#                    <div class="ui-typo-row">#}
-{#                        <span class="ui-typo-label">Small / 13px / 400</span>#}
-{#                        <p class="ui-typo-sample ui-typo-sample--small">Дрібний текст для підписів та допоміжної#}
-{#                            інформації</p>#}
-{#                    </div>#}
-{#                    <div class="ui-typo-row">#}
-{#                        <span class="ui-typo-label">Mono / 14px / 400</span>#}
-{#                        <p class="ui-typo-sample ui-typo-sample--mono">--color-primary: #1a1a1a;</p>#}
-{#                    </div>#}
-{#                </div>#}
+                <div class="ui-typo">
+                    {% for font in fonts %}
+                        {% for weight in font.weights %}
+                            <div class="ui-typo-row">
+                                <span class="ui-typo-label">{{ font.name }} / {{ weight }}</span>
+                                <p class="ui-typo-sample ui-typo-sample--{{ weight }}">Example Text</p>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
             </section>
 
             <section class="ui-section" id="components">
@@ -131,7 +109,9 @@
             const kit = document.querySelector('.ui-kit');
             const sidebar = document.getElementById('uiSidebar');
             const toggleBtn = document.getElementById('uiSidebarToggle');
-            const isMobile = function () { return window.innerWidth <= 768; };
+            const isMobile = function () {
+                return window.innerWidth <= 768;
+            };
 
             // Desktop: сворачивание сайдбара
             if (toggleBtn) {

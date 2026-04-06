@@ -44,26 +44,23 @@
   ],
   "fonts": [
     {
-      "var": "--unitshot-font-family-body",
       "name": "SuisseIntl",
       "weights": [
-        300,
-        500,
-        700
+        "font-sussie-regular",
+        "font-sussie-medium",
+        "font-sussie-bold"
       ]
     },
     {
-      "var": "--unitshot-font-family-blog",
       "name": "PPNeueMontrealMono",
       "weights": [
-        500
+        "font-drkrapka-medium"
       ]
     },
     {
-      "var": "--unitshot-font-family-tags",
       "name": "DRKrapkaRound",
       "weights": [
-        500
+        "font-ppneue-medium"
       ]
     }
   ],

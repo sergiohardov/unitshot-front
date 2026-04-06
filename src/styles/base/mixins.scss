@@ -1,3 +1,4 @@
+/* Media Queries */
 @mixin media-xl() {
   @media screen and (max-width: 1200px) {
     @content;
@@ -21,3 +22,30 @@
     @content;
   }
 }
+
+/* Fonts */
+@mixin font-sussie-regular {
+  font-family: "SuisseIntl", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-suisse-medium {
+  font-family: "SuisseIntl", sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-suisse-bold {
+  font-family: "SuisseIntl", sans-serif;
+  font-weight: 700;
+}
+
+@mixin font-drkrapka-medium {
+  font-family: "DRKrapkaRound", sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-ppneue-medium {
+  font-family: "PPNeueMontrealMono", monospace;
+  font-weight: 500;
+}
+
