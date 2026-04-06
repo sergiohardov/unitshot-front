@@ -1,6 +1,8 @@
 {
   "template": "./src/twig/components/button-round.twig",
   "type": "link",
+  "text": "",
+  "icon": "",
   "link": "#",
   "version": "v1",
   "disabled": false
