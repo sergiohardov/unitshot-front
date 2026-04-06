@@ -45,6 +45,13 @@
         'slides': slider_reviews.slides,
     } %}
 
+    {% include '@blocks/feedback-info.twig' with {
+        'title': feedback_info.title,
+        'description': feedback_info.description,
+        'socials': feedback_info.socials,
+        'numbers': feedback_info.numbers,
+    } %}
+
     {% include '@blocks/slider-posts.twig' with {
         'title': slider_posts.title,
         'posts': slider_posts.posts,
