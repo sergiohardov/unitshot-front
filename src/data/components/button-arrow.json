@@ -3,6 +3,6 @@
   "type": "link",
   "link": "#",
   "version": "v1",
-  "class": "custom-class",
+  "class": "button-arrow-class",
   "disabled": false
 }
