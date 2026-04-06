@@ -34,6 +34,11 @@
   font-weight: 500;
 }
 
+@mixin font-suisse-semibold {
+  font-family: "SuisseIntl", sans-serif;
+  font-weight: 600;
+}
+
 @mixin font-suisse-bold {
   font-family: "SuisseIntl", sans-serif;
   font-weight: 700;
