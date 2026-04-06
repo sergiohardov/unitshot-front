@@ -12,10 +12,9 @@
   }
 
   &__description {
-    font-family: var(--unitshot-font-family-blog);
-    font-weight: 300;
     font-size: 20px;
     color: var(--unitshot-gray-main);
+    @include font-ppneue-medium;
 
     @include media-md() {
       font-size: 14px;
@@ -40,10 +39,9 @@
   }
 
   &__contacts-title {
-    font-family: var(--unitshot-font-family-body);
     font-size: 18px;
-    font-weight: 300;
     color: var(--unitshot-gray-main);
+    @include font-suisse-medium;
 
     @include media-md() {
       font-size: 14px;
