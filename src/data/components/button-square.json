@@ -1,11 +1,11 @@
 {
   "template": "./src/twig/components/button-square.twig",
-  "text": "Button",
-  "type": "link",
+  "text": "Перейти",
+  "type": "",
   "href": "#",
   "version": "v1",
-  "id": "custom-id",
-  "class": "custom-class",
-  "data": "custom-data",
+  "id": "button-square-id",
+  "class": "button-square-class",
+  "data": "data-button-square",
   "disabled": false
 }
