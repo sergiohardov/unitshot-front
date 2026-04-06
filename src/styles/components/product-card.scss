@@ -22,9 +22,8 @@
     align-items: center;
     padding-top: 9px;
     gap: 5px;
-    font-family: var(--unitshot-font-family-tags);
     font-size: 16px;
-    font-weight: 500;
+    @include font-drkrapka-medium;
 
     @include media-md() {
       font-size: 12px;
@@ -89,10 +88,9 @@
 
   &__title {
     text-align: center;
-    font-family: var(--unitshot-font-family-body);
     font-size: 22px;
-    font-weight: 500;
     color: var(--unitshot-gray-main);
+    @include font-suisse-semibold;
 
     @include media-md() {
       font-size: 18px;
@@ -101,11 +99,10 @@
 
   &__brand {
     text-align: center;
-    font-family: var(--unitshot-font-family-body);
     font-size: 18px;
-    font-weight: 500;
     text-transform: uppercase;
     color: var(--unitshot-gray-main);
+    @include font-suisse-medium;
 
     @include media-md() {
       font-size: 14px;
@@ -114,10 +111,9 @@
 
   &__category {
     text-align: center;
-    font-family: var(--unitshot-font-family-body);
     font-size: 18px;
-    font-weight: 500;
     color: var(--unitshot-gray-main);
+    @include font-suisse-medium;
 
     @include media-md() {
       font-size: 14px;
@@ -145,11 +141,10 @@
     }
 
     &--old {
-      font-family: var(--unitshot-font-family-body);
       font-size: 16px;
-      font-weight: 500;
       color: var(--unitshot-red);
       text-decoration: line-through;
+      @include font-suisse-semibold;
 
       @include media-md() {
         font-size: 12px;
@@ -157,9 +152,9 @@
     }
 
     &--new {
-      font-family: var(--unitshot-font-family-blog);
       font-size: 20px;
-      font-weight: 500;
+      color: var(--unitshot-gray-main);
+      @include font-ppneue-medium;
 
       @include media-md() {
         font-size: 14px;
