@@ -76,7 +76,8 @@ export default defineConfig({
                     } catch (e) {
                         return `<!-- svg not found: ${name} -->`
                     }
-                }
+                },
+                home_url: () => '/pages/home.html'
             }
         }),
         postcss({

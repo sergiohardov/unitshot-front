@@ -1,6 +1,5 @@
 {
   "template": "./src/twig/blocks/header.twig",
-  "home_url": "/home.html",
   "logo": {
     "src": "/src/images/pictures/logo.png",
     "alt": "Site Logo"

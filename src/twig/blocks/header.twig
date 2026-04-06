@@ -2,8 +2,8 @@
     <div class="us-container">
         <div class="us-header__inner">
             <div class="us-header__top">
-                {% if logo.src and home_url %}
-                    <a href="{{ home_url }}" class="us-header__logo">
+                {% if logo.src %}
+                    <a href="{{ home_url() }}" class="us-header__logo">
                         <img src="{{ logo.src }}" alt="" class="{{ logo.alt }}">
                     </a>
                 {% endif %}
