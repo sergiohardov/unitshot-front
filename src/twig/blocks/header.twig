@@ -10,30 +10,34 @@
 
                <div class="us-header__top-right">
                    <div class="us-header__settings">
-                       <div class="us-header__currency">
-                           <a href="#" class="us-header__currency-item">UAH</a>
-                           <a href="#" class="us-header__currency-item us-header__currency-item--current">EUR</a>
+                       <div class="us-header__settings-item us-header__currency">
+                           <a href="#" class="us-header__settings-item-title">UAH</a>
+                           <a href="#" class="us-header__settings-item-title us-header__settings-item-title-current">EUR</a>
                        </div>
 
-                       <div class="us-header__lang">
-                           <a href="#" class="us-header__lang-item">UA</a>
-                           <a href="#" class="us-header__lang-item us-header__lang-item--current">RU</a>
+                       <div class="us-header__settings-item us-header__lang">
+                           <a href="#" class="us-header__settings-item-title">UA</a>
+                           <a href="#" class="us-header__settings-item-title us-header__settings-item-title--current">RU</a>
                        </div>
                    </div>
 
                    <div class="us-header__buttons">
-                       <button class="us-header__search">
-                           <img class="us-header__search-img" src="/src/images/icons/search.svg" alt="search">
+                       <button class="us-header__buttons-item us-header__buttons-item--burger">
+                           {{ svg_icon('burger')|raw }}
                        </button>
 
-                       <button class="us-header__cart">
-                           <img class="us-header__cart-img" src="/src/images/icons/cart.svg" alt="cart">
+                       <button class="us-header__buttons-item us-header__buttons-item--search">
+                           {{ svg_icon('search')|raw }}
+                       </button>
+
+                       <button class="us-header__buttons-item us-header__buttons-item--cart">
+                           {{ svg_icon('cart')|raw }}
                        </button>
                    </div>
                </div>
             </div>
-            <div class="us-header__bottom">
 
+            <div class="us-header__bottom">
                 <nav class="us-header__nav">
                     <button class="us-header__burger">
                         <img src="/src/images/icons/burger.svg" alt="burger">
