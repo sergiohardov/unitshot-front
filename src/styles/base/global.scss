@@ -1,3 +1,5 @@
+@use '@styles/base/mixins' as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +21,18 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--unitshot-gray-light);
-  font-family: var(--unitshot-font-family-body);
-  color: var(--unitshot-gray-main);
-  font-size: 16px;
   min-height: 100vh;
+  font-size: 16px;
+  color: var(--unitshot-gray-main);
+  @include font-sussie-regular;
+
+  &.scroll-lock {
+    overflow: hidden;
+  }
 }
 
-body.scroll-lock {
-  overflow: hidden;
+main {
+  flex: 1;
 }
 
 img {
@@ -35,33 +41,9 @@ img {
   height: auto;
 }
 
-main {
-  flex: 1;
-}
-
 .us-container {
   margin: 0 auto;
   max-width: 1320px; // 1290px + 30px (padding)
   padding: 0 15px;
   width: 100%;
-}
-
-.us-title-h1 {
-  font-size: 46px;
-  font-family: var(--unitshot-font-family-body);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.us-title-h2 {
-  font-size: 32px;
-  font-family: var(--unitshot-font-family-body);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.us-title-h3 {
-  font-size: 20px;
-  font-family: var(--unitshot-font-family-body);
-  font-weight: 700;
 }
