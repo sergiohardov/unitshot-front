@@ -21,10 +21,10 @@ function injectAssetsIntoComponents() {
 
                 if (!isComponent) return html
 
-                const head = isBuild ? '<head><meta charset="UTF-8"/><link rel="stylesheet" href="/css/main.css"></head>' : '<head><meta charset="UTF-8"/></head>'
+                const style = isBuild ? '<link rel="stylesheet" href="/css/main.css">' : ''
                 const script = isBuild ? '<script src="/js/main.js"></script>' : '<script src="/src/scripts/main.js" type="module"></script>'
 
-                let result = head
+                let result = `<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>${style}</head>`
                 result += '<body>'
                 result += html
                 result += script
