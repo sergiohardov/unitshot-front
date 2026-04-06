@@ -5,10 +5,6 @@
                 'title': title
             } %}
 
-            {% if title %}
-                <h2 class="us-category-showcase__title">{{ title }}</h2>
-            {% endif %}
-
             {% if categories %}
                 {% include '@components/slider-categories.twig' with {
                     'categories': categories
