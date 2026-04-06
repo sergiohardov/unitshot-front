@@ -1,33 +1,32 @@
 {
   "template": "./src/twig/pages/ui.twig",
   "colors": [
+    "--unitshot-white",
+    "--unitshot-black",
+    "--unitshot-red",
+    "--unitshot-gray-main",
+    "--unitshot-gray-light",
+    "--unitshot-gray-dark",
+    "--unitshot-gray-labels",
+    "--unitshot-gray-darker",
+    "--unitshot-gray-most-darker",
+    "--unitshot-accent-pink"
+  ],
+  "fonts": [
     {
-      "name": "--unitshot-white",
-      "hex": "#FFFFFF"
+      "var": "--unitshot-font-family-body",
+      "name": "SuisseIntl",
+      "weights": [300,500,700]
     },
     {
-      "name": "--unitshot-black",
-      "hex": "#000000"
+      "var": "--unitshot-font-family-blog",
+      "name": "PPNeueMontrealMono",
+      "weights": [500]
     },
     {
-      "name": "--unitshot-gray-main",
-      "hex": "#393939"
-    },
-    {
-      "name": "--unitshot-gray-light",
-      "hex": "#F5F5F5"
-    },
-    {
-      "name": "--unitshot-gray-dark",
-      "hex": "#9D9D9D"
-    },
-    {
-      "name": "--unitshot-gray-darker",
-      "hex": "#CFCFCF"
-    },
-    {
-      "name": "--unitshot-accent-pink",
-      "hex": "#ED81B5"
+      "var": "--unitshot-font-family-tags",
+      "name": "DRKrapkaRound",
+      "weights": [500]
     }
   ],
   "components": [
