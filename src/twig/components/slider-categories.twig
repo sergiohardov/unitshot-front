@@ -1,21 +1,18 @@
-<div class="us-slider-categories">
+{% extends '@layouts/slider.twig' %}
 
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            {% for slide in slides %}
-                <div class="swiper-slide us-slider-categories__slide">
-                    <a class="us-slider-categories__slide-link" href="{{ slide.link }}">
-                        {% if not slide.image.src %}
-                            <img class="us-slider-categories__slide-img" src="/src/images/pictures/placeholder-image.jpg" alt="{{ slide.image.alt }}">
-                        {% else %}
-                            <img class="us-slider-categories__slide-img" src="{{ slide.image.src }}" alt="{{ slide.image.alt }}">
-                        {% endif %}
-                        <span class="us-slider-categories__slide-title">{{ slide.title }}</span>
-                    </a>
-                </div>
-            {% endfor %}
+{% block class_slider %} us-slider-categories {% endblock %}
+
+{% block slides %}
+    {% for category in categories %}
+        <div class="swiper-slide us-slider-categories__slide">
+            <a class="us-slider-categories__link" href="{{ category.link }}">
+                {% if not category.image.src %}
+                    <img class="us-slider-categories__img" src="/src/images/pictures/placeholder-image.jpg" alt="{{ category.image.alt }}">
+                {% else %}
+                    <img class="us-slider-categories__img" src="{{ category.image.src }}" alt="{{ category.image.alt }}">
+                {% endif %}
+                <span class="us-slider-categories__title">{{ category.title }}</span>
+            </a>
         </div>
-    </div>
-
-    <div class="us-slider-categories__pagination"></div>
-</div>
+    {% endfor %}
+{% endblock %}

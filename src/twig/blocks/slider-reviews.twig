@@ -1,41 +1,34 @@
-<div class="us-slider-reviews">
-    <div class="us-container">
-        <div class="us-slider-reviews__inner">
-            {% if title %}
-                <h2 class="us-slider-reviews__title">{{ title }}</h2>
-            {% endif %}
+{% extends '@layouts/slider.twig' %}
 
-            <div class="us-slider-reviews__slider">
-                {% include '@components/button-arrow.twig' with {
-                    'version': 'v2',
-                    'class': 'us-slider-reviews__slider-prev'
-                } %}
+{% block class_slider %} us-slider-reviews {% endblock %}
 
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        {% for slide in slides %}
-                            <div class="swiper-slide">
-                                <div class="us-slider-reviews__slider-slide">
-                                    <div class="us-slider-reviews__slider-image">
-                                        <img src="{{ slide.image.src }}" alt="{{ slide.image.alt }}">
-                                    </div>
-                                    <div class="us-slider-reviews__slider-text">
-                                        <p class="us-slider-reviews__slider-name">{{ slide.name }}</p>
-                                        <p class="us-slider-reviews__slider-position">{{ slide.position }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
+{% block before_slider %}
+<div class="us-container">
+    {% if title %}
+        <h2 class="us-slider-reviews__title">{{ title }}</h2>
+    {% endif %}
+
+    {% endblock %}
+
+    {% block slides %}
+        {% for slide in slides %}
+            <div class="swiper-slide">
+                <div class="us-slider-reviews__slide">
+                    <div class="us-slider-reviews__slide-image">
+                        <img src="{{ slide.image.src }}" alt="{{ slide.image.alt }}">
+                    </div>
+
+                    <div class="us-slider-reviews__slide-text">
+                        <p class="us-slider-reviews__slide-name">{{ slide.name }}</p>
+                        <p class="us-slider-reviews__slide-position">{{ slide.position }}</p>
                     </div>
                 </div>
-
-                {% include '@components/button-arrow.twig' with {
-                    'version': 'v2',
-                    'class': 'us-slider-reviews__slider-next'
-                } %}
             </div>
+        {% endfor %}
+    {% endblock %}
 
-            <div class="us-slider-reviews__slider-pagination"></div>
-        </div>
-    </div>
+    {% block after_slider %}
 </div>
+{% endblock %}
+
+

@@ -1,30 +1,19 @@
-<div class="us-slider-product-cards">
-    {% include '@components/button-arrow.twig' with {
-        'version': 'v2',
-        'class': 'us-slider-product-cards__prev'
-    } %}
+{% extends '@layouts/slider.twig' %}
 
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            {% for product in products %}
-                <div class="swiper-slide">
-                    {% include '@components/product-card.twig' with {
-                        'tags': product.tags,
-                        'image': product.image,
-                        'title': product.title,
-                        'brand': product.brand,
-                        'category': product.category,
-                        'price': product.price
-                    } %}
-                </div>
-            {% endfor %}
+{% block class_slider %} us-slider-product-cards {% endblock %}
+
+{% block slides %}
+    {% for product in products %}
+        <div class="swiper-slide">
+            {% include '@components/product-card.twig' with {
+                'tags': product.tags,
+                'image': product.image,
+                'title': product.title,
+                'brand': product.brand,
+                'category': product.category,
+                'price': product.price
+            } %}
         </div>
-    </div>
+    {% endfor %}
+{% endblock %}
 
-    {% include '@components/button-arrow.twig' with {
-        'version': 'v2',
-        'class': 'us-slider-product-cards__next'
-    } %}
-
-    <div class="us-slider-product-cards__pagination"></div>
-</div>

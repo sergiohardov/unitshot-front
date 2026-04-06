@@ -1,16 +1,13 @@
-<div class="us-slider-logo-images">
+{% extends '@layouts/slider.twig' %}
 
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            {% for logo in logotypes %}
-                <div class="swiper-slide us-slider-logo-images__slide">
-                    <a class="us-slider-logo-images__slide-link" href="{{ logo.link }}">
-                        <img class="us-slider-logo-images__slide-img" src="{{ logo.image.src }}" alt="{{ logo.image.alt }}">
-                    </a>
-                </div>
-            {% endfor %}
+{% block class_slider %} us-slider-logo-images {% endblock %}
+
+{% block slides %}
+    {% for logo in logotypes %}
+        <div class="swiper-slide">
+            <a class="us-slider-logo-images__link" href="{{ logo.link }}">
+                <img class="us-slider-logo-images__img" src="{{ logo.image.src }}" alt="{{ logo.image.alt }}">
+            </a>
         </div>
-    </div>
-
-    <div class="us-slider-logo-images__pagination"></div>
-</div>
+    {% endfor %}
+{% endblock %}

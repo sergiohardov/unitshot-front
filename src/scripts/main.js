@@ -1,4 +1,5 @@
 import '@styles/main.scss'
+
 import PhoneNumberComponent from "@scripts/components/phone-number.js";
 import ModalCallComponent from "@scripts/components/modal-call.js";
 import ModalAddCartComponent from "@scripts/components/modal-add-cart.js";

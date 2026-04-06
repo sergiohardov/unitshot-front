@@ -1,35 +1,21 @@
 @use '@styles/base/mixins' as *;
 
 .us-slider-reviews {
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    @include media-md() {
-      gap: 12px;
-    }
-  }
-
   &__title {
     font-family: var(--unitshot-font-family-body);
     font-size: 46px;
     font-weight: 700;
     color: var(--unitshot-gray-main);
     text-transform: uppercase;
+    margin-bottom: 32px;
 
     @include media-md() {
       font-size: 24px;
+      margin-bottom: 12px;
     }
   }
 
-  &__slider {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-
-  &__slider-slide {
+  &__slide {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -39,47 +25,10 @@
     }
   }
 
-  &__slider-prev {
-    transform: rotate(180deg);
-  }
-
-  &__slider-prev, &__slider-next {
-    @include media-md {
-      display: none;
-    }
-  }
-
-  &__slider-pagination {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-
-    &--lock {
-      display: none;
-    }
-
-    &-bullet {
-      cursor: pointer;
-      width: 3px;
-      height: 3px;
-      border-radius: 10px;
-      background-color: var(--unitshot-gray-darker);
-      transition: var(--unitshot-transition-speed);
-
-      &:hover {
-        background-color: var(--unitshot-gray-main);
-      }
-
-      &--active {
-        width: 18px;
-        background-color: var(--unitshot-gray-main);
-      }
-    }
-  }
-
-  &__slider-image {
+  &__slide-image {
     height: 376px;
+    border-radius: 12px;
+    overflow: hidden;
 
     @include media-md {
       height: 260px;
@@ -92,7 +41,7 @@
     }
   }
 
-  &__slider-text {
+  &__slide-text {
     font-family: var(--unitshot-font-family-blog);
     font-weight: 500;
     display: flex;
@@ -104,7 +53,7 @@
     }
   }
 
-  &__slider-name {
+  &__slide-name {
     font-size: 22px;
     color: var(--unitshot-gray-main);
 
@@ -113,12 +62,22 @@
     }
   }
 
-  &__slider-position {
+  &__slide-position {
     font-size: 18px;
     color: var(--unitshot-gray-most-darker);
 
     @include media-md {
       font-size: 14px;
+    }
+  }
+
+  .us-slider__pagination {
+    margin-top: 32px;
+  }
+
+  .us-slider__prev, .us-slider__next {
+    @include media-md {
+      display: none;
     }
   }
 }
