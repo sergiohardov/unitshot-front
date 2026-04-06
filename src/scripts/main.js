@@ -12,6 +12,7 @@ import SliderCategoriesComponent from "@scripts/components/slider-categories.js"
 import TextImageBlock from "@scripts/blocks/text-image.js";
 import ClientLogosBlock from "@scripts/blocks/client-logos.js";
 import SliderReviewsBlock from "@scripts/blocks/slider-reviews.js";
+import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
     TextImageBlock.init()
     ClientLogosBlock.init()
     SliderReviewsBlock.init()
+    SliderPostsBlock.init()
 })
