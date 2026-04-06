@@ -1,32 +1,70 @@
 {
   "template": "./src/twig/pages/ui.twig",
   "colors": [
-    "--unitshot-white",
-    "--unitshot-black",
-    "--unitshot-red",
-    "--unitshot-gray-main",
-    "--unitshot-gray-light",
-    "--unitshot-gray-dark",
-    "--unitshot-gray-labels",
-    "--unitshot-gray-darker",
-    "--unitshot-gray-most-darker",
-    "--unitshot-accent-pink"
+    {
+      "var": "--unitshot-white",
+      "name": "White"
+    },
+    {
+      "var": "--unitshot-black",
+      "name": "Black"
+    },
+    {
+      "var": "--unitshot-red",
+      "name": "Red"
+    },
+    {
+      "var": "--unitshot-gray-main",
+      "name": "Gray Main"
+    },
+    {
+      "var": "--unitshot-gray-light",
+      "name": "Gray Light"
+    },
+    {
+      "var": "--unitshot-gray-dark",
+      "name": "Gray Dark"
+    },
+    {
+      "var": "--unitshot-gray-labels",
+      "name": "Gray Labels"
+    },
+    {
+      "var": "--unitshot-gray-darker",
+      "name": "Gray Darker"
+    },
+    {
+      "var": "--unitshot-gray-most-darker",
+      "name": "Gray Most Darker"
+    },
+    {
+      "var": "--unitshot-accent-pink",
+      "name": "Accent Pink"
+    }
   ],
   "fonts": [
     {
       "var": "--unitshot-font-family-body",
       "name": "SuisseIntl",
-      "weights": [300,500,700]
+      "weights": [
+        300,
+        500,
+        700
+      ]
     },
     {
       "var": "--unitshot-font-family-blog",
       "name": "PPNeueMontrealMono",
-      "weights": [500]
+      "weights": [
+        500
+      ]
     },
     {
       "var": "--unitshot-font-family-tags",
       "name": "DRKrapkaRound",
-      "weights": [500]
+      "weights": [
+        500
+      ]
     }
   ],
   "components": [
@@ -59,5 +97,8 @@
     "slider-posts",
     "slider-reviews",
     "text-image"
+  ],
+  "pages": [
+    "home"
   ]
 }
