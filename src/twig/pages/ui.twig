@@ -72,95 +72,12 @@
             <li>
                 <span class="ui-title">Components</span>
                 <ol>
-                    <li>
-                        <span class="ui-title">Checkbox</span>
-                        <div class="ui-content">
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% for item in checkbox %}
-                                    {% include '@components/checkbox.twig' with {
-                                        'label': item.label,
-                                        'id': item.id
-                                    } %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </li>
+                    {% if components %}
+                        {% for component in components %}
+                            <li><a href="/components/{{ component }}.html" style="color: var(--unitshot-accent-pink); text-decoration: underline">{{ component }}</a></li>
+                        {% endfor %}
+                    {% endif %}
 
-                    <li>
-                        <span class="ui-title">Button Square</span>
-                        <div class="ui-content">
-                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
-                                {% for item in button_square %}
-                                    {# для переключения тега кнопки type = link || button #}
-                                    {% include '@components/button-square.twig' with {
-                                        'version': item.version,
-                                        'text': item.text,
-                                        'disabled': item.disabled,
-                                        'type': 'link'
-                                    } %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Button Round</span>
-                        <div class="ui-content">
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% for item in button_round %}
-                                    {% include '@components/button-round.twig' with {
-                                        'version': item.version,
-                                        'text': item.text
-                                    } %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Button Arrow</span>
-                        <div class="ui-content">
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% for item in button_arrow %}
-                                    {% include '@components/button-arrow.twig' with {
-                                        'version': item.version,
-                                        'text': item.text
-                                    } %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Breadcrumbs</span>
-                        <div class="ui-content">
-                            {% include '@components/breadcrumbs.twig' with {
-                                'links': breadcrumbs.links,
-                            } %}
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Pagination</span>
-                        <div class="ui-content">
-                            {% include '@components/pagination.twig' with {
-                                'prev': pagination.prev,
-                                'next': pagination.next,
-                                'pages': pagination.pages
-                            } %}
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Phone Number</span>
-                        <div class="ui-content">
-                            {% for item in phone_number %}
-                                {% include '@components/phone-number.twig' with {
-                                    'number': item.number,
-                                } %}
-                            {% endfor %}
-                        </div>
-                    </li>
 
                     <li>
                         <span class="ui-title">Modals</span>
@@ -225,61 +142,16 @@
                             }
                         } %}
                     </li>
-
-                    <li>
-                        <span class="ui-title">Product Card</span>
-                        <div class="ui-content">
-                            <style>
-                                .ui-cards {
-                                    display: grid;
-                                    grid-template-columns: repeat(4, 1fr);
-                                    gap: 40px;
-                                }
-                                @media (max-width: 768px) {
-                                    .ui-cards {
-                                        grid-template-columns: repeat(2, 1fr);
-                                    }
-                                }
-                            </style>
-                            <div class="ui-cards">
-                                {% include '@components/product-card.twig' with {
-                                    'tags': product_card.tags,
-                                    'image': product_card.image,
-                                    'title': product_card.title,
-                                    'brand': product_card.brand,
-                                    'category': product_card.category,
-                                    'price': product_card.price
-                                } %}
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Slider Product Cards</span>
-                        <div class="ui-content">
-                            {% include '@components/slider-product-cards.twig' with {
-                                'products': slider_product_cards.products
-                            } %}
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Slider Logo Images</span>
-                        <div class="ui-content">
-                            {% include '@components/slider-logo-images.twig' with {
-                                'logotypes': slider_logo_images
-                            } %}
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Slider Categories</span>
-                        <div class="ui-content">
-                            {% include '@components/slider-categories.twig' with {
-                                'categories': slider_categories
-                            } %}
-                        </div>
-                    </li>
+                </ol>
+            </li>
+            <li>
+                <span class="ui-title">Blocks</span>
+                <ol>
+                    {% if blocks %}
+                        {% for block in blocks %}
+                            <li><a href="/blocks/{{ block }}.html" style="color: var(--unitshot-accent-pink); text-decoration: underline">{{ block }}</a></li>
+                        {% endfor %}
+                    {% endif %}
                 </ol>
             </li>
         </ol>
