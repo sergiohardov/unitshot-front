@@ -47,9 +47,9 @@
   }
 
   &__title {
-    font-family: var(--body-font-family);
     font-size: 26px;
-    font-weight: 500;
+    color: var(--unitshot-gray-main);
+    @include font-suisse-semibold;
 
     @include media-md {
       font-size: 14px;
