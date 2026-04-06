@@ -4,6 +4,7 @@ import twig from '@vituum/vite-plugin-twig'
 import postcss from '@vituum/vite-plugin-postcss'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
+import fs from 'fs'
 function injectAssetsIntoComponents() {
     let isBuild = false
 
@@ -52,10 +53,12 @@ export default defineConfig({
     plugins: [
         vituum({
             input: [
-                path.resolve(__dirname, './src/twig/pages'),
+                path.resolve(__dirname, './src/data/components/*.json'),
+                path.resolve(__dirname, './src/data/blocks/*.json'),
+                path.resolve(__dirname, './src/data/pages/*.json'),
             ],
             pages: {
-                dir: path.resolve(__dirname, './src/twig/pages'),
+                dir: path.resolve(__dirname, './src/data/'),
             },
         }),
         twig({
@@ -65,6 +68,16 @@ export default defineConfig({
                 'pages'         : 'src/twig/pages',
                 'layouts'       : 'src/twig/layouts',
             },
+            functions: {
+                svg_icon: (name) => {
+                    const filePath = path.resolve(__dirname, `./src/images/icons/${name}.svg`)
+                    try {
+                        return fs.readFileSync(filePath, 'utf-8')
+                    } catch (e) {
+                        return `<!-- svg not found: ${name} -->`
+                    }
+                }
+            }
         }),
         postcss({
             autoprefixer: {
