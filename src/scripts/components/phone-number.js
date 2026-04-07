@@ -9,7 +9,7 @@ class PhoneNumberComponent {
 
     showLink() {
         const a = document.createElement('a')
-        a.classList.add('us-phone-number')
+        a.className = this.elem.className
         a.href = `tel:${this.fullNumber}`
         a.textContent = this.fullNumber
         this.elem.replaceWith(a)
