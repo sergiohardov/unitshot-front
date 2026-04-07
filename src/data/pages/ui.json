@@ -61,7 +61,8 @@
     {
       "name": "DRKrapkaRound",
       "weights": [
-        "font-ppneue-medium"
+        "font-ppneue-medium",
+        "font-ppneue-bold"
       ]
     }
   ],
