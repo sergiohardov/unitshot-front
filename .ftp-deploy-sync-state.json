@@ -1,8 +1,16 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1774626930262,
+    "generatedTime": 1775574199245,
     "data": [
+        {
+            "type": "folder",
+            "name": "blocks"
+        },
+        {
+            "type": "folder",
+            "name": "components"
+        },
         {
             "type": "folder",
             "name": "css"
@@ -12,26 +20,196 @@
             "name": "fonts"
         },
         {
-            "type": "file",
-            "name": "index.html",
-            "size": 642,
-            "hash": "6063c0b167ff509753d2a2dc536e65a0b03b8a2c3e0f5b8793ec1d7369689458"
+            "type": "folder",
+            "name": "images"
         },
         {
             "type": "folder",
             "name": "js"
         },
         {
+            "type": "folder",
+            "name": "pages"
+        },
+        {
             "type": "file",
-            "name": "ui.html",
-            "size": 11874,
-            "hash": "3c199cf185203bdc3843705fbec8dd12935eea89a9b749c3f18c062156775f3d"
+            "name": "blocks/brand-logos.html",
+            "size": 6281,
+            "hash": "e1e6810f5fd174470f0b7368005d0d9753c70438c081fca16f7283bbd50e2b1b"
+        },
+        {
+            "type": "file",
+            "name": "blocks/category-links.html",
+            "size": 11889,
+            "hash": "7874f115c21a51824835e4381e7e35792972f1456acd63b56a47bf70418f97a9"
+        },
+        {
+            "type": "file",
+            "name": "blocks/category-showcase.html",
+            "size": 25173,
+            "hash": "e99617ba8ae4eb41560b90d40086adbb0a192abf83b18f3b58ce1de873043244"
+        },
+        {
+            "type": "file",
+            "name": "blocks/client-logos.html",
+            "size": 5705,
+            "hash": "4ca4140f092ab03bf2749543be967741547853b9daa03a1512598f89b659725d"
+        },
+        {
+            "type": "file",
+            "name": "blocks/feedback-info.html",
+            "size": 10974,
+            "hash": "325b3d5b990efe0848674ac5441efbfb95dcab88f2dd50165b9ec4494bf42198"
+        },
+        {
+            "type": "file",
+            "name": "blocks/footer.html",
+            "size": 21050,
+            "hash": "d6b7c905dfdf53d858615e0f8a22c0aa78820b1a280bfd5c3780844b91fa250b"
+        },
+        {
+            "type": "file",
+            "name": "blocks/header.html",
+            "size": 26998,
+            "hash": "046f0459cde2e8075d670d2a683e534db56c4f19444b385ac3e9b41f40d8d487"
+        },
+        {
+            "type": "file",
+            "name": "blocks/popular-products.html",
+            "size": 19658,
+            "hash": "3f70010e16545067cc980984492b4cdad778b30125366fc292419d46a688ec94"
+        },
+        {
+            "type": "file",
+            "name": "blocks/slider-posts.html",
+            "size": 4132,
+            "hash": "c2555c4845f5822ce237e0d8b49efc36f9da2e8580aa2a12e8013be7e80471ba"
+        },
+        {
+            "type": "file",
+            "name": "blocks/slider-reviews.html",
+            "size": 4642,
+            "hash": "6ffdc6803f59d3b8fe67cf3910e11da262f393347f0e5eda7256887905a8dce3"
+        },
+        {
+            "type": "file",
+            "name": "blocks/text-image.html",
+            "size": 2805,
+            "hash": "bc7b1191a5ebf9eaf0e2a53e88335a1f3e09659c199367eda92eda6e9a45b590"
+        },
+        {
+            "type": "file",
+            "name": "components/breadcrumbs.html",
+            "size": 882,
+            "hash": "602dc159c10983883eef87cb1751cc6e3d7d6102076980f664601e1d74307e39"
+        },
+        {
+            "type": "file",
+            "name": "components/button-arrow.html",
+            "size": 286,
+            "hash": "6c72a64df9d383409b1448254527c0d0d6e451efe8df77129ffcb100206b6cc0"
+        },
+        {
+            "type": "file",
+            "name": "components/button-round.html",
+            "size": 289,
+            "hash": "3eaf77810770752b4817021b55819af033ab7043a17d3d8bb62227be6ae73f93"
+        },
+        {
+            "type": "file",
+            "name": "components/button-square.html",
+            "size": 393,
+            "hash": "baf5d748a2ff26185618260f95a69cb48e8fddd102e7f50b9244a3dd22b28174"
+        },
+        {
+            "type": "file",
+            "name": "components/checkbox.html",
+            "size": 437,
+            "hash": "68731b35c023015ba56ba7a987535954c2f12ca1e92124950fca948c130f04b5"
+        },
+        {
+            "type": "file",
+            "name": "components/modal-add-cart.html",
+            "size": 921,
+            "hash": "cf5538149b674fb383766ccffe417800a1a4b376652b685d48b2c459afafac23"
+        },
+        {
+            "type": "file",
+            "name": "components/modal-call.html",
+            "size": 1979,
+            "hash": "d0881518334a9485dabf6237d9f9cec817b1519fceabdc15a7ec31e05279cb8d"
+        },
+        {
+            "type": "file",
+            "name": "components/modal-lang.html",
+            "size": 1320,
+            "hash": "5303d3efb5953c74307600b55c0e720271e4c80cacfb0a4b08f7ec9bd44a29c1"
+        },
+        {
+            "type": "file",
+            "name": "components/modal-remove-cart.html",
+            "size": 929,
+            "hash": "56ce707af68e177738b63ce6b6b9728960d6e0b1e51d304df7ea377710e3e499"
+        },
+        {
+            "type": "file",
+            "name": "components/page-title.html",
+            "size": 258,
+            "hash": "d59111a8410b1b37ef134a5b893dfa16796e001f3391da30454f4750dd0a2653"
+        },
+        {
+            "type": "file",
+            "name": "components/pagination.html",
+            "size": 1116,
+            "hash": "2e53ed89b0cbff0487d320bb89ca24298b96fe16bed1ac4036156ebc42b3bdc0"
+        },
+        {
+            "type": "file",
+            "name": "components/phone-number.html",
+            "size": 375,
+            "hash": "a566ec3e4c121f53a87eba697ad88815725711dc964aaabda8744d1e3c743a3b"
+        },
+        {
+            "type": "file",
+            "name": "components/product-card.html",
+            "size": 3967,
+            "hash": "a54ba71d4a6b4e91713b4b2794275ff29a29e427d4801b61979501eed3e60162"
+        },
+        {
+            "type": "file",
+            "name": "components/slider-categories.html",
+            "size": 3034,
+            "hash": "a5f8ea5878ead9ba5cc083b39ed8f08ec6098546766a892adea84e2c28291a09"
+        },
+        {
+            "type": "file",
+            "name": "components/slider-logo-images.html",
+            "size": 2613,
+            "hash": "11c4af69ab8d7e6775a3d0a4a1d3df4cd6cff6321a6f1b069ec9584c751bee84"
+        },
+        {
+            "type": "file",
+            "name": "components/slider-product-cards.html",
+            "size": 19865,
+            "hash": "865712f921c23ab3c3007192d1fb52f0ac923e07b35cab61c30cff25d1fd62cf"
         },
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 17705,
-            "hash": "de07722e395d2fec35b9b2e5e59df85a07934bb90370915da134df1a19613a0f"
+            "size": 68475,
+            "hash": "343b424e9ea038d6568915e0dde258c94599d50bce01b6f3d3394d572a9564fe"
+        },
+        {
+            "type": "file",
+            "name": "fonts/DRKrapkaRound-Medium.woff",
+            "size": 279600,
+            "hash": "d5a0c006a1284d7bcb96655250d4d262db3f318bf1a49739a3bb286615e39969"
+        },
+        {
+            "type": "file",
+            "name": "fonts/PPNeueMontrealMono-Bold.woff",
+            "size": 109584,
+            "hash": "0d2a84920e38db2818e0f51ac163018a1ec2ec1bca445a73543632c26d185c5a"
         },
         {
             "type": "file",
@@ -47,9 +225,357 @@
         },
         {
             "type": "file",
+            "name": "fonts/SuisseIntl-Medium.woff",
+            "size": 80852,
+            "hash": "7eea26edc3e99b7e473562887593a433662ae7e81037b1dfb5b7fa95ba3d2e76"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-Regular.woff",
+            "size": 81096,
+            "hash": "bea9722891e13c7b8d63d290297bf3f0b6913bc30050839ddd2f9e48517518f1"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-SemiBold.woff",
+            "size": 81784,
+            "hash": "6f87a913a1dd697bc54b59a5e329357eaa82bdf496ad190c7fbfcebd00dab1ba"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-1.png",
+            "size": 10970,
+            "hash": "fd27568eae7c79967db5dec1a69935d8dcf05dea7a8c384ab49585123361bf94"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-10.png",
+            "size": 11583,
+            "hash": "227cdf662fe121030fc5cc5af7514544f6a460a02ad80e91a61f0a90cdeb70ca"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-11.png",
+            "size": 12267,
+            "hash": "aea0b36c355caf6b0f786396e05256213a6dc8feb12c94c07e979078a31ad0f8"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-12.png",
+            "size": 11835,
+            "hash": "9e68ea1f63787828030282928bba2e519fabda7f60cc213b33e96bf8009e3f88"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-2.png",
+            "size": 18105,
+            "hash": "6739374b7c7a96a4e021286f47a9be6d02338415feb8ce6ca2d841e3b72ef151"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-3.png",
+            "size": 6245,
+            "hash": "769e224e0223c973f3f1b1e256a36dce3bc2b31993ce859531834ea9994088a6"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-4.png",
+            "size": 5551,
+            "hash": "c7793588ac0606f64fa6399839526443e12081117353298b41aeff45fe58da7a"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-5.png",
+            "size": 18476,
+            "hash": "6adb0419a9d950ec484bf4cdecab895356a8dfb853a7fc8d07038f02aa5b1b5c"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-6.png",
+            "size": 5040,
+            "hash": "a6db038b056bf1058b82fcbe238a0f176924bcb14d1b023521f9e8af94bc7ad8"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-7.png",
+            "size": 6014,
+            "hash": "9be918f5790fb448eaf7f81467ad5ee0b22d66da228b06d81d02c86c9b7b500b"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-8.png",
+            "size": 6041,
+            "hash": "6ee798d74c9e1753a5168fae4c1064463977ccaff4594de8d0fa42ad5133a4fc"
+        },
+        {
+            "type": "file",
+            "name": "images/brand-logos-9.png",
+            "size": 7873,
+            "hash": "f41a59297aa0ab8a0a58702dbd2825766cd52c3578d513fd4d5ffa3a3bba7c24"
+        },
+        {
+            "type": "file",
+            "name": "images/category-links-1.png",
+            "size": 54410,
+            "hash": "91d0608c9e6655679dfb149952e927851609649bdeeb32a1612890ba7c256d59"
+        },
+        {
+            "type": "file",
+            "name": "images/category-links-2.png",
+            "size": 49770,
+            "hash": "84ba75eddc91818d48dc4eb3630777530f43dfe2dcb916870893b58e45fb69d9"
+        },
+        {
+            "type": "file",
+            "name": "images/category-links-3.png",
+            "size": 97495,
+            "hash": "9f5943c68770fcb959e782e21865a47940245c4ecac362fefe5f3c5024f82782"
+        },
+        {
+            "type": "file",
+            "name": "images/category-links-4.png",
+            "size": 23300,
+            "hash": "51374adbb757e88de97d1696334ccaeacf91df756ffe6fe44493c92886aa9801"
+        },
+        {
+            "type": "file",
+            "name": "images/category-links-5.png",
+            "size": 38997,
+            "hash": "29d1f404c977753809bf92af787b1e61752aff47c2375bb742c61ecd84da228d"
+        },
+        {
+            "type": "file",
+            "name": "images/category-links-6.png",
+            "size": 62266,
+            "hash": "e67c284191d4169b9d95994483b5130f078c42ac650dfc64db423a94abefb3c7"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-1.png",
+            "size": 8445,
+            "hash": "3b6de4ddc05340e4e8ed0608292edc98a7e5c0b55269cec9bfdd2f40d09a4582"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-10.png",
+            "size": 6854,
+            "hash": "e6a6bedc726deb430cfa9a03c28b96741047b4aeda7fd8057f7783f6c79fcfdd"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-11.png",
+            "size": 7305,
+            "hash": "75b85cb740a12522855be5439d72f281d1750f3dd4c533101f8423f557a5bd09"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-12.png",
+            "size": 10617,
+            "hash": "32aebbab34d1d7b77808dfafc76db0da6d5a95779509f3f7e88e63a5dc70acbf"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-13.png",
+            "size": 27121,
+            "hash": "bd3a244f4586bca1a63179d8f039a55c013b3c377ae00d20c3f7a7552037a903"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-14.png",
+            "size": 6598,
+            "hash": "27dfca85c4e201fe62b6414c261c1a9077b990c69dae11131e986ca1b5e96be1"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-15.png",
+            "size": 7996,
+            "hash": "520052a1b547bae5517216b4cd277503c15018c3c681f41ce3ba924a1ae431fa"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-16.png",
+            "size": 10007,
+            "hash": "424bad9be32796598f2572dcdcabbac2ad091bcd3b105cb2f6d599192913f01c"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-17.png",
+            "size": 6328,
+            "hash": "121fa87f81f9ece5bba4c90c6f6c68a866d4fa006fa7a9c0d7d190211cdc8f7f"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-18.png",
+            "size": 8191,
+            "hash": "15b74daccd9c9fd2b58fbaf7b86aab62cc7ff2a93365b3933ffd51d0a6545b18"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-19.png",
+            "size": 10283,
+            "hash": "2a5323e1111317122af01bb557d4c02b2033dad7cbb1518ff22a1f6140a78e55"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-2.png",
+            "size": 9593,
+            "hash": "40d9709797134bd93c8d1886b7d9e9178eaea3f2efcfbffa64fea939219ddb2b"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-20.png",
+            "size": 16044,
+            "hash": "3a418052a4e6bc57af2ab8a4e9219c295c8c548da7edaf297c86ce2db30c4518"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-21.png",
+            "size": 9567,
+            "hash": "92d0f981e1494ddf4363f11678a5283eb3859345ac4eed105619bc158d2291b7"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-22.png",
+            "size": 22990,
+            "hash": "bef5969158ac6b7cc58ff48617ddfedf37298fb70d59778f7cf901e53ad671d9"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-23.png",
+            "size": 8938,
+            "hash": "fac1aa7677eed5a922091518e340c61d43ceaab117f0782f3509af09e8310e7c"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-24.png",
+            "size": 10301,
+            "hash": "5e57e611f894d25e4fa34c453972cdeee7f8c1c261b4a36e515a4323edad87e5"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-3.png",
+            "size": 4742,
+            "hash": "c58f17c65c80f3e428c8244e0e5d503a572a7519ea893266337649f631b954a4"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-4.png",
+            "size": 18789,
+            "hash": "4529fe6566c80a55e62054df545f7e0d299df0df45056ab0360a8d49672eae02"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-5.png",
+            "size": 5732,
+            "hash": "261c8e58cffc69cc52c6c15df7f27437281d22552953b83860f7dcfcc5bdbb7f"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-6.png",
+            "size": 7682,
+            "hash": "85ac94587dad5240180448275203ea5101c9191b682b9dca362fecaf3c01bd99"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-7.png",
+            "size": 6201,
+            "hash": "87330d3a8d95e6a8af6e3e72d76869159830e9d2db722642934a4072a1cd5363"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-8.png",
+            "size": 10764,
+            "hash": "96d09859e44d6833cb57c1dee6d69e8c1ab1baf9a50f9ce045fb242a4952b033"
+        },
+        {
+            "type": "file",
+            "name": "images/logo.png",
+            "size": 4576,
+            "hash": "5e3ed51424a3df334e88d7dac4cbcdfdd0272f96d057eabdb27f4e528291cbe8"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-9.png",
+            "size": 7092,
+            "hash": "514faffaa5a87e443670707168e394e162f4a5c22ca6e4aa489ef763e9c612e6"
+        },
+        {
+            "type": "file",
+            "name": "images/product-card-1.png",
+            "size": 87846,
+            "hash": "ea516b9f0c28bff3ab4e247134d36584ce9453b1e5399858495b904a1cc92b35"
+        },
+        {
+            "type": "file",
+            "name": "images/product-card-2.png",
+            "size": 95721,
+            "hash": "54f00278a04567763eb69383b003577650fb94b32c44b577864ab7ab6dffd5c0"
+        },
+        {
+            "type": "file",
+            "name": "images/product-card-3.png",
+            "size": 101662,
+            "hash": "1288f4575be03573b734fd5c7622c604595e2c4d65fc7b69857879ad5c8e0c6e"
+        },
+        {
+            "type": "file",
+            "name": "images/product-card-4.png",
+            "size": 73892,
+            "hash": "10f1cadf04e96ca323b06c9c3ae7658b997a05e4c1a8082014b5fe12ddc60bdc"
+        },
+        {
+            "type": "file",
+            "name": "images/slider-categories-1.png",
+            "size": 36359,
+            "hash": "b673a7db2d87915824f31a424e3977b4ac56781a950a0f82c355688fcffe0eb8"
+        },
+        {
+            "type": "file",
+            "name": "images/slider-categories-2.png",
+            "size": 20107,
+            "hash": "af1f621c80d02772522c31ca3b778a1680b445b41b91c1ec46cc402603fb617a"
+        },
+        {
+            "type": "file",
+            "name": "images/slider-categories-3.png",
+            "size": 39489,
+            "hash": "04af4b249acf3992f49321613d906b23d770e10e9ebba14960bc4d802743fd78"
+        },
+        {
+            "type": "file",
+            "name": "images/slider-categories-4.png",
+            "size": 44627,
+            "hash": "3232ed7ff648ff8dd4bc3b33bb897a78c19b592ca8a7909ba191a2a71a6bfb59"
+        },
+        {
+            "type": "file",
+            "name": "images/slider-categories-5.png",
+            "size": 25926,
+            "hash": "a8915a826d647228b0712d7c700c268e545b9195f3598e037f59e7218a5f54ca"
+        },
+        {
+            "type": "file",
+            "name": "images/text-image-1.jpg",
+            "size": 539241,
+            "hash": "0dd56ca5daa1d32631a21d395a8fba9515c8f3e18698d4ad0024301460452688"
+        },
+        {
+            "type": "file",
             "name": "js/main.js",
-            "size": 721,
-            "hash": "530ee3286f50e2c384c4d8fc76c98a7d7dc9c5d07be3197feb0c81e69c42fbe4"
+            "size": 90475,
+            "hash": "df8cbc9140d806cd052525d0ce7c9e076e06197e4cc945425b37ece41b16719b"
+        },
+        {
+            "type": "file",
+            "name": "pages/home.html",
+            "size": 164957,
+            "hash": "b8bc7222a88d1f9c057e97b767262a70c782293cd72a1e0b45df2989a4cd781d"
+        },
+        {
+            "type": "file",
+            "name": "pages/ui.html",
+            "size": 14498,
+            "hash": "8618175beb25055418c54ef0b68318bf4f6dcf4d23324ef98dbfbf165f7f2bbf"
         }
     ]
 }

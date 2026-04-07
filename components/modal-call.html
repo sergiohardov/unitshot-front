@@ -1,0 +1,30 @@
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body><div class="us-modal us-modal-call" id="us-modal-call" role="dialog" aria-modal="true" data-us-modal-call-rest-url="http://localhost:3000/call/">
+    <div class="us-modal__overlay" data-modal-close></div>
+
+    <div class="us-modal__window">
+        <div class="us-modal__header">
+                                                <h2 class="us-modal__title">Оформлення зворотнього дзінка</h2>
+                
+                <button class="us-modal__close" data-modal-close aria-label="Закрыть"></button>
+                    </div>
+        <div class="us-modal__body">
+                <form class="us-modal-call__form" id="us-modal-call-form">
+        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" value="">
+        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" value="">
+        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10"></textarea>
+    </form>
+
+    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message">
+        <p>Замовлення оформлене.</p>
+        <p>Наш менеджер зв’яжеться з вами за декілька хвилин!</p>
+    </div>
+        </div>
+        <div class="us-modal__footer">
+                            
+                                                <button id="us-modal-call-accept-btn" class="us-button-square  us-button-square--v3  us-modal-call"  data-us-modal-call-rest-url="http://localhost:3000/call/" type="button">
+            Передзвоніть мені
+        </button>
+                                        </div>
+    </div>
+</div>
+<script src="/js/main.js"></script></body>
