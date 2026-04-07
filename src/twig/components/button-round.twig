@@ -1,10 +1,10 @@
 {% if type == 'link' %}
-    <a href="{{ link }}" class="us-button-round {% if version %} us-button-round--{{ version }} {% endif %} {% if disabled %} us-button-round--link-disabled {% endif %}">
+    <a href="{{ link }}" class="us-button-round {% if version %} us-button-round--{{ version }} {% endif %} {{ class }} {% if disabled %} us-button-round--link-disabled {% endif %}">
         {% if text %}{{ text }}{% endif %}
         {% if icon %}{{ svg_icon(icon) }}{% endif %}
     </a>
 {% else %}
-    <button class="us-button-round {% if version %} us-button-round--{{ version }} {% endif %}" {% if disabled %} disabled {% endif %}>
+    <button class="us-button-round {% if version %} us-button-round--{{ version }} {% endif %} {{ class }}" {% if disabled %} disabled {% endif %}>
         {% if text %}{{ text }}{% endif %}
         {% if icon %}{{ svg_icon(icon) }}{% endif %}
     </button>
