@@ -1,298 +1,136 @@
 {% extends '@layouts/demo.twig' %}
 
 {% block content %}
-    <style>
-        /* inner numeric list */
-        ol {
-            list-style-type: none;
-            counter-reset: item;
-            margin: 0;
-            padding: 0;
-        }
-        ol > li {
-            counter-increment: item;
-            margin-bottom: 0.6em;
-            padding: 10px 0;
-        }
-        ol > li:before {
-            content: counters(item, ".") ". ";
-            padding-right: 0.6em;
-        }
-        li ol > li {
-            margin: 0;
-        }
-        li ol > li:before {
-            content: counters(item, ".") " ";
-        }
+    <div class="ui-kit">
 
-        .ui-title {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-        .ui-content {
-            margin-top: 10px;
-        }
-    </style>
+        {# Кнопка сворачивания сайдбара (desktop) #}
+        <button class="ui-sidebar-toggle" id="uiSidebarToggle" aria-label="Свернуть меню">
+            <span class="ui-sidebar-toggle__arrow">◀</span>
+        </button>
 
-    <div class="us-container" style="padding-top: 20px; pbd-bottom: 20px;">
-        <ol>
-            <li>
-                <span class="ui-title">Colors</span>
-                <div class="ui-content" style="color: black; text-shadow: 0 0 5px white;">
-                    <div style="background-color: var(--unitshot-white);">--unitshot-white: #FFFFFF;</div>
-                    <div style="background-color: var(--unitshot-black);">--unitshot-black: #000000;</div>
-                    <div style="background-color: var(--unitshot-gray-main);">--unitshot-gray-main: #393939;</div>
-                    <div style="background-color: var(--unitshot-gray-light);">--unitshot-gray-light: #F5F5F5;</div>
-                    <div style="background-color: var(--unitshot-gray-dark);">--unitshot-gray-dark: #9D9D9D;</div>
-                    <div style="background-color: var(--unitshot-gray-darker);">--unitshot-gray-darker: #CFCFCF;</div>
-                    <div style="background-color: var(--unitshot-accent-pink);">--unitshot-accent-pink: #ED81B5;</div>
+        <aside class="ui-sidebar" id="uiSidebar">
+            <div class="ui-sidebar__logo">UI KIT</div>
+            <nav class="ui-sidebar__nav">
+                <a href="#colors" class="ui-sidebar__link">Цвета</a>
+                <a href="#typography" class="ui-sidebar__link">Типографика</a>
+                <a href="#components" class="ui-sidebar__link">Компоненты</a>
+                <a href="#blocks" class="ui-sidebar__link">Блоки</a>
+                <a href="#pages" class="ui-sidebar__link">Страницы</a>
+            </nav>
+            <div class="ui-sidebar__version">v1.0.0</div>
+        </aside>
+
+        <div class="ui-main">
+
+            <header class="ui-header">
+                <div class="ui-header__label">Design System</div>
+                <h1 class="ui-header__title">UI Kit</h1>
+                <p class="ui-header__sub">Компоненты, блоки, и стили проекта</p>
+            </header>
+
+            <section class="ui-section" id="colors">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">01</span>
+                    <h2 class="ui-section__title">Цвета</h2>
                 </div>
-            </li>
 
-            <li>
-                <span class="ui-title">Classes</span>
-                <ol>
-                    <li>
-                        <span class="ui-title">Container: .us-container</span>
-                        <div class="ui-content">
-                            <div class="us-container">
-                                <div style="display: flex; align-items:center; justify-content: center; height: 50px; background-color: var(--unitshot-accent-pink); margin: 0 -15px;">
-                                    <p>1290px/auto</p>
-                                </div>
+                <div class="ui-colors">
+                    {% for color in colors %}
+                        <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var({{ color.var }})"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">{{ color.name }}</span>
+                                <span class="ui-color-var">{{ color.var }}</span>
                             </div>
                         </div>
-                    </li>
+                    {% endfor %}
+                </div>
+            </section>
 
-                    <li>
-                        <span class="ui-title">Title: .us-title-h1;.us-title-h2</span>
-                        <div class="ui-content">
-                            <h1 class="us-title-h1">h1 Example</h1>
-                            <h2 class="us-title-h2">h2 Example</h2>
-                        </div>
-                    </li>
-                </ol>
-            </li>
+            <section class="ui-section" id="typography">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">02</span>
+                    <h2 class="ui-section__title">Типографика</h2>
+                </div>
 
-            <li>
-                <span class="ui-title">Components</span>
-                <ol>
-                    <li>
-                        <span class="ui-title">Checkbox</span>
-                        <div class="ui-content">
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% include '@components/checkbox.twig' with {
-                                    'label': 'Підкатегорія 1',
-                                    'id': 'check-1'
-                                } %}
-                                {% include '@components/checkbox.twig' with {
-                                    'label': 'Підкатегорія 2',
-                                    'id': 'check-2'
-                                } %}
+                <div class="ui-typo">
+                    {% for font in fonts %}
+                        {% for weight in font.weights %}
+                            <div class="ui-typo-row">
+                                <span class="ui-typo-label">{{ font.name }} / {{ weight }}</span>
+                                <p class="ui-typo-sample ui-typo-sample--{{ weight }}">Example Text</p>
                             </div>
-                        </div>
-                    </li>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </section>
 
-                    <li>
-                        <span class="ui-title">Button Square</span>
-                        <div class="ui-content">
-                            <h3>Type: Button</h3>
-                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v1',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v2',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v3',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v4',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v6',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v7',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '220v',
-                                    'disabled': true
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v6',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v7',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v5',
-                                    'text': '1',
-                                    'disabled': true
-                                } %}
-                            </div>
-                            <h3>Type: Link</h3>
-                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start;">
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v1',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v2',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v3',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'version': 'v4',
-                                    'type': 'link',
-                                    'text': 'Перейти',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v6',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v7',
-                                    'text': '220v',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '220v',
-                                    'disabled': true
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v6',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v7',
-                                    'text': '1',
-                                } %}
-                                {% include '@components/button-square.twig' with {
-                                    'type': 'link',
-                                    'version': 'v5',
-                                    'text': '1',
-                                    'disabled': true
-                                } %}
-                            </div>
-                        </div>
-                    </li>
+            <section class="ui-section" id="components">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">03</span>
+                    <h2 class="ui-section__title">Компоненты</h2>
+                </div>
+                <ul class="ui-links-list">
+                    {% for item in components %}
+                        <li><a href="/components/{{ item }}">{{ item }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
 
-                    <li>
-                        <span class="ui-title">Button Round</span>
-                        <div class="ui-content">
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v1',
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v2',
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v3',
-                                    'text': '1'
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v4',
-                                    'text': '1'
-                                } %}
-                                {% include '@components/button-round.twig' with {
-                                    'version': 'v5',
-                                    'text': '1'
-                                } %}
-                            </div>
-                        </div>
-                    </li>
+            <section class="ui-section" id="blocks">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">04</span>
+                    <h2 class="ui-section__title">Блоки</h2>
+                </div>
+                <ul class="ui-links-list">
+                    {% for item in blocks %}
+                        <li><a href="/blocks/{{ item }}">{{ item }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
 
-                    <li>
-                        <span class="ui-title">Button Arrow</span>
-                        <div class="ui-content">
-                            <div style="display: flex; gap: 10px; align-items: flex-start;">
-                                {% include '@components/button-arrow.twig' with {
-                                    'version': 'v1',
-                                } %}
+            <section class="ui-section" id="pages">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">05</span>
+                    <h2 class="ui-section__title">Страницы</h2>
+                </div>
+                <ul class="ui-links-list">
+                    {% for item in pages %}
+                        <li><a href="/pages/{{ item }}">{{ item }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
 
-                                {% include '@components/button-arrow.twig' with {
-                                    'version': 'v2',
-                                } %}
-
-                                {% include '@components/button-arrow.twig' with {
-                                    'version': 'v3',
-                                } %}
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Breadcrumbs</span>
-                        <div class="ui-content">
-                            {% include '@components/breadcrumbs.twig' with {
-                                'links': [
-                                    {'src': '#', 'title': 'Головна', 'is_current': false},
-                                    {'src': '#', 'title': 'Головна', 'is_current': false},
-                                    {'src': '#', 'title': 'Головна', 'is_current': false},
-                                    {'src': '#', 'title': 'Кавомашини', 'is_current': true},
-                                ],
-                            } %}
-                        </div>
-                    </li>
-
-                    <li>
-                        <span class="ui-title">Pagination</span>
-                        <div class="ui-content">
-                            {% include '@components/pagination.twig' with {
-                                'prev': '#prev',
-                                'next': '#next',
-                                'pages': [
-                                    {'number': 1, 'link': '#1', 'is_current': true},
-                                    {'number': 2, 'link': '#2', 'is_current': false},
-                                    {'number': 3, 'link': '#3', 'is_current': false},
-                                    {'number': 4, 'link': '#4', 'is_current': false},
-                                ]
-                            } %}
-                        </div>
-                    </li>
-                </ol>
-            </li>
-        </ol>
+        </div>
     </div>
-{% endblock %}
 
+    <script>
+        (function () {
+            const kit = document.querySelector('.ui-kit');
+            const sidebar = document.getElementById('uiSidebar');
+            const toggleBtn = document.getElementById('uiSidebarToggle');
+            const isMobile = function () {
+                return window.innerWidth <= 768;
+            };
+
+            // Desktop: сворачивание сайдбара
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function () {
+                    kit.classList.toggle('sidebar-collapsed');
+                });
+            }
+
+            function closeSidebar() {
+                sidebar.classList.remove('is-open');
+            }
+
+
+            // Закрытие по клику на ссылку (мобилка)
+            sidebar.querySelectorAll('.ui-sidebar__link').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (isMobile()) closeSidebar();
+                });
+            });
+        })();
+    </script>
+{% endblock %}

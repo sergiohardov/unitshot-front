@@ -1,0 +1,49 @@
+<div class="us-feedback-info">
+    <div class="us-container">
+        <div class="us-feedback-info__inner">
+            {% include '@components/page-title.twig' with {
+                'title': title
+            } %}
+
+            {% if description %}
+                <div class="us-feedback-info__description">{{ description|raw }}</div>
+            {% endif %}
+
+            <div class="us-feedback-info__contacts">
+                {% if socials %}
+                    <div class="us-feedback-info__contacts-content">
+                        <span class="us-feedback-info__contacts-title">Написати нам:</span>
+                        <div class="us-feedback-info__socials">
+                            {% for social in socials %}
+                                <a href="{{ social.link }}">
+                                    <img src="/src/images/icons/social-{{ social.icon }}.svg" alt="{{ social.icon }}">
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if numbers %}
+                    <div class="us-feedback-info__contacts-content">
+                        <span class="us-feedback-info__contacts-title">Подзвонити:</span>
+                        <div class="us-feedback-info__numbers">
+                            {% for number in numbers %}
+                                {% include '@components/phone-number.twig' with {
+                                    'number': number
+                                } %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="us-feedback-info__contacts-content">
+                    <span class="us-feedback-info__contacts-title">Замовити дзвінок:</span>
+                    {% include '@components/button-square.twig' with {
+                        'version': 'v2',
+                        'text': 'Безкоштовна констультація'
+                    } %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

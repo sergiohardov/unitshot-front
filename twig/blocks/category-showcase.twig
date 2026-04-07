@@ -1,0 +1,27 @@
+<div class="us-category-showcase">
+    <div class="us-container">
+        <div class="us-category-showcase__inner">
+            {% include '@components/page-title.twig' with {
+                'title': title
+            } %}
+
+            {% if categories %}
+                {% include '@components/slider-categories.twig' with {
+                    'categories': categories
+                } %}
+            {% endif %}
+
+            {% if brands %}
+                {% include '@components/slider-logo-images.twig' with {
+                    'logotypes': brands
+                } %}
+            {% endif %}
+
+            {% if products %}
+                {% include '@components/slider-product-cards.twig' with {
+                    'products': products
+                } %}
+            {% endif %}
+        </div>
+    </div>
+</div>

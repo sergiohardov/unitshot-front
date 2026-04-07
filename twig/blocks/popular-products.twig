@@ -1,0 +1,15 @@
+<div class="us-popular-products">
+    <div class="us-container">
+        <div class="us-popular-products__inner">
+            {% include '@components/page-title.twig' with {
+                'title': title
+            } %}
+
+            {% if products %}
+                {% include '@components/slider-product-cards.twig' with {
+                    'products': products
+                } %}
+            {% endif %}
+        </div>
+    </div>
+</div>

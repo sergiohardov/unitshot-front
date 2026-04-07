@@ -1,0 +1,19 @@
+{% if brands %}
+    <div class="us-brand-logos">
+        <div class="us-container">
+            <ul class="us-brand-logos__list us-brand-logos__list--collapsed">
+                {% for brand in brands %}
+                    <li class="us-brand-logos__item">
+                        <a class="us-brand-logos__item-link" href="{{ brand.link }}">
+                            <img class="us-brand-logos__item-image" src="{{ brand.logo.src }}" alt="{{ brand.logo.alt }}">
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div class="us-brand-logos__more {% if brands|length > 12 %} us-brand-logos__more--12 {% endif %} {% if brands|length > 18 %} us-brand-logos__more--18 {% endif %}">
+                <button class="us-brand-logos__more-btn">Розгорнути</button>
+            </div>
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,14 @@
+{% extends '@layouts/modal.twig' %}
+
+{% block body %}
+    <form class="us-modal-call__form" id="us-modal-call-form">
+        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" value="">
+        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" value="">
+        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10"></textarea>
+    </form>
+
+    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message">
+        <p>Замовлення оформлене.</p>
+        <p>Наш менеджер зв’яжеться з вами за декілька хвилин!</p>
+    </div>
+{% endblock %}

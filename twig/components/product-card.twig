@@ -1,0 +1,49 @@
+<div class="us-product-card {{ class }}">
+    {% if tags %}
+        <div class="us-product-card__tags">
+            {% for tag in tags %}
+                <span class="us-product-card__tags--{{ tag.status }}">{{ tag.text }}</span>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="us-product-card__image">
+        {% if not image.src %}
+            <img src="/src/images/pictures/placeholder-image.jpg" alt="No Image">
+        {% else %}
+            <img src="{{ image.src }}" alt="{{ image.alt }}">
+        {% endif %}
+    </div>
+
+    <div class="us-product-card__info">
+        <div class="us-product-card__text">
+            {% if title.link and title.text %}
+                <a href="{{ title.link }}" class="us-product-card__title">{{ title.text }}</a>
+            {% endif %}
+
+            {% if brand.link and brand.text %}
+                <a href="{{ brand.link }}" class="us-product-card__brand">{{ brand.text }}</a>
+            {% endif %}
+
+            {% if category.link and category.text %}
+                <a href="{{ category.link }}" class="us-product-card__category">{{ category.text }}</a>
+            {% endif %}
+        </div>
+
+        <div class="us-product-card__total">
+            <div class="us-product-card__price">
+                {% if price.old %}
+                    <span class="us-product-card__price--old">{{ price.old }}</span>
+                {% endif %}
+
+                {% if price.new %}
+                    <span class="us-product-card__price--new">{{ price.new }}</span>
+                {% endif %}
+            </div>
+
+            <button class="us-product-card__add-cart">
+                <img src="/src/images/icons/cart.svg" alt="cart">
+            </button>
+        </div>
+    </div>
+</div>
