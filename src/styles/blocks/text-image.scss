@@ -49,13 +49,13 @@
 
   &__description-content {
     min-height: 0;
+    @include font-ppneue-medium;
 
     h2 {
-      font-family: var(--unitshot-font-family-blog);
-      font-weight: 500;
       font-size: 28px;
       color: var(--unitshot-gray-main);
       margin-bottom: 16px;
+      @include font-ppneue-medium;
 
       @include media-md() {
         font-size: 22px;
@@ -64,11 +64,10 @@
     }
 
     p {
-      font-family: var(--unitshot-font-family-blog);
-      font-weight: 500;
       font-size: 20px;
       color: var(--unitshot-gray-main);
       margin-bottom: 16px;
+      @include font-ppneue-medium;
 
       @include media-md() {
         font-size: 14px;
