@@ -121,9 +121,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-family: var(--unitshot-font-family-blog);
-    font-weight: 300;
     font-size: 12px;
+    @include font-sussie-regular;
 
     &:not(:first-child):before {
       content: '';
@@ -140,8 +139,8 @@
     }
 
     &--current {
-      font-weight: 500;
       font-size: 14px;
+      @include font-suisse-medium;
     }
   }
 
@@ -165,6 +164,12 @@
     display: flex;
     align-items: center;
     gap: 40px;
+  }
+
+  &__menu-item {
+    font-size: 18px;
+    color: var(--unitshot-gray-light);
+    @include font-suisse-medium;
   }
 
   &__number {
