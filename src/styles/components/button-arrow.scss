@@ -1,6 +1,7 @@
 @use '@styles/base/mixins' as *;
 
 .us-button-arrow {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;

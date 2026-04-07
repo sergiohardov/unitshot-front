@@ -1,0 +1,26 @@
+@use '@styles/base/mixins' as *;
+
+.us-slider-logo-images {
+  &__link {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .us-slider__prev, .us-slider__next {
+    display: none;
+  }
+
+  .us-slider__pagination {
+    display: none;
+
+    @include media-md() {
+      display: flex;
+    }
+  }
+}

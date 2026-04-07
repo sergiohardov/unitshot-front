@@ -1,0 +1,8 @@
+{
+  "template": "./src/twig/components/button-arrow.twig",
+  "type": "link",
+  "link": "#",
+  "version": "v1",
+  "class": "button-arrow-class",
+  "disabled": false
+}

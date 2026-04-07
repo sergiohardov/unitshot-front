@@ -3,9 +3,38 @@
 @use 'base/global';
 @use 'base/fonts';
 
+@use 'layouts/modal';
+@use 'layouts/slider';
+
 @use 'components/checkbox';
 @use 'components/button-square';
 @use 'components/button-round';
 @use 'components/button-arrow';
 @use 'components/breadcrumbs';
 @use 'components/pagination';
+@use 'components/phone-number';
+@use 'components/modal-add-cart';
+@use 'components/modal-remove-cart';
+@use 'components/modal-lang';
+@use 'components/modal-call';
+@use 'components/product-card';
+@use 'components/slider-product-cards';
+@use 'components/slider-logo-images';
+@use 'components/slider-categories';
+@use 'components/page-title';
+@use 'components/overlay';
+
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/brand-logos';
+@use 'blocks/popular-products';
+@use 'blocks/category-showcase';
+@use 'blocks/category-links';
+@use 'blocks/text-image';
+@use 'blocks/client-logos';
+@use 'blocks/slider-reviews';
+@use 'blocks/slider-posts';
+@use 'blocks/feedback-info';
+
+@use 'pages/ui';
+@use 'pages/home';

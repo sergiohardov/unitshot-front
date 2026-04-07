@@ -4,17 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json-server": "json-server json-server-db.json"
   },
   "devDependencies": {
     "@vituum/vite-plugin-postcss": "^2.0.1",
     "@vituum/vite-plugin-twig": "^2.0.1",
+    "json-server": "^1.0.0-beta.15",
     "path": "^0.12.7",
     "sass": "^1.98.0",
     "vite": "^8.0.1",
     "vite-plugin-static-copy": "^4.0.0",
     "vituum": "^2.0.1"
+  },
+  "dependencies": {
+    "swiper": "^12.1.3"
   }
 }

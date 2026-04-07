@@ -66,12 +66,11 @@
   &__label {
     cursor: pointer;
     user-select: none;
-    color: var(--unitshot-black);
-    font-family: var(--unitshot-font-family-base);
+    color: var(--unitshot-gray-main);
     font-size: 16px;
+    @include font-ppneue-medium;
 
     @include media-md() {
-      color: var(--unitshot-gray-main);
       font-size: 14px;
     }
   }

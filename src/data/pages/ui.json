@@ -1,0 +1,103 @@
+{
+  "template": "./src/twig/pages/ui.twig",
+  "colors": [
+    {
+      "var": "--unitshot-white",
+      "name": "White"
+    },
+    {
+      "var": "--unitshot-black",
+      "name": "Black"
+    },
+    {
+      "var": "--unitshot-red",
+      "name": "Red"
+    },
+    {
+      "var": "--unitshot-gray-main",
+      "name": "Gray Main"
+    },
+    {
+      "var": "--unitshot-gray-light",
+      "name": "Gray Light"
+    },
+    {
+      "var": "--unitshot-gray-dark",
+      "name": "Gray Dark"
+    },
+    {
+      "var": "--unitshot-gray-labels",
+      "name": "Gray Labels"
+    },
+    {
+      "var": "--unitshot-gray-darker",
+      "name": "Gray Darker"
+    },
+    {
+      "var": "--unitshot-gray-most-darker",
+      "name": "Gray Most Darker"
+    },
+    {
+      "var": "--unitshot-accent-pink",
+      "name": "Accent Pink"
+    }
+  ],
+  "fonts": [
+    {
+      "name": "SuisseIntl",
+      "weights": [
+        "font-sussie-regular",
+        "font-sussie-medium",
+        "font-sussie-semibold",
+        "font-sussie-bold"
+      ]
+    },
+    {
+      "name": "PPNeueMontrealMono",
+      "weights": [
+        "font-drkrapka-medium"
+      ]
+    },
+    {
+      "name": "DRKrapkaRound",
+      "weights": [
+        "font-ppneue-medium",
+        "font-ppneue-bold"
+      ]
+    }
+  ],
+  "components": [
+    "breadcrumbs",
+    "button-arrow",
+    "button-round",
+    "button-square",
+    "checkbox",
+    "modal-add-cart",
+    "modal-call",
+    "modal-lang",
+    "modal-remove-cart",
+    "page-title",
+    "pagination",
+    "phone-number",
+    "product-card",
+    "slider-categories",
+    "slider-logo-images",
+    "slider-product-cards"
+  ],
+  "blocks": [
+    "brand-logos",
+    "category-links",
+    "category-showcase",
+    "client-logos",
+    "feedback-info",
+    "footer",
+    "header",
+    "popular-products",
+    "slider-posts",
+    "slider-reviews",
+    "text-image"
+  ],
+  "pages": [
+    "home"
+  ]
+}

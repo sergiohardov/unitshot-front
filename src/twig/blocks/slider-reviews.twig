@@ -1,0 +1,35 @@
+{% extends '@layouts/slider.twig' %}
+
+{% block class_slider %} us-slider-reviews {% endblock %}
+
+{% block before_slider %}
+<div class="us-container">
+    {% include '@components/page-title.twig' with {
+        'title': title,
+        'class': 'us-slider-reviews__title'
+    } %}
+
+    {% endblock %}
+
+    {% block slides %}
+        {% for slide in slides %}
+            <div class="swiper-slide">
+                <div class="us-slider-reviews__slide">
+                    <div class="us-slider-reviews__slide-image">
+                        <img src="{{ slide.image.src }}" alt="{{ slide.image.alt }}">
+                    </div>
+
+                    <div class="us-slider-reviews__slide-text">
+                        <p class="us-slider-reviews__slide-name">{{ slide.name }}</p>
+                        <p class="us-slider-reviews__slide-position">{{ slide.position }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endblock %}
+
+    {% block after_slider %}
+</div>
+{% endblock %}
+
+

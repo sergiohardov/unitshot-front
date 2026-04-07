@@ -19,6 +19,21 @@
     height: 34px;
   }
 
+  &--v0 {
+    --button-round-size: 40px;
+    --button-round-icon-size: 20px;
+    --button-round-bg-color: var(--unitshot-accent-pink);
+
+    width: var(--button-round-size);
+    height: var(--button-round-size);
+    background-color: var(--button-round-bg-color);
+
+    svg {
+      width: var(--button-round-icon-size);
+      height: var(--button-round-icon-size);
+    }
+  }
+
   &--v1 {
     background-color: var(--unitshot-white);
     padding-left: 1px;
@@ -94,8 +109,8 @@
     background-color: transparent;
     border: 2px solid var(--unitshot-accent-pink);
     padding: 2px;
-    font-family: var(--unitshot-font-family-base);
     font-size: 16px;
+    @include font-ppneue-medium;
 
     @include media-md() {
       font-size: 14px;
@@ -110,9 +125,9 @@
   &--v5 {
     background-color: transparent;
     padding: 2px;
-    font-family: var(--unitshot-font-family-base);
     font-size: 16px;
     color: var(--unitshot-white);
+    @include font-ppneue-medium;
 
     @include media-md() {
       font-size: 14px;

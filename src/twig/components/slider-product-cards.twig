@@ -1,0 +1,19 @@
+{% extends '@layouts/slider.twig' %}
+
+{% block class_slider %} us-slider-product-cards {% endblock %}
+
+{% block slides %}
+    {% for product in products %}
+        <div class="swiper-slide">
+            {% include '@components/product-card.twig' with {
+                'tags': product.tags,
+                'image': product.image,
+                'title': product.title,
+                'brand': product.brand,
+                'category': product.category,
+                'price': product.price
+            } %}
+        </div>
+    {% endfor %}
+{% endblock %}
+

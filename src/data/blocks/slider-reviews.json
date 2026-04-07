@@ -1,0 +1,54 @@
+{
+  "template": "./src/twig/blocks/slider-reviews.twig",
+  "title": "Що кажуть про нас наші клієнти",
+  "slides": [
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Review 1"
+      },
+      "name": "Іван Іванов",
+      "position": "директор кав’ярні “Франсуа”"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Review 1"
+      },
+      "name": "Іван Іванов",
+      "position": "директор кав’ярні “Франсуа”"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Review 1"
+      },
+      "name": "Іван Іванов",
+      "position": "директор кав’ярні “Франсуа”"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Review 1"
+      },
+      "name": "Іван Іванов",
+      "position": "директор кав’ярні “Франсуа”"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Review 1"
+      },
+      "name": "Іван Іванов",
+      "position": "директор кав’ярні “Франсуа”"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Review 1"
+      },
+      "name": "Іван Іванов",
+      "position": "директор кав’ярні “Франсуа”"
+    }
+  ]
+}

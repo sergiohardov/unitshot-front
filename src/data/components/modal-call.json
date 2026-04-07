@@ -1,0 +1,16 @@
+{
+  "template": "./src/twig/components/modal-call.twig",
+  "id": "us-modal-call",
+  "class": "us-modal-call",
+  "title": "Оформлення зворотнього дзінка",
+  "data": "data-us-modal-call-rest-url=\"http://localhost:3000/call/\"",
+  "text": "",
+  "buttons": {
+    "primary": {
+      "text": "Передзвоніть мені",
+      "id": "us-modal-call-accept-btn"
+    }
+  }
+}
+
+

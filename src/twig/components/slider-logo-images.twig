@@ -1,0 +1,13 @@
+{% extends '@layouts/slider.twig' %}
+
+{% block class_slider %} us-slider-logo-images {% endblock %}
+
+{% block slides %}
+    {% for logo in logotypes %}
+        <div class="swiper-slide">
+            <a class="us-slider-logo-images__link" href="{{ logo.link }}">
+                <img class="us-slider-logo-images__img" src="{{ logo.image.src }}" alt="{{ logo.image.alt }}">
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -4,8 +4,44 @@ import twig from '@vituum/vite-plugin-twig'
 import postcss from '@vituum/vite-plugin-postcss'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
+import fs from 'fs'
+function injectAssetsIntoComponents() {
+    let isBuild = false
+
+    return {
+        name: 'inject-assets-into-components',
+        configResolved(config) {
+            isBuild = config.command === 'build'
+        },
+        transformIndexHtml: {
+            order: 'post',
+            handler(html, ctx) {
+                const id = ctx.path || ctx.filename || ''
+                const isComponent = id.includes('/components/') || id.includes('/blocks/')
+
+                if (!isComponent) return html
+
+                const style = isBuild ? '<link rel="stylesheet" href="/css/main.css">' : ''
+                const script = isBuild ? '<script src="/js/main.js"></script>' : '<script src="/src/scripts/main.js" type="module"></script>'
+
+                let result = `<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>${style}</head>`
+                result += '<body>'
+                result += html
+                result += script
+                result += '</body>'
+
+                return result
+            }
+        }
+    }
+}
 
 export default defineConfig({
+    server: {
+        watch: {
+            ignored: ['**/json-server-db.json']
+        }
+    },
     resolve: {
         alias: {
             '@images'   : path.resolve(__dirname, './src/images/'),
@@ -17,10 +53,12 @@ export default defineConfig({
     plugins: [
         vituum({
             input: [
-                path.resolve(__dirname, './src/twig/pages'),
+                path.resolve(__dirname, './src/data/components/*.json'),
+                path.resolve(__dirname, './src/data/blocks/*.json'),
+                path.resolve(__dirname, './src/data/pages/*.json'),
             ],
             pages: {
-                dir: path.resolve(__dirname, './src/twig/pages'),
+                dir: path.resolve(__dirname, './src/data/'),
             },
         }),
         twig({
@@ -30,6 +68,17 @@ export default defineConfig({
                 'pages'         : 'src/twig/pages',
                 'layouts'       : 'src/twig/layouts',
             },
+            functions: {
+                svg_icon: (name) => {
+                    const filePath = path.resolve(__dirname, `./src/images/icons/${name}.svg`)
+                    try {
+                        return fs.readFileSync(filePath, 'utf-8')
+                    } catch (e) {
+                        return `<!-- svg not found: ${name} -->`
+                    }
+                },
+                home_url: () => '/pages/home.html'
+            }
         }),
         postcss({
             autoprefixer: {
@@ -46,6 +95,7 @@ export default defineConfig({
 
             ]
         }),
+        injectAssetsIntoComponents()
     ],
     build: {
         rollupOptions: {

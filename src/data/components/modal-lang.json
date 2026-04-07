@@ -1,0 +1,16 @@
+{
+  "template": "./src/twig/components/modal-lang.twig",
+  "id": "us-modal-lang",
+  "class": "us-modal-lang",
+  "title": "Чи бажаєте переглядати сайт українською мовою?",
+  "data": "",
+  "text": "",
+  "buttons": {
+    "secondary": {
+      "text": "Ні"
+    },
+    "primary": {
+      "text": "Так"
+    }
+  }
+}

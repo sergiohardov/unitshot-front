@@ -1,0 +1,51 @@
+{
+  "template": "./src/twig/blocks/slider-posts.twig",
+  "title": "читати більше",
+  "posts": [
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Posts 1"
+      },
+      "date": "19 березня 2025",
+      "title": "Арабіка чи Робуста: Що краще для вашої чашки кави?",
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Posts 1"
+      },
+      "date": "19 березня 2025",
+      "title": "Арабіка чи Робуста: Що краще для вашої чашки кави?",
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Posts 1"
+      },
+      "date": "19 березня 2025",
+      "title": "Арабіка чи Робуста: Що краще для вашої чашки кави?",
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Posts 1"
+      },
+      "date": "19 березня 2025",
+      "title": "Арабіка чи Робуста: Що краще для вашої чашки кави?",
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/text-image-1.jpg",
+        "alt": "Slider Posts 1"
+      },
+      "date": "19 березня 2025",
+      "title": "Арабіка чи Робуста: Що краще для вашої чашки кави?",
+      "link": "#"
+    }
+  ]
+}

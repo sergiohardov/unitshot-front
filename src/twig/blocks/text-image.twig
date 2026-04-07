@@ -1,0 +1,29 @@
+<div class="us-text-image">
+    <div class="us-container">
+        <div class="us-text-image__inner">
+            <div class="us-text-image__text">
+                {% include '@components/page-title.twig' with {
+                    'title': title
+                } %}
+
+                {% if description %}
+                    <div class="us-text-image__description {% if hide_text %} us-text-image__description--hidden {% endif %}">
+                        <div class="us-text-image__description-content">
+                            {{ description|raw }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if hide_text %}
+                    <button class="us-text-image__more-btn">Розгорнути</button>
+                {% endif %}
+            </div>
+
+            <div class="us-text-image__image">
+                {% if image.src %}
+                    <img src="{{ image.src }}" alt="{{ image.alt }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

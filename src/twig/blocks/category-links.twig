@@ -1,0 +1,51 @@
+<div class="us-category-links">
+    <div class="us-container">
+        <div class="us-category-links__inner">
+            {% include '@components/page-title.twig' with {
+                'title': title
+            } %}
+
+            {% if categories %}
+                <div class="us-category-links__list">
+                    {% for category in categories %}
+                        <div class="us-category-links__item">
+                            <div class="us-category-links__item-text">
+                                {% if category.title %}
+                                    <h3 class="us-category-links__item-title">{{ category.title }}</h3>
+                                {% endif %}
+
+                                {% if category.brands %}
+                                    <div class="us-category-links__item-brands">
+                                        {% for brand in category.brands %}
+                                            <a href="{{ brand.link }}">
+                                                <img src="{{ brand.image.src }}" alt="{{ brand.image.alt }}">
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+
+                                {% if category.link %}
+                                    {% include '@components/button-square.twig' with {
+                                        'version': 'v1',
+                                        'text': 'Перейти',
+                                        'type': 'link',
+                                        'href': category.link,
+                                        'class': 'us-category-links__item-link'
+                                    } %}
+                                {% endif %}
+                            </div>
+
+                            <div class="us-category-links__item-image">
+                                {% if not category.image.src %}
+                                    <img src="/src/images/pictures/placeholder-image.jpg" alt="No Image">
+                                {% else %}
+                                    <img src="{{ category.image.src }}" alt="{{ category.image.alt }}">
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

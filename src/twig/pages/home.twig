@@ -1,0 +1,69 @@
+{% extends '@layouts/base.twig' %}
+
+{% block content %}
+    <div class="us-page-home">
+        {% include '@blocks/brand-logos.twig' with {
+            'brands': brand_logos.brands,
+        } %}
+
+        {% include '@blocks/popular-products.twig' with {
+            'title': popular_products.title,
+            'products': popular_products.products
+        } %}
+
+        {% include '@blocks/category-showcase.twig' with {
+            'title': category_showcase_1.title,
+            'categories': category_showcase_1.categories,
+            'brands': category_showcase_1.brands,
+            'products': category_showcase_1.products,
+        } %}
+
+        {% include '@blocks/category-showcase.twig' with {
+            'title': category_showcase_2.title,
+            'categories': category_showcase_2.categories,
+            'brands': category_showcase_2.brands,
+            'products': category_showcase_2.products,
+        } %}
+
+        {% include '@blocks/category-links.twig' with {
+            'title': category_links.title,
+            'categories': category_links.categories
+        } %}
+
+        {% include '@blocks/text-image.twig' with {
+            'title': text_image_1.title,
+            'description': text_image_1.description,
+            'image': text_image_1.image
+        } %}
+
+        {% include '@blocks/client-logos.twig' with {
+            'title': client_logos.title,
+            'clients': client_logos.clients
+        } %}
+
+        {% include '@blocks/slider-reviews.twig' with {
+            'title': slider_reviews.title,
+            'slides': slider_reviews.slides,
+        } %}
+
+        {% include '@blocks/feedback-info.twig' with {
+            'title': feedback_info.title,
+            'description': feedback_info.description,
+            'socials': feedback_info.socials,
+            'numbers': feedback_info.numbers,
+        } %}
+
+        {% include '@blocks/slider-posts.twig' with {
+            'title': slider_posts.title,
+            'posts': slider_posts.posts,
+        } %}
+
+        {% include '@blocks/text-image.twig' with {
+            'title': text_image_2.title,
+            'description': text_image_2.description,
+            'image': text_image_2.image,
+            'hide_text': text_image_2.hide_text,
+        } %}
+    </div>
+{% endblock %}
+

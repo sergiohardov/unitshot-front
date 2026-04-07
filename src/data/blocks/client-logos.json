@@ -1,0 +1,106 @@
+{
+  "template": "./src/twig/blocks/client-logos.twig",
+  "title": "Наші клієнти",
+  "clients": [
+    {
+      "src": "/src/images/pictures/client-logos-1.png",
+      "alt": "Client Logo 1"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-2.png",
+      "alt": "Client Logo 2"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-3.png",
+      "alt": "Client Logo 3"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-4.png",
+      "alt": "Client Logo 4"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-5.png",
+      "alt": "Client Logo 5"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-6.png",
+      "alt": "Client Logo 6"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-7.png",
+      "alt": "Client Logo 7"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-8.png",
+      "alt": "Client Logo 8"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-9.png",
+      "alt": "Client Logo 9"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-10.png",
+      "alt": "Client Logo 10"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-11.png",
+      "alt": "Client Logo 11"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-12.png",
+      "alt": "Client Logo 12"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-13.png",
+      "alt": "Client Logo 13"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-14.png",
+      "alt": "Client Logo 14"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-15.png",
+      "alt": "Client Logo 15"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-16.png",
+      "alt": "Client Logo 16"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-17.png",
+      "alt": "Client Logo 17"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-18.png",
+      "alt": "Client Logo 18"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-19.png",
+      "alt": "Client Logo 19"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-20.png",
+      "alt": "Client Logo 20"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-21.png",
+      "alt": "Client Logo 21"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-22.png",
+      "alt": "Client Logo 22"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-23.png",
+      "alt": "Client Logo 23"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-24.png",
+      "alt": "Client Logo 24"
+    },
+    {
+      "src": "/src/images/pictures/client-logos-24.png",
+      "alt": "Client Logo 25"
+    }
+  ]
+}

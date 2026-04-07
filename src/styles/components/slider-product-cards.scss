@@ -1,0 +1,18 @@
+@use '@styles/base/mixins' as *;
+
+.us-slider-product-cards {
+
+  .us-slider__prev, .us-slider__next {
+    @include media-md() {
+      display: none;
+    }
+  }
+  .us-slider__pagination {
+    display: none;
+
+    @include media-md() {
+      display: flex;
+      margin-top: 12px;
+    }
+  }
+}

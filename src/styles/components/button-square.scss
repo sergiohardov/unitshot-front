@@ -6,38 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--unitshot-font-family-base);
-  transition: all var(--unitshot-transition-speed) ease;
+  align-self: self-start;
   flex-shrink: 0;
+  transition: all var(--unitshot-transition-speed) ease;
+  @include font-ppneue-medium;
 
   &:hover {
     cursor: pointer;
-  }
-
-  &--v1 {
-    background-color: var(--unitshot-gray-main);
-  }
-
-  &--v2 {
-    border: 2px solid var(--unitshot-gray-main);
-    color: var(--unitshot-gray-main);
-
-    &:hover {
-      background-color: var(--unitshot-gray-main);
-    }
-  }
-
-  &--v3 {
-    background-color: var(--unitshot-accent-pink);
-  }
-
-  &--v4 {
-    border: 2px solid var(--unitshot-accent-pink);
-    color: var(--unitshot-gray-main);
-
-    &:hover {
-      background-color: var(--unitshot-accent-pink);
-    }
   }
 
   &--v1, &--v2, &--v3, &--v4 {
@@ -45,32 +20,35 @@
     border-radius: 6px;
   }
 
-  &--v1, &--v3 {
+  &--v1 {
+    background-color: var(--unitshot-accent-pink);
+    padding: 6px 33px;
+    color: var(--unitshot-white);
+
+    &:hover {
+      background-color: var(--unitshot-gray-main);
+    }
+  }
+
+  &--v2 {
+    background-color: var(--unitshot-gray-main);
     padding: 6px 33px;
     color: var(--unitshot-white);
   }
 
-  &--v2, &--v4 {
+  &--v3 {
+    border: 2px solid var(--unitshot-accent-pink);
     padding: 4px 33px;
+    color: var(--unitshot-gray-main);
 
     &:hover {
-      color: var(--unitshot-white);
+      border-color: var(--unitshot-gray-main);
     }
   }
 
-  &--v5 {
-    color: var(--unitshot-white);
-    background-color: var(--unitshot-gray-main);
-  }
-
-  &--v6 {
-    color: var(--unitshot-white);
-    background-color: var(--unitshot-accent-pink);
-  }
-
-  &--v7 {
-    background-color: transparent;
-    box-shadow: 0 0 0 1.5px var(--unitshot-gray-darker) inset; // Вместо border что бы не ломать высоту
+  &--v4 {
+    border: 2px solid var(--unitshot-gray-main);
+    padding: 4px 33px;
     color: var(--unitshot-gray-main);
   }
 
@@ -80,11 +58,27 @@
     border-radius: 4px;
 
     @include media-md() {
+      font-size: 16px;
+      padding: 5.5px 8px;
       min-height: 30px;
       min-width: 30px;
-      padding: 5.5px 8px;
-      font-size: 16px;
     }
+  }
+
+  &--v5 {
+    color: var(--unitshot-white);
+    background-color: var(--unitshot-accent-pink);
+  }
+
+  &--v6 {
+    color: var(--unitshot-white);
+    background-color: var(--unitshot-gray-main);
+  }
+
+  &--v7 {
+    background-color: transparent;
+    box-shadow: 0 0 0 1.5px var(--unitshot-gray-darker) inset; // Вместо border что бы не ломать высоту
+    color: var(--unitshot-gray-main);
   }
 
   &--link-disabled,

@@ -1,10 +1,10 @@
 {% if text %}
     {% if type == 'link' %}
-        <a href="{{ href }}" class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %} {% if disabled %} us-button-square--link-disabled {% endif %}">
+        <a href="{{ href }}" id="{{ id }}" class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %} {% if disabled %} us-button-square--link-disabled {% endif %} {{ class }}" {{ data }}>
             {{ text }}
         </a>
     {% else %}
-        <button class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %}" {% if disabled %} disabled {% endif %}>
+        <button id="{{ id }}" class="us-button-square {% if version %} us-button-square--{{ version }} {% endif %} {{ class }}" {% if disabled %} disabled {% endif %} {{ data }} type="button">
             {{ text }}
         </button>
     {% endif %}

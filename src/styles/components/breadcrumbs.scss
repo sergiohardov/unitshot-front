@@ -42,9 +42,9 @@
   }
 
   &__link {
-    font-family: var(--unitshot-font-family-base);
     font-size: 14px;
     color: var(--unitshot-gray-dark);
+    @include font-ppneue-medium;
 
     @include media-md() {
       font-size: 12px;
