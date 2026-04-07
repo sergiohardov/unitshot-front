@@ -48,10 +48,9 @@
   }
 
   &__slide-date {
-    font-family: var(--unitshot-font-family-body);
-    font-weight: 500;
     font-size: 14px;
     color: var(--unitshot-gray-most-darker);
+    @include font-suisse-medium;
 
     @include media-md() {
       font-size: 12px;
@@ -59,10 +58,9 @@
   }
 
   &__slide-title {
-    font-family: var(--unitshot-font-family-body);
-    font-weight: 500;
     font-size: 18px;
     color: var(--unitshot-gray-main);
+    @include font-suisse-medium;
 
     @include media-md() {
       font-size: 14px;
