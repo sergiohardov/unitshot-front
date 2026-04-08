@@ -152,20 +152,17 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      font-size: 16px;
+      @include font-suisse-medium;
 
       @include media-md() {
         align-items: center;
+        font-size: 14px;
       }
     }
 
     &-email-link {
-      font-size: 16px;
-      @include font-suisse-medium;
       transition: var(--unitshot-transition-speed);
-
-      @include media-md() {
-        font-size: 14px;
-      }
 
       &:hover {
         color: var(--unitshot-accent-pink);
