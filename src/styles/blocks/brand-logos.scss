@@ -33,7 +33,6 @@
     justify-content: center;
     position: relative;
     scale: 1;
-    transition: var(--unitshot-transition-speed) ease;
 
     &:before {
       content: '';
@@ -47,11 +46,11 @@
       border-radius: 50%;
       scale: 0;
       z-index: 1;
+      transition: var(--unitshot-transition-speed-slowly);
     }
 
     &:hover:before {
       scale: 1;
-      transition: all var(--unitshot-transition-speed) ease;
     }
 
     &-link {

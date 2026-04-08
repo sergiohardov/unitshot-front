@@ -434,7 +434,7 @@
         border-radius: 50%;
         scale: 0;
         background-color: var(--unitshot-accent-pink);
-        transition: var(--unitshot-transition-speed);
+        transition: var(--unitshot-transition-speed-slowly);
       }
 
       &:hover {
