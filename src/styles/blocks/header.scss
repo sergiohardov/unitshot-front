@@ -212,9 +212,12 @@
       display: flex;
       align-items: center;
       gap: 40px;
+      height: 22px;
       flex-wrap: wrap;
+      overflow: hidden;
 
       &__item {
+        text-wrap: nowrap;
         font-size: 18px;
         color: var(--unitshot-gray-light);
         @include font-suisse-medium;

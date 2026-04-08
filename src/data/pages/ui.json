@@ -53,13 +53,13 @@
       ]
     },
     {
-      "name": "PPNeueMontrealMono",
+      "name": "DRKrapkaRound",
       "weights": [
         "font-drkrapka-medium"
       ]
     },
     {
-      "name": "DRKrapkaRound",
+      "name": "PPNeueMontrealMono",
       "weights": [
         "font-ppneue-medium",
         "font-ppneue-bold"
