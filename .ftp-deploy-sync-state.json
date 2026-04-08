@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1775642528355,
+    "generatedTime": 1775684091392,
     "data": [
         {
             "type": "folder",
@@ -196,8 +196,8 @@
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 76891,
-            "hash": "a8245f809dfc438d7258594da2fce1a1f78905228f07b8aff81ad254e147d58a"
+            "size": 77278,
+            "hash": "e2741985c165c21ebf9c95097e8bcbc2bcafa4e2de205e9159dea092d3c295ec"
         },
         {
             "type": "file",
@@ -567,15 +567,15 @@
         },
         {
             "type": "file",
-            "name": "pages/home.html",
-            "size": 128094,
-            "hash": "9a40969f3618907dd5b8e1b741140ecfff6db8f024f09aa51da21f32d1f3aaf8"
+            "name": "pages/ui.html",
+            "size": 14643,
+            "hash": "cd6ce630570d18a37b3c15807af9c1404b50ea0700b7db381090c2ebc6cc3b9d"
         },
         {
             "type": "file",
-            "name": "pages/ui.html",
-            "size": 14638,
-            "hash": "a32df2a97425101a4cd48ed4d68e7dd21ac2884d17890a3427686a9c73d86062"
+            "name": "pages/home.html",
+            "size": 128094,
+            "hash": "9a40969f3618907dd5b8e1b741140ecfff6db8f024f09aa51da21f32d1f3aaf8"
         }
     ]
 }
