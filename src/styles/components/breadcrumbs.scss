@@ -45,6 +45,11 @@
     font-size: 14px;
     color: var(--unitshot-gray-dark);
     @include font-ppneue-medium;
+    transition: var(--unitshot-transition-speed);
+
+    &:hover {
+      color: var(--unitshot-gray-main);
+    }
 
     @include media-md() {
       font-size: 12px;

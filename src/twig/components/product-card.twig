@@ -7,13 +7,13 @@
         </div>
     {% endif %}
 
-    <div class="us-product-card__image">
+    <a href="{{ title.link }}" class="us-product-card__image">
         {% if not image.src %}
             <img src="/src/images/pictures/placeholder-image.jpg" alt="No Image">
         {% else %}
             <img src="{{ image.src }}" alt="{{ image.alt }}">
         {% endif %}
-    </div>
+    </a>
 
     <div class="us-product-card__info">
         <div class="us-product-card__text">
@@ -41,9 +41,7 @@
                 {% endif %}
             </div>
 
-            <button class="us-product-card__add-cart">
-                <img src="/src/images/icons/cart.svg" alt="cart">
-            </button>
+            <button class="us-product-card__add-cart"></button>
         </div>
     </div>
 </div>

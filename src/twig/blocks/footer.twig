@@ -63,7 +63,7 @@
                             <div class="us-footer__contact-social">
                                 {% for social in socials %}
                                     <a class="us-footer__contact-social__link" href="{{ social.link }}">
-                                        <img class="us-footer-contact__social__img" src="{{ social.icon.src }}" alt="{{ social.icon.alt }}" />
+                                        <img src="{{ social.icon.src }}" alt="{{ social.icon.alt }}" />
                                     </a>
                                 {% endfor %}
                             </div>
@@ -71,11 +71,11 @@
 
                         <div class="us-footer__contact-email">
                             {% if email %}
-                                <a href="mailto:{{ email }}">{{ email }}</a>
+                                <a class="us-footer__contact-email-link" href="mailto:{{ email }}">{{ email }}</a>
                             {% endif %}
 
                             {% if address %}
-                                <p>{{ address }}</p>
+                                <p class="us-footer__contact-email-link">{{ address }}</p>
                             {% endif %}
                         </div>
                     </div>

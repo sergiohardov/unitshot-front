@@ -55,6 +55,11 @@
       color: var(--unitshot-gray-light);
       font-size: 16px;
       @include font-suisse-medium;
+      transition: var(--unitshot-transition-speed);
+
+      &:hover {
+        color: var(--unitshot-accent-pink);
+      }
 
       @include media-md() {
         font-size: 14px;
@@ -103,9 +108,13 @@
       background-color: var(--unitshot-gray-light);
       border-radius: 6px;
       color: var(--unitshot-gray-main);
-      font-family: var(--unitshot-font-family-body);
-      font-weight: 500;
       font-size: 16px;
+      @include font-suisse-medium;
+      transition: var(--unitshot-transition-speed);
+
+      &:hover {
+        background-color: var(--unitshot-accent-pink);
+      }
 
       @include media-md() {
         font-size: 14px;
@@ -119,6 +128,23 @@
       @include media-md() {
         justify-content: center;
       }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          scale: 1.1;
+        }
+
+        img {
+          height: 34px;
+          width: 34px;
+          object-fit: contain;
+          transition: var(--unitshot-transition-speed);
+        }
+      }
     }
 
     &-email {
@@ -126,12 +152,23 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      font-size: 16px;
-      @include font-suisse-medium;
 
       @include media-md() {
         align-items: center;
+      }
+    }
+
+    &-email-link {
+      font-size: 16px;
+      @include font-suisse-medium;
+      transition: var(--unitshot-transition-speed);
+
+      @include media-md() {
         font-size: 14px;
+      }
+
+      &:hover {
+        color: var(--unitshot-accent-pink);
       }
     }
   }

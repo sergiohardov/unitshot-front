@@ -90,6 +90,11 @@
         gap: 8px;
         font-size: 12px;
         @include font-sussie-regular;
+        transition: var(--unitshot-transition-speed);
+
+        &:hover {
+          color: var(--unitshot-accent-pink);
+        }
 
         &:not(:first-child):before {
           content: '';
@@ -120,6 +125,7 @@
       &__item {
         --button-round-size: 44px;
         --button-round-icon-size: 22px;
+        transition: var(--unitshot-transition-speed);
 
         @include media-md() {
           --button-round-size: 34px;
@@ -141,13 +147,17 @@
 
         &--search {
           --button-round-bg-color: var(--unitshot-gray-light);
+
+          &:hover {
+            --button-round-bg-color: var(--unitshot-accent-pink);
+          }
         }
 
         &--cart {
           --button-round-bg-color: var(--unitshot-accent-pink);
 
           &:hover {
-            background-color: var(--unitshot-gray-light);
+            --button-round-bg-color: var(--unitshot-gray-light);
           }
         }
       }
@@ -165,6 +175,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:hover {
+          cursor: pointer;
+
+          &:after {
+            background-color: var(--unitshot-accent-pink);
+          }
+        }
 
         &--active {
           &:after {
@@ -311,7 +329,7 @@
       height: 100%;
       background-color: var(--unitshot-gray-light);
       display: grid;
-      grid-template-columns: minmax(360px, 434px) 210px minmax(412px, 644px);
+      grid-template-columns: minmax(360px, 434px) 220px minmax(412px, 644px);
     }
 
     &__categories, &__subcategories, &__brands {
