@@ -15,7 +15,7 @@
                         <span class="us-feedback-info__contacts-title">Написати нам:</span>
                         <div class="us-feedback-info__socials">
                             {% for social in socials %}
-                                <a href="{{ social.link }}">
+                                <a class="us-feedback-info__socials-link" href="{{ social.link }}">
                                     <img src="/src/images/icons/social-{{ social.icon }}.svg" alt="{{ social.icon }}">
                                 </a>
                             {% endfor %}
@@ -40,7 +40,9 @@
                     <span class="us-feedback-info__contacts-title">Замовити дзвінок:</span>
                     {% include '@components/button-square.twig' with {
                         'version': 'v2',
-                        'text': 'Безкоштовна констультація'
+                        'text': 'Безкоштовна констультація',
+                        'class': 'us-feedback-info__contacts-btn',
+                        'data': 'data-us-modal-id="us-modal-call"'
                     } %}
                 </div>
             </div>
