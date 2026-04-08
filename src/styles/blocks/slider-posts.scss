@@ -61,6 +61,11 @@
     font-size: 18px;
     color: var(--unitshot-gray-main);
     @include font-suisse-medium;
+    transition: var(--unitshot-transition-speed);
+
+    &:hover {
+      color: var(--unitshot-accent-pink);
+    }
 
     @include media-md() {
       font-size: 14px;
