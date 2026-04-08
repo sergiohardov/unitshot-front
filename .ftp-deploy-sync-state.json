@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1775574464477,
+    "generatedTime": 1775639014338,
     "data": [
         {
             "type": "folder",
@@ -46,8 +46,8 @@
         {
             "type": "file",
             "name": "blocks/category-showcase.html",
-            "size": 25173,
-            "hash": "e99617ba8ae4eb41560b90d40086adbb0a192abf83b18f3b58ce1de873043244"
+            "size": 12878,
+            "hash": "fc71eb3d716f808b6e9b9409b36aaba0180cf819df9af72873a9abd74b92f063"
         },
         {
             "type": "file",
@@ -58,14 +58,14 @@
         {
             "type": "file",
             "name": "blocks/feedback-info.html",
-            "size": 10974,
-            "hash": "325b3d5b990efe0848674ac5441efbfb95dcab88f2dd50165b9ec4494bf42198"
+            "size": 11153,
+            "hash": "947e250d5b7788d111aa413d118f13f44bc2e38848528c2c4eed642560e91938"
         },
         {
             "type": "file",
             "name": "blocks/footer.html",
-            "size": 21050,
-            "hash": "d6b7c905dfdf53d858615e0f8a22c0aa78820b1a280bfd5c3780844b91fa250b"
+            "size": 20931,
+            "hash": "b2ce1327d59a3e967e8dfbb53b99d567003f2f33aca3cce216463353916e67af"
         },
         {
             "type": "file",
@@ -76,8 +76,8 @@
         {
             "type": "file",
             "name": "blocks/popular-products.html",
-            "size": 19658,
-            "hash": "3f70010e16545067cc980984492b4cdad778b30125366fc292419d46a688ec94"
+            "size": 7363,
+            "hash": "e9ad83878ff646f60c47aadd2d845cab39787063eaf5fccc5e154569d32c2d97"
         },
         {
             "type": "file",
@@ -172,8 +172,8 @@
         {
             "type": "file",
             "name": "components/product-card.html",
-            "size": 3967,
-            "hash": "a54ba71d4a6b4e91713b4b2794275ff29a29e427d4801b61979501eed3e60162"
+            "size": 1508,
+            "hash": "a8a95af478f9a19278d138abe2e63c0c676443510d4acfe400081b42e1942e72"
         },
         {
             "type": "file",
@@ -190,14 +190,14 @@
         {
             "type": "file",
             "name": "components/slider-product-cards.html",
-            "size": 19865,
-            "hash": "865712f921c23ab3c3007192d1fb52f0ac923e07b35cab61c30cff25d1fd62cf"
+            "size": 7570,
+            "hash": "d1ea55ad904ca620e8997628c6607c75464fafa2edec4846aafb90d0c9c58871"
         },
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 68475,
-            "hash": "343b424e9ea038d6568915e0dde258c94599d50bce01b6f3d3394d572a9564fe"
+            "size": 76638,
+            "hash": "ebd691813389d9c6986310b4d165ed4f12160e54f19abaff0850b1f66ae2604a"
         },
         {
             "type": "file",
@@ -568,8 +568,8 @@
         {
             "type": "file",
             "name": "pages/home.html",
-            "size": 164957,
-            "hash": "b8bc7222a88d1f9c057e97b767262a70c782293cd72a1e0b45df2989a4cd781d"
+            "size": 128132,
+            "hash": "5f45596ce44b21b348e352a17765a09abb0b04502c4114f36994e4efcc461ea5"
         },
         {
             "type": "file",
