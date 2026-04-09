@@ -1,56 +1,67 @@
-import OverlayComponent from "@scripts/components/overlay.js";
-
 class HeaderComponent {
     constructor(elem) {
         this.component = elem
-        this.overlay    = OverlayComponent.getInstance()
+        this.overlay    = elem.querySelector('.us-header__overlay')
         this.number     = {
             container:  elem.querySelector('.us-header__line__number'),
             arrow:      elem.querySelector('.us-header__line__number__arrow'),
             menu:       elem.querySelector('.us-header__line__number__menu'),
-            isOpen:     false,
+            isActive:     false,
         }
         this.burger     = elem.querySelector('.us-header__line__nav__burger')
         this.menu       = elem.querySelector('.us-header__menu')
 
-        document.addEventListener('click', this.numberHandler.bind(this))
-        this.overlay.component?.addEventListener('click', this.overlayHandler.bind(this))
+        this.isOverlayActive    = false
+        this.isMenuActive       = false
+
+        document.addEventListener('click', this.numberMenuHandler.bind(this))
+        this.overlay?.addEventListener('click', this.overlayHandler.bind(this))
         this.burger?.addEventListener('click', this.burgerToggle.bind(this))
     }
 
-    overlayHandler() {
-        this.overlay.hide();
-        this.number.menu?.classList.remove('us-header__line__number__menu--visible')
-        this.menu?.classList.remove('us-header__menu--visible')
-        this.burger?.classList.remove('us-header__line__nav__burger--active')
-    }
+    numberMenuHandler(e) {
+        const target = e.target;
 
-    numberHandler(e) {
-        const target                 = e.target;
-        const isArrow       = target.closest('.us-header__line__number__arrow')    === this.number.arrow;
-        const isMenu        = target.closest('.us-header__line__number__menu')     === this.number.menu;
-        const isOverlay     = target.closest('.us-overlay')                        === this.overlay.component;
+        const isArrow       = target.closest('.us-header__line__number__arrow') === this.number.arrow;
+        const isMenu        = target.closest('.us-header__line__number__menu')  === this.number.menu;
 
         if (isArrow) {
-            this.number.isOpen = !this.number.isOpen;
-            this.overlay.toggle();
-            this.number.menu.classList.toggle('us-header__line__number__menu--visible')
-            return null;
+            this.number.isActive = !this.number.isActive;
+            this.number.menu.classList.toggle('us-header__line__number__menu--visible', this.number.isActive)
+            this.overlayToggle()
+            return;
         }
 
-        if (!isMenu || isOverlay) {
-            if(!this.number.isOpen) return null;
-
-            this.overlay.hide();
+        if (!isMenu && this.number.isActive) {
             this.number.menu.classList.remove('us-header__line__number__menu--visible')
-            return null;
+            this.number.isActive = false;
+            this.overlayToggle()
+            return;
         }
+    }
+
+    overlayToggle() {
+        const shouldShowOverlay = this.number.isActive || this.isMenuActive;
+        this.overlay.classList.toggle('us-header__overlay--visible', shouldShowOverlay)
     }
 
     burgerToggle(e) {
-        this.overlay.toggle();
-        this.menu.classList.toggle('us-header__menu--visible')
-        this.burger.classList.toggle('us-header__line__nav__burger--active')
+        this.isMenuActive = !this.isMenuActive;
+
+        this.menu.classList.toggle('us-header__menu--visible', this.isMenuActive)
+        this.burger.classList.toggle('us-header__line__nav__burger--active', this.isMenuActive)
+        this.overlayToggle()
+    }
+
+    overlayHandler() {
+        this.isOverlayActive    = false;
+        this.isMenuActive       = false;
+        this.number.isActive    = false;
+
+        this.overlay?.classList.remove('us-header__overlay--visible')
+        this.number.menu?.classList.remove('us-header__line__number__menu--visible')
+        this.menu?.classList.remove('us-header__menu--visible')
+        this.burger?.classList.remove('us-header__line__nav__burger--active')
     }
 
     static init() {
