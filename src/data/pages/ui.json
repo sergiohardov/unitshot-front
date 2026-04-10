@@ -103,6 +103,7 @@
   ],
   "pages": [
     "home",
+    "blog",
     "post",
     "contact"
   ]
