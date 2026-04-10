@@ -1,4 +1,4 @@
-class HeaderComponent {
+class HeaderBlock {
     constructor(elem) {
         this.component = elem
         this.overlay    = elem.querySelector('.us-header__overlay')
@@ -70,4 +70,4 @@ class HeaderComponent {
     }
 }
 
-export default HeaderComponent
+export default HeaderBlock
