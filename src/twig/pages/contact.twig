@@ -18,7 +18,7 @@
 
                         {% if description %}
                             <div class="us-page-contact__text__description">
-                                {{ description }}
+                                {{ description|raw }}
                             </div>
                         {% endif %}
 
@@ -28,7 +28,7 @@
                                     <div class="us-page-contact__text__contacts__item">
                                         <p class="us-page-contact__text__contacts__title">{{ item.title }}:</p>
                                         {% if item.type == 'text' %}
-                                            <div class="us-page-contact__text__contacts__text">{{ item.content }}</div>
+                                            <div class="us-page-contact__text__contacts__text">{{ item.content|raw }}</div>
                                         {% elseif item.type == 'number' %}
                                             <div class="us-page-contact__text__contacts__numbers">
                                                 {% if item.content %}
