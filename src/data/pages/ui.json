@@ -103,6 +103,7 @@
   ],
   "pages": [
     "home",
+    "post",
     "contact"
   ]
 }
