@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1775684091392,
+    "generatedTime": 1775814236165,
     "data": [
         {
             "type": "folder",
@@ -70,8 +70,8 @@
         {
             "type": "file",
             "name": "blocks/header.html",
-            "size": 26998,
-            "hash": "046f0459cde2e8075d670d2a683e534db56c4f19444b385ac3e9b41f40d8d487"
+            "size": 27042,
+            "hash": "336c79084a40cb4802cf5bebfa27cabc5ccf5c426a073c9373ccecd40cf2dac7"
         },
         {
             "type": "file",
@@ -196,8 +196,8 @@
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 77278,
-            "hash": "e2741985c165c21ebf9c95097e8bcbc2bcafa4e2de205e9159dea092d3c295ec"
+            "size": 77382,
+            "hash": "bd3eb2adaac798ed8e8cb3f20c1b38a51aafbf3971aeb1ed9e8adfccbb5ee95f"
         },
         {
             "type": "file",
@@ -562,20 +562,20 @@
         {
             "type": "file",
             "name": "js/main.js",
-            "size": 90475,
-            "hash": "df8cbc9140d806cd052525d0ce7c9e076e06197e4cc945425b37ece41b16719b"
+            "size": 90040,
+            "hash": "a6f2cca70bbd0c5057ad4f562412d589f8b1fe3dc430bd78268afae488dd1a11"
+        },
+        {
+            "type": "file",
+            "name": "pages/home.html",
+            "size": 128105,
+            "hash": "6d3041f09e8e4076690170c03a1a86c0f39df85969959e54435366ac345e9902"
         },
         {
             "type": "file",
             "name": "pages/ui.html",
             "size": 14643,
             "hash": "cd6ce630570d18a37b3c15807af9c1404b50ea0700b7db381090c2ebc6cc3b9d"
-        },
-        {
-            "type": "file",
-            "name": "pages/home.html",
-            "size": 128094,
-            "hash": "9a40969f3618907dd5b8e1b741140ecfff6db8f024f09aa51da21f32d1f3aaf8"
         }
     ]
 }
