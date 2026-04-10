@@ -13,8 +13,7 @@ import TextImageBlock from "@scripts/blocks/text-image.js";
 import ClientLogosBlock from "@scripts/blocks/client-logos.js";
 import SliderReviewsBlock from "@scripts/blocks/slider-reviews.js";
 import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
-import HeaderComponent from "@scripts/components/header.js";
-
+import HeaderBlock from "@scripts/blocks/header.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
@@ -30,5 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
     ClientLogosBlock.init()
     SliderReviewsBlock.init()
     SliderPostsBlock.init()
-    HeaderComponent.init()
+    HeaderBlock.init()
 })
