@@ -14,6 +14,10 @@
       "name": "Red"
     },
     {
+      "var": "--unitshot-dark",
+      "name": "Dark"
+    },
+    {
       "var": "--unitshot-gray-main",
       "name": "Gray Main"
     },
