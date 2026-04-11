@@ -1,0 +1,65 @@
+{% extends '@layouts/base.twig' %}
+
+{% block content %}
+    <div class="us-page-checkout">
+        <div class="us-container">
+            <div class="us-page-checkout__inner">
+                {% include '@components/breadcrumbs.twig' with {
+                    "links": breadcrumbs,
+                    'class': 'us-page-checkout__breadcrumbs'
+                } %}
+
+                {% include '@components/page-title.twig' with {
+                    'title': title,
+                    'class': 'us-page-checkout__title'
+                } %}
+
+                <form class="us-page-checkout__form">
+                    <div class="us-page-checkout__form__contact">
+                        <h2 class="us-page-checkout__form__title">Контактна інформація</h2>
+
+                        <div class="us-page-checkout__form__inputs">
+                            <input type="tel" id="phone" name="phone" placeholder="Номер телефону"/>
+                            <input type="text" id="name" name="name" placeholder="Ім'я"/>
+                            <input type="text" id="post" name="post" placeholder="Пошта"/>
+                            <textarea id="comment" name="comment" placeholder="Коментар до замовлення"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="us-page-checkout__form__cart">
+                        <h2 class="us-page-checkout__form__title">Ваше замовлення</h2>
+
+                        <div class="us-page-checkout__form__list">
+                            {% if list %}
+                                {% for item in list %}
+                                    <div class="us-page-checkout__form__item">
+                                        <button class="us-page-checkout__form__item__close"></button>
+                                        <div class="us-page-checkout__form__item__image">
+                                            {% if item.image %}
+                                                <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
+                                            {% endif %}
+                                        </div>
+                                        <h3 class="us-page-checkout__form__item__title">{{ item.title }}</h3>
+                                        <div class="us-page-checkout__form__item__qty">
+                                            <button>{{ svg_icon('minus') }}</button>
+                                            <input type="text" value="1">
+                                            <button>{{ svg_icon('plus') }}</button>
+                                        </div>
+                                        <span class="us-page-checkout__form__item__price">{{ item.price }}</span>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+
+                        <div class="us-page-checkout__form__summary">
+                            <span class="us-page-checkout__form__summary__label">4 товари на суму:</span>
+                            <span class="us-page-checkout__form__summary__total">312 798 грн.</span>
+                        </div>
+
+                        <button class="us-page-checkout__form__submit" type="button">Оформити замовлення</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
