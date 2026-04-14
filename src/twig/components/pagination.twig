@@ -1,5 +1,5 @@
 {% if prev and next and pages %}
-    <ul class="us-pagination">
+    <ul class="us-pagination {{ class }}">
         <li>
             {% include '@components/button-arrow.twig' with {
                 'type': 'link',
@@ -12,6 +12,7 @@
         {% for page in pages %}
             <li>
                 {% include '@components/button-round.twig' with {
+                    'class': '',
                     'type': 'link',
                     'version': page.is_current ? 'v3' : 'v4',
                     'text': page.number,
