@@ -1,0 +1,24 @@
+{
+  "template": "./src/twig/components/modal-filter.twig",
+  "id": "us-modal-filter",
+  "class": "us-modal-filter",
+  "modify": "left",
+  "title": "Фільтр",
+  "buttons": null,
+  "filters": [
+    {
+      "title": "Категорія 1",
+      "type": "checkbox"
+    },
+    {
+      "title": "Категорія 2",
+      "type": "checkbox"
+    },
+    {
+      "title": "Ціна",
+      "type": "range",
+      "min": 250,
+      "max": 13521
+    }
+  ]
+}

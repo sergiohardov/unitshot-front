@@ -14,12 +14,14 @@ import ClientLogosBlock from "@scripts/blocks/client-logos.js";
 import SliderReviewsBlock from "@scripts/blocks/slider-reviews.js";
 import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
 import HeaderBlock from "@scripts/blocks/header.js";
+import ModalFilterComponent from "@scripts/components/modal-filter.js";
 import RangeComponent from "@scripts/components/range.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
     ModalAddCartComponent.init()
     ModalRemoveCartComponent.init()
+    ModalFilterComponent.init()
     ModalCallComponent.init();
     ModalLangComponent.init()
     BrandLogosBlock.init()
