@@ -6,6 +6,7 @@
   align-items: center;
   align-self: flex-start;
   border-radius: 6px;
+  height: 32px;
 
   @include media-md() {
     border-radius: 3px;
@@ -13,7 +14,7 @@
 
   button {
     width: 32px;
-    height: 32px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +40,7 @@
     background-color: transparent;
     text-align: center;
     width: 34px;
-    height: 32px;
+    height: 100%;
     border: none;
     border-right: 1px solid var(--unitshot-accent-pink);
     border-left: 1px solid var(--unitshot-accent-pink);
