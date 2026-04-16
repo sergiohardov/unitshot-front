@@ -16,6 +16,7 @@ import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
 import HeaderBlock from "@scripts/blocks/header.js";
 import ModalFilterComponent from "@scripts/components/modal-filter.js";
 import RangeComponent from "@scripts/components/range.js";
+import QuantityComponent from "@scripts/components/quantity.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
@@ -34,4 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
     SliderPostsBlock.init()
     HeaderBlock.init()
     RangeComponent.init()
+    QuantityComponent.init()
 })

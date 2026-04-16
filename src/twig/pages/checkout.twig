@@ -40,11 +40,9 @@
                                             {% endif %}
                                         </div>
                                         <h3 class="us-page-checkout__form__item__title">{{ item.title }}</h3>
-                                        <div class="us-page-checkout__form__item__qty">
-                                            <button>{{ svg_icon('minus') }}</button>
-                                            <input type="text" value="1">
-                                            <button>{{ svg_icon('plus') }}</button>
-                                        </div>
+                                        {% include '@components/quantity.twig' with {
+                                            'class': 'us-page-checkout__form__item__qty'
+                                        } %}
                                         <span class="us-page-checkout__form__item__price">{{ item.price }}</span>
                                     </div>
                                 {% endfor %}

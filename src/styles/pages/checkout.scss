@@ -187,57 +187,6 @@
         grid-area: qty;
         justify-self: flex-start;
         align-self: flex-end;
-        border: 1px solid var(--unitshot-accent-pink);
-        display: flex;
-        align-items: center;
-        border-radius: 6px;
-
-        @include media-md() {
-          border-radius: 3px;
-        }
-
-        button {
-          width: 32px;
-          height: 32px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          @include media-md() {
-            width: 22px;
-            height: 22px;
-          }
-
-          svg {
-            width: 12px;
-            height: 12px;
-            object-fit: contain;
-
-            @include media-md() {
-              width: 10px;
-              height: 10px;
-            }
-          }
-        }
-
-        input {
-          background-color: transparent;
-          text-align: center;
-          width: 34px;
-          height: 32px;
-          border: none;
-          border-right: 1px solid var(--unitshot-accent-pink);
-          border-left: 1px solid var(--unitshot-accent-pink);
-          font-size: 16px;
-          color: var(--unitshot-gray-main);
-          @include font-ppneue-medium;
-
-          @include media-md() {
-            width: 24px;
-            height: 22px;
-            font-size: 14px;
-          }
-        }
       }
 
       &__price {
