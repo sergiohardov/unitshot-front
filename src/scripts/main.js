@@ -17,6 +17,7 @@ import HeaderBlock from "@scripts/blocks/header.js";
 import ModalFilterComponent from "@scripts/components/modal-filter.js";
 import RangeComponent from "@scripts/components/range.js";
 import QuantityComponent from "@scripts/components/quantity.js";
+import ProductGalleryComponent from "@scripts/components/product-gallery.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
@@ -36,4 +37,5 @@ document.addEventListener('DOMContentLoaded', () => {
     HeaderBlock.init()
     RangeComponent.init()
     QuantityComponent.init()
+    ProductGalleryComponent.init()
 })

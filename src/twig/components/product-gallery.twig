@@ -1,0 +1,35 @@
+{% if slides %}
+    <div class="us-product-gallery">
+        <div class="swiper us-product-gallery__main">
+            {% include '@components/button-arrow.twig' with {
+                'version': 'v2',
+                'class': 'us-product-gallery__main__next'
+            } %}
+
+            <div class="swiper-wrapper us-product-gallery__main__wrapper">
+                {% for slide in slides %}
+                    <div class="swiper-slide us-product-gallery__main__slide">
+                        <img src="{{ slide.src }}" alt="{{ slide.alt }}" />
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% include '@components/button-arrow.twig' with {
+                'version': 'v2',
+                'class': 'us-product-gallery__main__prev'
+            } %}
+        </div>
+
+        <div class="us-product-gallery__pagination"></div>
+
+        <div class="swiper us-product-gallery__thumbs">
+            <div class="swiper-wrapper us-product-gallery__thumbs__wrapper">
+                {% for slide in slides %}
+                    <div class="swiper-slide us-product-gallery__thumbs__slide">
+                        <img src="{{ slide.src }}" alt="{{ slide.alt }}" />
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
