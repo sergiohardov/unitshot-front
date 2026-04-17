@@ -18,6 +18,7 @@ import ModalFilterComponent from "@scripts/components/modal-filter.js";
 import RangeComponent from "@scripts/components/range.js";
 import QuantityComponent from "@scripts/components/quantity.js";
 import ProductGalleryComponent from "@scripts/components/product-gallery.js";
+import ProductSetComponent from "@scripts/components/product-set.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
@@ -38,4 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
     RangeComponent.init()
     QuantityComponent.init()
     ProductGalleryComponent.init()
+    ProductSetComponent.init()
 })
