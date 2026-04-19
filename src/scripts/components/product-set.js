@@ -17,6 +17,8 @@ class ProductSetComponent  {
 
         const swiper = new Swiper(this.slider, {
             modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: 0,
             navigation: {
                 nextEl: this.next,
                 prevEl: this.prev,

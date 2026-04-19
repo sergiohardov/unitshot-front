@@ -7,11 +7,16 @@
     font-size: 24px;
     color: var(--unitshot-gray-main);
     @include font-suisse-medium;
+
+    @include media-md() {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
   }
 
   &__product {
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: repeat(2, auto);
     gap: 14px 20px;
     padding: 0 34px;
@@ -19,12 +24,22 @@
         "image title"
         "image price";
 
+    @include media-md() {
+      gap: 8px;
+      padding: 8px 20px;
+    }
+
     &__image {
       grid-area: image;
-      width: 100%;
+      width: 120px;
       height: 120px;
       border-radius: 6px;
       overflow: hidden;
+
+      @include media-md() {
+        width: 44px;
+        height: 44px;
+      }
 
       img {
         width: 100%;
@@ -38,6 +53,10 @@
       font-size: 20px;
       color: var(--unitshot-gray-main);
       @include font-ppneue-medium;
+
+      @include media-md() {
+        font-size: 14px;
+      }
     }
 
     &__price {
@@ -45,6 +64,10 @@
       display: flex;
       align-items: center;
       gap: 16px;
+
+      @include media-md() {
+        gap: 20px;
+      }
     }
 
     &__price-old {
@@ -52,12 +75,20 @@
       font-size: 16px;
       @include font-suisse-semibold;
       text-decoration: line-through;
+
+      @include media-md() {
+        font-size: 14px;
+      }
     }
 
     &__price-current {
       color: var(--unitshot-gray-main);
       font-size: 24px;
       @include font-ppneue-medium;
+
+      @include media-md() {
+        font-size: 18px;
+      }
     }
   }
 
@@ -69,28 +100,55 @@
     justify-content: center;
     align-items: center;
 
+    @include media-md() {
+      margin: 0;
+    }
+
     svg {
       width: 17px;
       height: 17px;
     }
   }
 
-  &__price {
+  &__bottom {
     display: flex;
     align-items: flex-end;
     margin-top: 32px;
 
-    &__title {
-      margin-right: 20px;
-      color: var(--unitshot-gray-main);
-      font-size: 28px;
-      @include font-ppneue-medium;
+    @include media-md() {
+      gap: 12px;
     }
 
-    &__total {
-      color: var(--unitshot-gray-main);
-      font-size: 32px;
-      @include font-ppneue-medium;
+
+    &__price {
+      display: flex;
+      gap: 20px;
+
+      @include media-md() {
+        gap: 2px;
+        flex-wrap: wrap;
+      }
+
+      &__title {
+        color: var(--unitshot-gray-main);
+        font-size: 28px;
+        @include font-ppneue-medium;
+
+        @include media-md() {
+          font-size: 18px;
+        }
+      }
+
+      &__total {
+        text-wrap: nowrap;
+        color: var(--unitshot-gray-main);
+        font-size: 32px;
+        @include font-ppneue-medium;
+
+        @include media-md() {
+          font-size: 20px;
+        }
+      }
     }
 
     &__btn {
@@ -105,6 +163,12 @@
       font-size: 16px;
       color: var(--unitshot-white);
       @include font-ppneue-medium;
+
+      @include media-md() {
+        font-size: 14px;
+        height: 40px;
+        max-width: 179px;
+      }
     }
   }
 
@@ -112,7 +176,7 @@
     position: relative;
 
     &__wrapper {
-      height: auto!important;
+      height: auto !important;
     }
 
     &__prev, &__next {
