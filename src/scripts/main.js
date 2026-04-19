@@ -19,6 +19,7 @@ import RangeComponent from "@scripts/components/range.js";
 import QuantityComponent from "@scripts/components/quantity.js";
 import ProductGalleryComponent from "@scripts/components/product-gallery.js";
 import ProductSetComponent from "@scripts/components/product-set.js";
+import ProductPage from "@scripts/pages/product.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
@@ -40,4 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
     QuantityComponent.init()
     ProductGalleryComponent.init()
     ProductSetComponent.init()
+    ProductPage.init()
 })

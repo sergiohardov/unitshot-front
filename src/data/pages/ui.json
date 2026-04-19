@@ -118,6 +118,7 @@
   "pages": [
     "home",
     "catalog",
+    "product",
     "blog",
     "post",
     "contact",
