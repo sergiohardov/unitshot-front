@@ -44,6 +44,14 @@
     {
       "var": "--unitshot-accent-pink",
       "name": "Accent Pink"
+    },
+    {
+      "var": "--unitshot-pink-light",
+      "name": "Pink Light"
+    },
+    {
+      "var": "--unitshot-green",
+      "name": "Green"
     }
   ],
   "fonts": [
