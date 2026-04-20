@@ -17,6 +17,7 @@ class HeaderBlock {
         document.addEventListener('click', this.numberMenuHandler.bind(this))
         this.overlay?.addEventListener('click', this.overlayHandler.bind(this))
         this.burger?.addEventListener('click', this.burgerToggle.bind(this))
+this.burger.click()
     }
 
     numberMenuHandler(e) {

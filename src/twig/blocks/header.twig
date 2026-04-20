@@ -45,7 +45,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="us-header__line__bottom">
                     <nav class="us-header__line__nav">
                         <button class="us-header__line__nav__burger"></button>
@@ -65,10 +64,10 @@
                             'class': 'us-header__line__number__phone'
                         } %}
 
-                        <button class="us-header__line__number__arrow"></button>
+                        {% if socials %}
+                            <button class="us-header__line__number__arrow"></button>
 
-                        <div class="us-header__line__number__menu">
-                            {% if socials %}
+                            <div class="us-header__line__number__menu">
                                 <ul class="us-header__line__number__list">
                                     {% for social in socials %}
                                         <li>
@@ -79,8 +78,9 @@
                                         </li>
                                     {% endfor %}
                                 </ul>
-                            {% endif %}
-                        </div>
+                            </div>
+                        {% endif %}
+
                     </div>
                 </div>
             </div>
@@ -129,3 +129,4 @@
         </div>
     </div>
 </header>
+
