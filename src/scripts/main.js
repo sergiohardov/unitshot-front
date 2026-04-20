@@ -20,6 +20,7 @@ import QuantityComponent from "@scripts/components/quantity.js";
 import ProductGalleryComponent from "@scripts/components/product-gallery.js";
 import ProductSetComponent from "@scripts/components/product-set.js";
 import ProductPage from "@scripts/pages/product.js";
+import ModalCartComponent from "@scripts/components/modal-cart.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
@@ -42,4 +43,5 @@ document.addEventListener('DOMContentLoaded', () => {
     ProductGalleryComponent.init()
     ProductSetComponent.init()
     ProductPage.init()
+    ModalCartComponent.init()
 })
