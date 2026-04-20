@@ -32,19 +32,11 @@
                         <div class="us-page-checkout__form__list">
                             {% if list %}
                                 {% for item in list %}
-                                    <div class="us-page-checkout__form__item">
-                                        <button class="us-page-checkout__form__item__close"></button>
-                                        <div class="us-page-checkout__form__item__image">
-                                            {% if item.image %}
-                                                <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
-                                            {% endif %}
-                                        </div>
-                                        <h3 class="us-page-checkout__form__item__title">{{ item.title }}</h3>
-                                        {% include '@components/quantity.twig' with {
-                                            'class': 'us-page-checkout__form__item__qty'
-                                        } %}
-                                        <span class="us-page-checkout__form__item__price">{{ item.price }}</span>
-                                    </div>
+                                    {% include '@components/product-item.twig' with {
+                                        'image': item.image,
+                                        'title': item.title,
+                                        'price': item.price
+                                    } %}
                                 {% endfor %}
                             {% endif %}
                         </div>
