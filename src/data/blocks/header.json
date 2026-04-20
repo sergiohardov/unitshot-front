@@ -70,198 +70,218 @@
       "link": "#"
     }
   ],
-  "category_menu": {
-    "categories": [
-      {
-        "title": "Кавомашини",
-        "link": "#",
-        "is_current": true
-      },
-      {
-        "title": "Кавомолки",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "Водопідготовка",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "Інструменти бариста",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "Термопоти",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "Комплекти",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "Вживане обладнання",
-        "link": "#",
-        "is_current": false
-      }
-    ],
-    "subcategories": [
-      {
-        "title": "Під еспресо",
-        "link": "#",
-        "is_current": true
-      },
-      {
-        "title": "Під фільтр",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "З вагами",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "Без вагів",
-        "link": "#",
-        "is_current": false
-      },
-      {
-        "title": "Жорна",
-        "link": "#",
-        "is_current": false
-      }
-    ],
-    "brands": [
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-1.png",
-          "alt": "Brand 1"
+  "categories": [
+    {
+      "title": "Кавомашини",
+      "link": "#",
+      "is_current": true,
+      "subcategories": [
+        {
+          "title": "Під еспресо",
+          "link": "#",
+          "is_current": true
         },
-        "link": "#"
-      },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-2.png",
-          "alt": "Brand 2"
+        {
+          "title": "Під фільтр",
+          "link": "#",
+          "is_current": false
         },
-        "link": "#"
-      },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-3.png",
-          "alt": "Brand 3"
+        {
+          "title": "З вагами",
+          "link": "#",
+          "is_current": false
         },
-        "link": "#"
-      },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-4.png",
-          "alt": "Brand 4"
+        {
+          "title": "Без вагів",
+          "link": "#",
+          "is_current": false
         },
-        "link": "#"
-      },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-5.png",
-          "alt": "Brand 5"
+        {
+          "title": "Жорна",
+          "link": "#",
+          "is_current": false
+        }
+      ]
+    },
+    {
+      "title": "Кавомолки",
+      "link": "#",
+      "is_current": false,
+      "subcategories": []
+    },
+    {
+      "title": "Водопідготовка",
+      "link": "#",
+      "is_current": false,
+      "subcategories": [
+        {
+          "title": "З вагами",
+          "link": "#",
+          "is_current": false
         },
-        "link": "#"
-      },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-6.png",
-          "alt": "Brand 6"
+        {
+          "title": "Без вагів",
+          "link": "#",
+          "is_current": false
         },
-        "link": "#"
+        {
+          "title": "Жорна",
+          "link": "#",
+          "is_current": false
+        }
+      ]
+    },
+    {
+      "title": "Інструменти бариста",
+      "link": "#",
+      "is_current": false,
+      "subcategories": []
+    },
+    {
+      "title": "Термопоти",
+      "link": "#",
+      "is_current": false,
+      "subcategories": []
+    },
+    {
+      "title": "Комплекти",
+      "link": "#",
+      "is_current": false,
+      "subcategories": []
+    },
+    {
+      "title": "Вживане обладнання",
+      "link": "#",
+      "is_current": false,
+      "subcategories": []
+    }
+  ],
+  "brands": [
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-1.png",
+        "alt": "Brand 1"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-7.png",
-          "alt": "Brand 7"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-2.png",
+        "alt": "Brand 2"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-8.png",
-          "alt": "Brand 8"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-3.png",
+        "alt": "Brand 3"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-9.png",
-          "alt": "Brand 9"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-4.png",
+        "alt": "Brand 4"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-10.png",
-          "alt": "Brand 10"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-5.png",
+        "alt": "Brand 5"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-11.png",
-          "alt": "Brand 11"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-6.png",
+        "alt": "Brand 6"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-12.png",
-          "alt": "Brand 12"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-7.png",
+        "alt": "Brand 7"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-1.png",
-          "alt": "Brand 13"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-8.png",
+        "alt": "Brand 8"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-2.png",
-          "alt": "Brand 14"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-9.png",
+        "alt": "Brand 9"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-3.png",
-          "alt": "Brand 15"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-10.png",
+        "alt": "Brand 10"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-4.png",
-          "alt": "Brand 16"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-11.png",
+        "alt": "Brand 11"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-5.png",
-          "alt": "Brand 17"
-        },
-        "link": "#"
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-12.png",
+        "alt": "Brand 12"
       },
-      {
-        "image": {
-          "src": "/src/images/pictures/brand-logos-6.png",
-          "alt": "Brand 18"
-        },
-        "link": "#"
-      }
-    ]
-  }
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-1.png",
+        "alt": "Brand 13"
+      },
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-2.png",
+        "alt": "Brand 14"
+      },
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-3.png",
+        "alt": "Brand 15"
+      },
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-4.png",
+        "alt": "Brand 16"
+      },
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-5.png",
+        "alt": "Brand 17"
+      },
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/brand-logos-6.png",
+        "alt": "Brand 18"
+      },
+      "link": "#"
+    }
+  ]
 }
