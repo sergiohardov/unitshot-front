@@ -1,0 +1,30 @@
+{
+  "template": "./src/twig/components/site-settings.twig",
+  "class": "custom-class",
+  "settings": [
+    [
+      {
+        "title": "UAH",
+        "link": "#",
+        "is_current": false
+      },
+      {
+        "title": "EUR",
+        "link": "#",
+        "is_current": true
+      }
+    ],
+    [
+      {
+        "title": "UA",
+        "link": "#",
+        "is_current": false
+      },
+      {
+        "title": "RU",
+        "link": "#",
+        "is_current": true
+      }
+    ]
+  ]
+}
