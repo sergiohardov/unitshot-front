@@ -6,6 +6,7 @@
 @use 'layouts/modal';
 @use 'layouts/slider';
 
+@use 'components/image';
 @use 'components/checkbox';
 @use 'components/button-square';
 @use 'components/button-round';
@@ -31,7 +32,6 @@
 @use 'components/product-gallery';
 @use 'components/site-settings';
 @use 'components/product-item';
-@use 'components/image';
 
 @use 'blocks/header';
 @use 'blocks/footer';
