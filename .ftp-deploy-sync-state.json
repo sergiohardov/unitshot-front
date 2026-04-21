@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1776790715277,
+    "generatedTime": 1776791014189,
     "data": [
         {
             "type": "folder",
@@ -483,15 +483,15 @@
         },
         {
             "type": "file",
-            "name": "images/client-logos-20.png",
-            "size": 16044,
-            "hash": "3a418052a4e6bc57af2ab8a4e9219c295c8c548da7edaf297c86ce2db30c4518"
-        },
-        {
-            "type": "file",
             "name": "images/client-logos-21.png",
             "size": 9567,
             "hash": "92d0f981e1494ddf4363f11678a5283eb3859345ac4eed105619bc158d2291b7"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-20.png",
+            "size": 16044,
+            "hash": "3a418052a4e6bc57af2ab8a4e9219c295c8c548da7edaf297c86ce2db30c4518"
         },
         {
             "type": "file",
@@ -597,15 +597,15 @@
         },
         {
             "type": "file",
-            "name": "images/slider-categories-2.png",
-            "size": 20107,
-            "hash": "af1f621c80d02772522c31ca3b778a1680b445b41b91c1ec46cc402603fb617a"
-        },
-        {
-            "type": "file",
             "name": "images/slider-categories-3.png",
             "size": 39489,
             "hash": "04af4b249acf3992f49321613d906b23d770e10e9ebba14960bc4d802743fd78"
+        },
+        {
+            "type": "file",
+            "name": "images/slider-categories-2.png",
+            "size": 20107,
+            "hash": "af1f621c80d02772522c31ca3b778a1680b445b41b91c1ec46cc402603fb617a"
         },
         {
             "type": "file",
@@ -634,44 +634,44 @@
         {
             "type": "file",
             "name": "pages/blog.html",
-            "size": 68778,
-            "hash": "0ad1e45825a4cd236633728e81515ca614f024576cb500c0b35d526a684c4f7f"
+            "size": 80611,
+            "hash": "b669e5ed03bafb48ae573f8165a3f1b8b031d8f0c74cee0f7c70e9264ea8111b"
         },
         {
             "type": "file",
             "name": "pages/catalog.html",
-            "size": 98181,
-            "hash": "9650f6468a17e6ab6b499ef96ec2634315276eb8e123367df3ff1dec8e952cb4"
+            "size": 107066,
+            "hash": "184229e98145eb596445f968a47e372c6de958182fc5efb9063fb0e86b0e33cd"
         },
         {
             "type": "file",
             "name": "pages/checkout.html",
-            "size": 58390,
-            "hash": "696ba953dc7a0b92b88c72201c72e4cccd35a10dd7ab809bc1eeb18192c488f8"
+            "size": 70223,
+            "hash": "ee4078f8c831cc6939a0dbdea7b9a3d701ae5fb2979189092c632f6ecc67eae5"
         },
         {
             "type": "file",
             "name": "pages/contact.html",
-            "size": 62974,
-            "hash": "d633a14901d8a7b921a625be667838573014ae2f94a42dd2eb0c9fd89e0003c9"
+            "size": 74807,
+            "hash": "d63b6df892a23c711ec04c0856cb368be2fb89b2a0271297fcfabc7c012a8319"
         },
         {
             "type": "file",
             "name": "pages/home.html",
-            "size": 129005,
-            "hash": "b4ceae0dd21265974a6a6c4e5ba8c3cb87093263211f15458c66e53d550a625f"
+            "size": 140838,
+            "hash": "483a24ad3ba42b1abaaa82c98e65a903ba9020d38f0eb4907ae93898b3508838"
         },
         {
             "type": "file",
             "name": "pages/post.html",
-            "size": 60240,
-            "hash": "89db415a8d00801e7f3b95c749046b31cc22191cf12050895b25aa398ecce583"
+            "size": 72073,
+            "hash": "8faff6ff79e4c01c7d81e53af2637c1effa8611a21f25bc492bb7dbf05d97406"
         },
         {
             "type": "file",
             "name": "pages/product.html",
-            "size": 98115,
-            "hash": "464e36a53c15792a4185de79ed98d5da21465bd0f3dc778190aeeaefe7e06408"
+            "size": 109948,
+            "hash": "1beedbcca1e910c9a346c7efdd8b96f90065435c9c2eb40dfa7d7b39af0a3b7e"
         },
         {
             "type": "file",
