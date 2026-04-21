@@ -1,0 +1,8 @@
+{
+  "template": "./src/twig/components/image.twig",
+  "class": "custom-class",
+  "image": {
+    "src": "/src/images/pictures/product-card-1.png",
+    "alt": "Product"
+  }
+}
