@@ -12,7 +12,7 @@ class ProductSetComponent  {
         this.prev = elem.querySelector('.us-product-set__slider__prev')
         this.next = elem.querySelector('.us-product-set__slider__next')
         this.price = elem.querySelector('.us-product-set__product__price-current')
-        this.total = elem.querySelector('.us-product-set__price__total')
+        this.total = elem.querySelector('.us-product-set__bottom__price__total')
 
 
         const swiper = new Swiper(this.slider, {
