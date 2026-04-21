@@ -7,12 +7,11 @@
         </div>
     {% endif %}
 
-    <a href="{{ title.link }}" class="us-product-card__image">
-        {% if not image.src %}
-            <img src="/src/images/pictures/placeholder-image.jpg" alt="No Image">
-        {% else %}
-            <img src="{{ image.src }}" alt="{{ image.alt }}">
-        {% endif %}
+    <a href="{{ title.link|default('#') }}" class="us-product-card__image">
+        {% include '@components/image.twig' with {
+            'class': 'us-product-card__image__img',
+            'image': image
+        } %}
     </a>
 
     <div class="us-product-card__info">

@@ -1,6 +1,6 @@
 {
   "template": "./src/twig/components/product-card.twig",
-  "class": "",
+  "class": "custom-class",
   "tags": [
     {
       "status": "discount",
