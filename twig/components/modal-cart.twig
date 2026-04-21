@@ -1,0 +1,32 @@
+{% extends '@layouts/modal.twig' %}
+
+{% block body %}
+   <div class="us-modal-cart__list">
+       {% if products %}
+           {% for product in products %}
+               {% include '@components/product-item.twig' with {
+                   "class": "custom-class",
+                   "title": product.title,
+                   "image": product.image,
+                   "price": product.price
+               } %}
+           {% endfor %}
+       {% endif %}
+   </div>
+
+    <div class="us-modal-cart__total">
+        <div class="us-modal-cart__price">
+            <span class="us-modal-cart__price__title">Сума:</span>
+            <span class="us-modal-cart__price__sum">{{ price }}</span>
+        </div>
+
+        {# TODO: сделать динамическую ссылку на страницу оформления товара #}
+        {% include '@components/button-square.twig' with {
+            'version': 'v1',
+            'class': 'us-modal-cart__checkout-btn',
+            'text': 'Оформити замовлення',
+            'type': 'link',
+            'href': '/checkout/'
+        } %}
+    </div>
+{% endblock %}

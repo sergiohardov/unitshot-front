@@ -1,0 +1,67 @@
+{% if sets %}
+    <div class="us-product-set {{ class }}">
+        <p class="us-product-set__title">Разом вигідніше:</p>
+        <div class="us-product-set__product">
+            <div class="us-product-set__product__image">
+                {% include '@components/image.twig' with {
+                    'class': 'us-product-set__product__image__img',
+                    'image': image
+                } %}
+            </div>
+            <p class="us-product-set__product__title">{{ title }}</p>
+            <div class="us-product-set__product__price">
+                {% if old_price %}
+                    <span class="us-product-set__product__price-old">{{ old_price }}</span>
+                {% endif %}
+
+                <span class="us-product-set__product__price-current">{{ current_price }}</span>
+            </div>
+        </div>
+
+        <div class="us-product-set__plus">{{ svg_icon('plus') }}</div>
+
+        <div class="swiper us-product-set__slider">
+            {% include '@components/button-arrow.twig' with {
+                'version': 'v2',
+                'class': 'us-product-set__slider__prev'
+            } %}
+
+            <div class="swiper-wrapper us-product-set__slider__wrapper">
+                {% for set in sets %}
+                    <div class="swiper-slide">
+                        <div class="us-product-set__product">
+                            <div class="us-product-set__product__image">
+                                {% include '@components/image.twig' with {
+                                    'class': 'us-product-set__product__image__img',
+                                    'image': set.image
+                                } %}
+                            </div>
+                            <p class="us-product-set__product__title">{{ set.title }}</p>
+                            <div class="us-product-set__product__price">
+                                {% if set.old_price %}
+                                    <span class="us-product-set__product__price-old">{{ set.old_price }}</span>
+                                {% endif %}
+
+                                <span class="us-product-set__product__price-current">{{ set.current_price }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% include '@components/button-arrow.twig' with {
+                'version': 'v2',
+                'class': 'us-product-set__slider__next'
+            } %}
+        </div>
+
+        <div class="us-product-set__bottom">
+            <div class="us-product-set__bottom__price">
+                <span class="us-product-set__bottom__price__title">Ціна:</span>
+                <span class="us-product-set__bottom__price__total">{{ total }}</span>
+            </div>
+
+            <button class="us-product-set__bottom__btn">Купити комплект</button>
+        </div>
+    </div>
+{% endif %}

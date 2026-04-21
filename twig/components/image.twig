@@ -1,0 +1,5 @@
+{% if image.src %}
+    <img class="us-image {{ class }}" src="{{ image.src }}" alt="{{ image.alt }}">
+{% else %}
+    <img class="us-image {{ class }}" src="/src/images/pictures/placeholder-image.jpg" alt="Placeholder Image">
+{% endif %}

@@ -1,0 +1,18 @@
+<div class="us-product-item {{ class }}">
+    <button class="us-product-item__close" type="button"></button>
+
+    <div class="us-product-item__image">
+        {% include '@components/image.twig' with {
+            'class': 'us-product-item__image__img',
+            'image': image
+        } %}
+    </div>
+
+    <h3 class="us-product-item__title">{{ title }}</h3>
+
+    {% include '@components/quantity.twig' with {
+        'class': 'us-product-item__qty'
+    } %}
+
+    <span class="us-product-item__price">{{ price }}</span>
+</div>
