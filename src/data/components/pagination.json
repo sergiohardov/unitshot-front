@@ -1,5 +1,6 @@
 {
   "template": "./src/twig/components/pagination.twig",
+  "class": "custom-class",
   "prev": "#prev",
   "next": "#next",
   "pages": [
