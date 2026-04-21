@@ -1,5 +1,6 @@
 {
   "template": "./src/twig/components/page-title.twig",
-  "title": "Page Title",
-  "class": "custom-class"
+  "class": "custom-class",
+  "tag": "h3",
+  "title": "Page Title"
 }
