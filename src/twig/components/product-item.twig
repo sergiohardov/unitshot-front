@@ -2,7 +2,10 @@
     <button class="us-product-item__close" type="button"></button>
 
     <div class="us-product-item__image">
-        <img src="{{ image.src }}" alt="{{ image.alt }}">
+        {% include '@components/image.twig' with {
+            'class': 'us-product-item__image__img',
+            'image': image
+        } %}
     </div>
 
     <h3 class="us-product-item__title">{{ title }}</h3>
