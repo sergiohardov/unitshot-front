@@ -135,5 +135,57 @@
             </div>
         </div>
     </div>
+
+    <div class="us-header__search">
+        <div class="us-header__search__container">
+            <div class="us-header__search__input">
+                <input type="text" class="us-header__search__input__field" placeholder="Пошук товару...">
+                <div class="us-header__search__input__buttons">
+                    <button class="us-header__search__input__buttons__clear">{{ svg_icon('close') }}</button>
+                    <button class="us-header__search__input__buttons__search">{{ svg_icon('search') }}</button>
+                </div>
+            </div>
+            <div class="us-header__search__results">
+                <div class="us-header__search__results__list">
+                    {# TODO: сделать динамикой #}
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                </div>
+                <p class="us-header__search__results__more">Переглянути всі товари</p>
+            </div>
+        </div>
+
+        {% include '@components/button-round.twig' with {
+            'version': 'v0',
+            'icon': 'close',
+            'class': 'us-header__search__close'
+        } %}
+    </div>
 </header>
 
