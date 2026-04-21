@@ -1,4 +1,5 @@
 {
   "template": "./src/twig/components/phone-number.twig",
+  "class": "custom-class",
   "number": "+380731111111"
 }
