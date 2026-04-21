@@ -614,11 +614,14 @@
     opacity: 0;
     visibility: hidden;
     transition: var(--unitshot-transition-speed);
-    z-index: 100;
+    z-index: 50;
+    height: 0;
+    pointer-events: none; // TODO: фикс (поиск перекрывает элементы под собой когда скрыт)
 
     &--active {
       opacity: 1;
       visibility: visible;
+      pointer-events: all;
     }
 
     &--results {

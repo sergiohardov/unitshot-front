@@ -122,6 +122,8 @@ class Search {
 
     close() {
         this.isActive = false;
+        this.isResultsActive = false;
+
         this.searchContainer?.classList.remove('us-header__search--active')
         this.headerCtx.overlayToggle()
     }
