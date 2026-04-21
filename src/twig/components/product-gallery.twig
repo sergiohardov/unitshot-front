@@ -9,7 +9,10 @@
             <div class="swiper-wrapper us-product-gallery__main__wrapper">
                 {% for slide in slides %}
                     <div class="swiper-slide us-product-gallery__main__slide">
-                        <img src="{{ slide.src }}" alt="{{ slide.alt }}" />
+                        {% include '@components/image.twig' with {
+                            'class': 'us-product-gallery__main__slide__img',
+                            'image': slide
+                        } %}
                     </div>
                 {% endfor %}
             </div>
@@ -26,7 +29,10 @@
             <div class="swiper-wrapper us-product-gallery__thumbs__wrapper">
                 {% for slide in slides %}
                     <div class="swiper-slide us-product-gallery__thumbs__slide">
-                        <img src="{{ slide.src }}" alt="{{ slide.alt }}" />
+                        {% include '@components/image.twig' with {
+                            'class': 'us-product-gallery__thumbs__slide__img',
+                            'image': slide
+                        } %}
                     </div>
                 {% endfor %}
             </div>
