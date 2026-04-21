@@ -14,6 +14,10 @@
       "name": "Red"
     },
     {
+      "var": "--unitshot-dark",
+      "name": "Dark"
+    },
+    {
       "var": "--unitshot-gray-main",
       "name": "Gray Main"
     },
@@ -40,6 +44,14 @@
     {
       "var": "--unitshot-accent-pink",
       "name": "Accent Pink"
+    },
+    {
+      "var": "--unitshot-pink-light",
+      "name": "Pink Light"
+    },
+    {
+      "var": "--unitshot-green",
+      "name": "Green"
     }
   ],
   "fonts": [
@@ -70,16 +82,26 @@
     "breadcrumbs",
     "button-arrow",
     "button-round",
+    "button-show-more",
     "button-square",
     "checkbox",
+    "image",
     "modal-add-cart",
     "modal-call",
+    "modal-cart",
+    "modal-filter",
     "modal-lang",
     "modal-remove-cart",
     "page-title",
     "pagination",
     "phone-number",
     "product-card",
+    "product-gallery",
+    "product-item",
+    "product-set",
+    "quantity",
+    "range",
+    "site-settings",
     "slider-categories",
     "slider-logo-images",
     "slider-product-cards"
@@ -98,6 +120,12 @@
     "text-image"
   ],
   "pages": [
-    "home"
+    "home",
+    "catalog",
+    "product",
+    "blog",
+    "post",
+    "contact",
+    "checkout"
   ]
 }

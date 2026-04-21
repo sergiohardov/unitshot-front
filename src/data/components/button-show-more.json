@@ -1,0 +1,4 @@
+{
+  "template": "./src/twig/components/button-show-more.twig",
+  "class": ""
+}

@@ -1,0 +1,57 @@
+{
+  "template": "./src/twig/pages/contact.twig",
+  "breadcrumbs": [
+    {
+      "title": "Головна",
+      "url": "/",
+      "is_current": false
+    },
+    {
+      "title": "Контакти",
+      "url": "",
+      "is_current": true
+    }
+  ],
+  "title": "Наші контакти",
+  "description": "<p>Ми знаємося як компетентно допомогти з продукцією через мережу ітнтернет, але якщо вам необхіда очна консультація ми маємо можлівість зустрітись в самому центрі м.Дніпро.</p><p>Зустріч узгоджуйте будь-ласка заздалегідь по номерам телефону вказаним нижче.</p>",
+  "contacts": [
+    {
+      "title": "Адреса",
+      "type": "text",
+      "content": "<p>м.Дніпро</p><p>вул. Центральна, буд. 1А</p>"
+    },
+    {
+      "title": "Графік роботи",
+      "type": "text",
+      "content": "<p>м.Понеділок – П’ятниця: 09:00 – 18:00</p><p>Субота – Неділя: Вихіді</p>"
+    },
+    {
+      "title": "Телефони",
+      "type": "number",
+      "content": ["+380631111111", "+380991111111"]
+    },
+    {
+      "title": "Мессендери",
+      "type": "socials",
+      "content": [
+        {
+          "icon": "social-whatsapp",
+          "link": "https://wa.me/380631111111"
+        },
+        {
+          "icon": "social-telegram",
+          "link": "https://t.me/test"
+        },
+        {
+          "icon": "social-viber",
+          "link": "https://viber.com/test"
+        }
+      ]
+    },
+    {
+      "title": "Пошта",
+      "type": "text",
+      "content": "<p>info@mailname.com.ua</p>"
+    }
+  ]
+}

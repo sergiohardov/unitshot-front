@@ -1,5 +1,6 @@
 {
   "template": "./src/twig/components/checkbox.twig",
+  "class": "custom-class",
   "id": "custom-id",
   "name": "custom-name",
   "value": "some-value",

@@ -1,0 +1,21 @@
+{
+  "template": "./src/twig/components/product-gallery.twig",
+  "slides": [
+    {
+      "src": "/src/images/pictures/product-card-1.png",
+      "alt": "Product Image"
+    },
+    {
+      "src": "/src/images/pictures/product-card-2.png",
+      "alt": "Product Image"
+    },
+    {
+      "src": "/src/images/pictures/product-card-3.png",
+      "alt": "Product Image"
+    },
+    {
+      "src": "/src/images/pictures/product-card-4.png",
+      "alt": "Product Image"
+    }
+  ]
+}

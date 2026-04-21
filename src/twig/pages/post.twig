@@ -1,0 +1,42 @@
+{% extends '@layouts/base.twig' %}
+
+{% block content %}
+    <div class="us-page-post">
+        <div class="us-container">
+            <div class="us-page-post__inner">
+                {% include '@components/breadcrumbs.twig' with {
+                    'links': breadcrumbs,
+                    'class': 'us-page-post__breadcrumbs'
+                } %}
+
+                {% if title %}
+                    <div class="us-page-post__content">
+                        {% include '@components/page-title.twig' with {
+                            "title": title,
+                            'class': 'us-page-post__content__title'
+                        } %}
+
+                        {% if date %}
+                            <p class="us-page-post__content__date">{{ date }}</p>
+                        {% endif %}
+
+                        {% if image %}
+                            <div class="us-page-post__content__image">
+                                <img src="{{ image.src }}" alt="{{ image.alt }}">
+                            </div>
+                        {% endif %}
+
+                        {% if content %}
+                            <div class="us-page-post__content__text">{{ content|raw }}</div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+                {% include '@blocks/slider-posts.twig' with {
+                    'title': more_posts.title,
+                    'posts': more_posts.posts
+                } %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

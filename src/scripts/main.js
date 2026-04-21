@@ -14,11 +14,19 @@ import ClientLogosBlock from "@scripts/blocks/client-logos.js";
 import SliderReviewsBlock from "@scripts/blocks/slider-reviews.js";
 import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
 import HeaderBlock from "@scripts/blocks/header.js";
+import ModalFilterComponent from "@scripts/components/modal-filter.js";
+import RangeComponent from "@scripts/components/range.js";
+import QuantityComponent from "@scripts/components/quantity.js";
+import ProductGalleryComponent from "@scripts/components/product-gallery.js";
+import ProductSetComponent from "@scripts/components/product-set.js";
+import ProductPage from "@scripts/pages/product.js";
+import ModalCartComponent from "@scripts/components/modal-cart.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
     ModalAddCartComponent.init()
     ModalRemoveCartComponent.init()
+    ModalFilterComponent.init()
     ModalCallComponent.init();
     ModalLangComponent.init()
     BrandLogosBlock.init()
@@ -30,4 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     SliderReviewsBlock.init()
     SliderPostsBlock.init()
     HeaderBlock.init()
+    RangeComponent.init()
+    QuantityComponent.init()
+    ProductGalleryComponent.init()
+    ProductSetComponent.init()
+    ProductPage.init()
+    ModalCartComponent.init()
 })

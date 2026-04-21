@@ -1,0 +1,5 @@
+{
+  "template": "./src/twig/components/quantity.twig",
+  "class": "custom-class",
+  "name": "custom-name"
+}

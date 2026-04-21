@@ -12,22 +12,14 @@
                     {% endif %}
 
                     <div class="us-header__line__top-right">
-                        {% if settings %}
-                            <div class="us-header__line__settings">
-                                {% for setting in settings %}
-                                    <div class="us-header__line__settings__item">
-                                        {% for item in setting %}
-                                            <a href="{{ item.link }}" class="us-header__line__settings__item-title {% if item.is_current %} us-header__line__settings__item-title--current {% endif %}">{{ item.title }}</a>
-                                        {% endfor %}
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
+                        {% include '@components/site-settings.twig' with {
+                            'class': 'us-header__line__settings',
+                            'settings': settings
+                        } %}
 
                         <div class="us-header__line__buttons">
                             {% include '@components/button-round.twig' with {
                                 'version': 'v0',
-                                'icon': 'burger',
                                 'class': 'us-header__line__buttons__item us-header__line__buttons__item--burger'
                             } %}
 
@@ -40,12 +32,12 @@
                             {% include '@components/button-round.twig' with {
                                 'version': 'v0',
                                 'icon': 'cart',
-                                'class': 'us-header__line__buttons__item us-header__line__buttons__item--cart'
+                                'class': 'us-header__line__buttons__item us-header__line__buttons__item--cart',
+                                'data': 'data-us-modal-id="us-modal-cart"'
                             } %}
                         </div>
                     </div>
                 </div>
-
                 <div class="us-header__line__bottom">
                     <nav class="us-header__line__nav">
                         <button class="us-header__line__nav__burger"></button>
@@ -65,10 +57,10 @@
                             'class': 'us-header__line__number__phone'
                         } %}
 
-                        <button class="us-header__line__number__arrow"></button>
+                        {% if socials %}
+                            <button class="us-header__line__number__arrow"></button>
 
-                        <div class="us-header__line__number__menu">
-                            {% if socials %}
+                            <div class="us-header__line__number__menu">
                                 <ul class="us-header__line__number__list">
                                     {% for social in socials %}
                                         <li>
@@ -79,8 +71,9 @@
                                         </li>
                                     {% endfor %}
                                 </ul>
-                            {% endif %}
-                        </div>
+                            </div>
+                        {% endif %}
+
                     </div>
                 </div>
             </div>
@@ -90,32 +83,46 @@
     <div class="us-header__menu">
         <div class="us-container">
             <div class="us-header__menu__inner">
-                <div class="us-header__menu__categories">
-                    {% if category_menu.categories %}
-                        <ul class="us-header__menu__categories-list">
-                            {% for item in category_menu.categories %}
-                                <li class="us-header__menu__categories-item">
-                                    <a class="us-header__menu__categories-link {% if item.is_current %} us-header__menu__categories-link--current {% endif %}" href="{{ item.link }}">{{ item.title }}</a>
+                {% include '@components/site-settings.twig' with {
+                    'class': 'us-header__menu__settings',
+                    'settings': settings
+                } %}
+
+                <div class="us-header__menu__navigation">
+                    {% if categories %}
+                        <ul class="us-header__menu__list">
+                            {% for category in categories %}
+                                <li class="us-header__menu__list__item {% if loop.first %} us-header__menu__list__item--active {% endif %}">
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="{{ category.link }}" class="us-header__menu__list__nav-link {% if category.is_current %} us-header__menu__list__nav-link--current {% endif %}">{{ category.title }}</a>
+
+                                        {% if category.subcategories %}
+                                            <button class="us-header__menu__list__arrow"></button>
+                                        {% endif %}
+                                    </div>
+
+                                    {% if category.subcategories %}
+                                        <ul class="us-header__menu__list__subnav">
+                                            {% for subcategory in category.subcategories %}
+                                                <li><a href="{{ subcategory.link }}" class="us-header__menu__list__subnav-link {% if subcategory.is_current %} us-header__menu__list__subnav-link--current {% endif %}">{{ subcategory.title }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
                                 </li>
                             {% endfor %}
                         </ul>
                     {% endif %}
                 </div>
-                <div class="us-header__menu__subcategories">
-                    {% if category_menu.subcategories %}
-                        <ul class="us-header__menu__subcategories-list">
-                            {% for item in category_menu.subcategories %}
-                                <li class="us-header__menu__subcategories-item">
-                                    <a class="us-header__menu__subcategories-link {% if item.is_current %} us-header__menu__subcategories-link--current {% endif %}" href="{{ item.link }}">{{ item.title }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </div>
+
+                {% include '@components/phone-number.twig' with {
+                    'class': 'us-header__menu__number',
+                    'number': number
+                } %}
+
                 <div class="us-header__menu__brands">
-                    {% if category_menu.brands %}
+                    {% if brands %}
                     <ul class="us-header__menu__brands-list">
-                        {% for item in category_menu.brands %}
+                        {% for item in brands %}
                             <li class="us-header__menu__brands-item">
                                 <a class="us-header__menu__brands-link" href="{{ item.link }}">
                                     <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
@@ -128,4 +135,57 @@
             </div>
         </div>
     </div>
+
+    <div class="us-header__search">
+        <div class="us-header__search__container">
+            <div class="us-header__search__input">
+                <input type="text" class="us-header__search__input__field" placeholder="Пошук товару...">
+                <div class="us-header__search__input__buttons">
+                    <button class="us-header__search__input__buttons__clear">{{ svg_icon('close') }}</button>
+                    <button class="us-header__search__input__buttons__search">{{ svg_icon('search') }}</button>
+                </div>
+            </div>
+            <div class="us-header__search__results">
+                <div class="us-header__search__results__list">
+                    {# TODO: сделать динамикой #}
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/src/images/pictures/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                </div>
+                <p class="us-header__search__results__more">Переглянути всі товари</p>
+            </div>
+        </div>
+
+        {% include '@components/button-round.twig' with {
+            'version': 'v0',
+            'icon': 'close',
+            'class': 'us-header__search__close'
+        } %}
+    </div>
 </header>
+

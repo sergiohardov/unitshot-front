@@ -15,7 +15,9 @@
                 {% endif %}
 
                 {% if hide_text %}
-                    <button class="us-text-image__more-btn">Розгорнути</button>
+                    {% include '@components/button-show-more.twig' with {
+                        'class': 'us-text-image__more-btn'
+                    } %}
                 {% endif %}
             </div>
 

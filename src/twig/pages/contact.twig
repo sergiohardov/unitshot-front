@@ -1,0 +1,76 @@
+{% extends '@layouts/base.twig' %}
+
+{% block content %}
+
+    <div class="us-page-contact">
+        <div class="us-container">
+            <div class="us-page-contact__inner">
+                {% include '@components/breadcrumbs.twig' with {
+                    'links': breadcrumbs
+                } %}
+
+                <div class="us-page-contact__content">
+                    <div class="us-page-contact__text">
+                        {% include '@components/page-title.twig' with {
+                            'title': title,
+                            'class': 'us-page-contact__text__title'
+                        } %}
+
+                        {% if description %}
+                            <div class="us-page-contact__text__description">
+                                {{ description|raw }}
+                            </div>
+                        {% endif %}
+
+                        {% if contacts %}
+                            <div class="us-page-contact__text__contacts">
+                                {% for item in contacts %}
+                                    <div class="us-page-contact__text__contacts__item">
+                                        <p class="us-page-contact__text__contacts__title">{{ item.title }}:</p>
+                                        {% if item.type == 'text' %}
+                                            <div class="us-page-contact__text__contacts__text">{{ item.content|raw }}</div>
+                                        {% elseif item.type == 'number' %}
+                                            <div class="us-page-contact__text__contacts__numbers">
+                                                {% if item.content %}
+                                                    {% for number in item.content %}
+                                                        {% include '@components/phone-number.twig' with {
+                                                            'number': number
+                                                        } %}
+                                                    {% endfor %}
+                                                {% endif %}
+
+                                                {% include '@components/button-square.twig' with {
+                                                    'version': 'v2',
+                                                    'text': 'Замовити дзвінок',
+                                                    'data': 'data-us-modal-id="us-modal-call"'
+                                                } %}
+                                            </div>
+                                        {% elseif item.type == 'socials' %}
+                                            <div class="us-page-contact__text__contacts__socials">
+                                                {% if item.content %}
+                                                    {% for social in item.content %}
+                                                        <a href="{{ social.link }}">{{ svg_icon(social.icon) }}</a>
+                                                    {% endfor %}
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="us-page-contact__map">
+                        <iframe
+                                class="us-page-contact__map__iframe"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11759.654401969308!2d35.04344973161344!3d48.46775538633464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1775824339921!5m2!1sru!2sua"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

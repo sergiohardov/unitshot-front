@@ -1,6 +1,6 @@
 class PhoneNumberComponent {
     constructor(elem) {
-        this.elem           = elem
+        this.component      = elem
         this.fullNumber     = elem.getAttribute('data-us-phone-number')
         this.showNumberBtn  = elem.querySelector('.us-phone-number__show-btn')
 
@@ -9,10 +9,10 @@ class PhoneNumberComponent {
 
     showLink() {
         const a = document.createElement('a')
-        a.className = this.elem.className
+        a.className = this.component.className
         a.href = `tel:${this.fullNumber}`
         a.textContent = this.fullNumber
-        this.elem.replaceWith(a)
+        this.component.replaceWith(a)
     }
 
     static init() {

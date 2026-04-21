@@ -1,0 +1,47 @@
+{% extends '@layouts/modal.twig' %}
+
+{% block body %}
+    <div class="us-modal-filter__filters">
+        {% if filters %}
+            {% for filter in filters %}
+                <div class="us-modal-filter__item">
+                    <p class="us-modal-filter__item__title">{{ filter.title }}</p>
+                    <div class="us-modal-filter__item__content">
+                        {% if filter.type == 'checkbox' %}
+                            {% include '@components/checkbox.twig' with {
+                                'class': 'us-modal-filter__item__checkbox',
+                                'label': 'Підкатегорія'
+                            } %}
+                            {% include '@components/checkbox.twig' with {
+                                'class': 'us-modal-filter__item__checkbox',
+                                'label': 'Підкатегорія'
+                            } %}
+                            {% include '@components/checkbox.twig' with {
+                                'class': 'us-modal-filter__item__checkbox',
+                                'label': 'Підкатегорія'
+                            } %}
+                        {% elseif filter.type == 'range' %}
+                            {% include '@components/range.twig' with {
+                                'min': filter.min,
+                                'max': filter.max
+                            } %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="us-modal-filter__buttons">
+        {% include '@components/button-square.twig' with {
+            'version': 'v1',
+            'text': 'Застосувати',
+            'class': 'us-modal-filter__buttons__btn'
+        } %}
+
+        {% include '@components/button-square.twig' with {
+            'version': 'v3',
+            'text': 'Очистити',
+            'class': 'us-modal-filter__buttons__btn'
+        } %}
+    </div>
+{% endblock %}

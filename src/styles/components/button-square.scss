@@ -73,12 +73,23 @@
   &--v6 {
     color: var(--unitshot-white);
     background-color: var(--unitshot-gray-main);
+
+    &:hover {
+      background-color: var(--unitshot-accent-pink);
+      color: var(--unitshot-white);
+    }
   }
 
   &--v7 {
     background-color: transparent;
     box-shadow: 0 0 0 1.5px var(--unitshot-gray-darker) inset; // Вместо border что бы не ломать высоту
     color: var(--unitshot-gray-main);
+
+    &:hover {
+      background-color: var(--unitshot-accent-pink);
+      color: var(--unitshot-white);
+      box-shadow: 0 0 0 1.5px var(--unitshot-accent-pink) inset; // Вместо border что бы не ломать высоту
+    }
   }
 
   &--link-disabled,

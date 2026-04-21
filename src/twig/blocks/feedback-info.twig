@@ -1,7 +1,8 @@
-<div class="us-feedback-info">
+<div class="us-feedback-info {{ class }}">
     <div class="us-container">
         <div class="us-feedback-info__inner">
             {% include '@components/page-title.twig' with {
+                'class': '',
                 'title': title
             } %}
 
@@ -29,6 +30,7 @@
                         <div class="us-feedback-info__numbers">
                             {% for number in numbers %}
                                 {% include '@components/phone-number.twig' with {
+                                    'class': '',
                                     'number': number
                                 } %}
                             {% endfor %}

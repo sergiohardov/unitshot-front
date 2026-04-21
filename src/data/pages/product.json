@@ -1,0 +1,327 @@
+{
+  "template": "./src/twig/pages/product.twig",
+  "breadcrumbs": [
+    {
+      "title": "Головна",
+      "url": "/",
+      "is_current": false
+    },
+    {
+      "title": "Кавомашини",
+      "url": "",
+      "is_current": false
+    },
+    {
+      "title": "La marzocco",
+      "url": "",
+      "is_current": true
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/src/images/pictures/product-card-1.png",
+      "alt": "Product Image"
+    },
+    {
+      "src": "/src/images/pictures/product-card-2.png",
+      "alt": "Product Image"
+    },
+    {
+      "src": "/src/images/pictures/product-card-3.png",
+      "alt": "Product Image"
+    },
+    {
+      "src": "/src/images/pictures/product-card-4.png",
+      "alt": "Product Image"
+    },
+    {
+      "src": "/src/images/pictures/product-card-1.png",
+      "alt": "Product Image"
+    }
+  ],
+  "title": "Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3",
+  "old_price": "312 798 грн.",
+  "price": "312 798 грн.",
+  "sku": "109098",
+  "status": {
+    "modify": "success",
+    "text": "В наявності"
+  },
+  "properties": [
+    {
+      "name": "Напруга",
+      "values": [
+        {
+          "is_current": true,
+          "is_disabled": false,
+          "name": "220v",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  false,
+          "name": "230v",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  false,
+          "name": "240v",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "Колір",
+      "values": [
+        {
+          "is_current": true,
+          "is_disabled": false,
+          "name": "Червоний",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  true,
+          "name": "Срібний",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  false,
+          "name": "Чорний",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "Кількість груп",
+      "values": [
+        {
+          "is_current": true,
+          "is_disabled": false,
+          "name": "1",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  false,
+          "name": "2",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  false,
+          "name": "3",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  false,
+          "name": "4",
+          "link": "#"
+        },
+        {
+          "is_current": false,
+          "is_disabled":  false,
+          "name": "5",
+          "link": "#"
+        }
+      ]
+    }
+  ],
+  "description": "<p>Lorem ipsum dolor sit amet consectetur. Fusce tristique risus aenean felis et arcu in vitae quisque. Condimentum egestas quis facilisis bibendum. Purus a maecenas fermentum erat volutpat ultricies amet. Id ac nunc at turpis sollicitudin nulla vitae vulputate. Neque turpis placerat adipiscing morbi purus egestas nunc iaculis.</p><p>Lorem ipsum dolor sit amet consectetur. Fusce tristique risus aenean felis et arcu in vitae quisque. Condimentum egestas quis facilisis bibendum. Purus a maecenas fermentum erat volutpat ultricies amet. Id ac nunc at turpis sollicitudin nulla vitae vulputate. Neque turpis placerat adipiscing morbi purus egestas nunc iaculis.</p>",
+  "sets": [
+    {
+      "image": {
+        "src": "/src/images/pictures/product-card-2.png",
+        "alt": "Product 2"
+      },
+      "title": "Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3",
+      "old_price": "112 798 грн.",
+      "current_price": "212 798 грн."
+    },
+    {
+      "image": {
+        "src": "/src/images/pictures/product-card-3.png",
+        "alt": "Product 2"
+      },
+      "title": "Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3",
+      "old_price": "312 798 грн.",
+      "current_price": "312 798 грн."
+    }
+  ],
+  "info": {
+    "stats": [
+      {
+        "name": "Бренд",
+        "value": "La marzocco"
+      },
+      {
+        "name": "Бренд",
+        "value": "La marzocco"
+      },
+      {
+        "name": "Бренд",
+        "value": "Lorem ipsum dolor sit amet consectetur. Fusce tristique risus aenean felis et arcu in vitae quisque. Condimentum egestas quis facilisis bibendum. Purus a maecenas fermentum erat volutpat ultricies amet. Id ac nunc at turpis sollicitudin nulla vitae vulputate. Neque turpis placerat adipiscing morbi purus egestas."
+      },
+      {
+        "name": "Бренд",
+        "value": "La marzocco"
+      }
+    ],
+    "description": "<h2>Кавомашини в Дім Кави</h2><p>DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману. В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Гондурасу і Гватемали. Наші досвідчені бариста і продавці завжди готові познайомити з найцікавішими сортами та купажами, ексклюзивними кавовими букетами, а також унікальними моносортами зерен. Знайомитися с дивовижним світом справжньої кави разом з інтернет-магазином DomKofe. Замовляйте улюблені смаки по об’єктивним цінам, без переплат, комісій та ризиків. Ми пригостимо вас найкращою кавою та поставимо найбільш сучасне, надійне, ефективне та функціональне кавове обладнання.</p>",
+    "files": ["one.pdf", "two.pdf", "three.pdf"]
+  },
+  "popular_products": {
+    "title": "Схожі товари",
+    "products": [
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          },
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-1.png",
+          "alt": "Product Card 1"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-2.png",
+          "alt": "Product Card 2"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-3.png",
+          "alt": "Product Card 3"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-4.png",
+          "alt": "Product Card 4"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "new": "198 789 грн."
+        }
+      },
+      {
+        "tags": [
+          {
+            "status": "discount",
+            "text": "-18%"
+          },
+          {
+            "status": "info",
+            "text": "На складі в Європі"
+          }
+        ],
+        "image": {
+          "src": "/src/images/pictures/product-card-1.png",
+          "alt": "Product Card 1"
+        },
+        "title": {
+          "link": "#",
+          "text": "Nuova Simonelli"
+        },
+        "brand": {
+          "link": "#",
+          "text": "APPIA"
+        },
+        "category": {
+          "link": "#",
+          "text": "Кавомашина"
+        },
+        "price": {
+          "old": "198 789 грн.",
+          "new": "198 789 грн."
+        }
+      }
+    ]
+  }
+}

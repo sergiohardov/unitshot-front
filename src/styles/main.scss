@@ -6,6 +6,7 @@
 @use 'layouts/modal';
 @use 'layouts/slider';
 
+@use 'components/image';
 @use 'components/checkbox';
 @use 'components/button-square';
 @use 'components/button-round';
@@ -17,11 +18,20 @@
 @use 'components/modal-remove-cart';
 @use 'components/modal-lang';
 @use 'components/modal-call';
+@use 'components/modal-filter';
+@use 'components/modal-cart';
 @use 'components/product-card';
 @use 'components/slider-product-cards';
 @use 'components/slider-logo-images';
 @use 'components/slider-categories';
 @use 'components/page-title';
+@use 'components/range';
+@use 'components/button-show-more';
+@use 'components/quantity';
+@use 'components/product-set';
+@use 'components/product-gallery';
+@use 'components/site-settings';
+@use 'components/product-item';
 
 @use 'blocks/header';
 @use 'blocks/footer';
@@ -37,3 +47,9 @@
 
 @use 'pages/ui';
 @use 'pages/home';
+@use 'pages/catalog';
+@use 'pages/product';
+@use 'pages/blog';
+@use 'pages/post';
+@use 'pages/contact';
+@use 'pages/checkout';

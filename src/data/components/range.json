@@ -1,0 +1,6 @@
+{
+  "template": "./src/twig/components/range.twig",
+  "id": "custom-id",
+  "min": 0,
+  "max": 1000
+}

@@ -1,6 +1,7 @@
 @use '@styles/base/mixins' as *;
 
 .us-modal {
+  $parent: &;
   --us-modal-width: 500px;
   --us-modal-title-fz: 20px;
 
@@ -31,13 +32,80 @@
     border-radius: 4px;
   }
 
+  &--left, &--right {
+    padding: 0;
+
+    #{$parent} {
+      &__window {
+        height: 100%;
+
+        @include media-md() {
+          padding: 16px;
+        }
+      }
+
+      &__header {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__title {
+        font-size: 28px;
+
+        @include media-md() {
+          font-size: 24px;
+        }
+      }
+
+      &__close {
+        position: relative;
+        top: unset;
+        right: unset;
+      }
+    }
+  }
+
+  &--left {
+    @include media-md() {
+      padding-right: 40px;
+    }
+
+    #{$parent} {
+      &__window {
+        margin-left: 0;
+        margin-right: auto;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        transform: translateX(-100%) scale(1);
+      }
+    }
+  }
+
+  &--right {
+    @include media-md() {
+      padding-left: 40px;
+    }
+
+    #{$parent} {
+      &__window {
+        margin-right: 0;
+        margin-left: auto;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        transform: translateX(100%) scale(1);
+      }
+    }
+  }
+
   &--active {
     opacity: 1;
     visibility: visible;
 
-    .us-modal__window {
-      transform: translateY(0) scale(1);
-      opacity: 1;
+    #{$parent} {
+      &__window {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
     }
   }
 

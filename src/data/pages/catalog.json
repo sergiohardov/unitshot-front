@@ -1,0 +1,650 @@
+{
+  "template": "./src/twig/pages/catalog.twig",
+  "breadcrumbs": [
+    {
+      "title": "Головна",
+      "url": "/",
+      "is_current": false
+    },
+    {
+      "title": "Кавомашини",
+      "url": "",
+      "is_current": true
+    }
+  ],
+  "title": "професійні кавомашини",
+  "categories": [
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-1.png",
+        "alt": "Category 1"
+      },
+      "title": "Під еспресо"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-2.png",
+        "alt": "Category 2"
+      },
+      "title": "Під фільтр"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-3.png",
+        "alt": "Category 3"
+      },
+      "title": "З вагами"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-4.png",
+        "alt": "Category 4"
+      },
+      "title": "Без вагів"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-5.png",
+        "alt": "Category 5"
+      },
+      "title": "Без вагів"
+    },
+    {
+      "link": "#",
+      "image": {
+        "src": "/src/images/pictures/slider-categories-1.png",
+        "alt": "Category 1"
+      },
+      "title": "Під еспресо"
+    }
+  ],
+  "products": [
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    },
+    {
+      "tags": [
+        {
+          "status": "discount",
+          "text": "-18%"
+        },
+        {
+          "status": "info",
+          "text": "На складі в Європі"
+        }
+      ],
+      "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product Card 1"
+      },
+      "title": {
+        "link": "#",
+        "text": "Nuova Simonelli"
+      },
+      "brand": {
+        "link": "#",
+        "text": "APPIA"
+      },
+      "category": {
+        "link": "#",
+        "text": "Кавомашина"
+      },
+      "price": {
+        "old": "198 789 грн.",
+        "new": "198 789 грн."
+      }
+    }
+  ],
+  "pagination": {
+    "prev": "#prev",
+    "next": "#next",
+    "pages": [
+      {
+        "number": 1,
+        "link": "#1",
+        "is_current": true
+      },
+      {
+        "number": 2,
+        "link": "#2",
+        "is_current": false
+      },
+      {
+        "number": 3,
+        "link": "#3",
+        "is_current": false
+      },
+      {
+        "number": 4,
+        "link": "#4",
+        "is_current": false
+      }
+    ]
+  },
+  "feedback_info": {
+    "title": "Втомився вибирати що саме тобі підійде?",
+    "description": "<p>Ми бездоганно знаємо всі характеристики обладнання та ціни всіх брендів! Розкажіть про свій бізнес, і ми допоможемо з вибором.</p>",
+    "socials": [
+      {
+        "icon": "whatsapp",
+        "link": "#"
+      },
+      {
+        "icon": "telegram",
+        "link": "#"
+      },
+      {
+        "icon": "viber",
+        "link": "#"
+      }
+    ],
+    "numbers": ["+380731111111", "+380732222222"]
+  },
+  "text_image": {
+    "title": "Бажаєш купити професійну кавомашину?",
+    "description": "<h2>Кавомашини в Дім Кави</h2><p>Ми – команда фахівців із професійного кавового обладнання, яка вже допомогла десяткам кав’ярень запуститися та працювати на якісному рівні. Наша мета – зробити так, щоб кожна чашка кави у вашому закладі була досконалою.</p><p>Ми – команда фахівців із професійного кавового обладнання, яка вже допомогла десяткам кав’ярень запуститися та працювати на якісному рівні. Наша мета – зробити так, щоб кожна чашка кави у вашому закладі була досконалою.</p><p>Ми – команда фахівців із професійного кавового обладнання, яка вже допомогла десяткам кав’ярень запуститися та працювати на якісному рівні. Наша мета – зробити так, щоб кожна чашка кави у вашому закладі була досконалою.</p><p>Ми – команда фахівців із професійного кавового обладнання, яка вже допомогла десяткам кав’ярень запуститися та працювати на якісному рівні. Наша мета – зробити так, щоб кожна чашка кави у вашому закладі була досконалою.</p>",
+    "image": {
+      "src": "/src/images/pictures/text-image-1.jpg",
+      "alt": "Text Image 1"
+    },
+    "hide_text": true
+  },
+  "filters": [
+    {
+      "title": "Категорія 1",
+      "type": "checkbox"
+    },
+    {
+      "title": "Категорія 2",
+      "type": "checkbox"
+    },
+    {
+      "title": "Ціна",
+      "type": "range",
+      "min": 250,
+      "max": 13521
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{% extends '@layouts/base.twig' %}
+
+{% block content %}
+    <div class="us-page-product">
+        <div class="us-container">
+            <div class="us-page-product__inner">
+                {% include '@components/breadcrumbs.twig' with {
+                    "links": breadcrumbs,
+                    'class': 'us-page-product__breadcrumbs'
+                } %}
+
+                <div class="us-page-product__main">
+                    <div class="us-page-product__main__gallery">
+                        {% include '@components/product-gallery.twig' with {
+                            'slides': gallery
+                        } %}
+                    </div>
+                    <div class="us-page-product__main__info">
+                        {% if title %}
+                            <h1 class="us-page-product__main__title">{{ title }}</h1>
+                        {% endif %}
+
+                        {% if old_price %}
+                            <div class="us-page-product__main__old-price">{{ old_price }}</div>
+                        {% endif %}
+
+                        {% if price %}
+                            <div class="us-page-product__main__price">
+                                <span class="us-page-product__main__price__total">{{ price }}</span>
+                                <span class="us-page-product__main__price__feedback" data-us-modal-id="us-modal-call">Знайшли нижчу ціну?</span>
+                            </div>
+                        {% endif %}
+
+                        {% if sku or status.text %}
+                            <div class="us-page-product__main__tags">
+                                {% if sku %}
+                                    <span class="us-page-product__main__tags__sku">Артикул: {{ sku }}</span>
+                                {% endif %}
+
+                                {% if status.text %}
+                                    <span class="us-page-product__main__tags__status us-page-product__main__tags__status--{{ status.modify }}">{{ status.text }}</span>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
+                        {% if properties %}
+                            <div class="us-page-product__main__properties">
+                                {% for property in properties %}
+                                    <div class="us-page-product__main__properties__item">
+                                        <span class="us-page-product__main__properties__title">{{ property.name }}:</span>
+                                        <div class="us-page-product__main__properties__values">
+                                            {% if property.values %}
+                                                {% for value in property.values %}
+                                                    {% include '@components/button-square.twig' with {
+                                                        'version': value.is_current ? 'v6' : 'v7',
+                                                        'type': 'link',
+                                                        'text': value.name,
+                                                        'disabled': value.is_disabled
+                                                    } %}
+                                                {% endfor %}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        {% if description %}
+                            <div class="us-page-product__main__description">{{ description|raw }}</div>
+                        {% endif %}
+
+                        <div class="us-page-product__main__buttons">
+                            {% include '@components/quantity.twig' with {
+                                'class': 'us-page-product__main__buttons__qty'
+                            } %}
+                            <button class="us-page-product__main__buttons__add-cart">Додати в кошик</button>
+                        </div>
+
+                        {% include '@components/product-set.twig' with {
+                            'class': 'us-page-product__main__set',
+                            'image': gallery.0,
+                            'title': title,
+                            'old_price': old_price,
+                            'current_price': price,
+                            'sets': sets
+                        } %}
+
+                        <div class="us-page-product__main__stats">
+                            <div class="us-page-product__main__stats__title">Основні характеристики:</div>
+                            <div class="us-page-product__main__stats__list">
+                                <div class="us-page-product__main__stats__item">
+                                    <span>Бренд:</span>
+                                    <div class="us-page-product__main__stats__separator"></div>
+                                    <span>La marzocco</span>
+                                </div>
+                                <div class="us-page-product__main__stats__item">
+                                    <span>Бренд:</span>
+                                    <div class="us-page-product__main__stats__separator"></div>
+                                    <span>La marzocco</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="us-page-product__main__feedback">
+                            <p class="us-page-product__main__feedback__title">Потрібна допомога з вибором або з'явились питання?</p>
+                            <p class="us-page-product__main__feedback__description">Ми бездоганно знаємо всі характеристики обладнання та ціни всіх брендів! Розкажіть про свій бізнес, і ми допоможемо з вибором.</p>
+                            <div class="us-page-product__main__feedback__contact">
+                                <div class="us-page-product__main__feedback__contact-item">
+                                    <p class="us-page-product__main__feedback__contact-title">Написати нам:</p>
+                                    <div class="us-page-product__main__feedback__contact-social">
+                                        <a href="#">{{ svg_icon('social-whatsapp') }}</a>
+                                        <a href="#">{{ svg_icon('social-telegram') }}</a>
+                                        <a href="#">{{ svg_icon('social-viber') }}</a>
+                                    </div>
+                                </div>
+                                <div class="us-page-product__main__feedback__contact-item">
+                                    <p class="us-page-product__main__feedback__contact-title">Подзвонити:</p>
+                                    <div class="us-page-product__main__feedback__contact-number">
+                                        {% include '@components/phone-number.twig' with {
+                                            'number': '+380711111111'
+                                        } %}
+                                        {% include '@components/phone-number.twig' with {
+                                            'number': '+380711111111'
+                                        } %}
+                                    </div>
+                                </div>
+                                <div class="us-page-product__main__feedback__contact-item">
+                                    <p class="us-page-product__main__feedback__contact-title">Замовити дзвінок:</p>
+                                    <button class="us-page-product__main__feedback__contact-btn" data-us-modal-id="us-modal-call">Безкоштовна консультація</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="us-page-product__info">
+                    <div class="us-page-product__info__item">
+                        <p class="us-page-product__info__title">Характеристики</p>
+                        <div class="us-page-product__info__more us-page-product__info__more-btn">
+                            {% include '@components/button-show-more.twig' with {
+                                'class': ''
+                            } %}
+                        </div>
+                        <div class="us-page-product__info__content us-page-product__info__content-description">
+                            <div class="us-page-product__info__content-description__inner">
+                                <div class="us-page-product__info__content-description__brand">
+                                    {% for stat in info.stats %}
+                                        <div class="us-page-product__info__content-description__brand-item">
+                                            <span class="us-page-product__info__content-description__brand-name">{{ stat.name }}:</span>
+                                            <div class="us-page-product__info__content-description__brand-separator"></div>
+                                            <span class="us-page-product__info__content-description__brand-value">{{ stat.value }}</span>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="us-page-product__info__item">
+                        <p class="us-page-product__info__title">Опис товару</p>
+                        <div class="us-page-product__info__more us-page-product__info__more-btn">
+                            {% include '@components/button-show-more.twig' with {
+                                'class': ''
+                            } %}
+                        </div>
+                        <div class="us-page-product__info__content us-page-product__info__content-description">
+                           <div class="us-page-product__info__content-description__inner">{{ info.description }}</div>
+                        </div>
+                    </div>
+
+                    <div class="us-page-product__info__item">
+                        <p class="us-page-product__info__title">ФАЙЛИ</p>
+                        <div class="us-page-product__info__more"></div>
+                        <div class="us-page-product__info__content us-page-product__info__content-files">
+                            <p class="us-page-product__info__content-files__title">Додаткові матеріали від виробника:</p>
+                            <div class="us-page-product__info__content-files__list">
+                                {% for file in info.files %}
+                                    <a class="us-page-product__info__content-files__item" href="#">
+                                        <div class="us-page-product__info__content-files__item-image">{{ svg_icon('file-pdf') }}</div>
+                                        <p class="us-page-product__info__content-files__item-name">{{ file }}</p>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% include '@blocks/popular-products.twig' with {
+                    'title': popular_products.title,
+                    'products': popular_products.products
+                } %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
