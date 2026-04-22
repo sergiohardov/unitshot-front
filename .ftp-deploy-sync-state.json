@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1776837510365,
+    "generatedTime": 1776843339153,
     "data": [
         {
             "type": "folder",
@@ -154,8 +154,8 @@
         {
             "type": "file",
             "name": "components/modal-cart.html",
-            "size": 4979,
-            "hash": "0f232fa2ad8b2f20facbe0726932936674d202355a2a327a4bd56f47a3449ce2"
+            "size": 5181,
+            "hash": "a66210664762df1530b6d152a6680cbd6f2787e7897a401ac374ebea142844d3"
         },
         {
             "type": "file",
@@ -208,8 +208,8 @@
         {
             "type": "file",
             "name": "components/product-item.html",
-            "size": 1362,
-            "hash": "0f5c80f69777b94125ec16d982a3e2bd6ceda2cd1e0e4926dba4126ed3898bc4"
+            "size": 1429,
+            "hash": "dd7fadd8ff2ea71855ee3fce767f0b40022a6697dd82ada02c6dee486bd31d8b"
         },
         {
             "type": "file",
@@ -256,8 +256,8 @@
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 135811,
-            "hash": "72b407318a5a38afc39586c51ee01f65e22fbf930f18812d59e663231c3e1404"
+            "size": 135832,
+            "hash": "b3d2988f8f549c1c3fb604f2007000ab9a2deb5e1e8aa3958f8f63b69bfbf6df"
         },
         {
             "type": "file",
@@ -628,50 +628,50 @@
         {
             "type": "file",
             "name": "js/main.js",
-            "size": 105531,
-            "hash": "278125efbb47fba159fbaf0af5010843e696bbf8d621c263c83d92d155aac446"
+            "size": 106959,
+            "hash": "e9dc738aea39ab6644f4102055913f00a998cd2be06f2b1bc92f5c9fc34f7515"
         },
         {
             "type": "file",
             "name": "pages/blog.html",
-            "size": 80611,
-            "hash": "b669e5ed03bafb48ae573f8165a3f1b8b031d8f0c74cee0f7c70e9264ea8111b"
+            "size": 80813,
+            "hash": "ac347bb396a98bc0895615d57df2c26702320d2380520648fde0bda649bd8454"
         },
         {
             "type": "file",
             "name": "pages/catalog.html",
-            "size": 107066,
-            "hash": "184229e98145eb596445f968a47e372c6de958182fc5efb9063fb0e86b0e33cd"
+            "size": 107268,
+            "hash": "c6592e8caa26e973e812613441e34ddb276aba1392beb81763991fe02b958882"
         },
         {
             "type": "file",
             "name": "pages/checkout.html",
-            "size": 70223,
-            "hash": "ee4078f8c831cc6939a0dbdea7b9a3d701ae5fb2979189092c632f6ecc67eae5"
+            "size": 71051,
+            "hash": "e005da1735d6ddae11910bbc46570565903e7bd47d9ff5b2027eb57dee9b594c"
         },
         {
             "type": "file",
             "name": "pages/contact.html",
-            "size": 74849,
-            "hash": "7c21ea9e37eab94c3c85e4c7ed2e7ea103717f53a2685b0d4b281af1e9083b48"
+            "size": 75051,
+            "hash": "2954809e35f44d26dbd5f30535c85d63a7d0d905be315aece10962ae5b5fa22c"
         },
         {
             "type": "file",
             "name": "pages/home.html",
-            "size": 140838,
-            "hash": "483a24ad3ba42b1abaaa82c98e65a903ba9020d38f0eb4907ae93898b3508838"
+            "size": 141040,
+            "hash": "6f6bc7e3780d663cdb507e5e28d5242db3fa9e4d886415d84dfbb0c6c0ae588c"
         },
         {
             "type": "file",
             "name": "pages/post.html",
-            "size": 72073,
-            "hash": "8faff6ff79e4c01c7d81e53af2637c1effa8611a21f25bc492bb7dbf05d97406"
+            "size": 72275,
+            "hash": "9d621ba527b64359ec868fdccc373090b46645cf33d3cd5c611ea4719641b6eb"
         },
         {
             "type": "file",
             "name": "pages/product.html",
-            "size": 109948,
-            "hash": "1beedbcca1e910c9a346c7efdd8b96f90065435c9c2eb40dfa7d7b39af0a3b7e"
+            "size": 110150,
+            "hash": "6c4884e30abe0bf0776f11130e0916d2a52bebf5d665f8bf4ae34ddc054c4409"
         },
         {
             "type": "file",
