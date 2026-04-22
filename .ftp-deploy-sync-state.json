@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1776791014189,
+    "generatedTime": 1776837510365,
     "data": [
         {
             "type": "folder",
@@ -256,8 +256,8 @@
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 135652,
-            "hash": "c1c3692447b5551faca6f5e503ac12720a43ea66d6d96babb15c787745ad14de"
+            "size": 135811,
+            "hash": "72b407318a5a38afc39586c51ee01f65e22fbf930f18812d59e663231c3e1404"
         },
         {
             "type": "file",
@@ -483,15 +483,15 @@
         },
         {
             "type": "file",
-            "name": "images/client-logos-21.png",
-            "size": 9567,
-            "hash": "92d0f981e1494ddf4363f11678a5283eb3859345ac4eed105619bc158d2291b7"
-        },
-        {
-            "type": "file",
             "name": "images/client-logos-20.png",
             "size": 16044,
             "hash": "3a418052a4e6bc57af2ab8a4e9219c295c8c548da7edaf297c86ce2db30c4518"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-21.png",
+            "size": 9567,
+            "hash": "92d0f981e1494ddf4363f11678a5283eb3859345ac4eed105619bc158d2291b7"
         },
         {
             "type": "file",
@@ -597,15 +597,15 @@
         },
         {
             "type": "file",
-            "name": "images/slider-categories-3.png",
-            "size": 39489,
-            "hash": "04af4b249acf3992f49321613d906b23d770e10e9ebba14960bc4d802743fd78"
-        },
-        {
-            "type": "file",
             "name": "images/slider-categories-2.png",
             "size": 20107,
             "hash": "af1f621c80d02772522c31ca3b778a1680b445b41b91c1ec46cc402603fb617a"
+        },
+        {
+            "type": "file",
+            "name": "images/slider-categories-3.png",
+            "size": 39489,
+            "hash": "04af4b249acf3992f49321613d906b23d770e10e9ebba14960bc4d802743fd78"
         },
         {
             "type": "file",
@@ -652,8 +652,8 @@
         {
             "type": "file",
             "name": "pages/contact.html",
-            "size": 74807,
-            "hash": "d63b6df892a23c711ec04c0856cb368be2fb89b2a0271297fcfabc7c012a8319"
+            "size": 74849,
+            "hash": "7c21ea9e37eab94c3c85e4c7ed2e7ea103717f53a2685b0d4b281af1e9083b48"
         },
         {
             "type": "file",
