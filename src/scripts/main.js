@@ -23,6 +23,11 @@ import ProductPage from "@scripts/pages/product.js";
 import ModalCartComponent from "@scripts/components/modal-cart.js";
 import CheckoutPage from "@scripts/pages/checkout.js";
 
+import Alpine from 'alpinejs'
+
+window.Alpine = Alpine
+Alpine.start()
+
 document.addEventListener('DOMContentLoaded', () => {
     PhoneNumberComponent.init();
     ModalAddCartComponent.init()
