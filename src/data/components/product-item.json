@@ -1,10 +1,11 @@
 {
   "template": "./src/twig/components/product-item.twig",
   "class": "custom-class",
+  "product_id": "442",
   "title": "Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3",
   "image": {
     "src": "/src/images/pictures/product-card-1.png",
     "alt": "Product image"
   },
-  "price": "312 798 грн."
+  "price": "312798"
 }
