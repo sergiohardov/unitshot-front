@@ -1,7 +1,7 @@
 {% if brands %}
-    <div class="us-brand-logos">
+    <div class="us-brand-logos" x-data="{ expanded: false }">
         <div class="us-container">
-            <ul class="us-brand-logos__list us-brand-logos__list--collapsed">
+            <ul class="us-brand-logos__list" x-bind:class="{ 'us-brand-logos__list--collapsed': !expanded }">
                 {% for brand in brands %}
                     <li class="us-brand-logos__item">
                         <a class="us-brand-logos__item-link" href="{{ brand.link }}">
@@ -11,8 +11,8 @@
                 {% endfor %}
             </ul>
 
-            <div class="us-brand-logos__more {% if brands|length > 12 %} us-brand-logos__more--12 {% endif %} {% if brands|length > 18 %} us-brand-logos__more--18 {% endif %}">
-                <button class="us-brand-logos__more-btn">Розгорнути</button>
+            <div class="us-brand-logos__more {% if brands|length > 12 %} us-brand-logos__more--12 {% endif %} {% if brands|length > 18 %} us-brand-logos__more--18 {% endif %}" x-show="!expanded">
+                <button type="button" class="us-brand-logos__more-btn" x-on:click="expanded = true">Розгорнути</button>
             </div>
         </div>
     </div>
