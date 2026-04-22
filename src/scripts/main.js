@@ -7,7 +7,6 @@ import ModalRemoveCartComponent from "@scripts/components/modal-remove-cart.js";
 import SliderProductCardsComponent from "@scripts/components/slider-product-cards.js";
 import SliderLogoImagesComponent from "@scripts/components/slider-logo-images.js";
 import SliderCategoriesComponent from "@scripts/components/slider-categories.js";
-import ClientLogosBlock from "@scripts/blocks/client-logos.js";
 import SliderReviewsBlock from "@scripts/blocks/slider-reviews.js";
 import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
 import HeaderBlock from "@scripts/blocks/header.js";
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     SliderProductCardsComponent.init()
     SliderLogoImagesComponent.init()
     SliderCategoriesComponent.init()
-    ClientLogosBlock.init()
     SliderReviewsBlock.init()
     SliderPostsBlock.init()
     HeaderBlock.init()
