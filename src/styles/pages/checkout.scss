@@ -39,6 +39,7 @@
 
     &__cart {
       max-width: 526px;
+      width: 100%;
       flex-shrink: 0;
 
       @include media-lg() {
@@ -108,8 +109,9 @@
     &__summary {
       margin-bottom: 24px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 10px;
       font-size: 28px;
       color: var(--unitshot-gray-main);
