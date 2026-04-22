@@ -6,6 +6,7 @@
            {% for product in products %}
                {% include '@components/product-item.twig' with {
                    "class": "custom-class",
+                   "product_id": product.product_id,
                    "title": product.title,
                    "image": product.image,
                    "price": product.price
