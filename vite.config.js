@@ -77,6 +77,9 @@ export default defineConfig({
                         return `<!-- svg not found: ${name} -->`
                     }
                 },
+                // TODO: учесть случай когда попадает не число (строкой/числом)
+                // TODO: сделать валюту динамической
+                format_price: (price) => Number(price).toLocaleString('ru-RU') + ' грн.',
                 home_url: () => '/pages/home.html'
             }
         }),

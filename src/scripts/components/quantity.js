@@ -12,11 +12,13 @@ class QuantityComponent {
 
     increment() {
         this.input.value++
+        this.input.dispatchEvent(new Event('change', { bubbles: true }))
     }
 
     decrement() {
         if(this.input.value <= 0) return
         this.input.value--
+        this.input.dispatchEvent(new Event('change', { bubbles: true }))
     }
 
     inputHandler(e) {
