@@ -1,6 +1,5 @@
 import '@styles/main.scss'
 
-import PhoneNumberComponent from "@scripts/components/phone-number.js";
 import ModalCallComponent from "@scripts/components/modal-call.js";
 import ModalAddCartComponent from "@scripts/components/modal-add-cart.js";
 import ModalLangComponent from "@scripts/components/modal-lang.js";
@@ -29,7 +28,6 @@ window.Alpine = Alpine
 Alpine.start()
 
 document.addEventListener('DOMContentLoaded', () => {
-    PhoneNumberComponent.init();
     ModalAddCartComponent.init()
     ModalRemoveCartComponent.init()
     ModalFilterComponent.init()
