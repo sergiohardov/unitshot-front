@@ -76,12 +76,14 @@
 
       &__title {
         font-size: 22px;
-        min-width: 190px;
+        max-width: 190px;
+        width: 100%;
         color: var(--unitshot-gray-main);
         @include font-ppneue-medium;
 
         @include media-md() {
           font-size: 18px;
+          max-width: 124px;
         }
       }
 
@@ -99,6 +101,12 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+
+        &__btn {
+          @include media-md() {
+            padding: 6px 16px;
+          }
+        }
       }
 
       &__socials {
@@ -111,6 +119,8 @@
           justify-content: center;
           width: 34px;
           height: 34px;
+          border-radius: 50%;
+          overflow: hidden;
 
           svg {
             width: 100%;
