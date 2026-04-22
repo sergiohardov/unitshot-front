@@ -1,4 +1,4 @@
-<div class="us-text-image">
+<div class="us-text-image" {% if hide_text %} x-data="{ expanded: false }" {% endif %}>
     <div class="us-container">
         <div class="us-text-image__inner">
             <div class="us-text-image__text">
@@ -7,16 +7,15 @@
                 } %}
 
                 {% if description %}
-                    <div class="us-text-image__description {% if hide_text %} us-text-image__description--hidden {% endif %}">
-                        <div class="us-text-image__description-content">
-                            {{ description|raw }}
-                        </div>
+                    <div class="us-text-image__description {% if hide_text %} us-text-image__description--hidden {% endif %}" {% if hide_text %} x-bind:class="{ 'us-text-image__description--hidden': !expanded }" {% endif %}>
+                        <div class="us-text-image__description-content">{{ description|raw }}</div>
                     </div>
                 {% endif %}
 
                 {% if hide_text %}
                     {% include '@components/button-show-more.twig' with {
-                        'class': 'us-text-image__more-btn'
+                        'class': 'us-text-image__more-btn',
+                        'data': 'x-show="!expanded" x-on:click="expanded = true"'
                     } %}
                 {% endif %}
             </div>
