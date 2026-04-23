@@ -1,5 +1,5 @@
-<header class="us-header">
-    <div class="us-header__overlay"></div>
+<header class="us-header" x-data="HeaderBlock">
+    <div class="us-header__overlay" x-bind:class="{ 'us-header__overlay--visible': isOverlayActive }" x-on:click="closeAll"></div>
 
     <div class="us-header__line">
         <div class="us-container">
@@ -20,13 +20,16 @@
                         <div class="us-header__line__buttons">
                             {% include '@components/button-round.twig' with {
                                 'version': 'v0',
-                                'class': 'us-header__line__buttons__item us-header__line__buttons__item--burger'
+                                'class': 'us-header__line__buttons__item us-header__line__buttons__item--burger',
+                                'x_click': 'toggleMenu',
+                                'x_bind_class': "{ 'us-header__line__buttons__item--burger--active': isMenuOpen }"
                             } %}
 
                             {% include '@components/button-round.twig' with {
                                 'version': 'v0',
                                 'icon': 'search',
-                                'class': 'us-header__line__buttons__item us-header__line__buttons__item--search'
+                                'class': 'us-header__line__buttons__item us-header__line__buttons__item--search',
+                                'x_click': 'toggleSearch'
                             } %}
 
                             {% include '@components/button-round.twig' with {
@@ -40,7 +43,7 @@
                 </div>
                 <div class="us-header__line__bottom">
                     <nav class="us-header__line__nav">
-                        <button class="us-header__line__nav__burger"></button>
+                        <button class="us-header__line__nav__burger" x-bind:class="{ 'us-header__line__nav__burger--active': isMenuOpen }" x-on:click="toggleMenu"></button>
 
                         {% if top_menu %}
                         <ul class="us-header__line__menu">
@@ -51,16 +54,16 @@
                         {% endif %}
                     </nav>
 
-                    <div class="us-header__line__number">
+                    <div class="us-header__line__number" x-on:click.outside="isNumberOpen = false">
                         {% include '@components/phone-number.twig' with {
                             'number': number,
                             'class': 'us-header__line__number__phone'
                         } %}
 
                         {% if socials %}
-                            <button class="us-header__line__number__arrow"></button>
+                            <button class="us-header__line__number__arrow" x-on:click="toggleNumber"></button>
 
-                            <div class="us-header__line__number__menu">
+                            <div class="us-header__line__number__menu" x-bind:class="{ 'us-header__line__number__menu--visible': isNumberOpen }">
                                 <ul class="us-header__line__number__list">
                                     {% for social in socials %}
                                         <li>
@@ -80,7 +83,7 @@
         </div>
     </div>
 
-    <div class="us-header__menu">
+    <div class="us-header__menu" x-bind:class="{ 'us-header__menu--visible': isMenuOpen }">
         <div class="us-container">
             <div class="us-header__menu__inner">
                 {% include '@components/site-settings.twig' with {
@@ -92,12 +95,15 @@
                     {% if categories %}
                         <ul class="us-header__menu__list">
                             {% for category in categories %}
-                                <li class="us-header__menu__list__item {% if loop.first %} us-header__menu__list__item--active {% endif %}">
+                                <li class="us-header__menu__list__item {% if loop.first %} us-header__menu__list__item--active {% endif %}"
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === {{ loop.index0 }} }"
+                                    x-on:mouseenter="hoverMenu({{ loop.index0 }})"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="{{ category.link }}" class="us-header__menu__list__nav-link {% if category.is_current %} us-header__menu__list__nav-link--current {% endif %}">{{ category.title }}</a>
 
                                         {% if category.subcategories %}
-                                            <button class="us-header__menu__list__arrow"></button>
+                                            <button class="us-header__menu__list__arrow" x-on:click="clickMenuArrow({{ loop.index0 }}, $event)"></button>
                                         {% endif %}
                                     </div>
 
@@ -136,16 +142,21 @@
         </div>
     </div>
 
-    <div class="us-header__search">
+    <div class="us-header__search"
+         x-bind:class="{
+            'us-header__search--active': isSearchOpen,
+            'us-header__search--results': searchQuery.length > 3
+        }"
+    >
         <div class="us-header__search__container">
             <div class="us-header__search__input">
-                <input type="text" class="us-header__search__input__field" placeholder="Пошук товару...">
+                <input type="text" class="us-header__search__input__field" x-model="searchQuery" placeholder="Пошук товару...">
                 <div class="us-header__search__input__buttons">
-                    <button class="us-header__search__input__buttons__clear">{{ svg_icon('close') }}</button>
+                    <button class="us-header__search__input__buttons__clear" x-on:click="searchQuery = ''">{{ svg_icon('close') }}</button>
                     <button class="us-header__search__input__buttons__search">{{ svg_icon('search') }}</button>
                 </div>
             </div>
-            <div class="us-header__search__results">
+            <div class="us-header__search__results" x-bind:class="{ 'us-header__search__results--active': searchQuery.length > 3 }">
                 <div class="us-header__search__results__list">
                     {# TODO: сделать динамикой #}
                     <div class="us-header__search__results__item">
@@ -184,7 +195,8 @@
         {% include '@components/button-round.twig' with {
             'version': 'v0',
             'icon': 'close',
-            'class': 'us-header__search__close'
+            'class': 'us-header__search__close',
+            'x_click': 'closeAll'
         } %}
     </div>
 </header>

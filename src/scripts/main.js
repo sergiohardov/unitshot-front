@@ -9,7 +9,6 @@ import SliderLogoImagesComponent from "@scripts/components/slider-logo-images.js
 import SliderCategoriesComponent from "@scripts/components/slider-categories.js";
 import SliderReviewsBlock from "@scripts/blocks/slider-reviews.js";
 import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
-import HeaderBlock from "@scripts/blocks/header.js";
 import ModalFilterComponent from "@scripts/components/modal-filter.js";
 import RangeComponent from "@scripts/components/range.js";
 import ProductPage from "@scripts/pages/product.js";
@@ -18,6 +17,7 @@ import ModalCartComponent from "@scripts/components/modal-cart.js";
 import Alpine from 'alpinejs'
 import ProductSetComponent from "@scripts/components/product-set.js";
 import ProductGalleryComponent from "@scripts/components/product-gallery.js";
+import HeaderBlock from "@scripts/blocks/header.js";
 import CheckoutPage from "@scripts/pages/checkout.js";
 
 window.Alpine = Alpine
@@ -25,6 +25,9 @@ window.Alpine = Alpine
 /* Components */
 ProductSetComponent()
 ProductGalleryComponent()
+
+/* Blocks */
+HeaderBlock()
 
 /* Pages */
 CheckoutPage()
@@ -41,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     SliderCategoriesComponent.init()
     SliderReviewsBlock.init()
     SliderPostsBlock.init()
-    HeaderBlock.init()
     RangeComponent.init()
     ProductPage.init()
     ModalCartComponent.init()
