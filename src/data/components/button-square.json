@@ -7,5 +7,6 @@
   "id": "button-square-id",
   "class": "button-square-class",
   "data": "data-button-square",
+  "x_click": null,
   "disabled": false
 }
