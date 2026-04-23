@@ -1,4 +1,8 @@
-<button class="us-button-show-more {{ class }}" {{ data }}>
+<button class="us-button-show-more {{ class }}"
+        {% if x_click %} x-on:click="{{ x_click }}" {% endif %}
+        {% if x_bind_class %} x-bind:class="{{ x_bind_class }}" {% endif %}
+        {{ data }}
+>
     <span>Розгорнути</span>
     <span>Згорнути</span>
 </button>

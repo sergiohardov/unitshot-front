@@ -10,7 +10,6 @@ import SliderCategoriesComponent from "@scripts/components/slider-categories.js"
 import SliderReviewsBlock from "@scripts/blocks/slider-reviews.js";
 import SliderPostsBlock from "@scripts/blocks/slider-posts.js";
 import ModalFilterComponent from "@scripts/components/modal-filter.js";
-import ProductPage from "@scripts/pages/product.js";
 import ModalCartComponent from "@scripts/components/modal-cart.js";
 
 import Alpine from 'alpinejs'
@@ -32,6 +31,7 @@ HeaderBlock()
 
 /* Pages */
 CheckoutPage()
+
 Alpine.start()
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,6 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
     SliderCategoriesComponent.init()
     SliderReviewsBlock.init()
     SliderPostsBlock.init()
-    ProductPage.init()
     ModalCartComponent.init()
 })

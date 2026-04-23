@@ -134,14 +134,16 @@
                 </div>
 
                 <div class="us-page-product__info">
-                    <div class="us-page-product__info__item">
+                    <div class="us-page-product__info__item" x-data="{ expanded: false }">
                         <p class="us-page-product__info__title">Характеристики</p>
                         <div class="us-page-product__info__more us-page-product__info__more-btn">
                             {% include '@components/button-show-more.twig' with {
-                                'class': ''
+                                'class': '',
+                                'x_click': 'expanded = !expanded',
+                                'x_bind_class': "{ 'us-button-show-more--active': expanded }"
                             } %}
                         </div>
-                        <div class="us-page-product__info__content us-page-product__info__content-description">
+                        <div class="us-page-product__info__content us-page-product__info__content-description" x-bind:class="{ 'us-page-product__info__content-description--active': expanded }">
                             <div class="us-page-product__info__content-description__inner">
                                 <div class="us-page-product__info__content-description__brand">
                                     {% for stat in info.stats %}
@@ -156,14 +158,16 @@
                         </div>
                     </div>
 
-                    <div class="us-page-product__info__item">
+                    <div class="us-page-product__info__item" x-data="{ expanded: false }">
                         <p class="us-page-product__info__title">Опис товару</p>
                         <div class="us-page-product__info__more us-page-product__info__more-btn">
                             {% include '@components/button-show-more.twig' with {
-                                'class': ''
+                                'class': '',
+                                'x_click': 'expanded = !expanded',
+                                'x_bind_class': "{ 'us-button-show-more--active': expanded }"
                             } %}
                         </div>
-                        <div class="us-page-product__info__content us-page-product__info__content-description">
+                        <div class="us-page-product__info__content us-page-product__info__content-description" x-bind:class="{ 'us-page-product__info__content-description--active': expanded }">
                            <div class="us-page-product__info__content-description__inner">{{ info.description }}</div>
                         </div>
                     </div>
