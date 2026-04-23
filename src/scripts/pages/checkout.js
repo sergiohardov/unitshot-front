@@ -2,64 +2,95 @@ import {formatPrice} from "@scripts/base/helpers.js";
 
 // TODO: сделать отправку формы на бек
 // TODO: добавить заглушку "нет товаров" при пустом списке
-class CheckoutPage {
-    constructor(elem) {
-        this.page           = elem
-        this.productsList   = elem.querySelector('.us-page-checkout__form__list')
-        this.summaryValue   = elem.querySelector('.us-page-checkout__form__summary__label__value')
-        this.totalValue     = elem.querySelector('.us-page-checkout__form__summary__total__value')
+export default function CheckoutPage() {
+    Alpine.data('CheckoutPage', () => ({
+        items: {}, // Здесь будет структура: { 'ID': { price: 500, qty: 1 }, ... }
 
-        this.productsList.addEventListener('click', this.removeProductHandler.bind(this))
-        this.productsList.addEventListener('change', this.changeQuantityHandler.bind(this))
+        // 1. Добавляем объект для данных формы
+        customer: {
+            phone: '',
+            name: '',
+            post: '',
+            comment: ''
+        },
 
-        this.updateValues()
-    }
+        // Флаг загрузки
+        isSubmitting: false,
+        isSend: false,
 
-    removeProductHandler(e) {
-        const target = e.target.closest('.us-product-item__close')
-        if (!target) return;
+        // Метод для регистрации товара (вызывается из x-init в product-item)
+        registerItem(id, price, qty) {
+            this.items[id] = {price: Number(price), qty: Number(qty)};
+        },
 
-        const productItem = target.closest('.us-page-checkout__form__list__item')
-        if (!productItem) return;
+        // Принимаем ID и сам DOM-элемент карточки товара
+        removeItem(id, element) {
+            element.remove();
 
-        productItem.remove()
-        // TODO: удалять с корзины
-        // TODO: обновлять счетчик корзины
+            // Без settimeout имеем ошибку
+            setTimeout(() => delete this.items[id], 0);
+        },
 
-        this.updateValues()
-    }
+        // Метод отправки заказа
+        async submitOrder() {
+            if (!this.customer.phone || !this.customer.name) {
+                alert("Будь ласка, заповніть обов'язкові поля (Ім'я та Телефон)");
+                return;
+            }
 
-    changeQuantityHandler(e) {
-        const target = e.target.closest('.us-quantity__input')
-        if (!target) return;
+            // Формируем итоговый пакет данных для бэкенда
+            const orderPayload = {
+                customer: this.customer,
+                products: this.items,
+                // total: this.totalPrice // пересчитать на беке
+            };
 
-        // TODO: обновлять значения в корзине
-        this.updateValues()
-    }
+            this.isSubmitting = true;
 
-    updateValues() {
-        const productsData = this.getProductsData()
+            try {
+                // TODO: настроить под бек
+                /*
+                const response = await fetch('/api/checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderPayload)
+                });
 
-        this.summaryValue.innerHTML = productsData.length
-        this.totalValue.innerHTML   = formatPrice(productsData.reduce((acc, item) => acc + item.price * item.quantity, 0))
-    }
+                const result = await response.json();
 
-    getProductsData() {
-        const products = this.productsList.querySelectorAll('.us-page-checkout__form__list__item')
-        if (!products) return [];
+                if (result.success) {
+                    window.location.href = '/success-page'; // Редирект на страницу "Спасибо"
+                } else {
+                    alert('Помилка: ' + result.message);
+                }
+                */
 
-        return Array.from(products).map(item => {
-            const id = item.getAttribute('data-us-product-item-id')
-            const price = item.getAttribute('data-us-product-item-price')
-            const quantity = item.querySelector('.us-quantity__input').value
-            return {id, price, quantity}
-        })
-    }
+                // TODO: Имитация загрузки для проверки (удалить)
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                this.isSend = true;
+                this.items = {}
+                this.customer = {
+                    phone: '',
+                    name: '',
+                    post: '',
+                    comment: ''
+                }
 
-    static init() {
-        const page = document.querySelector('.us-page-checkout')
-        if (page) new this(page)
-    }
+            } catch (error) {
+                console.error('Помилка відправки:', error);
+                alert('Сталася помилка. Спробуйте пізніше.');
+            } finally {
+                this.isSubmitting = false;
+            }
+        },
+
+        get totalCount() {
+            return Object.keys(this.items).length;
+        },
+
+        get totalPrice() {
+            const total = Object.values(this.items).reduce((acc, item) => acc + (item.price * item.qty), 0);
+            return formatPrice(total);
+        }
+    }));
 }
-
-export default CheckoutPage

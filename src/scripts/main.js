@@ -14,11 +14,11 @@ import ModalFilterComponent from "@scripts/components/modal-filter.js";
 import RangeComponent from "@scripts/components/range.js";
 import ProductPage from "@scripts/pages/product.js";
 import ModalCartComponent from "@scripts/components/modal-cart.js";
-import CheckoutPage from "@scripts/pages/checkout.js";
 
 import Alpine from 'alpinejs'
 import ProductSetComponent from "@scripts/components/product-set.js";
 import ProductGalleryComponent from "@scripts/components/product-gallery.js";
+import CheckoutPage from "@scripts/pages/checkout.js";
 
 window.Alpine = Alpine
 
@@ -26,6 +26,8 @@ window.Alpine = Alpine
 ProductSetComponent()
 ProductGalleryComponent()
 
+/* Pages */
+CheckoutPage()
 Alpine.start()
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,5 +45,4 @@ document.addEventListener('DOMContentLoaded', () => {
     RangeComponent.init()
     ProductPage.init()
     ModalCartComponent.init()
-    CheckoutPage.init()
 })
