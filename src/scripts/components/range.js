@@ -1,53 +1,41 @@
-class RangeComponent {
-    constructor(elem) {
-        this.elem           = elem
-        this.rangeInput     = elem.querySelectorAll(".us-range__range-input input");
-        this.priceInput     = elem.querySelectorAll(".us-range__price-input input");
-        this.range          = elem.querySelector(".us-range__progress");
-        this.priceGap       = 100;
+import Alpine from 'alpinejs'
 
-        this.priceInput?.forEach(input => input?.addEventListener("input", this.priceInputHandler.bind(this)));
-        this.rangeInput?.forEach(input => input?.addEventListener("input", this.rangeInputHandler.bind(this)));
-    }
+export default function RangeComponent() {
+    Alpine.data('RangeComponent', (min, max, startMin, startMax, gap = 100) => ({
+        min: Number(min),
+        max: Number(max),
+        minVal: Number(startMin) || Number(min),
+        maxVal: Number(startMax) || Number(max),
+        gap: Number(gap),
 
-    priceInputHandler(e) {
-        let minPrice = parseInt(this.priceInput[0].value),
-            maxPrice = parseInt(this.priceInput[1].value);
+        // Высчитываем отступ слева в процентах
+        get leftPercent() {
+            return ((this.minVal - this.min) / (this.max - this.min)) * 100 + '%';
+        },
 
-        if ((maxPrice - minPrice >= this.priceGap) && maxPrice <= this.rangeInput[1].max) {
-            if (e.target.className === "us-range__input-min") {
-                this.rangeInput[0].value = minPrice;
-                this.range.style.left = ((minPrice / this.rangeInput[0].max) * 100) + "%";
-            } else {
-                this.rangeInput[1].value = maxPrice;
-                this.range.style.right = 100 - (maxPrice / this.rangeInput[1].max) * 100 + "%";
+        // Высчитываем отступ справа в процентах
+        get rightPercent() {
+            return (100 - ((this.maxVal - this.min) / (this.max - this.min)) * 100) + '%';
+        },
+
+        updateMin() {
+            this.minVal = parseInt(this.minVal) || this.min;
+            if (this.minVal < this.min) this.minVal = this.min;
+
+            // Упираемся в правый ползунок с учетом gap
+            if (this.maxVal - this.minVal < this.gap) {
+                this.minVal = this.maxVal - this.gap;
+            }
+        },
+
+        updateMax() {
+            this.maxVal = parseInt(this.maxVal) || this.max;
+            if (this.maxVal > this.max) this.maxVal = this.max;
+
+            // Упираемся в левый ползунок с учетом gap
+            if (this.maxVal - this.minVal < this.gap) {
+                this.maxVal = this.minVal + this.gap;
             }
         }
-    }
-
-    rangeInputHandler(e) {
-        let minVal = parseInt(this.rangeInput[0].value),
-            maxVal = parseInt(this.rangeInput[1].value);
-        if ((maxVal - minVal) < this.priceGap) {
-            if (e.target.className === "us-range__range-min") {
-                this.rangeInput[0].value = maxVal - this.priceGap
-            } else {
-                this.rangeInput[1].value = minVal + this.priceGap;
-            }
-        } else {
-            this.priceInput[0].value = minVal;
-            this.priceInput[1].value = maxVal;
-            this.range.style.left = ((minVal / this.rangeInput[0].max) * 100) + "%";
-            this.range.style.right = 100 - (maxVal / this.rangeInput[1].max) * 100 + "%";
-        }
-    }
-
-    static init() {
-        const elems = document.querySelectorAll('.us-range')
-        if(!elems) return null;
-
-        elems.forEach(elem => new this(elem))
-    }
+    }));
 }
-
-export default RangeComponent
