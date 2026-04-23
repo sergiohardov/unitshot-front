@@ -21,12 +21,12 @@
                         {% endif %}
 
                         {% if old_price %}
-                            <div class="us-page-product__main__old-price">{{ old_price }}</div>
+                            <div class="us-page-product__main__old-price">{{ format_price(old_price) }}</div>
                         {% endif %}
 
                         {% if price %}
                             <div class="us-page-product__main__price">
-                                <span class="us-page-product__main__price__total">{{ price }}</span>
+                                <span class="us-page-product__main__price__total">{{ format_price(price) }}</span>
                                 <span class="us-page-product__main__price__feedback" data-us-modal-id="us-modal-call">Знайшли нижчу ціну?</span>
                             </div>
                         {% endif %}
