@@ -7,5 +7,8 @@
     "src": "/src/images/pictures/product-card-1.png",
     "alt": "Product image"
   },
-  "price": "312798"
+  "price": "312798",
+  "x_init": null,
+  "x_click_remove": null,
+  "x_model_qty": null
 }
