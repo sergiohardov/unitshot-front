@@ -1,6 +1,6 @@
 {# Внутри блока slides нужно оборачивать каждый слайд в <div class="swiper-slide"> #}
 
-<div class="us-slider {% block class_slider %}{% endblock %}">
+<div class="us-slider {{ class }}" x-data='SliderLayout({{ swiper_options|default({})|json_encode }})'>
     {% block before_slider %}{% endblock %}
 
     <div class="us-slider__container">

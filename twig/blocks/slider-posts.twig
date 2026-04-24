@@ -1,6 +1,13 @@
 {% extends '@layouts/slider.twig' %}
 
-{% block class_slider %} us-slider-posts {% endblock %}
+{% set class = 'us-slider-posts' %}
+{% set swiper_options = {
+    "slidesPerView": 1.5,
+    "breakpoints": {
+        769: { "slidesPerView": 2 },
+        993: { "slidesPerView": 3 }
+    }
+} %}
 
 {% block before_slider %}
 <div class="us-container">
@@ -8,7 +15,6 @@
         'title': title,
         'class': 'us-slider-posts__title'
     } %}
-
     {% endblock %}
 
     {% block slides %}

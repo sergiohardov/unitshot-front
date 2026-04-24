@@ -1,14 +1,40 @@
 {% extends '@layouts/modal.twig' %}
 
+{% set id = 'us-modal-call' %}
+{% set class = 'us-modal-call' %}
+{% set modify = 'normal' %}
+{% set data = null %}
+{% set x_data = "ModalCallComponent('http://localhost:3000/call/')" %}
+{% set title = 'Оформлення зворотнього дзінка' %}
+{% set buttons = {
+    'primary': {
+        'text': 'Передзвоніть мені',
+        'id': 'iiii',
+        'x_click': 'submit'
+    }
+} %}
+
 {% block body %}
-    <form class="us-modal-call__form" id="us-modal-call-form">
-        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" value="">
-        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" value="">
-        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10"></textarea>
+    <form class="us-modal-call__form" id="us-modal-call-form" x-show="!isSended">
+        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" x-model="formData.phone" x-bind:class="{ 'us-modal-call__input--error': errors.phone }">
+        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" x-model="formData.username" x-bind:class="{ 'us-modal-call__input--error': errors.username }">
+        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10" x-model="formData.comment"></textarea>
     </form>
 
-    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message">
+    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message" x-show="isSended" x-cloak>
         <p>Замовлення оформлене.</p>
         <p>Наш менеджер зв’яжеться з вами за декілька хвилин!</p>
     </div>
 {% endblock %}
+
+
+{# TODO: использовать дефолт кнопку или прогнать кастом #}
+{#{% block footer %}#}
+{#    {% include '@components/button-square.twig' with {#}
+{#        'version': 'v3',#}
+{#        'text': 'Відправити',#}
+{#        'x_bind_text': "isSended ? 'Зрозуміло' : (isLoading ? 'Відправка...' : 'Відправити')",#}
+{#        'x_click': 'submit',#}
+{#        'disabled': 'isLoading'#}
+{#    } %}#}
+{#{% endblock %}#}

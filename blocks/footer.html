@@ -66,15 +66,25 @@
                     
                     <div class="us-footer__contact-content">
                                                     <div class="us-footer__contact-phones">
-                                                                        <span class="us-phone-number " data-us-phone-number="+380731111111">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
-                                                                        <span class="us-phone-number " data-us-phone-number="+380732222222">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
+                                                                        <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+                                                                        <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380732222222' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380732222222' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
                                 
                                 
-                                <button class="us-footer__contact-btn" data-us-modal-id="us-modal-call">Замовити дзвінок</button>
+                                <button class="us-footer__contact-btn" x-data x-on:click="$store.ModalStore.open('us-modal-call')">Замовити дзвінок</button>
                             </div>
                         
                                                     <div class="us-footer__contact-social">

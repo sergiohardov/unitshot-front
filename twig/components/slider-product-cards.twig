@@ -1,6 +1,12 @@
 {% extends '@layouts/slider.twig' %}
 
-{% block class_slider %} us-slider-product-cards {% endblock %}
+{% set class = "us-slider-product-cards" %}
+{% set swiper_options = {
+    "breakpoints": {
+        769: { "slidesPerView": 3 },
+        993: { "slidesPerView": 4 }
+    }
+} %}
 
 {% block slides %}
     {% for product in products %}

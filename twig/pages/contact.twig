@@ -30,7 +30,7 @@
                                         {% if item.type == 'text' %}
                                             <div class="us-page-contact__text__contacts__text">{{ item.content|raw }}</div>
                                         {% elseif item.type == 'number' %}
-                                            <div class="us-page-contact__text__contacts__numbers">
+                                            <div class="us-page-contact__text__contacts__numbers" x-data>
                                                 {% if item.content %}
                                                     {% for number in item.content %}
                                                         {% include '@components/phone-number.twig' with {
@@ -43,7 +43,7 @@
                                                     'version': 'v2',
                                                     'class': 'us-page-contact__text__contacts__numbers__btn',
                                                     'text': 'Замовити дзвінок',
-                                                    'data': 'data-us-modal-id="us-modal-call"'
+                                                    'x_click': "$store.ModalStore.open('us-modal-call')"
                                                 } %}
                                             </div>
                                         {% elseif item.type == 'socials' %}

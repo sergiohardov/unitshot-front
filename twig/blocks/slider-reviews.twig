@@ -1,6 +1,13 @@
 {% extends '@layouts/slider.twig' %}
 
-{% block class_slider %} us-slider-reviews {% endblock %}
+{% set class = 'us-slider-reviews' %}
+{% set swiper_options = {
+    "slidesPerView": 1.5,
+    "breakpoints": {
+        769: { "slidesPerView": 2 },
+        993: { "slidesPerView": 3 }
+    }
+} %}
 
 {% block before_slider %}
 <div class="us-container">

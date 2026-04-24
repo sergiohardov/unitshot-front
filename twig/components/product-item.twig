@@ -1,5 +1,9 @@
-<div class="us-product-item {{ class }}" data-us-product-item-id="{{ product_id }}" data-us-product-item-price="{{ price }}">
-    <button class="us-product-item__close" type="button"></button>
+{# x-init для регистрации в родительском объекте items #}
+{# x-show="items['{{ product_id }}']" — если товара нет в объекте, он исчезнет из DOM. #}
+
+<div class="us-product-item {{ class }}" {% if x_init %} x-init="{{ x_init }}" {% endif %}>
+    {# Кнопка удаления просто убирает ID из объекта родителя и удаляет элемент #}
+    <button class="us-product-item__close" type="button" {% if x_click_remove %} x-on:click="{{ x_click_remove }}" {% endif %}></button>
 
     <div class="us-product-item__image">
         {% include '@components/image.twig' with {
@@ -10,8 +14,10 @@
 
     <h3 class="us-product-item__title">{{ title }}</h3>
 
+    {# Передаем путь x-model к конкретному полю qty в объекте items. #}
     {% include '@components/quantity.twig' with {
-        'class': 'us-product-item__qty'
+        'class': 'us-product-item__qty',
+        'x_model': x_model_qty ?: null
     } %}
 
     <span class="us-product-item__price">{{ format_price(price) }}</span>

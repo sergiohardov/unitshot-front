@@ -19,12 +19,12 @@
                     'categories': categories
                 } %}
 
-                <div class="us-page-catalog__buttons">
+                <div class="us-page-catalog__buttons" x-data>
                     {% include '@components/button-square.twig' with {
                         'class': 'us-page-catalog__buttons__filter-btn',
                         'version': 'v2',
-                        'data': 'data-us-modal-id="us-modal-filter"',
                         'text': 'Фільтр',
+                        'x_click': "$store.ModalStore.open('us-modal-filter')"
                     } %}
 
                     <div class="us-page-catalog__buttons__sort">
@@ -81,13 +81,6 @@
             </div>
         </div>
 
-        {% include '@components/modal-filter.twig' with {
-            'id': 'us-modal-filter',
-            'class': 'us-modal-filter',
-            'title': 'Фільтр',
-            'modify': 'left',
-            'buttons': null,
-            'filters': filters,
-        } %}
+        {% include '@components/modal-filter.twig' %}
     </div>
 {% endblock %}

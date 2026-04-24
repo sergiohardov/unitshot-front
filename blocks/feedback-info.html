@@ -24,18 +24,31 @@
                                     <div class="us-feedback-info__contacts-content">
                         <span class="us-feedback-info__contacts-title">Подзвонити:</span>
                         <div class="us-feedback-info__numbers">
-                                                                <span class="us-phone-number " data-us-phone-number="+380731111111">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
-                                                                <span class="us-phone-number " data-us-phone-number="+380732222222">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
+                                                                <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+                                                                <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380732222222' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380732222222' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
                                                     </div>
                     </div>
                 
-                <div class="us-feedback-info__contacts-content">
+                <div class="us-feedback-info__contacts-content" x-data>
                     <span class="us-feedback-info__contacts-title">Замовити дзвінок:</span>
-                                <button id="" class="us-button-square  us-button-square--v2  us-feedback-info__contacts-btn"  data-us-modal-id="us-modal-call" type="button">
+                                <button id="" class="us-button-square  us-button-square--v2  us-feedback-info__contacts-btn"
+                type="button"
+                                 x-on:click="$store.ModalStore.open('us-modal-call')"                 
+        >
             Безкоштовна констультація
         </button>
                     </div>

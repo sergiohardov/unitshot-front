@@ -1,5 +1,43 @@
 {% extends '@layouts/modal.twig' %}
 
+{% set id = 'us-modal-cart' %}
+{% set class = 'us-modal-cart' %}
+{% set modify = 'right' %}
+{% set title = 'Кошик' %}
+{% set data = null %}
+{% set x_data = null %}
+{% set buttons = null %}
+{% set price = "12798" %}
+{% set products = [
+    {
+        "product_id": "423",
+        "title": "Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3",
+        "image": {
+        "src": "/src/images/pictures/product-card-1.png",
+        "alt": "Product image"
+    },
+        "price": "312798"
+    },
+    {
+        "product_id": "2222",
+        "title": "Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3",
+        "image": {
+        "src": "/src/images/pictures/product-card-2.png",
+        "alt": "Product image"
+    },
+        "price": "312798"
+    },
+    {
+        "product_id": "323",
+        "title": "Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3",
+        "image": {
+        "src": "/src/images/pictures/product-card-3.png",
+        "alt": "Product image"
+    },
+        "price": "312798"
+    }
+] %}
+
 {% block body %}
    <div class="us-modal-cart__list">
        {% if products %}
@@ -18,7 +56,7 @@
     <div class="us-modal-cart__total">
         <div class="us-modal-cart__price">
             <span class="us-modal-cart__price__title">Сума:</span>
-            <span class="us-modal-cart__price__sum">{{ price }}</span>
+            <span class="us-modal-cart__price__sum">{{ format_price(price) }}</span>
         </div>
 
         {# TODO: сделать динамическую ссылку на страницу оформления товара #}

@@ -8,8 +8,8 @@
   <link rel="stylesheet" crossorigin href="/css/main.css">
 </head>
 <body>
-<header class="us-header">
-    <div class="us-header__overlay"></div>
+<header class="us-header" x-data="HeaderBlock">
+    <div class="us-header__overlay" x-bind:class="{ 'us-header__overlay--visible': isOverlayActive }" x-on:click="closeAll"></div>
 
     <div class="us-header__line">
         <div class="us-container">
@@ -32,17 +32,23 @@
             </div>
 
                         <div class="us-header__line__buttons">
-                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--burger"  >
+                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--burger"
+                         x-on:click="toggleMenu"              x-bind:class="{ 'us-header__line__buttons__item--burger--active': isMenuOpen }"             
+    >
                     </button>
 
-                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--search"  >
+                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--search"
+                         x-on:click="toggleSearch"                         
+    >
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.23 18.52C11.4305 18.528 13.5604 17.7435 15.23 16.31L20.23 21.31C20.3706 21.4505 20.5613 21.5293 20.76 21.5293C20.9588 21.5293 21.1494 21.4505 21.29 21.31C21.4305 21.1694 21.5093 20.9788 21.5093 20.78C21.5093 20.5813 21.4305 20.3906 21.29 20.25L16.29 15.25C17.7235 13.5804 18.508 11.4505 18.5 9.25C18.5 7.42053 17.9575 5.63213 16.9411 4.11098C15.9247 2.58982 14.48 1.40423 12.7898 0.704118C11.0996 0.00400788 9.23974 -0.179173 7.44542 0.17774C5.65109 0.534654 4.0029 1.41563 2.70927 2.70927C1.41563 4.0029 0.534654 5.65109 0.17774 7.44542C-0.179173 9.23974 0.00400788 11.0996 0.704118 12.7898C1.40423 14.48 2.58982 15.9247 4.11098 16.9411C5.63213 17.9575 7.42053 18.5 9.25 18.5L9.23 18.52ZM9.23 1.52C10.7628 1.52 12.2612 1.97453 13.5357 2.82611C14.8102 3.6777 15.8035 4.88808 16.3901 6.30421C16.9766 7.72034 17.1301 9.2786 16.8311 10.782C16.5321 12.2853 15.7939 13.6662 14.7101 14.7501C13.6262 15.8339 12.2453 16.5721 10.742 16.8711C9.2386 17.1701 7.68034 17.0166 6.26421 16.4301C4.84808 15.8435 3.6377 14.8502 2.78611 13.5757C1.93453 12.3012 1.48 10.8028 1.48 9.27C1.48265 7.21539 2.30001 5.24568 3.75285 3.79285C5.20568 2.34001 7.17539 1.52265 9.23 1.52Z" fill="#393939"/>
 <path d="M8.23047 15.0195C8.42938 15.0195 8.62015 14.9405 8.7608 14.7999C8.90145 14.6592 8.98047 14.4684 8.98047 14.2695C8.98047 14.0706 8.90145 13.8799 8.7608 13.7392C8.62015 13.5985 8.42938 13.5195 8.23047 13.5195C7.36933 13.5169 6.54421 13.1736 5.93529 12.5647C5.32636 11.9558 4.98311 11.1307 4.98047 10.2695C4.98047 10.0706 4.90145 9.87985 4.7608 9.7392C4.62015 9.59855 4.42938 9.51953 4.23047 9.51953C4.03156 9.51953 3.84079 9.59855 3.70014 9.7392C3.55949 9.87985 3.48047 10.0706 3.48047 10.2695C3.48047 11.5293 3.98091 12.7375 4.87171 13.6283C5.76251 14.5191 6.97069 15.0195 8.23047 15.0195Z" fill="#393939"/>
 </svg>
     </button>
 
-                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--cart"  data-us-modal-id="us-modal-cart">
+                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--cart"
+                         x-on:click="$store.ModalStore.open('us-modal-cart')"                         
+    >
                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.25 21.501C16.2165 21.501 17 20.7175 17 19.751C17 18.7845 16.2165 18.001 15.25 18.001C14.2835 18.001 13.5 18.7845 13.5 19.751C13.5 20.7175 14.2835 21.501 15.25 21.501Z" fill="#393939"/>
 <path d="M7.75 21.501C8.7165 21.501 9.5 20.7175 9.5 19.751C9.5 18.7845 8.7165 18.001 7.75 18.001C6.7835 18.001 6 18.7845 6 19.751C6 20.7175 6.7835 21.501 7.75 21.501Z" fill="#393939"/>
@@ -54,7 +60,7 @@
                 </div>
                 <div class="us-header__line__bottom">
                     <nav class="us-header__line__nav">
-                        <button class="us-header__line__nav__burger"></button>
+                        <button class="us-header__line__nav__burger" x-bind:class="{ 'us-header__line__nav__burger--active': isMenuOpen }" x-on:click="toggleMenu"></button>
 
                                                 <ul class="us-header__line__menu">
                                                             <li class="us-header__line__menu__item"><a href="#">Кавомашини</a></li>
@@ -65,14 +71,19 @@
                                                     </ul>
                                             </nav>
 
-                    <div class="us-header__line__number">
-                            <span class="us-phone-number us-header__line__number__phone" data-us-phone-number="+380731111111">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
+                    <div class="us-header__line__number" x-on:click.outside="isNumberOpen = false">
+                            <a class="us-phone-number us-header__line__number__phone"
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
 
-                                                    <button class="us-header__line__number__arrow"></button>
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
 
-                            <div class="us-header__line__number__menu">
+                                                    <button class="us-header__line__number__arrow" x-on:click="toggleNumber"></button>
+
+                            <div class="us-header__line__number__menu" x-bind:class="{ 'us-header__line__number__menu--visible': isNumberOpen }">
                                 <ul class="us-header__line__number__list">
                                                                             <li>
                                             <a class="us-header__line__number__list-item" href="#">
@@ -122,7 +133,7 @@
         </div>
     </div>
 
-    <div class="us-header__menu">
+    <div class="us-header__menu" x-bind:class="{ 'us-header__menu--visible': isMenuOpen }">
         <div class="us-container">
             <div class="us-header__menu__inner">
                     <div class="us-site-settings us-header__menu__settings">
@@ -138,11 +149,14 @@
 
                 <div class="us-header__menu__navigation">
                                             <ul class="us-header__menu__list">
-                                                            <li class="us-header__menu__list__item  us-header__menu__list__item--active ">
+                                                            <li class="us-header__menu__list__item  us-header__menu__list__item--active "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 0 }"
+                                    x-on:mouseenter="hoverMenu(0)"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="#" class="us-header__menu__list__nav-link  us-header__menu__list__nav-link--current ">Кавомашини</a>
 
-                                                                                    <button class="us-header__menu__list__arrow"></button>
+                                                                                    <button class="us-header__menu__list__arrow" x-on:click="clickMenuArrow(0, $event)"></button>
                                                                             </div>
 
                                                                             <ul class="us-header__menu__list__subnav">
@@ -153,18 +167,24 @@
                                                                                             <li><a href="#" class="us-header__menu__list__subnav-link ">Жорна</a></li>
                                                                                     </ul>
                                                                     </li>
-                                                            <li class="us-header__menu__list__item ">
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 1 }"
+                                    x-on:mouseenter="hoverMenu(1)"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="#" class="us-header__menu__list__nav-link ">Кавомолки</a>
 
                                                                             </div>
 
                                                                     </li>
-                                                            <li class="us-header__menu__list__item ">
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 2 }"
+                                    x-on:mouseenter="hoverMenu(2)"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="#" class="us-header__menu__list__nav-link ">Водопідготовка</a>
 
-                                                                                    <button class="us-header__menu__list__arrow"></button>
+                                                                                    <button class="us-header__menu__list__arrow" x-on:click="clickMenuArrow(2, $event)"></button>
                                                                             </div>
 
                                                                             <ul class="us-header__menu__list__subnav">
@@ -173,28 +193,40 @@
                                                                                             <li><a href="#" class="us-header__menu__list__subnav-link ">Жорна</a></li>
                                                                                     </ul>
                                                                     </li>
-                                                            <li class="us-header__menu__list__item ">
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 3 }"
+                                    x-on:mouseenter="hoverMenu(3)"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="#" class="us-header__menu__list__nav-link ">Інструменти бариста</a>
 
                                                                             </div>
 
                                                                     </li>
-                                                            <li class="us-header__menu__list__item ">
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 4 }"
+                                    x-on:mouseenter="hoverMenu(4)"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="#" class="us-header__menu__list__nav-link ">Термопоти</a>
 
                                                                             </div>
 
                                                                     </li>
-                                                            <li class="us-header__menu__list__item ">
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 5 }"
+                                    x-on:mouseenter="hoverMenu(5)"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="#" class="us-header__menu__list__nav-link ">Комплекти</a>
 
                                                                             </div>
 
                                                                     </li>
-                                                            <li class="us-header__menu__list__item ">
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 6 }"
+                                    x-on:mouseenter="hoverMenu(6)"
+                                >
                                     <div class="us-header__menu__list__item-header">
                                         <a href="#" class="us-header__menu__list__nav-link ">Вживане обладнання</a>
 
@@ -204,9 +236,14 @@
                                                     </ul>
                                     </div>
 
-                    <span class="us-phone-number us-header__menu__number" data-us-phone-number="+380731111111">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
+                    <a class="us-phone-number us-header__menu__number"
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
 
                 <div class="us-header__menu__brands">
                                         <ul class="us-header__menu__brands-list">
@@ -306,12 +343,17 @@
         </div>
     </div>
 
-    <div class="us-header__search">
+    <div class="us-header__search"
+         x-bind:class="{
+            'us-header__search--active': isSearchOpen,
+            'us-header__search--results': searchQuery.length > 3
+        }"
+    >
         <div class="us-header__search__container">
             <div class="us-header__search__input">
-                <input type="text" class="us-header__search__input__field" placeholder="Пошук товару...">
+                <input type="text" class="us-header__search__input__field" x-model="searchQuery" placeholder="Пошук товару...">
                 <div class="us-header__search__input__buttons">
-                    <button class="us-header__search__input__buttons__clear"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button class="us-header__search__input__buttons__clear" x-on:click="searchQuery = ''"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.699219 0.700195L14.6992 14.7002M14.6992 0.700195L0.699219 14.7002" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
 </button>
@@ -322,7 +364,7 @@
 </button>
                 </div>
             </div>
-            <div class="us-header__search__results">
+            <div class="us-header__search__results" x-bind:class="{ 'us-header__search__results--active': searchQuery.length > 3 }">
                 <div class="us-header__search__results__list">
                     
                     <div class="us-header__search__results__item">
@@ -358,7 +400,9 @@
             </div>
         </div>
 
-            <button class="us-button-round  us-button-round--v0  us-header__search__close"  >
+            <button class="us-button-round  us-button-round--v0  us-header__search__close"
+                         x-on:click="closeAll"                         
+    >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.699219 0.700195L14.6992 14.7002M14.6992 0.700195L0.699219 14.7002" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
@@ -396,10 +440,9 @@
                 
                 
 
-<div class="us-slider  us-slider-posts ">
+<div class="us-slider us-slider-posts" x-data='SliderLayout({"slidesPerView":1.5,"breakpoints":{"769":{"slidesPerView":2},"993":{"slidesPerView":3}}})'>
     <div class="us-container">
         <h2 class="us-page-title us-slider-posts__title">читати більше</h2>
-
     
     <div class="us-slider__container">
             <button class="us-button-arrow  us-button-arrow--v2  us-slider__prev" ></button>
@@ -549,15 +592,25 @@
                     
                     <div class="us-footer__contact-content">
                                                     <div class="us-footer__contact-phones">
-                                                                        <span class="us-phone-number " data-us-phone-number="+380731111111">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
-                                                                        <span class="us-phone-number " data-us-phone-number="+380732222222">
-        +38073<span class="us-phone-number__show-btn">[Показати номер]</span>
-    </span>
+                                                                        <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+                                                                        <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380732222222' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380732222222' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
                                 
                                 
-                                <button class="us-footer__contact-btn" data-us-modal-id="us-modal-call">Замовити дзвінок</button>
+                                <button class="us-footer__contact-btn" x-data x-on:click="$store.ModalStore.open('us-modal-call')">Замовити дзвінок</button>
                             </div>
                         
                                                     <div class="us-footer__contact-social">
@@ -589,49 +642,73 @@
     </div>
 </footer>
 
-<div class="us-modal us-modal--normal us-modal-call" id="us-modal-call" role="dialog" aria-modal="true" >
-    <div class="us-modal__overlay" data-modal-close></div>
+<div class="us-modal us-modal--normal us-modal-call"
+     id="us-modal-call"
+     role="dialog"
+     aria-modal="true"
+     x-cloak
+     x-bind:class="{ 'us-modal--active': $store.ModalStore.active === 'us-modal-call' }"
+     x-on:keydown.escape.window="$store.ModalStore.close()"
+     x-data="ModalCallComponent('http://localhost:3000/call/')"
+     
+>
+    <div class="us-modal__overlay" x-on:click="$store.ModalStore.close()"></div>
 
     <div class="us-modal__window">
         <div class="us-modal__header">
                                                 <h2 class="us-modal__title">Оформлення зворотнього дзінка</h2>
                 
-                <button class="us-modal__close" data-modal-close aria-label="Закрыть"></button>
+                <button class="us-modal__close" x-on:click="$store.ModalStore.close()" aria-label="Закрыть"></button>
                     </div>
         <div class="us-modal__body">
-                <form class="us-modal-call__form" id="us-modal-call-form">
-        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" value="">
-        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" value="">
-        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10"></textarea>
+                <form class="us-modal-call__form" id="us-modal-call-form" x-show="!isSended">
+        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" x-model="formData.phone" x-bind:class="{ 'us-modal-call__input--error': errors.phone }">
+        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" x-model="formData.username" x-bind:class="{ 'us-modal-call__input--error': errors.username }">
+        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10" x-model="formData.comment"></textarea>
     </form>
 
-    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message">
+    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message" x-show="isSended" x-cloak>
         <p>Замовлення оформлене.</p>
         <p>Наш менеджер зв’яжеться з вами за декілька хвилин!</p>
     </div>
         </div>
         <div class="us-modal__footer">
                             
-                                                <button id="iiii" class="us-button-square  us-button-square--v3  us-modal-call"   type="button">
+                                                <button id="iiii" class="us-button-square  us-button-square--v3  us-modal-call"
+                type="button"
+                                 x-on:click="submit"                 
+        >
             Передзвоніть мені
         </button>
                                         </div>
     </div>
 </div>
-
-<div class="us-modal us-modal--right us-modal-cart" id="us-modal-cart" role="dialog" aria-modal="true" >
-    <div class="us-modal__overlay" data-modal-close></div>
+<div class="us-modal us-modal--right us-modal-cart"
+     id="us-modal-cart"
+     role="dialog"
+     aria-modal="true"
+     x-cloak
+     x-bind:class="{ 'us-modal--active': $store.ModalStore.active === 'us-modal-cart' }"
+     x-on:keydown.escape.window="$store.ModalStore.close()"
+     x-data=""
+     
+>
+    <div class="us-modal__overlay" x-on:click="$store.ModalStore.close()"></div>
 
     <div class="us-modal__window">
         <div class="us-modal__header">
                                                 <h2 class="us-modal__title">Кошик</h2>
                 
-                <button class="us-modal__close" data-modal-close aria-label="Закрыть"></button>
+                <button class="us-modal__close" x-on:click="$store.ModalStore.close()" aria-label="Закрыть"></button>
                     </div>
         <div class="us-modal__body">
                <div class="us-modal-cart__list">
-                                 <div class="us-product-item custom-class" data-us-product-item-id="423" data-us-product-item-price="312798">
-    <button class="us-product-item__close" type="button"></button>
+                                 
+
+
+<div class="us-product-item custom-class" >
+    
+    <button class="us-product-item__close" type="button" ></button>
 
     <div class="us-product-item__image">
             <img class="us-image us-product-item__image__img" src="/images/product-card-1.png" alt="Product image">
@@ -639,13 +716,23 @@
 
     <h3 class="us-product-item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</h3>
 
-    <div class="us-quantity us-product-item__qty">
-    <button class="us-quantity__minus" type="button"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+    
+    
+
+
+
+<div class="us-quantity us-product-item__qty"
+     x-data="{ qty: 1 }"
+     x-modelable="qty"
+     >
+    <button class="us-quantity__minus" type="button" x-on:click="if(qty > 1) qty--"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.699219 0.700012H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
 </button>
-    <input class="us-quantity__input" name="" type="number" value="1">
-    <button class="us-quantity__plus" type="button"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <input class="us-quantity__input" name="" type="number" x-model.number="qty" x-on:input="if ($el.value < 1) qty = 1">
+
+    <button class="us-quantity__plus" type="button" x-on:click="qty++"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.69922 0.700012V10.7M0.699219 5.8852H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
 </button>
@@ -653,8 +740,12 @@
 
     <span class="us-product-item__price">312 798 грн.</span>
 </div>
-                          <div class="us-product-item custom-class" data-us-product-item-id="2222" data-us-product-item-price="312798">
-    <button class="us-product-item__close" type="button"></button>
+                          
+
+
+<div class="us-product-item custom-class" >
+    
+    <button class="us-product-item__close" type="button" ></button>
 
     <div class="us-product-item__image">
             <img class="us-image us-product-item__image__img" src="/images/product-card-2.png" alt="Product image">
@@ -662,13 +753,23 @@
 
     <h3 class="us-product-item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</h3>
 
-    <div class="us-quantity us-product-item__qty">
-    <button class="us-quantity__minus" type="button"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+    
+    
+
+
+
+<div class="us-quantity us-product-item__qty"
+     x-data="{ qty: 1 }"
+     x-modelable="qty"
+     >
+    <button class="us-quantity__minus" type="button" x-on:click="if(qty > 1) qty--"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.699219 0.700012H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
 </button>
-    <input class="us-quantity__input" name="" type="number" value="1">
-    <button class="us-quantity__plus" type="button"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <input class="us-quantity__input" name="" type="number" x-model.number="qty" x-on:input="if ($el.value < 1) qty = 1">
+
+    <button class="us-quantity__plus" type="button" x-on:click="qty++"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.69922 0.700012V10.7M0.699219 5.8852H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
 </button>
@@ -676,8 +777,12 @@
 
     <span class="us-product-item__price">312 798 грн.</span>
 </div>
-                          <div class="us-product-item custom-class" data-us-product-item-id="323" data-us-product-item-price="312798">
-    <button class="us-product-item__close" type="button"></button>
+                          
+
+
+<div class="us-product-item custom-class" >
+    
+    <button class="us-product-item__close" type="button" ></button>
 
     <div class="us-product-item__image">
             <img class="us-image us-product-item__image__img" src="/images/product-card-3.png" alt="Product image">
@@ -685,13 +790,23 @@
 
     <h3 class="us-product-item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</h3>
 
-    <div class="us-quantity us-product-item__qty">
-    <button class="us-quantity__minus" type="button"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+    
+    
+
+
+
+<div class="us-quantity us-product-item__qty"
+     x-data="{ qty: 1 }"
+     x-modelable="qty"
+     >
+    <button class="us-quantity__minus" type="button" x-on:click="if(qty > 1) qty--"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.699219 0.700012H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
 </button>
-    <input class="us-quantity__input" name="" type="number" value="1">
-    <button class="us-quantity__plus" type="button"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <input class="us-quantity__input" name="" type="number" x-model.number="qty" x-on:input="if ($el.value < 1) qty = 1">
+
+    <button class="us-quantity__plus" type="button" x-on:click="qty++"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.69922 0.700012V10.7M0.699219 5.8852H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
 </svg>
 </button>
@@ -704,11 +819,14 @@
     <div class="us-modal-cart__total">
         <div class="us-modal-cart__price">
             <span class="us-modal-cart__price__title">Сума:</span>
-            <span class="us-modal-cart__price__sum">12 798 грн.</span>
+            <span class="us-modal-cart__price__sum">12 798 грн.</span>
         </div>
 
         
-                    <a href="/checkout/" id="us-modal-cart" class="us-button-square  us-button-square--v1   us-modal-cart__checkout-btn" >
+                    <a href="/checkout/" id="us-modal-cart"
+           class="us-button-square  us-button-square--v1   us-modal-cart__checkout-btn"
+                        
+        >
             Оформити замовлення
         </a>
         </div>

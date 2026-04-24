@@ -1,20 +1,35 @@
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body><div class="us-modal us-modal--normal us-modal-lang" id="us-modal-lang" role="dialog" aria-modal="true" >
-    <div class="us-modal__overlay" data-modal-close></div>
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body><div class="us-modal us-modal--normal us-modal-lang"
+     id="us-modal-lang"
+     role="dialog"
+     aria-modal="true"
+     x-cloak
+     x-bind:class="{ 'us-modal--active': $store.ModalStore.active === 'us-modal-lang' }"
+     x-on:keydown.escape.window="$store.ModalStore.close()"
+     x-data=""
+     
+>
+    <div class="us-modal__overlay" x-on:click="$store.ModalStore.close()"></div>
 
     <div class="us-modal__window">
         <div class="us-modal__header">
                                                 <h2 class="us-modal__title">Чи бажаєте переглядати сайт українською мовою?</h2>
                 
-                <button class="us-modal__close" data-modal-close aria-label="Закрыть"></button>
+                <button class="us-modal__close" x-on:click="$store.ModalStore.close()" aria-label="Закрыть"></button>
                     </div>
         <div class="us-modal__body">
                                                 </div>
         <div class="us-modal__footer">
-                                                            <button id="" class="us-button-square  us-button-square--v4  us-modal-lang"   type="button">
+                                                            <button id="" class="us-button-square  us-button-square--v4  us-modal-lang"
+                type="button"
+                                                
+        >
             Ні
         </button>
                     
-                                                <button id="" class="us-button-square  us-button-square--v3  us-modal-lang"   type="button">
+                                                <button id="" class="us-button-square  us-button-square--v3  us-modal-lang"
+                type="button"
+                                                
+        >
             Так
         </button>
                                         </div>
