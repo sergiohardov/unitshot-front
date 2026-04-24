@@ -15,15 +15,16 @@
                 {% if hide_text %}
                     {% include '@components/button-show-more.twig' with {
                         'class': 'us-text-image__more-btn',
-                        'data': 'x-show="!expanded" x-on:click="expanded = true"'
+                        'x_model': 'expanded'
                     } %}
                 {% endif %}
             </div>
 
             <div class="us-text-image__image">
-                {% if image.src %}
-                    <img src="{{ image.src }}" alt="{{ image.alt }}">
-                {% endif %}
+                {% include '@components/image.twig' with {
+                    'class': 'us-text-image__image__img',
+                    'image': image
+                } %}
             </div>
         </div>
     </div>
