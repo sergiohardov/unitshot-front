@@ -11,6 +11,12 @@
     overflow: hidden;
   }
 
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
   &__filters {
     display: flex;
     flex-direction: column;

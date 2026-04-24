@@ -5,5 +5,7 @@
   "icon": "",
   "link": "#",
   "version": "v1",
-  "disabled": false
+  "disabled": false,
+  "x_click": null,
+  "x_bind_class": null
 }

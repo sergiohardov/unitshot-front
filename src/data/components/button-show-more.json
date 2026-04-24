@@ -1,4 +1,7 @@
 {
   "template": "./src/twig/components/button-show-more.twig",
-  "class": ""
+  "class": "",
+  "data": "",
+  "x_click": null,
+  "x_bind_class": null
 }

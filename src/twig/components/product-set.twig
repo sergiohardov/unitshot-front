@@ -1,5 +1,5 @@
 {% if sets %}
-    <div class="us-product-set {{ class }}">
+    <div class="us-product-set {{ class }}" x-data="ProductSetComponent({{ current_price }})">
         <p class="us-product-set__title">Разом вигідніше:</p>
         <div class="us-product-set__product">
             <div class="us-product-set__product__image">
@@ -11,10 +11,10 @@
             <p class="us-product-set__product__title">{{ title }}</p>
             <div class="us-product-set__product__price">
                 {% if old_price %}
-                    <span class="us-product-set__product__price-old">{{ old_price }}</span>
+                    <span class="us-product-set__product__price-old">{{ format_price(old_price) }}</span>
                 {% endif %}
 
-                <span class="us-product-set__product__price-current">{{ current_price }}</span>
+                <span class="us-product-set__product__price-current">{{ format_price(current_price) }}</span>
             </div>
         </div>
 
@@ -28,7 +28,7 @@
 
             <div class="swiper-wrapper us-product-set__slider__wrapper">
                 {% for set in sets %}
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" data-us-product-set-price="{{ set.current_price }}">
                         <div class="us-product-set__product">
                             <div class="us-product-set__product__image">
                                 {% include '@components/image.twig' with {
@@ -39,10 +39,10 @@
                             <p class="us-product-set__product__title">{{ set.title }}</p>
                             <div class="us-product-set__product__price">
                                 {% if set.old_price %}
-                                    <span class="us-product-set__product__price-old">{{ set.old_price }}</span>
+                                    <span class="us-product-set__product__price-old">{{ format_price(set.old_price) }}</span>
                                 {% endif %}
 
-                                <span class="us-product-set__product__price-current">{{ set.current_price }}</span>
+                                <span class="us-product-set__product__price-current">{{ format_price(set.current_price) }}</span>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
         <div class="us-product-set__bottom">
             <div class="us-product-set__bottom__price">
                 <span class="us-product-set__bottom__price__title">Ціна:</span>
-                <span class="us-product-set__bottom__price__total">{{ total }}</span>
+                <span class="us-product-set__bottom__price__total" x-text="totalPrice">{{ format_price(total) }}</span>
             </div>
 
             <button class="us-product-set__bottom__btn">Купити комплект</button>

@@ -1,93 +1,51 @@
-import ModalLayout from '@scripts/layouts/modal'
+import Alpine from 'alpinejs'
 
-class ModalCallComponent extends ModalLayout {
-    constructor(elem) {
-        super(elem)
+export default function ModalCallComponent() {
+    Alpine.data('ModalCallComponent', (restUrl) => ({
+        restUrl: restUrl,
+        isSended: false,
+        isLoading: false,
+        errors: {}, // Храним ошибки полей
+        formData: {
+            phone: '',
+            username: '',
+            comment: ''
+        },
 
-        this.restUrl = elem.getAttribute('data-us-modal-call-rest-url')
-        this.form = elem.querySelector('#us-modal-call-form')
-        this.message = elem.querySelector('#us-modal-call-message')
-        this.acceptBtn = elem.querySelector('#us-modal-call-accept-btn')
-        this.sended = false
+        async submit() {
+            if (this.isSended) {
+                this.$store.ModalStore.close();
+                return;
+            }
 
-        if (!this.form || !this.message || !this.acceptBtn || !this.restUrl) {
-            return undefined;
-            // throw new Error(`Modal Call - Ошибка: отсутствует один из елементов формы`)
-        }
+            // Простая валидация
+            this.errors = {};
+            if (!this.formData.phone.trim()) this.errors.phone = true;
+            if (!this.formData.username.trim()) this.errors.username = true;
 
-        this.form.addEventListener('submit', e => e.preventDefault())
-        this.acceptBtn.addEventListener('click', this.acceptBtnHandler.bind(this))
-    }
+            if (Object.keys(this.errors).length > 0) return;
 
-    static getId() {
-        return 'us-modal-call'
-    }
+            this.isLoading = true;
 
-    acceptBtnHandler(e) {
-        e.preventDefault()
+            try {
+                /*
+                const response = await fetch(this.restUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(this.formData),
+                });
+                if (!response.ok) throw new Error('Network response was not ok');
+                */
 
-        if (this.sended) this.close()
+                // TODO: Имитация задержки, удалить
+                await new Promise(resolve => setTimeout(resolve, 1000));
 
-        const formData = new FormData(this.form)
-        const isFormValid = this.validateForm(formData)
-
-        if (!isFormValid) return
-
-        this.sendForm(formData)
-            .then(response => {
-                this.message.classList.remove('us-modal-call__message--hidden')
-                this.form.classList.add('us-modal-call__message--hidden')
-                this.acceptBtn.innerHTML = 'Зрозумiло'
-            })
-            .catch(error => {
-                console.error('Ошибка:', error)
-                // TODO: логика ошибки
-            }).finally(() => {
-            this.sended = true
-        })
-    }
-
-    validateForm(formData) {
-        const rules = {
-            phone: value => value.trim().length > 0,
-            username: value => value.trim().length > 0,
-            comment: value => true, // не обязательное
-        }
-
-        let isValid = true
-
-        for (const [fieldName, validate] of Object.entries(rules)) {
-            const value = formData.get(fieldName) ?? ''
-            const field = this.form.querySelector(`[name="${fieldName}"]`)
-
-            if (!field) continue
-
-            if (!validate(value)) {
-                field.classList.add('us-modal-call__input--error')
-                isValid = false
-            } else {
-                field.classList.remove('us-modal-call__input--error')
+                this.isSended = true;
+            } catch (error) {
+                console.error('Ошибка:', error);
+            } finally {
+                this.isLoading = false;
             }
         }
-
-        return isValid
-    }
-
-    async sendForm(formData) {
-        const body = Object.fromEntries(formData.entries())
-
-        const response = await fetch(this.restUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(body),
-        })
-
-        if (!response.ok) throw new Error(`HTTP error: ${response.status}`)
-
-        return await response.json()
-    }
+    }));
 }
-
-export default ModalCallComponent

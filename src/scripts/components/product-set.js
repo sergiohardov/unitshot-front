@@ -1,54 +1,47 @@
+import Alpine from "alpinejs";
 import Swiper from "swiper";
-import "swiper/css";
 import {Navigation} from "swiper/modules";
+import {formatPrice} from "@scripts/base/helpers.js";
+import "swiper/css";
 
 
-// TODO: сделать передачу валюты и чистых значений сум через data атрибуты
-// TODO: сделать подсчет при инициализации или передача значения с сервера
-class ProductSetComponent  {
-    constructor(elem) {
-        this.component = elem
-        this.slider = elem.querySelector('.us-product-set__slider')
-        this.prev = elem.querySelector('.us-product-set__slider__prev')
-        this.next = elem.querySelector('.us-product-set__slider__next')
-        this.price = elem.querySelector('.us-product-set__product__price-current')
-        this.total = elem.querySelector('.us-product-set__bottom__price__total')
+export default function ProductSetComponent() {
+    Alpine.data('ProductSetComponent', (basePrice) => ({
+        basePrice: Number(basePrice) || 0,
+        activeSetPrice: 0,
 
+        get totalPrice() {
+            return formatPrice(this.basePrice + this.activeSetPrice);
+        },
 
-        const swiper = new Swiper(this.slider, {
-            modules: [Navigation],
-            slidesPerView: 1,
-            spaceBetween: 0,
-            navigation: {
-                nextEl: this.next,
-                prevEl: this.prev,
-            },
-            on: {
-                slideChange: () => {
-                    const currency = this.getCurrency(this.price.textContent)
-                    const price = swiper.slides[swiper.activeIndex].querySelector('.us-product-set__product__price-current').textContent
-                    const sum = this.parseAmount(price) + this.parseAmount(this.price.textContent)
-                    this.total.textContent = sum.toLocaleString('ru-RU') + ' ' + currency
+        init() {
+            const swiper = new Swiper(this.$el.querySelector('.swiper'), {
+                modules: [Navigation],
+                slidesPerView: 1,
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: this.$el.querySelector('.us-product-set__slider__next'),
+                    prevEl: this.$el.querySelector('.us-product-set__slider__prev'),
                 },
-            },
-        });
-    }
+                on: {
+                    // При инициализации сразу берем цену первого слайда
+                    init: (swiperInstance) => {
+                        this.updatePriceFromSlide(swiperInstance);
+                    },
+                    // При перелистывании обновляем цену
+                    slideChange: (swiperInstance) => {
+                        this.updatePriceFromSlide(swiperInstance);
+                    },
+                },
+            });
+        },
 
-    getCurrency(str) {
-        const match = str.match(/[^\d\s.,]+\.?$/u);
-        return match ? match[0] : null;
-    }
+        // Метод, который достает цену из data-атрибута активного слайда
+        updatePriceFromSlide(swiperInstance) {
+            const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+            const activeSlidePrice = activeSlide.getAttribute('data-us-product-set-price');
 
-    parseAmount(str) {
-        return Number(str.replace(/[^\d]/g, ''));
-    }
-
-    static init() {
-        const elems = document.querySelectorAll('.us-product-set')
-        if(!elems) return null;
-
-        elems.forEach(elem => new this(elem))
-    }
+            if (activeSlide && activeSlidePrice) this.activeSetPrice = Number(activeSlidePrice) || 0;
+        }
+    }));
 }
-
-export default ProductSetComponent

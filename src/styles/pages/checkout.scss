@@ -143,4 +143,31 @@
       }
     }
   }
+
+  &__success {
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    @include media-md() {
+      padding: 100px 0;
+    }
+
+    p {
+      text-align: center;
+      font-size: 28px;
+      color: var(--unitshot-gray-main);
+      @include font-ppneue-medium;
+
+      @include media-md() {
+        font-size: 20px;
+      }
+    }
+
+    &__btn {
+      align-self: center;
+    }
+  }
 }

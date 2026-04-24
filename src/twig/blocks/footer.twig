@@ -55,7 +55,7 @@
                                 {% endfor %}
 
                                 {# TODO: сделать модалку, добавить данные #}
-                                <button class="us-footer__contact-btn" data-us-modal-id="us-modal-call">Замовити дзвінок</button>
+                                <button class="us-footer__contact-btn" x-data x-on:click="$store.ModalStore.open('us-modal-call')">Замовити дзвінок</button>
                             </div>
                         {% endif %}
 

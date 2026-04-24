@@ -1,9 +1,3 @@
 {
-  "template": "./src/twig/components/modal-add-cart.twig",
-  "id": "us-modal-add-cart",
-  "class": "us-modal-add-cart",
-  "title": "Товар додано до кошика",
-  "text": "",
-  "data": "",
-  "buttons": {}
+  "template": "./src/twig/components/modal-add-cart.twig"
 }

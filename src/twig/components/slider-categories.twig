@@ -1,6 +1,14 @@
 {% extends '@layouts/slider.twig' %}
 
-{% block class_slider %} us-slider-categories {% endblock %}
+{% set class = 'us-slider-categories' %}
+{% set swiper_options = {
+    "slidesPerView": 3,
+    "spaceBetween": 20,
+    "breakpoints": {
+        769: { "slidesPerView": 4 },
+        993: { "slidesPerView": 5 },
+    }
+} %}
 
 {% block slides %}
     {% for category in categories %}

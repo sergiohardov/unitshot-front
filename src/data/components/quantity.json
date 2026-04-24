@@ -1,5 +1,7 @@
 {
   "template": "./src/twig/components/quantity.twig",
   "class": "custom-class",
-  "name": "custom-name"
+  "name": "custom-name",
+  "value": 1,
+  "x_model": null
 }
