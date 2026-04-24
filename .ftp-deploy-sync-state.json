@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1776843339153,
+    "generatedTime": 1777037571811,
     "data": [
         {
             "type": "folder",
@@ -34,68 +34,68 @@
         {
             "type": "file",
             "name": "blocks/brand-logos.html",
-            "size": 6281,
-            "hash": "e1e6810f5fd174470f0b7368005d0d9753c70438c081fca16f7283bbd50e2b1b"
+            "size": 6404,
+            "hash": "c4bd73c8d19db8ca45f7d97b95c62a98ccddc908a6e03b877ff3ab62631eea07"
         },
         {
             "type": "file",
             "name": "blocks/category-links.html",
-            "size": 11889,
-            "hash": "7874f115c21a51824835e4381e7e35792972f1456acd63b56a47bf70418f97a9"
+            "size": 12153,
+            "hash": "44f5bfb22cddbffde20b3f2ca3ddbdc9d0d0d061f3dc0ad3e1a5aff94e0d5978"
         },
         {
             "type": "file",
             "name": "blocks/category-showcase.html",
-            "size": 13023,
-            "hash": "e9977a3c7268fb383354751314f71cb340b7858e186a3deb6c4a03094a6cb8fc"
+            "size": 13483,
+            "hash": "3f277fd4084bf0f4ca025133c6139f5cb9b8690935a24146fc71e94c4148f272"
         },
         {
             "type": "file",
             "name": "blocks/client-logos.html",
-            "size": 5705,
-            "hash": "4ca4140f092ab03bf2749543be967741547853b9daa03a1512598f89b659725d"
+            "size": 5861,
+            "hash": "0b8d2d82e3e9e0a90b886df2bfcba50df9edccfa84cfc1bb5beafa80af2338f5"
         },
         {
             "type": "file",
             "name": "blocks/feedback-info.html",
-            "size": 11154,
-            "hash": "1df179c0ab872827fe33870561d0067bd5d2e3ae6ac510b5226b5c40898d117c"
+            "size": 11699,
+            "hash": "1903028c14f738ddf5f24f64e1526a5c6eccac96ebc2ef62dd2583f83fd902ea"
         },
         {
             "type": "file",
             "name": "blocks/footer.html",
-            "size": 20893,
-            "hash": "9e8e9f0a20c398cea58cd876af5a9e3c7d6dc716d8ec62b0dcaf3097fe9c7c11"
+            "size": 21364,
+            "hash": "42a7b7ab14db5651e4cdd018043f68856ea53f31ed60bf2cfa8eca0fd13d29d8"
         },
         {
             "type": "file",
             "name": "blocks/header.html",
-            "size": 34468,
-            "hash": "8842cbadb9d2ae7caa8d2cb7b573f19c842a2894888a535d0d292a35d4c5ce32"
+            "size": 37584,
+            "hash": "26d277e209577bbb9f09af933f19633a91089bed533b161ce93179bb5c6088f0"
         },
         {
             "type": "file",
             "name": "blocks/popular-products.html",
-            "size": 7508,
-            "hash": "7a3814de122722f7b46072d41d815491761367c32cfdf8c810910a4412283836"
+            "size": 7714,
+            "hash": "892e44128b251755cc7ba4f09c3afff4a5f27460ce08eb44adfa9952cfa8cc24"
         },
         {
             "type": "file",
             "name": "blocks/slider-posts.html",
-            "size": 4132,
-            "hash": "c2555c4845f5822ce237e0d8b49efc36f9da2e8580aa2a12e8013be7e80471ba"
+            "size": 4242,
+            "hash": "cdea08e1b5f14bae73a7e5a84ef83e81f0dfbe1f9f548b65a44386af8e01986d"
         },
         {
             "type": "file",
             "name": "blocks/slider-reviews.html",
-            "size": 4642,
-            "hash": "6ffdc6803f59d3b8fe67cf3910e11da262f393347f0e5eda7256887905a8dce3"
+            "size": 4753,
+            "hash": "96e49fbcb314ae6a92f16394b7572201220ffb4a96b2fedcd523062495029fe9"
         },
         {
             "type": "file",
             "name": "blocks/text-image.html",
-            "size": 2878,
-            "hash": "52031778e406f646b42c4e0b259278153d35a509617fb267ed3e1be2819d71ae"
+            "size": 2997,
+            "hash": "1fb36be72305103edd82546991d060744841098dd779450a1a6cea43dff6c207"
         },
         {
             "type": "file",
@@ -112,20 +112,20 @@
         {
             "type": "file",
             "name": "components/button-round.html",
-            "size": 290,
-            "hash": "2fff3c3443e4cb1202f16fff7443f0e5b7853bf29bda4654bbc9e005f063ca7c"
+            "size": 343,
+            "hash": "994a1b8695a1832f0a9a583ab093bd28fbfc5c25603269231ff60c5b1ade2333"
         },
         {
             "type": "file",
             "name": "components/button-show-more.html",
-            "size": 319,
-            "hash": "4d71a5ffaba4e4629c81e3ad10c7d4daecc71d43fa8197bd9e6774a63ca045b8"
+            "size": 345,
+            "hash": "4aeb07b72257e469a5ac3ab1e1c6bae1f721b64b8742bd044861bd78d561da04"
         },
         {
             "type": "file",
             "name": "components/button-square.html",
-            "size": 393,
-            "hash": "baf5d748a2ff26185618260f95a69cb48e8fddd102e7f50b9244a3dd22b28174"
+            "size": 465,
+            "hash": "0751a653e7f22246e6457012e17b866b4d115f772a58a6b6b939442135a3ff65"
         },
         {
             "type": "file",
@@ -142,38 +142,38 @@
         {
             "type": "file",
             "name": "components/modal-add-cart.html",
-            "size": 938,
-            "hash": "7dac02d6d91a14cd8c82c8503b4b83da6b192ddd4cfdf9bf17c3c3ba9cfb4200"
+            "size": 1184,
+            "hash": "04366713162c6621a7d89620631de61079c19e2779a5791d77c11ba0bb7aecf8"
         },
         {
             "type": "file",
             "name": "components/modal-call.html",
-            "size": 1996,
-            "hash": "7d21b6be6896fb3ee745f5da8a5d1650d1189abb197c81abd836900ed4e69a96"
+            "size": 2482,
+            "hash": "b6f83046d30b4c2fb8f55ae4c44a7ffdcb997ed8404a951c892a994b66775284"
         },
         {
             "type": "file",
             "name": "components/modal-cart.html",
-            "size": 5181,
-            "hash": "a66210664762df1530b6d152a6680cbd6f2787e7897a401ac374ebea142844d3"
+            "size": 5797,
+            "hash": "503da322dbcf442bb7deae4bfcc802b6998742eadc5aafd440265214f6ce70e5"
         },
         {
             "type": "file",
             "name": "components/modal-filter.html",
-            "size": 4752,
-            "hash": "941b36634c4cea0776f026631cc39067200933119c4773df262433c93833661b"
+            "size": 6177,
+            "hash": "07ba636c986a6464b931a7fd02670a448687d64c3aae147b49879b02a3ed31eb"
         },
         {
             "type": "file",
             "name": "components/modal-lang.html",
-            "size": 1337,
-            "hash": "87d90da57391ff8d3bcab7f0681e4c3119525af694d9bc7ba2a324e15249f2e9"
+            "size": 1723,
+            "hash": "c1fe325a5232545371e8b37d3fadca8ae1b320b4d2dabd21890ca281cfbdd708"
         },
         {
             "type": "file",
             "name": "components/modal-remove-cart.html",
-            "size": 946,
-            "hash": "2eafce1d6514c54a029d1ada041bb4db280d634fd33265692020b64db6a7c3c6"
+            "size": 1195,
+            "hash": "09c9fe3b2ff052addbeb275c48df5d78d8e12dd5185cc8f6d3ddec8512fc6517"
         },
         {
             "type": "file",
@@ -184,14 +184,14 @@
         {
             "type": "file",
             "name": "components/pagination.html",
-            "size": 1133,
-            "hash": "d2cb03503b08b906621ff53e75631dc4539395646cf82b5109ef147434f34e02"
+            "size": 1345,
+            "hash": "b5cda338b6a743c8b806aeac80aef2d0fb7278d622d1d159f94223bb62001ae1"
         },
         {
             "type": "file",
             "name": "components/phone-number.html",
-            "size": 387,
-            "hash": "27576bad2361f7e2f8fd6e6a64f5a0c60daab3fe4db1f3f8a0a5c42b2d25f02c"
+            "size": 609,
+            "hash": "01e5f0799934256a2d6119febf1ce9984438e9962c725293d58afe55bbb00962"
         },
         {
             "type": "file",
@@ -202,32 +202,32 @@
         {
             "type": "file",
             "name": "components/product-gallery.html",
-            "size": 3016,
-            "hash": "ff3dd644b74b2b3630b9c786d9c4c101b83c5c8e9fdc648d12af6151d8056db0"
+            "size": 3049,
+            "hash": "7cf51c182ef301067bdc829471e406f9ac50e952465123e4ac0dd5c0aebea02a"
         },
         {
             "type": "file",
             "name": "components/product-item.html",
-            "size": 1429,
-            "hash": "dd7fadd8ff2ea71855ee3fce767f0b40022a6697dd82ada02c6dee486bd31d8b"
+            "size": 1539,
+            "hash": "27b811b1ef94f3fec03806174f910837defd2b354f5362d904f306b50b08daa9"
         },
         {
             "type": "file",
             "name": "components/product-set.html",
-            "size": 3987,
-            "hash": "8b4f8b485313eea98676dea57dc0986ecd92a63d5a3c6e6a3151eda9cfea4d7a"
+            "size": 4120,
+            "hash": "97d21f679f26411241d9e17b9115c9da91c3046234dea1ff24e0671484413c58"
         },
         {
             "type": "file",
             "name": "components/quantity.html",
-            "size": 872,
-            "hash": "800fa0d8512dfb1b6aeb459578ff36ce4a800049629eb6e06e3f79d4878c886f"
+            "size": 1033,
+            "hash": "85f2566bc996eb7bce773b21b2f67341414f0a6f72ae929a7ec13647679e2fbb"
         },
         {
             "type": "file",
             "name": "components/range.html",
-            "size": 827,
-            "hash": "4845948598779d905809f315ca7e668faf472d198cafa72ff98786401276da39"
+            "size": 1296,
+            "hash": "cbbb11289b7a7ef1db32806d7125e561e70788ef792d23dc4d220aa0d89a3343"
         },
         {
             "type": "file",
@@ -238,26 +238,26 @@
         {
             "type": "file",
             "name": "components/slider-categories.html",
-            "size": 3034,
-            "hash": "a5f8ea5878ead9ba5cc083b39ed8f08ec6098546766a892adea84e2c28291a09"
+            "size": 3161,
+            "hash": "30d27a39a801fe8fede3f23670c173bd6c7564551db73fc422596fdaa6f28ab8"
         },
         {
             "type": "file",
             "name": "components/slider-logo-images.html",
-            "size": 2613,
-            "hash": "11c4af69ab8d7e6775a3d0a4a1d3df4cd6cff6321a6f1b069ec9584c751bee84"
+            "size": 2740,
+            "hash": "1350f4f4f8e09c09fd3456293beb9961427e330f2d07c96632dfa4b04417c457"
         },
         {
             "type": "file",
             "name": "components/slider-product-cards.html",
-            "size": 7715,
-            "hash": "b0a0faa5af1fb16454222ffb5db77e5d1261a6848b5378786ba639d5df33ad7f"
+            "size": 7921,
+            "hash": "72c9bb721eeb6c7f6f8955d16e815dbb2021df933902ddba2351c0793dd9bf8f"
         },
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 135832,
-            "hash": "b3d2988f8f549c1c3fb604f2007000ab9a2deb5e1e8aa3958f8f63b69bfbf6df"
+            "size": 136359,
+            "hash": "516c453f26d8d208681f7a9762e140707627536e772b174ff04ff9be7ad69d64"
         },
         {
             "type": "file",
@@ -628,50 +628,50 @@
         {
             "type": "file",
             "name": "js/main.js",
-            "size": 106959,
-            "hash": "e9dc738aea39ab6644f4102055913f00a998cd2be06f2b1bc92f5c9fc34f7515"
+            "size": 139111,
+            "hash": "8ce44ca84a49f634aeb47bf828a2bd52329afa65ebfed3a6c871897bf523a05a"
         },
         {
             "type": "file",
             "name": "pages/blog.html",
-            "size": 80813,
-            "hash": "ac347bb396a98bc0895615d57df2c26702320d2380520648fde0bda649bd8454"
+            "size": 85847,
+            "hash": "b849c750edda604cb39e3b7ea3d0379897231cc3826b74cdfc3e9bc969678a90"
         },
         {
             "type": "file",
             "name": "pages/catalog.html",
-            "size": 107268,
-            "hash": "c6592e8caa26e973e812613441e34ddb276aba1392beb81763991fe02b958882"
+            "size": 114247,
+            "hash": "b787380074252fdaf4418b91c28b7027fb84020931dbd7c17dca4889018b7830"
         },
         {
             "type": "file",
             "name": "pages/checkout.html",
-            "size": 71051,
-            "hash": "e005da1735d6ddae11910bbc46570565903e7bd47d9ff5b2027eb57dee9b594c"
+            "size": 78544,
+            "hash": "0b269418cc111fb1b4ec82e730e8bd324d3d6afd785096e8f98066a7feec50bf"
         },
         {
             "type": "file",
             "name": "pages/contact.html",
-            "size": 75051,
-            "hash": "2954809e35f44d26dbd5f30535c85d63a7d0d905be315aece10962ae5b5fa22c"
+            "size": 80418,
+            "hash": "303894960a07195f2f6448e53b0f5b74fad6eef0edfeb269fca00c8ec585c738"
         },
         {
             "type": "file",
             "name": "pages/home.html",
-            "size": 141040,
-            "hash": "6f6bc7e3780d663cdb507e5e28d5242db3fa9e4d886415d84dfbb0c6c0ae588c"
+            "size": 148364,
+            "hash": "982293d963798479840d58323d1bfe78db1fe75deb21e671c28ba24083043798"
         },
         {
             "type": "file",
             "name": "pages/post.html",
-            "size": 72275,
-            "hash": "9d621ba527b64359ec868fdccc373090b46645cf33d3cd5c611ea4719641b6eb"
+            "size": 77207,
+            "hash": "11bcd762c924c062b70cb78d11eea6a73e12b6a8e4eb5462033f7078c94c7c06"
         },
         {
             "type": "file",
             "name": "pages/product.html",
-            "size": 110150,
-            "hash": "6c4884e30abe0bf0776f11130e0916d2a52bebf5d665f8bf4ae34ddc054c4409"
+            "size": 116977,
+            "hash": "60ab53182f5ab54e3b0ce68e51d556c32867a156440533f1066be6dcbd17cc3d"
         },
         {
             "type": "file",

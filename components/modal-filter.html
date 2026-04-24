@@ -1,16 +1,26 @@
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body><div class="us-modal us-modal--left us-modal-filter" id="us-modal-filter" role="dialog" aria-modal="true" >
-    <div class="us-modal__overlay" data-modal-close></div>
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body><div class="us-modal us-modal--left us-modal-filter"
+     id="us-modal-filter"
+     role="dialog"
+     aria-modal="true"
+     x-cloak
+     x-bind:class="{ 'us-modal--active': $store.ModalStore.active === 'us-modal-filter' }"
+     x-on:keydown.escape.window="$store.ModalStore.close()"
+     x-data=""
+     
+>
+    <div class="us-modal__overlay" x-on:click="$store.ModalStore.close()"></div>
 
     <div class="us-modal__window">
         <div class="us-modal__header">
                                                 <h2 class="us-modal__title">Фільтр</h2>
                 
-                <button class="us-modal__close" data-modal-close aria-label="Закрыть"></button>
+                <button class="us-modal__close" x-on:click="$store.ModalStore.close()" aria-label="Закрыть"></button>
                     </div>
         <div class="us-modal__body">
-                <div class="us-modal-filter__filters">
-                                    <div class="us-modal-filter__item">
-                    <p class="us-modal-filter__item__title">Категорія 1</p>
+            <form class="us-modal-filter__form" x-ref="filterForm" x-on:submit.prevent="console.log('Фільтр застосовано!')">
+    <div class="us-modal-filter__filters">
+                                    <div class="us-modal-filter__item" x-data="{ expanded: false }" x-bind:class="{ 'us-modal-filter__item--active': expanded }">
+                    <p class="us-modal-filter__item__title" x-on:click="expanded = !expanded">Категорія 1</p>
                     <div class="us-modal-filter__item__content">
                                                     <div class="us-checkbox us-modal-filter__item__checkbox">
     <input type="checkbox" class="us-checkbox__input" id="us-modal-filter" name="" value="">
@@ -29,8 +39,8 @@
     </div>
                                             </div>
                 </div>
-                            <div class="us-modal-filter__item">
-                    <p class="us-modal-filter__item__title">Категорія 2</p>
+                            <div class="us-modal-filter__item" x-data="{ expanded: false }" x-bind:class="{ 'us-modal-filter__item--active': expanded }">
+                    <p class="us-modal-filter__item__title" x-on:click="expanded = !expanded">Категорія 2</p>
                     <div class="us-modal-filter__item__content">
                                                     <div class="us-checkbox us-modal-filter__item__checkbox">
     <input type="checkbox" class="us-checkbox__input" id="us-modal-filter" name="" value="">
@@ -49,34 +59,61 @@
     </div>
                                             </div>
                 </div>
-                            <div class="us-modal-filter__item">
-                    <p class="us-modal-filter__item__title">Ціна</p>
+                            <div class="us-modal-filter__item" x-data="{ expanded: false }" x-bind:class="{ 'us-modal-filter__item--active': expanded }">
+                    <p class="us-modal-filter__item__title" x-on:click="expanded = !expanded">Ціна</p>
                     <div class="us-modal-filter__item__content">
-                                                    <div class="us-range">
+                                                    <div class="us-range us-modal-filter"
+     x-data="RangeComponent(250, 13521, 250, 13521)">
+
     <div class="us-range__price-input">
-        <input class="us-range__input-min" type="number" value="250">
+        <input class="us-range__input-min" type="number"
+               name="min_price"
+               x-model.number="minVal"
+               x-on:input="updateMin">
+
         <div class="us-range__separator"></div>
-        <input class="us-range__input-max" type="number" value="13521">
+
+        <input class="us-range__input-max" type="number"
+               name="max_price"
+               x-model.number="maxVal"
+               x-on:input="updateMax">
     </div>
 
     <div class="us-range__range-input">
-        <div class="us-range__slider"><div class="us-range__progress" style="left: 0%; right: 0%"></div></div>
-        <input class="us-range__range-min" type="range" min="250" max="13521" value="250" step="100">
-        <input class="us-range__range-max" type="range" min="250" max="13521" value="13521" step="100">
+        <div class="us-range__slider">
+            <div class="us-range__progress" x-bind:style="`left: ${leftPercent}; right: ${rightPercent}`"></div>
+        </div>
+
+        <input class="us-range__range-min" type="range"
+               min="250" max="13521" step="100"
+               x-model.number="minVal"
+               x-on:input="updateMin">
+
+        <input class="us-range__range-max" type="range"
+               min="250" max="13521" step="100"
+               x-model.number="maxVal"
+               x-on:input="updateMax">
     </div>
 </div>
                                             </div>
                 </div>
                         </div>
     <div class="us-modal-filter__buttons">
-                    <button id="us-modal-filter" class="us-button-square  us-button-square--v1  us-modal-filter__buttons__btn"   type="button">
+                    <button id="us-modal-filter" class="us-button-square  us-button-square--v1  us-modal-filter__buttons__btn"
+                type="button"
+                                 x-on:click="$refs.filterForm.requestSubmit()"                 
+        >
             Застосувати
         </button>
     
-                    <button id="us-modal-filter" class="us-button-square  us-button-square--v3  us-modal-filter__buttons__btn"   type="button">
+                    <button id="us-modal-filter" class="us-button-square  us-button-square--v3  us-modal-filter__buttons__btn"
+                type="button"
+                                                
+        >
             Очистити
         </button>
         </div>
+</form>
         </div>
         <div class="us-modal__footer">
                             

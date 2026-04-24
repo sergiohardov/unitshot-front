@@ -1,6 +1,6 @@
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body>    <div class="us-brand-logos">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body>    <div class="us-brand-logos" x-data="{ expanded: false }">
         <div class="us-container">
-            <ul class="us-brand-logos__list us-brand-logos__list--collapsed">
+            <ul class="us-brand-logos__list" x-bind:class="{ 'us-brand-logos__list--collapsed': !expanded }">
                                     <li class="us-brand-logos__item">
                         <a class="us-brand-logos__item-link" href="#">
                             <img class="us-brand-logos__item-image" src="/images/brand-logos-1.png" alt="Brand Logo 1">
@@ -93,8 +93,8 @@
                     </li>
                             </ul>
 
-            <div class="us-brand-logos__more  us-brand-logos__more--12  ">
-                <button class="us-brand-logos__more-btn">Розгорнути</button>
+            <div class="us-brand-logos__more  us-brand-logos__more--12  " x-show="!expanded">
+                <button type="button" class="us-brand-logos__more-btn" x-on:click="expanded = true">Розгорнути</button>
             </div>
         </div>
     </div>
