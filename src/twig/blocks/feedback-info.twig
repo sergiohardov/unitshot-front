@@ -38,13 +38,13 @@
                     </div>
                 {% endif %}
 
-                <div class="us-feedback-info__contacts-content">
+                <div class="us-feedback-info__contacts-content" x-data>
                     <span class="us-feedback-info__contacts-title">Замовити дзвінок:</span>
                     {% include '@components/button-square.twig' with {
                         'version': 'v2',
                         'text': 'Безкоштовна констультація',
                         'class': 'us-feedback-info__contacts-btn',
-                        'data': 'data-us-modal-id="us-modal-call"'
+                        'x_click': "$store.ModalStore.open('us-modal-call')"
                     } %}
                 </div>
             </div>

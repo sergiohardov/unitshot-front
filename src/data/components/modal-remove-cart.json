@@ -1,10 +1,4 @@
 {
-  "template": "./src/twig/components/modal-remove-cart.twig",
-  "id": "us-modal-remove-cart",
-  "class": "us-modal-remove-cart",
-  "title": "Товар видалено з кошика",
-  "data": "",
-  "text": "",
-  "buttons": {}
+  "template": "./src/twig/components/modal-remove-cart.twig"
 }
 

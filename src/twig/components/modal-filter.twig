@@ -1,11 +1,36 @@
 {% extends '@layouts/modal.twig' %}
 
+{% set id = 'us-modal-filter' %}
+{% set class = 'us-modal-filter' %}
+{% set modify = 'left' %}
+{% set title = 'Фільтр' %}
+{% set data = null %}
+{% set x_data = null %}
+{% set buttons = null %}
+{% set filters = [
+    {
+        "title": "Категорія 1",
+        "type": "checkbox"
+    },
+    {
+        "title": "Категорія 2",
+        "type": "checkbox"
+    },
+    {
+        "title": "Ціна",
+        "type": "range",
+        "min": 250,
+        "max": 13521
+    }
+] %}
+
 {% block body %}
+<form class="us-modal-filter__form" x-ref="filterForm" x-on:submit.prevent="console.log('Фільтр застосовано!')">
     <div class="us-modal-filter__filters">
         {% if filters %}
             {% for filter in filters %}
-                <div class="us-modal-filter__item">
-                    <p class="us-modal-filter__item__title">{{ filter.title }}</p>
+                <div class="us-modal-filter__item" x-data="{ expanded: false }" x-bind:class="{ 'us-modal-filter__item--active': expanded }">
+                    <p class="us-modal-filter__item__title" x-on:click="expanded = !expanded">{{ filter.title }}</p>
                     <div class="us-modal-filter__item__content">
                         {% if filter.type == 'checkbox' %}
                             {% include '@components/checkbox.twig' with {
@@ -35,7 +60,8 @@
         {% include '@components/button-square.twig' with {
             'version': 'v1',
             'text': 'Застосувати',
-            'class': 'us-modal-filter__buttons__btn'
+            'class': 'us-modal-filter__buttons__btn',
+            'x_click': '$refs.filterForm.requestSubmit()'
         } %}
 
         {% include '@components/button-square.twig' with {
@@ -44,4 +70,5 @@
             'class': 'us-modal-filter__buttons__btn'
         } %}
     </div>
+</form>
 {% endblock %}

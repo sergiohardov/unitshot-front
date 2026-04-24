@@ -27,7 +27,7 @@
                         {% if price %}
                             <div class="us-page-product__main__price">
                                 <span class="us-page-product__main__price__total">{{ format_price(price) }}</span>
-                                <span class="us-page-product__main__price__feedback" data-us-modal-id="us-modal-call">Знайшли нижчу ціну?</span>
+                                <span class="us-page-product__main__price__feedback" x-data x-on:click="$store.ModalStore.open('us-modal-call')">Знайшли нижчу ціну?</span>
                             </div>
                         {% endif %}
 
@@ -126,7 +126,7 @@
                                 </div>
                                 <div class="us-page-product__main__feedback__contact-item">
                                     <p class="us-page-product__main__feedback__contact-title">Замовити дзвінок:</p>
-                                    <button class="us-page-product__main__feedback__contact-btn" data-us-modal-id="us-modal-call">Безкоштовна консультація</button>
+                                    <button class="us-page-product__main__feedback__contact-btn" x-data x-on:click="$store.ModalStore.open('us-modal-call')">Безкоштовна консультація</button>
                                 </div>
                             </div>
                         </div>
