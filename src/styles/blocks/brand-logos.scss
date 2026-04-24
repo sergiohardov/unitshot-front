@@ -6,6 +6,10 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
 
+    /* ВАЖНО: Если появится вертикальный отступ, тг задавать его
+       не через row-gap, а через padding/margin внутри __item,
+       чтобы он тоже мог плавно анимироваться в 0. */
+
     @include media-md() {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -13,26 +17,33 @@
     &--collapsed {
       @include min-media-md() {
         li:nth-child(n+13) {
-          height: 0;
-          scale: 0;
+          grid-template-rows: 0fr;
+          opacity: 0;
+          padding-top: 0; // Обнуляем вертикальные отступы, если они есть
+          padding-bottom: 0;
         }
       }
 
       @include media-md() {
         li:nth-child(n+19) {
-          height: 0;
-          scale: 0;
+          grid-template-rows: 0fr;
+          opacity: 0;
+          padding-top: 0; // Обнуляем вертикальные отступы, если они есть
+          padding-bottom: 0;
         }
       }
     }
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows var(--unitshot-transition-speed) ease,
+    opacity var(--unitshot-transition-speed) ease,
+    padding var(--unitshot-transition-speed) ease;
+    opacity: 1;
+
     position: relative;
-    scale: 1;
 
     &:before {
       content: '';
@@ -47,17 +58,22 @@
       scale: 0;
       z-index: 1;
       transition: var(--unitshot-transition-speed-slowly);
-    }
 
-    &:hover:before {
-      scale: 1;
+      &:hover {
+        scale: 1;
+      }
     }
 
     &-link {
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       z-index: 2;
     }
 
-    &-img {
+    &-image {
       width: 100%;
       height: auto;
     }
@@ -76,35 +92,6 @@
     &--18 {
       @include media-md() {
         display: flex;
-      }
-    }
-
-    &-btn {
-      font-family: var(--unitshot-font-family-blog);
-      font-weight: 500;
-      font-size: 18px;
-      border-bottom: 2px solid var(--unitshot-accent-pink);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding-bottom: 8px;
-
-      @include media-md() {
-        font-size: 14px;
-      }
-
-      &:after {
-        content: '';
-        display: block;
-        width: 14px;
-        height: 14px;
-
-        mask-image: url('@images/icons/arrow-dark.svg');
-        mask-repeat: no-repeat;
-        mask-position: center center;
-        mask-size: 100%;
-        background-color: var(--unitshot-accent-pink);
-        transform: rotate(90deg);
       }
     }
   }
