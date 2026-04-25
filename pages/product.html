@@ -750,10 +750,13 @@
                         <p class="us-page-product__info__title">Характеристики</p>
                         <div class="us-page-product__info__more us-page-product__info__more-btn">
                             <button class="us-button-show-more "
-         x-on:click="expanded = !expanded"          x-bind:class="{ 'us-button-show-more--active': expanded }"         
+        x-data="{ state: false }"
+        x-modelable="state"
+        x-on:click="state = !state"
+        x-bind:class="{ 'us-button-show-more--active': state }"
+         x-model="expanded"         
 >
-    <span>Розгорнути</span>
-    <span>Згорнути</span>
+    <span x-text="state ? 'Згорнути' : 'Розгорнути'"></span>
 </button>
                         </div>
                         <div class="us-page-product__info__content us-page-product__info__content-description" x-bind:class="{ 'us-page-product__info__content-description--active': expanded }">
@@ -788,10 +791,13 @@
                         <p class="us-page-product__info__title">Опис товару</p>
                         <div class="us-page-product__info__more us-page-product__info__more-btn">
                             <button class="us-button-show-more "
-         x-on:click="expanded = !expanded"          x-bind:class="{ 'us-button-show-more--active': expanded }"         
+        x-data="{ state: false }"
+        x-modelable="state"
+        x-on:click="state = !state"
+        x-bind:class="{ 'us-button-show-more--active': state }"
+         x-model="expanded"         
 >
-    <span>Розгорнути</span>
-    <span>Згорнути</span>
+    <span x-text="state ? 'Згорнути' : 'Розгорнути'"></span>
 </button>
                         </div>
                         <div class="us-page-product__info__content us-page-product__info__content-description" x-bind:class="{ 'us-page-product__info__content-description--active': expanded }">

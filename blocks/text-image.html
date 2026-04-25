@@ -9,16 +9,19 @@
                     </div>
                 
                                     <button class="us-button-show-more us-text-image__more-btn"
-                        x-show="!expanded" x-on:click="expanded = true"
+        x-data="{ state: false }"
+        x-modelable="state"
+        x-on:click="state = !state"
+        x-bind:class="{ 'us-button-show-more--active': state }"
+         x-model="expanded"         
 >
-    <span>Розгорнути</span>
-    <span>Згорнути</span>
+    <span x-text="state ? 'Згорнути' : 'Розгорнути'"></span>
 </button>
                             </div>
 
             <div class="us-text-image__image">
-                                    <img src="/images/text-image-1.jpg" alt="Text Image 1">
-                            </div>
+                    <img class="us-image us-text-image__image__img" src="/images/text-image-1.jpg" alt="Text Image 1">
+            </div>
         </div>
     </div>
 </div>
