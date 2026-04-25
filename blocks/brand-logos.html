@@ -93,8 +93,16 @@
                     </li>
                             </ul>
 
-            <div class="us-brand-logos__more  us-brand-logos__more--12  " x-show="!expanded">
-                <button type="button" class="us-brand-logos__more-btn" x-on:click="expanded = true">Розгорнути</button>
+            <div class="us-brand-logos__more  us-brand-logos__more--12  ">
+                <button class="us-button-show-more "
+        x-data="{ state: false }"
+        x-modelable="state"
+        x-on:click="state = !state"
+        x-bind:class="{ 'us-button-show-more--active': state }"
+         x-model="expanded"         
+>
+    <span x-text="state ? 'Згорнути' : 'Розгорнути'"></span>
+</button>
             </div>
         </div>
     </div>

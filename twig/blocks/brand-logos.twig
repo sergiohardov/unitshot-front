@@ -11,8 +11,10 @@
                 {% endfor %}
             </ul>
 
-            <div class="us-brand-logos__more {% if brands|length > 12 %} us-brand-logos__more--12 {% endif %} {% if brands|length > 18 %} us-brand-logos__more--18 {% endif %}" x-show="!expanded">
-                <button type="button" class="us-brand-logos__more-btn" x-on:click="expanded = true">Розгорнути</button>
+            <div class="us-brand-logos__more {% if brands|length > 12 %} us-brand-logos__more--12 {% endif %} {% if brands|length > 18 %} us-brand-logos__more--18 {% endif %}">
+                {% include '@components/button-show-more.twig' with {
+                    'x_model': 'expanded'
+                } %}
             </div>
         </div>
     </div>
