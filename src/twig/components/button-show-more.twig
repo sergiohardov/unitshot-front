@@ -1,8 +1,10 @@
 <button class="us-button-show-more {{ class }}"
-        {% if x_click %} x-on:click="{{ x_click }}" {% endif %}
-        {% if x_bind_class %} x-bind:class="{{ x_bind_class }}" {% endif %}
-        {{ data }}
+        x-data="{ state: {{ active|default('false') }} }"
+        x-modelable="state"
+        x-on:click="state = !state"
+        x-bind:class="{ 'us-button-show-more--active': state }"
+        {% if x_model %} x-model="{{ x_model }}" {% endif %}
+        {{ data|default('')|raw }}
 >
-    <span>Розгорнути</span>
-    <span>Згорнути</span>
+    <span x-text="state ? 'Згорнути' : 'Розгорнути'"></span>
 </button>

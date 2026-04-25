@@ -94,37 +94,11 @@
 
   &__more-btn {
     align-self: flex-start;
-    font-family: var(--unitshot-font-family-blog);
-    font-weight: 500;
-    font-size: 18px;
-    border-bottom: 2px solid var(--unitshot-accent-pink);
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-bottom: 8px;
-
-    @include media-md() {
-      font-size: 14px;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      width: 14px;
-      height: 14px;
-
-      mask-image: url('@images/icons/arrow-dark.svg');
-      mask-repeat: no-repeat;
-      mask-position: center center;
-      mask-size: 100%;
-      background-color: var(--unitshot-accent-pink);
-      transform: rotate(90deg);
-    }
   }
 
   &__image {
     width: 514px;
-    height: auto;
+    max-height: 514px;
     overflow: hidden;
     border-radius: 8px;
     display: flex;
@@ -134,15 +108,17 @@
 
     @include media-lg() {
       width: 100%;
+      max-height: unset;
       aspect-ratio: 1.6;
     }
 
     @include media-md() {
       width: 100%;
+      max-height: unset;
       aspect-ratio: calc(335/260);
     }
 
-    img {
+    &__img {
       position: absolute;
       top: 0;
       left: 0;

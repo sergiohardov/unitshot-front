@@ -42,21 +42,5 @@
     &:after {
       transform: rotate(-90deg);
     }
-
-    span:first-child {
-      display: none!important;
-    }
-
-    span:last-child {
-      display: block!important;
-    }
-  }
-
-  span:first-child {
-    display: block;
-  }
-
-  span:last-child {
-    display: none;
   }
 }

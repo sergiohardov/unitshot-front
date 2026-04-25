@@ -139,8 +139,7 @@
                         <div class="us-page-product__info__more us-page-product__info__more-btn">
                             {% include '@components/button-show-more.twig' with {
                                 'class': '',
-                                'x_click': 'expanded = !expanded',
-                                'x_bind_class': "{ 'us-button-show-more--active': expanded }"
+                                'x_model': 'expanded'
                             } %}
                         </div>
                         <div class="us-page-product__info__content us-page-product__info__content-description" x-bind:class="{ 'us-page-product__info__content-description--active': expanded }">
@@ -163,8 +162,7 @@
                         <div class="us-page-product__info__more us-page-product__info__more-btn">
                             {% include '@components/button-show-more.twig' with {
                                 'class': '',
-                                'x_click': 'expanded = !expanded',
-                                'x_bind_class': "{ 'us-button-show-more--active': expanded }"
+                                'x_model': 'expanded',
                             } %}
                         </div>
                         <div class="us-page-product__info__content us-page-product__info__content-description" x-bind:class="{ 'us-page-product__info__content-description--active': expanded }">

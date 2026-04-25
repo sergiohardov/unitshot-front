@@ -6,17 +6,24 @@
             } %}
 
             {% if clients %}
-                <ul class="us-client-logos__list us-client-logos__list--collapsed" x-bind:class="{ 'us-client-logos__list--collapsed': !expanded }">
+                <ul class="us-client-logos__list" x-bind:class="{ 'us-client-logos__list--collapsed': !expanded }">
                     {% for client in clients %}
                         <li class="us-client-logos__item">
-                            <img src="{{ client.src }}" alt="{{ client.alt }}">
+                            <div class="us-client-logos__item__inner">
+                                {% include '@components/image.twig' with {
+                                    'class': 'us-client-logos__item__img',
+                                    'image': client
+                                } %}
+                            </div>
                         </li>
                     {% endfor %}
                 </ul>
             {% endif %}
 
-            <div class="us-client-logos__more {% if clients|length > 24 %} us-client-logos__more--24 {% endif %} {% if clients|length > 21 %} us-client-logos__more--21 {% endif %}" x-show="!expanded">
-                <button class="us-client-logos__more-btn" type="button" x-on:click="expanded = true">Розгорнути</button>
+            <div class="us-client-logos__more {% if clients|length > 24 %} us-client-logos__more--24 {% endif %} {% if clients|length > 21 %} us-client-logos__more--21 {% endif %}">
+                {% include '@components/button-show-more.twig' with {
+                    'x_model': 'expanded'
+                } %}
             </div>
         </div>
     </div>
