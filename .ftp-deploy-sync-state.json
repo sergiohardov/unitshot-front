@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1777210898635,
+    "generatedTime": 1777211572445,
     "data": [
         {
             "type": "folder",
@@ -46,8 +46,8 @@
         {
             "type": "file",
             "name": "blocks/category-showcase.html",
-            "size": 13483,
-            "hash": "3f277fd4084bf0f4ca025133c6139f5cb9b8690935a24146fc71e94c4148f272"
+            "size": 13519,
+            "hash": "58c06655485ec15e20486efd52435602c8a48e40a3daf8d176d95e0168c9d000"
         },
         {
             "type": "file",
@@ -76,20 +76,20 @@
         {
             "type": "file",
             "name": "blocks/popular-products.html",
-            "size": 7714,
-            "hash": "892e44128b251755cc7ba4f09c3afff4a5f27460ce08eb44adfa9952cfa8cc24"
+            "size": 7726,
+            "hash": "4a2ca70e83bb4ce5fde05e3f1de5f5dffbaa8c4b1d12a2cc27f69f17a0a0c8e8"
         },
         {
             "type": "file",
             "name": "blocks/slider-posts.html",
-            "size": 4242,
-            "hash": "cdea08e1b5f14bae73a7e5a84ef83e81f0dfbe1f9f548b65a44386af8e01986d"
+            "size": 4254,
+            "hash": "840ea161f5c518181d1cf7a8f643673ecf5714ddd5fda128d6e5c9588b911352"
         },
         {
             "type": "file",
             "name": "blocks/slider-reviews.html",
-            "size": 4753,
-            "hash": "96e49fbcb314ae6a92f16394b7572201220ffb4a96b2fedcd523062495029fe9"
+            "size": 4765,
+            "hash": "b2b7b321cbaad31a756bd31e254c40e6ab762be80746ddf3c24416154a966e76"
         },
         {
             "type": "file",
@@ -238,20 +238,20 @@
         {
             "type": "file",
             "name": "components/slider-categories.html",
-            "size": 3161,
-            "hash": "30d27a39a801fe8fede3f23670c173bd6c7564551db73fc422596fdaa6f28ab8"
+            "size": 3173,
+            "hash": "3c36b729ced87314e1a4856e51c90ffe53bab688999a6cf26ca0692ee2caddb8"
         },
         {
             "type": "file",
             "name": "components/slider-logo-images.html",
-            "size": 2740,
-            "hash": "1350f4f4f8e09c09fd3456293beb9961427e330f2d07c96632dfa4b04417c457"
+            "size": 2752,
+            "hash": "679ed6b81c7c1597e13caf32beb141b537f34db6080a855b14f43206969a7bd3"
         },
         {
             "type": "file",
             "name": "components/slider-product-cards.html",
-            "size": 7921,
-            "hash": "72c9bb721eeb6c7f6f8955d16e815dbb2021df933902ddba2351c0793dd9bf8f"
+            "size": 7933,
+            "hash": "81383c5cb26ba68d63077ff738829772d3ab11de5a7fba291509d82ed58e4781"
         },
         {
             "type": "file",
@@ -640,8 +640,8 @@
         {
             "type": "file",
             "name": "pages/catalog.html",
-            "size": 115643,
-            "hash": "a9664177b2460b05b4206375770dc0ccea24dfc5c83dc9e8d8bed694f40ccf59"
+            "size": 115655,
+            "hash": "c571570a04b70af7cd25ffbd931f89bb48c884d575cd6094f481ecf3a49a314a"
         },
         {
             "type": "file",
@@ -658,20 +658,20 @@
         {
             "type": "file",
             "name": "pages/home.html",
-            "size": 152824,
-            "hash": "a8494fd4076f528f5fb113ca895ceb1e76d96ca48b81032a2bbc6a6723f7a72e"
+            "size": 152932,
+            "hash": "406b8bc057f68e668bff7d951751fdc2f95b1c9565f445d3ab44f821d466d709"
         },
         {
             "type": "file",
             "name": "pages/post.html",
-            "size": 77207,
-            "hash": "11bcd762c924c062b70cb78d11eea6a73e12b6a8e4eb5462033f7078c94c7c06"
+            "size": 77219,
+            "hash": "1f6f5b5026bc130d5b85d5e428099a9e4a9bd388def945b61f748e6f86c90d77"
         },
         {
             "type": "file",
             "name": "pages/product.html",
-            "size": 117149,
-            "hash": "f262250594c947b8ce804c1259d3aafaf57ba60899b28a6f3c4ec960ac5dab07"
+            "size": 117161,
+            "hash": "c3a21755e469308f3440585d16cc6f3700ce7067c2da49905d190e55f3bd89c7"
         },
         {
             "type": "file",
