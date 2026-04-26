@@ -1,9 +1,0 @@
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body>    <a class="us-phone-number custom-class"
-       x-data="{ revealed: false }"
-       x-bind:href="revealed ? 'tel:+380731111111' : null"
-       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
-
-        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
-        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
-    </a>
-<script src="/js/main.js"></script></body>
