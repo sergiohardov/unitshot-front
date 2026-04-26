@@ -103,6 +103,12 @@
         gap: 8px;
 
         &__btn {
+          transition: var(--unitshot-transition-speed);
+
+          &:hover {
+            background-color: var(--unitshot-accent-pink);
+          }
+
           @include media-md() {
             padding: 6px 16px;
           }
@@ -121,6 +127,11 @@
           height: 34px;
           border-radius: 50%;
           overflow: hidden;
+          transition: var(--unitshot-transition-speed);
+
+          &:hover {
+            scale: 1.1;
+          }
 
           svg {
             width: 100%;
