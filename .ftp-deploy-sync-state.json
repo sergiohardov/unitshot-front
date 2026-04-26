@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1777211572445,
+    "generatedTime": 1777212768969,
     "data": [
         {
             "type": "folder",
@@ -25,11 +25,11 @@
         },
         {
             "type": "folder",
-            "name": "js"
+            "name": "pages"
         },
         {
             "type": "folder",
-            "name": "pages"
+            "name": "js"
         },
         {
             "type": "file",
@@ -256,8 +256,8 @@
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 134990,
-            "hash": "70831f735e317848faa673cff27bdc3ada71b5c15bc0ff81ff53644b99491999"
+            "size": 135584,
+            "hash": "0dfb3aefd38299e163496dcc6dbf12fb6a5aab316cd63f81345a89a49bd0e74d"
         },
         {
             "type": "file",
@@ -627,27 +627,21 @@
         },
         {
             "type": "file",
-            "name": "js/main.js",
-            "size": 139111,
-            "hash": "8ce44ca84a49f634aeb47bf828a2bd52329afa65ebfed3a6c871897bf523a05a"
-        },
-        {
-            "type": "file",
             "name": "pages/blog.html",
             "size": 85847,
             "hash": "b849c750edda604cb39e3b7ea3d0379897231cc3826b74cdfc3e9bc969678a90"
         },
         {
             "type": "file",
-            "name": "pages/catalog.html",
-            "size": 115655,
-            "hash": "c571570a04b70af7cd25ffbd931f89bb48c884d575cd6094f481ecf3a49a314a"
-        },
-        {
-            "type": "file",
             "name": "pages/checkout.html",
             "size": 78544,
             "hash": "0b269418cc111fb1b4ec82e730e8bd324d3d6afd785096e8f98066a7feec50bf"
+        },
+        {
+            "type": "file",
+            "name": "pages/catalog.html",
+            "size": 115655,
+            "hash": "c571570a04b70af7cd25ffbd931f89bb48c884d575cd6094f481ecf3a49a314a"
         },
         {
             "type": "file",
@@ -678,6 +672,12 @@
             "name": "pages/ui.html",
             "size": 17678,
             "hash": "f48040c1ce859a87ae73c0d26162e7684a2367562b095319b011066c2aba6a36"
+        },
+        {
+            "type": "file",
+            "name": "js/main.js",
+            "size": 139111,
+            "hash": "8ce44ca84a49f634aeb47bf828a2bd52329afa65ebfed3a6c871897bf523a05a"
         }
     ]
 }
