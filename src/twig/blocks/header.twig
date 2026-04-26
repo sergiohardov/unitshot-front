@@ -57,16 +57,16 @@
                         {% endif %}
                     </nav>
 
-                    <div class="us-header__line__number" x-on:click.outside="isNumberOpen = false">
+                    <div class="us-header__line__number">
                         {% include '@components/phone-number.twig' with {
                             'number': number,
                             'class': 'us-header__line__number__phone'
                         } %}
 
                         {% if socials %}
-                            <button class="us-header__line__number__arrow" x-on:click="toggleNumber"></button>
+                            <button class="us-header__line__number__arrow"></button>
 
-                            <div class="us-header__line__number__menu" x-bind:class="{ 'us-header__line__number__menu--visible': isNumberOpen }">
+                            <div class="us-header__line__number__menu">
                                 <ul class="us-header__line__number__list">
                                     {% for social in socials %}
                                         <li>

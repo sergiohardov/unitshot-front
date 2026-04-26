@@ -226,11 +226,19 @@
     }
 
     &__number {
+      $parent: &;
       flex-shrink: 0;
       position: relative;
       display: flex;
       align-items: center;
       gap: 12px;
+
+      &:hover {
+        #{$parent}__menu {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
 
       &__phone {
         color: var(--unitshot-gray-light);
@@ -267,11 +275,6 @@
         width: max-content;
         transition: all var(--unitshot-transition-speed) ease;
         z-index: 150;
-
-        &--visible {
-          opacity: 1;
-          visibility: visible;
-        }
       }
 
       &__list {
@@ -281,6 +284,8 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+
       }
 
       &__list-item {
