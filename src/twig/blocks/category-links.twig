@@ -9,6 +9,14 @@
                 <div class="us-category-links__list">
                     {% for category in categories %}
                         <div class="us-category-links__item">
+                            <div class="us-category-links__item-image">
+                                {% if not category.image.src %}
+                                    <img src="/src/images/pictures/placeholder-image.jpg" alt="No Image">
+                                {% else %}
+                                    <img src="{{ category.image.src }}" alt="{{ category.image.alt }}">
+                                {% endif %}
+                            </div>
+
                             <div class="us-category-links__item-text">
                                 {% if category.title %}
                                     <h3 class="us-category-links__item-title">{{ category.title }}</h3>
@@ -32,14 +40,6 @@
                                         'href': category.link,
                                         'class': 'us-category-links__item-link'
                                     } %}
-                                {% endif %}
-                            </div>
-
-                            <div class="us-category-links__item-image">
-                                {% if not category.image.src %}
-                                    <img src="/src/images/pictures/placeholder-image.jpg" alt="No Image">
-                                {% else %}
-                                    <img src="{{ category.image.src }}" alt="{{ category.image.alt }}">
                                 {% endif %}
                             </div>
                         </div>
