@@ -18,6 +18,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: var(--unitshot-transition-speed);
+
+    &:hover {
+      background-color: var(--unitshot-accent-pink);
+    }
 
     @include media-md() {
       width: 22px;
