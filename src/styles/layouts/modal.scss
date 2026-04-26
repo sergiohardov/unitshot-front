@@ -158,10 +158,16 @@
     top: 12px;
     right: 22px;
     cursor: pointer;
-    background-image: url('@images/icons/close.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100%;
+    background-color: var(--unitshot-gray-main);
+    mask-image: url('@images/icons/close.svg');
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: 100%;
+    transition: var(--unitshot-transition-speed);
+
+    &:hover {
+      background-color: var(--unitshot-accent-pink);
+    }
 
     @include media-md() {
       right: 12px;
