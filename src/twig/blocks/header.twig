@@ -128,17 +128,23 @@
                     'number': number
                 } %}
 
-                <div class="us-header__menu__brands">
+                <div class="us-header__menu__brands" x-data="{ expanded: false }">
                     {% if brands %}
-                    <ul class="us-header__menu__brands-list">
-                        {% for item in brands %}
-                            <li class="us-header__menu__brands-item">
-                                <a class="us-header__menu__brands-link" href="{{ item.link }}">
-                                    <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                        <ul class="us-header__menu__brands__list" x-bind:class="{ 'us-header__menu__brands__list--collapsed': !expanded }">
+                            {% for item in brands %}
+                                <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="{{ item.link }}">
+                                        <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                        <div class="us-header__menu__brands__more">
+                            {% include '@components/button-show-more.twig' with {
+                                'x_model': 'expanded'
+                            } %}
+                        </div>
                     {% endif %}
                 </div>
             </div>
