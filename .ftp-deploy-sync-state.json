@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1777113734880,
+    "generatedTime": 1777195193268,
     "data": [
         {
             "type": "folder",
@@ -41,7 +41,7 @@
             "type": "file",
             "name": "blocks/category-links.html",
             "size": 12153,
-            "hash": "44f5bfb22cddbffde20b3f2ca3ddbdc9d0d0d061f3dc0ad3e1a5aff94e0d5978"
+            "hash": "fc08d5228c14384fd2a06f010062bf831ea8a122c15e48e3b92c2057b5935c0c"
         },
         {
             "type": "file",
@@ -123,15 +123,15 @@
         },
         {
             "type": "file",
-            "name": "components/button-square.html",
-            "size": 465,
-            "hash": "0751a653e7f22246e6457012e17b866b4d115f772a58a6b6b939442135a3ff65"
-        },
-        {
-            "type": "file",
             "name": "components/checkbox.html",
             "size": 450,
             "hash": "cae541d49cc0a97518faf87ebeefda6feb0efdacc09b129ec19e8df10a436f76"
+        },
+        {
+            "type": "file",
+            "name": "components/button-square.html",
+            "size": 465,
+            "hash": "0751a653e7f22246e6457012e17b866b4d115f772a58a6b6b939442135a3ff65"
         },
         {
             "type": "file",
@@ -256,8 +256,8 @@
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 133767,
-            "hash": "96bbe54e95e62f1f17ad8cf25e58a255a36fa430c02bb5c5cbc47e70dc0f6b54"
+            "size": 133865,
+            "hash": "d84dd7668566b4a1db52462dc2bba34dac8f4be07ec752a5f337b658a9431fad"
         },
         {
             "type": "file",
@@ -659,7 +659,7 @@
             "type": "file",
             "name": "pages/home.html",
             "size": 152824,
-            "hash": "33275c280b2b3f652c3607f3ce2880201acd497e52227de18ae6ed254f312feb"
+            "hash": "a8494fd4076f528f5fb113ca895ceb1e76d96ca48b81032a2bbc6a6723f7a72e"
         },
         {
             "type": "file",
