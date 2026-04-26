@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1777242150788,
+    "generatedTime": 1777243002574,
     "data": [
         {
             "type": "folder",
@@ -13,7 +13,7 @@
         },
         {
             "type": "folder",
-            "name": "images"
+            "name": "css"
         },
         {
             "type": "folder",
@@ -21,7 +21,7 @@
         },
         {
             "type": "folder",
-            "name": "css"
+            "name": "images"
         },
         {
             "type": "folder",
@@ -252,6 +252,54 @@
             "name": "components/slider-product-cards.html",
             "size": 7933,
             "hash": "81383c5cb26ba68d63077ff738829772d3ab11de5a7fba291509d82ed58e4781"
+        },
+        {
+            "type": "file",
+            "name": "css/main.css",
+            "size": 136384,
+            "hash": "c3fae1e0734ebd7e6bdd7bad3de585cafe6fa730664527a97451a48d989520d5"
+        },
+        {
+            "type": "file",
+            "name": "fonts/DRKrapkaRound-Medium.woff",
+            "size": 279600,
+            "hash": "d5a0c006a1284d7bcb96655250d4d262db3f318bf1a49739a3bb286615e39969"
+        },
+        {
+            "type": "file",
+            "name": "fonts/PPNeueMontrealMono-Bold.woff",
+            "size": 109584,
+            "hash": "0d2a84920e38db2818e0f51ac163018a1ec2ec1bca445a73543632c26d185c5a"
+        },
+        {
+            "type": "file",
+            "name": "fonts/PPNeueMontrealMono-Medium.woff",
+            "size": 107720,
+            "hash": "fdba15b02afe180400e27ac98ec53270c444eaf7bc30d78f2e3d22792c7baac2"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-Bold.woff",
+            "size": 81652,
+            "hash": "fde2705627c9e38930cbce7982aa35c16f8a72479b968e9654ec818088899004"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-Medium.woff",
+            "size": 80852,
+            "hash": "7eea26edc3e99b7e473562887593a433662ae7e81037b1dfb5b7fa95ba3d2e76"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-Regular.woff",
+            "size": 81096,
+            "hash": "bea9722891e13c7b8d63d290297bf3f0b6913bc30050839ddd2f9e48517518f1"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-SemiBold.woff",
+            "size": 81784,
+            "hash": "6f87a913a1dd697bc54b59a5e329357eaa82bdf496ad190c7fbfcebd00dab1ba"
         },
         {
             "type": "file",
@@ -576,54 +624,6 @@
             "name": "images/text-image-1.jpg",
             "size": 539241,
             "hash": "0dd56ca5daa1d32631a21d395a8fba9515c8f3e18698d4ad0024301460452688"
-        },
-        {
-            "type": "file",
-            "name": "fonts/DRKrapkaRound-Medium.woff",
-            "size": 279600,
-            "hash": "d5a0c006a1284d7bcb96655250d4d262db3f318bf1a49739a3bb286615e39969"
-        },
-        {
-            "type": "file",
-            "name": "fonts/PPNeueMontrealMono-Bold.woff",
-            "size": 109584,
-            "hash": "0d2a84920e38db2818e0f51ac163018a1ec2ec1bca445a73543632c26d185c5a"
-        },
-        {
-            "type": "file",
-            "name": "fonts/PPNeueMontrealMono-Medium.woff",
-            "size": 107720,
-            "hash": "fdba15b02afe180400e27ac98ec53270c444eaf7bc30d78f2e3d22792c7baac2"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-Bold.woff",
-            "size": 81652,
-            "hash": "fde2705627c9e38930cbce7982aa35c16f8a72479b968e9654ec818088899004"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-Medium.woff",
-            "size": 80852,
-            "hash": "7eea26edc3e99b7e473562887593a433662ae7e81037b1dfb5b7fa95ba3d2e76"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-Regular.woff",
-            "size": 81096,
-            "hash": "bea9722891e13c7b8d63d290297bf3f0b6913bc30050839ddd2f9e48517518f1"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-SemiBold.woff",
-            "size": 81784,
-            "hash": "6f87a913a1dd697bc54b59a5e329357eaa82bdf496ad190c7fbfcebd00dab1ba"
-        },
-        {
-            "type": "file",
-            "name": "css/main.css",
-            "size": 136384,
-            "hash": "c3fae1e0734ebd7e6bdd7bad3de585cafe6fa730664527a97451a48d989520d5"
         },
         {
             "type": "file",
