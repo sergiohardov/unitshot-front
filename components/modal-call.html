@@ -1,0 +1,42 @@
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body><div class="us-modal us-modal--normal us-modal-call"
+     id="us-modal-call"
+     role="dialog"
+     aria-modal="true"
+     x-cloak
+     x-bind:class="{ 'us-modal--active': $store.ModalStore.active === 'us-modal-call' }"
+     x-on:keydown.escape.window="$store.ModalStore.close()"
+     x-data="ModalCallComponent('http://localhost:3000/call/')"
+     
+>
+    <div class="us-modal__overlay" x-on:click="$store.ModalStore.close()"></div>
+
+    <div class="us-modal__window">
+        <div class="us-modal__header">
+                                                <h2 class="us-modal__title">Оформлення зворотнього дзінка</h2>
+                
+                <button class="us-modal__close" x-on:click="$store.ModalStore.close()" aria-label="Закрыть"></button>
+                    </div>
+        <div class="us-modal__body">
+                <form class="us-modal-call__form" id="us-modal-call-form" x-show="!isSended">
+        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" x-model="formData.phone" x-bind:class="{ 'us-modal-call__input--error': errors.phone }">
+        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" x-model="formData.username" x-bind:class="{ 'us-modal-call__input--error': errors.username }">
+        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10" x-model="formData.comment"></textarea>
+    </form>
+
+    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message" x-show="isSended" x-cloak>
+        <p>Замовлення оформлене.</p>
+        <p>Наш менеджер зв’яжеться з вами за декілька хвилин!</p>
+    </div>
+        </div>
+        <div class="us-modal__footer">
+                            
+                                                <button id="iiii" class="us-button-square  us-button-square--v3  us-modal-call"
+                type="button"
+                                 x-on:click="submit"                 
+        >
+            Передзвоніть мені
+        </button>
+                                        </div>
+    </div>
+</div>
+<script src="/js/main.js"></script></body>

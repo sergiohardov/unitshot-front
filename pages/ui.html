@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>unitshot-front</title>
+  <script type="module" crossorigin src="/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="/css/main.css">
+</head>
+<body>
+
+<main>
+        <div class="ui-kit">
+
+        
+        <button class="ui-sidebar-toggle" id="uiSidebarToggle" aria-label="Свернуть меню">
+            <span class="ui-sidebar-toggle__arrow">◀</span>
+        </button>
+
+        <aside class="ui-sidebar" id="uiSidebar">
+            <div class="ui-sidebar__logo">UI KIT</div>
+            <nav class="ui-sidebar__nav">
+                <a href="#colors" class="ui-sidebar__link">Цвета</a>
+                <a href="#typography" class="ui-sidebar__link">Типографика</a>
+                <a href="#components" class="ui-sidebar__link">Компоненты</a>
+                <a href="#blocks" class="ui-sidebar__link">Блоки</a>
+                <a href="#pages" class="ui-sidebar__link">Страницы</a>
+            </nav>
+            <div class="ui-sidebar__version">v1.0.0</div>
+        </aside>
+
+        <div class="ui-main">
+
+            <header class="ui-header">
+                <div class="ui-header__label">Design System</div>
+                <h1 class="ui-header__title">UI Kit</h1>
+                <p class="ui-header__sub">Компоненты, блоки, и стили проекта</p>
+            </header>
+
+            <section class="ui-section" id="colors">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">01</span>
+                    <h2 class="ui-section__title">Цвета</h2>
+                </div>
+
+                <div class="ui-colors">
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-white)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">White</span>
+                                <span class="ui-color-var">--unitshot-white</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-black)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Black</span>
+                                <span class="ui-color-var">--unitshot-black</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-red)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Red</span>
+                                <span class="ui-color-var">--unitshot-red</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-dark)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Dark</span>
+                                <span class="ui-color-var">--unitshot-dark</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-gray-main)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Gray Main</span>
+                                <span class="ui-color-var">--unitshot-gray-main</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-gray-light)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Gray Light</span>
+                                <span class="ui-color-var">--unitshot-gray-light</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-gray-dark)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Gray Dark</span>
+                                <span class="ui-color-var">--unitshot-gray-dark</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-gray-labels)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Gray Labels</span>
+                                <span class="ui-color-var">--unitshot-gray-labels</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-gray-darker)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Gray Darker</span>
+                                <span class="ui-color-var">--unitshot-gray-darker</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-gray-most-darker)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Gray Most Darker</span>
+                                <span class="ui-color-var">--unitshot-gray-most-darker</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-accent-pink)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Accent Pink</span>
+                                <span class="ui-color-var">--unitshot-accent-pink</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-pink-light)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Pink Light</span>
+                                <span class="ui-color-var">--unitshot-pink-light</span>
+                            </div>
+                        </div>
+                                            <div class="ui-color-group">
+                            <div class="ui-color-swatch" style="background-color: var(--unitshot-green)"></div>
+                            <div class="ui-color-info">
+                                <span class="ui-color-name">Green</span>
+                                <span class="ui-color-var">--unitshot-green</span>
+                            </div>
+                        </div>
+                                    </div>
+            </section>
+
+            <section class="ui-section" id="typography">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">02</span>
+                    <h2 class="ui-section__title">Типографика</h2>
+                </div>
+
+                <div class="ui-typo">
+                                                                        <div class="ui-typo-row">
+                                <span class="ui-typo-label">SuisseIntl / font-sussie-regular</span>
+                                <p class="ui-typo-sample ui-typo-sample--font-sussie-regular">Example Text</p>
+                            </div>
+                                                    <div class="ui-typo-row">
+                                <span class="ui-typo-label">SuisseIntl / font-sussie-medium</span>
+                                <p class="ui-typo-sample ui-typo-sample--font-sussie-medium">Example Text</p>
+                            </div>
+                                                    <div class="ui-typo-row">
+                                <span class="ui-typo-label">SuisseIntl / font-sussie-semibold</span>
+                                <p class="ui-typo-sample ui-typo-sample--font-sussie-semibold">Example Text</p>
+                            </div>
+                                                    <div class="ui-typo-row">
+                                <span class="ui-typo-label">SuisseIntl / font-sussie-bold</span>
+                                <p class="ui-typo-sample ui-typo-sample--font-sussie-bold">Example Text</p>
+                            </div>
+                                                                                                <div class="ui-typo-row">
+                                <span class="ui-typo-label">DRKrapkaRound / font-drkrapka-medium</span>
+                                <p class="ui-typo-sample ui-typo-sample--font-drkrapka-medium">Example Text</p>
+                            </div>
+                                                                                                <div class="ui-typo-row">
+                                <span class="ui-typo-label">PPNeueMontrealMono / font-ppneue-medium</span>
+                                <p class="ui-typo-sample ui-typo-sample--font-ppneue-medium">Example Text</p>
+                            </div>
+                                                    <div class="ui-typo-row">
+                                <span class="ui-typo-label">PPNeueMontrealMono / font-ppneue-bold</span>
+                                <p class="ui-typo-sample ui-typo-sample--font-ppneue-bold">Example Text</p>
+                            </div>
+                                                            </div>
+            </section>
+
+            <section class="ui-section" id="components">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">03</span>
+                    <h2 class="ui-section__title">Компоненты</h2>
+                </div>
+                <ul class="ui-links-list">
+                                            <li><a href="/components/breadcrumbs.html">breadcrumbs</a></li>
+                                            <li><a href="/components/button-arrow.html">button-arrow</a></li>
+                                            <li><a href="/components/button-round.html">button-round</a></li>
+                                            <li><a href="/components/button-show-more.html">button-show-more</a></li>
+                                            <li><a href="/components/button-square.html">button-square</a></li>
+                                            <li><a href="/components/checkbox.html">checkbox</a></li>
+                                            <li><a href="/components/image.html">image</a></li>
+                                            <li><a href="/components/modal-add-cart.html">modal-add-cart</a></li>
+                                            <li><a href="/components/modal-call.html">modal-call</a></li>
+                                            <li><a href="/components/modal-cart.html">modal-cart</a></li>
+                                            <li><a href="/components/modal-filter.html">modal-filter</a></li>
+                                            <li><a href="/components/modal-lang.html">modal-lang</a></li>
+                                            <li><a href="/components/modal-remove-cart.html">modal-remove-cart</a></li>
+                                            <li><a href="/components/page-title.html">page-title</a></li>
+                                            <li><a href="/components/pagination.html">pagination</a></li>
+                                            <li><a href="/components/phone-number.html">phone-number</a></li>
+                                            <li><a href="/components/product-card.html">product-card</a></li>
+                                            <li><a href="/components/product-gallery.html">product-gallery</a></li>
+                                            <li><a href="/components/product-item.html">product-item</a></li>
+                                            <li><a href="/components/product-set.html">product-set</a></li>
+                                            <li><a href="/components/quantity.html">quantity</a></li>
+                                            <li><a href="/components/range.html">range</a></li>
+                                            <li><a href="/components/site-settings.html">site-settings</a></li>
+                                            <li><a href="/components/slider-categories.html">slider-categories</a></li>
+                                            <li><a href="/components/slider-logo-images.html">slider-logo-images</a></li>
+                                            <li><a href="/components/slider-product-cards.html">slider-product-cards</a></li>
+                                    </ul>
+            </section>
+
+            <section class="ui-section" id="blocks">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">04</span>
+                    <h2 class="ui-section__title">Блоки</h2>
+                </div>
+                <ul class="ui-links-list">
+                                            <li><a href="/blocks/brand-logos.html">brand-logos</a></li>
+                                            <li><a href="/blocks/category-links.html">category-links</a></li>
+                                            <li><a href="/blocks/category-showcase.html">category-showcase</a></li>
+                                            <li><a href="/blocks/client-logos.html">client-logos</a></li>
+                                            <li><a href="/blocks/feedback-info.html">feedback-info</a></li>
+                                            <li><a href="/blocks/footer.html">footer</a></li>
+                                            <li><a href="/blocks/header.html">header</a></li>
+                                            <li><a href="/blocks/popular-products.html">popular-products</a></li>
+                                            <li><a href="/blocks/slider-posts.html">slider-posts</a></li>
+                                            <li><a href="/blocks/slider-reviews.html">slider-reviews</a></li>
+                                            <li><a href="/blocks/text-image.html">text-image</a></li>
+                                    </ul>
+            </section>
+
+            <section class="ui-section" id="pages">
+                <div class="ui-section__head">
+                    <span class="ui-section__num">05</span>
+                    <h2 class="ui-section__title">Страницы</h2>
+                </div>
+                <ul class="ui-links-list">
+                                            <li><a href="/pages/home.html">home</a></li>
+                                            <li><a href="/pages/catalog.html">catalog</a></li>
+                                            <li><a href="/pages/product.html">product</a></li>
+                                            <li><a href="/pages/blog.html">blog</a></li>
+                                            <li><a href="/pages/post.html">post</a></li>
+                                            <li><a href="/pages/contact.html">contact</a></li>
+                                            <li><a href="/pages/checkout.html">checkout</a></li>
+                                    </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const kit = document.querySelector('.ui-kit');
+            const sidebar = document.getElementById('uiSidebar');
+            const toggleBtn = document.getElementById('uiSidebarToggle');
+            const isMobile = function () {
+                return window.innerWidth <= 768;
+            };
+
+            // Desktop: сворачивание сайдбара
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function () {
+                    kit.classList.toggle('sidebar-collapsed');
+                });
+            }
+
+            function closeSidebar() {
+                sidebar.classList.remove('is-open');
+            }
+
+
+            // Закрытие по клику на ссылку (мобилка)
+            sidebar.querySelectorAll('.ui-sidebar__link').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (isMobile()) closeSidebar();
+                });
+            });
+        })();
+    </script>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/css/main.css"></head><body><button class="us-button-show-more "
+        x-data="{ state: false }"
+        x-modelable="state"
+        x-on:click="state = !state"
+        x-bind:class="{ 'us-button-show-more--active': state }"
+                
+>
+    <span x-text="state ? 'Згорнути' : 'Розгорнути'"></span>
+</button>
+<script src="/js/main.js"></script></body>

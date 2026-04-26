@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>unitshot-front</title>
+  <script type="module" crossorigin src="/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="/css/main.css">
+</head>
+<body>
+<header class="us-header" x-data="HeaderBlock">
+    <div class="us-header__overlay" x-bind:class="{ 'us-header__overlay--visible': isOverlayActive }" x-on:click="closeAll"></div>
+
+    <div class="us-header__line">
+        <div class="us-container">
+            <div class="us-header__line__inner">
+                <div class="us-header__line__top">
+                                            <a href="/pages/home.html" class="us-header__line__logo">
+                            <img src="/images/logo.png" alt="" class="Site Logo">
+                        </a>
+                    
+                    <div class="us-header__line__top-right">
+                            <div class="us-site-settings us-header__line__settings">
+                    <div class="us-site-settings__item">
+                                    <a href="#" class="us-site-settings__title ">UAH</a>
+                                    <a href="#" class="us-site-settings__title  us-site-settings__title--current ">EUR</a>
+                            </div>
+                    <div class="us-site-settings__item">
+                                    <a href="#" class="us-site-settings__title ">UA</a>
+                                    <a href="#" class="us-site-settings__title  us-site-settings__title--current ">RU</a>
+                            </div>
+            </div>
+
+                        <div class="us-header__line__buttons">
+                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--burger"
+                         x-on:click="toggleMenu"              x-bind:class="{ 'us-header__line__buttons__item--burger--active': isMenuOpen }"             
+    >
+                    </button>
+
+                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--search"
+                         x-on:click="toggleSearch"                         
+    >
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.23 18.52C11.4305 18.528 13.5604 17.7435 15.23 16.31L20.23 21.31C20.3706 21.4505 20.5613 21.5293 20.76 21.5293C20.9588 21.5293 21.1494 21.4505 21.29 21.31C21.4305 21.1694 21.5093 20.9788 21.5093 20.78C21.5093 20.5813 21.4305 20.3906 21.29 20.25L16.29 15.25C17.7235 13.5804 18.508 11.4505 18.5 9.25C18.5 7.42053 17.9575 5.63213 16.9411 4.11098C15.9247 2.58982 14.48 1.40423 12.7898 0.704118C11.0996 0.00400788 9.23974 -0.179173 7.44542 0.17774C5.65109 0.534654 4.0029 1.41563 2.70927 2.70927C1.41563 4.0029 0.534654 5.65109 0.17774 7.44542C-0.179173 9.23974 0.00400788 11.0996 0.704118 12.7898C1.40423 14.48 2.58982 15.9247 4.11098 16.9411C5.63213 17.9575 7.42053 18.5 9.25 18.5L9.23 18.52ZM9.23 1.52C10.7628 1.52 12.2612 1.97453 13.5357 2.82611C14.8102 3.6777 15.8035 4.88808 16.3901 6.30421C16.9766 7.72034 17.1301 9.2786 16.8311 10.782C16.5321 12.2853 15.7939 13.6662 14.7101 14.7501C13.6262 15.8339 12.2453 16.5721 10.742 16.8711C9.2386 17.1701 7.68034 17.0166 6.26421 16.4301C4.84808 15.8435 3.6377 14.8502 2.78611 13.5757C1.93453 12.3012 1.48 10.8028 1.48 9.27C1.48265 7.21539 2.30001 5.24568 3.75285 3.79285C5.20568 2.34001 7.17539 1.52265 9.23 1.52Z" fill="#393939"/>
+<path d="M8.23047 15.0195C8.42938 15.0195 8.62015 14.9405 8.7608 14.7999C8.90145 14.6592 8.98047 14.4684 8.98047 14.2695C8.98047 14.0706 8.90145 13.8799 8.7608 13.7392C8.62015 13.5985 8.42938 13.5195 8.23047 13.5195C7.36933 13.5169 6.54421 13.1736 5.93529 12.5647C5.32636 11.9558 4.98311 11.1307 4.98047 10.2695C4.98047 10.0706 4.90145 9.87985 4.7608 9.7392C4.62015 9.59855 4.42938 9.51953 4.23047 9.51953C4.03156 9.51953 3.84079 9.59855 3.70014 9.7392C3.55949 9.87985 3.48047 10.0706 3.48047 10.2695C3.48047 11.5293 3.98091 12.7375 4.87171 13.6283C5.76251 14.5191 6.97069 15.0195 8.23047 15.0195Z" fill="#393939"/>
+</svg>
+    </button>
+
+                                <button class="us-button-round  us-button-round--v0  us-header__line__buttons__item us-header__line__buttons__item--cart"
+                         x-on:click="$store.ModalStore.open('us-modal-cart')"                         
+    >
+                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.25 21.501C16.2165 21.501 17 20.7175 17 19.751C17 18.7845 16.2165 18.001 15.25 18.001C14.2835 18.001 13.5 18.7845 13.5 19.751C13.5 20.7175 14.2835 21.501 15.25 21.501Z" fill="#393939"/>
+<path d="M7.75 21.501C8.7165 21.501 9.5 20.7175 9.5 19.751C9.5 18.7845 8.7165 18.001 7.75 18.001C6.7835 18.001 6 18.7845 6 19.751C6 20.7175 6.7835 21.501 7.75 21.501Z" fill="#393939"/>
+<path d="M0.75 1.50089H2.84C2.9063 1.50089 2.96989 1.52723 3.01678 1.57412C3.06366 1.621 3.09 1.68459 3.09 1.75089L3.18 2.75089L4.33 15.0109C4.39253 15.6934 4.70859 16.3277 5.21582 16.7887C5.72305 17.2496 6.38462 17.5038 7.07 17.5009H17.75C17.9489 17.5009 18.1397 17.4219 18.2803 17.2812C18.421 17.1406 18.5 16.9498 18.5 16.7509C18.5 16.552 18.421 16.3612 18.2803 16.2206C18.1397 16.0799 17.9489 16.0009 17.75 16.0009H7.07C6.75933 16.0021 6.45952 15.8867 6.22989 15.6774C6.00027 15.4682 5.85756 15.1803 5.83 14.8709V14.5009H16.92C17.607 14.5035 18.2699 14.248 18.7773 13.785C19.2848 13.322 19.5998 12.6852 19.66 12.0009L20.3 5.00089C20.3332 4.62046 20.2871 4.23728 20.1646 3.87558C20.0421 3.51389 19.8459 3.18154 19.5884 2.89957C19.3309 2.6176 19.0176 2.39214 18.6685 2.23746C18.3193 2.08277 17.9419 2.00222 17.56 2.00089H4.62V1.59089C4.58427 1.14798 4.37949 0.735804 4.0481 0.439786C3.71671 0.143768 3.28412 -0.0133866 2.84 0.000894628H0.75C0.551088 0.000894628 0.360322 0.0799123 0.21967 0.220565C0.0790177 0.361217 0 0.551982 0 0.750895C0 0.949807 0.0790177 1.14057 0.21967 1.28122C0.360322 1.42188 0.551088 1.50089 0.75 1.50089ZM17.56 3.50089C17.7337 3.4998 17.9056 3.53581 18.0643 3.60652C18.2229 3.67723 18.3647 3.781 18.48 3.91089C18.6063 4.042 18.7008 4.20033 18.7563 4.37369C18.8117 4.54706 18.8267 4.73084 18.8 4.91089L18.16 11.9109C18.1371 12.223 17.9961 12.5147 17.7658 12.7265C17.5354 12.9383 17.2329 13.0543 16.92 13.0509H5.65L4.75 3.50089H17.56Z" fill="#393939"/>
+</svg>
+    </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="us-header__line__bottom">
+                    <nav class="us-header__line__nav">
+                        <button class="us-header__line__nav__burger" x-bind:class="{ 'us-header__line__nav__burger--active': isMenuOpen }" x-on:click="toggleMenu"></button>
+
+                                                <ul class="us-header__line__menu">
+                                                            <li class="us-header__line__menu__item"><a href="#">Кавомашини</a></li>
+                                                            <li class="us-header__line__menu__item"><a href="#">Кавомолки</a></li>
+                                                            <li class="us-header__line__menu__item"><a href="#">Доставка та оплата</a></li>
+                                                            <li class="us-header__line__menu__item"><a href="#">Сервіс</a></li>
+                                                            <li class="us-header__line__menu__item"><a href="#">Про нас</a></li>
+                                                    </ul>
+                                            </nav>
+
+                    <div class="us-header__line__number">
+                            <a class="us-phone-number us-header__line__number__phone"
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+
+                                                    <button class="us-header__line__number__arrow"></button>
+
+                            <div class="us-header__line__number__menu">
+                                <ul class="us-header__line__number__list">
+                                                                            <li>
+                                            <a class="us-header__line__number__list-item" href="#">
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.0387 0H16.9613C7.59382 0 0 7.59383 0 16.9613V17.0387C0 26.4062 7.59382 34 16.9613 34H17.0387C26.4062 34 34 26.4062 34 17.0387V16.9613C34 7.59383 26.4062 0 17.0387 0Z" fill="#00B0F2"/>
+<path d="M6.43963 16.4207C6.48728 16.3969 6.53494 16.3743 6.5814 16.3528C7.38902 15.9788 8.20737 15.6286 9.02452 15.2784C9.0686 15.2784 9.14243 15.2272 9.18412 15.2105C9.24726 15.1831 9.3104 15.1569 9.37353 15.1295L9.73685 14.9734C9.97985 14.8698 10.2216 14.7662 10.4646 14.6625C10.9495 14.4553 11.4343 14.248 11.9191 14.0395C12.8887 13.625 13.8595 13.2093 14.8292 12.7948C15.7988 12.3802 16.7696 11.9645 17.7392 11.55C18.7089 11.1354 19.6797 10.7197 20.6493 10.3052C21.6189 9.89065 22.5897 9.47492 23.5594 9.06039C23.775 8.96748 24.0084 8.8293 24.2395 8.7888C24.4337 8.75426 24.6231 8.68755 24.8184 8.65062C25.1889 8.58034 25.5975 8.55175 25.9524 8.70542C26.0751 8.75902 26.1883 8.83406 26.2824 8.92817C26.7327 9.37367 26.6695 10.1051 26.5742 10.7316C25.9107 15.0985 25.2473 19.4666 24.5826 23.8335C24.4921 24.4326 24.3682 25.0902 23.8953 25.469C23.495 25.7894 22.9256 25.8251 22.4313 25.6893C21.937 25.5523 21.501 25.2653 21.0734 24.983C19.2997 23.8085 17.5248 22.6339 15.7511 21.4594C15.3295 21.1807 14.8601 20.8162 14.8649 20.3099C14.8673 20.005 15.0495 19.7334 15.2354 19.4916C16.7767 17.4809 19.0007 16.0991 20.6552 14.1813C20.8887 13.9109 21.0722 13.4225 20.7517 13.2665C20.5612 13.1736 20.342 13.2998 20.168 13.4201C17.981 14.9389 15.7952 16.4588 13.6082 17.9776C12.8947 18.4731 12.1466 18.983 11.2866 19.1045C10.5171 19.2141 9.74281 18.9996 8.99832 18.7805C8.37414 18.597 7.75113 18.4088 7.13052 18.2146C6.80056 18.1122 6.45988 18.0014 6.20497 17.7691C5.95005 17.5369 5.80356 17.1462 5.95722 16.8364C6.05371 16.6423 6.24073 16.5196 6.43727 16.4195L6.43963 16.4207Z" fill="#FEFFFC"/>
+</svg>
+
+                                                <span>Написати нам у Telegram</span>
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a class="us-header__line__number__list-item" href="#">
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2029_15995)">
+<path d="M28.9 0H5.1C2.28335 0 0 2.28335 0 5.1V28.9C0 31.7167 2.28335 34 5.1 34H28.9C31.7167 34 34 31.7167 34 28.9V5.1C34 2.28335 31.7167 0 28.9 0Z" fill="#665CA7"/>
+<path d="M17.7214 13.0338C17.9578 13.0258 18.1933 13.0664 18.4134 13.153C18.6334 13.2397 18.8332 13.3706 19.0005 13.5376C19.1677 13.7046 19.2988 13.9042 19.3856 14.1239C19.4724 14.3436 19.5131 14.5788 19.5051 14.8148M17.3186 11.4826C17.8171 11.482 18.3105 11.5825 18.7689 11.778C19.2273 11.9735 19.6412 12.2598 19.9855 12.6197C20.3298 12.9796 20.5973 13.4056 20.7719 13.8718C20.9465 14.338 21.0244 14.8347 21.0011 15.3319M16.8008 9.98881C17.5785 9.97075 18.3514 10.1152 19.0699 10.413C19.7884 10.7107 20.4366 11.1552 20.973 11.7178C21.5094 12.2804 21.922 12.9488 22.1845 13.68C22.4469 14.4112 22.5534 15.1891 22.4971 15.9639" stroke="white" stroke-width="0.664062" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.81994 15.6262C7.81994 10.4396 8.78927 7.24793 17 7.24793C25.2107 7.24793 26.1801 10.4396 26.1801 15.6262C26.1801 20.8127 25.2107 24.0044 17 24.0044L15.5175 23.9474L12.4955 27.5381C12.2674 27.766 12.0393 27.5951 12.0393 27.3671V23.4344C11.6972 23.4344 10.2718 22.7505 9.87263 22.3515C8.61821 21.0407 7.81994 20.0717 7.81994 15.6262ZM6.10938 15.6262C6.10938 8.44482 9.24542 5.53809 17 5.53809C24.7546 5.53809 27.8906 8.44482 27.8906 15.6262C27.8906 22.8075 24.7546 25.7142 17 25.7142C16.4298 25.7142 15.9737 25.7142 15.1754 25.6002L13.0087 28.051C12.6095 28.507 11.4121 28.678 11.4121 27.3101V24.9163C11.07 24.9163 10.2718 24.5743 9.1884 23.8904C8.10504 23.1495 6.10938 21.3826 6.10938 15.6262ZM18.8246 18.0199C19.2047 17.526 19.6609 17.45 20.1931 17.792L22.2457 19.3308C22.5498 19.7108 22.4168 20.2427 21.8466 20.9267C21.2764 21.6106 20.7442 21.8956 20.2501 21.7816C18.2354 21.3256 16.2968 20.1857 14.4341 18.3619C12.5715 16.5381 11.4121 14.5623 10.956 12.4345C10.956 11.6745 11.4311 11.0286 12.3815 10.4966C12.8756 10.1547 13.2938 10.2497 13.6359 10.7816L15.0614 12.7764C15.2894 13.2324 15.1564 13.6503 14.6622 14.0303C12.4385 14.8852 17.5702 20.4137 18.8246 18.0199Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_2029_15995">
+<rect width="34" height="34" rx="17" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+                                                <span>Написати нам у Viber</span>
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a class="us-header__line__number__list-item" href="#">
+                                                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.609 0.586914H17.5316C8.16414 0.586914 0.570312 8.18074 0.570312 17.5482V17.6256C0.570312 26.9931 8.16414 34.5869 17.5316 34.5869H17.609C26.9765 34.5869 34.5703 26.9931 34.5703 17.6256V17.5482C34.5703 8.18074 26.9765 0.586914 17.609 0.586914Z" fill="#00E510"/>
+<path d="M20.884 22.5598C16.5326 22.5598 12.9924 19.0184 12.9912 14.667C12.9924 13.564 13.8906 12.667 14.9912 12.667C15.1044 12.667 15.2163 12.6765 15.3235 12.6956C15.5594 12.7349 15.7834 12.8147 15.9894 12.935C16.0192 12.9529 16.0395 12.9815 16.0442 13.0148L16.504 15.913C16.51 15.9475 16.4993 15.9809 16.4766 16.0059C16.2229 16.287 15.8989 16.4895 15.538 16.5908L15.3641 16.6396L15.4296 16.8076C16.0228 18.318 17.2306 19.5246 18.7423 20.1202L18.9102 20.1869L18.959 20.013C19.0603 19.6521 19.2628 19.3281 19.5439 19.0744C19.5642 19.0553 19.5916 19.0458 19.619 19.0458C19.6249 19.0458 19.6309 19.0458 19.638 19.047L22.5362 19.5068C22.5707 19.5127 22.5993 19.5318 22.6172 19.5616C22.7363 19.7676 22.8161 19.9928 22.8566 20.2286C22.8757 20.3335 22.884 20.4442 22.884 20.5598C22.884 21.6616 21.987 22.5586 20.884 22.5598Z" fill="#FDFDFD"/>
+<path d="M28.6002 16.6328C28.3655 13.9812 27.1505 11.5214 25.1791 9.70721C23.1958 7.88231 20.6228 6.87695 17.9319 6.87695C12.026 6.87695 7.22078 11.6822 7.22078 17.5881C7.22078 19.5702 7.76752 21.5011 8.80266 23.1831L6.49414 28.2933L13.8854 27.5059C15.1707 28.0324 16.5311 28.2992 17.9307 28.2992C18.2988 28.2992 18.6764 28.2802 19.0552 28.2409C19.3887 28.2051 19.7258 28.1527 20.057 28.086C25.0028 27.0866 28.6133 22.6971 28.6419 17.6453V17.5881C28.6419 17.2665 28.6276 16.9448 28.599 16.6328H28.6002ZM14.1701 25.2629L10.0808 25.6989L11.3018 22.9937L11.0576 22.6661C11.0397 22.6423 11.0218 22.6185 11.0016 22.5911C9.94144 21.1271 9.38157 19.3975 9.38157 17.5893C9.38157 12.8746 13.2172 9.03895 17.9319 9.03895C22.3488 9.03895 26.0927 12.4851 26.4536 16.8841C26.4727 17.12 26.4834 17.357 26.4834 17.5905C26.4834 17.6572 26.4822 17.7227 26.481 17.793C26.3905 21.737 23.6353 25.0866 19.7806 25.9395C19.4864 26.005 19.185 26.055 18.8849 26.0872C18.5728 26.1229 18.2523 26.1408 17.9343 26.1408C16.8015 26.1408 15.7008 25.9216 14.6609 25.488C14.5454 25.4416 14.4322 25.3915 14.3262 25.3403L14.1713 25.2653L14.1701 25.2629Z" fill="#FDFDFD"/>
+</svg>
+
+                                                <span>Написати нам у WhatsApp</span>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="us-header__menu" x-bind:class="{ 'us-header__menu--visible': isMenuOpen }">
+        <div class="us-container">
+            <div class="us-header__menu__inner">
+                    <div class="us-site-settings us-header__menu__settings">
+                    <div class="us-site-settings__item">
+                                    <a href="#" class="us-site-settings__title ">UAH</a>
+                                    <a href="#" class="us-site-settings__title  us-site-settings__title--current ">EUR</a>
+                            </div>
+                    <div class="us-site-settings__item">
+                                    <a href="#" class="us-site-settings__title ">UA</a>
+                                    <a href="#" class="us-site-settings__title  us-site-settings__title--current ">RU</a>
+                            </div>
+            </div>
+
+                <div class="us-header__menu__navigation">
+                                            <ul class="us-header__menu__list">
+                                                            <li class="us-header__menu__list__item  us-header__menu__list__item--active "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 0 }"
+                                    x-on:mouseenter="hoverMenu(0)"
+                                >
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="#" class="us-header__menu__list__nav-link  us-header__menu__list__nav-link--current ">Кавомашини</a>
+
+                                                                                    <button class="us-header__menu__list__arrow" x-on:click="clickMenuArrow(0, $event)"></button>
+                                                                            </div>
+
+                                                                            <ul class="us-header__menu__list__subnav">
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link  us-header__menu__list__subnav-link--current ">Під еспресо</a></li>
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link ">Під фільтр</a></li>
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link ">З вагами</a></li>
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link ">Без вагів</a></li>
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link ">Жорна</a></li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 1 }"
+                                    x-on:mouseenter="hoverMenu(1)"
+                                >
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="#" class="us-header__menu__list__nav-link ">Кавомолки</a>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 2 }"
+                                    x-on:mouseenter="hoverMenu(2)"
+                                >
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="#" class="us-header__menu__list__nav-link ">Водопідготовка</a>
+
+                                                                                    <button class="us-header__menu__list__arrow" x-on:click="clickMenuArrow(2, $event)"></button>
+                                                                            </div>
+
+                                                                            <ul class="us-header__menu__list__subnav">
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link ">З вагами</a></li>
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link ">Без вагів</a></li>
+                                                                                            <li><a href="#" class="us-header__menu__list__subnav-link ">Жорна</a></li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 3 }"
+                                    x-on:mouseenter="hoverMenu(3)"
+                                >
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="#" class="us-header__menu__list__nav-link ">Інструменти бариста</a>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 4 }"
+                                    x-on:mouseenter="hoverMenu(4)"
+                                >
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="#" class="us-header__menu__list__nav-link ">Термопоти</a>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 5 }"
+                                    x-on:mouseenter="hoverMenu(5)"
+                                >
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="#" class="us-header__menu__list__nav-link ">Комплекти</a>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                            <li class="us-header__menu__list__item "
+                                    x-bind:class="{ 'us-header__menu__list__item--active': activeMenuIndex === 6 }"
+                                    x-on:mouseenter="hoverMenu(6)"
+                                >
+                                    <div class="us-header__menu__list__item-header">
+                                        <a href="#" class="us-header__menu__list__nav-link ">Вживане обладнання</a>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                    </ul>
+                                    </div>
+
+                    <a class="us-phone-number us-header__menu__number"
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+
+                <div class="us-header__menu__brands" x-data="{ expanded: false }">
+                                            <ul class="us-header__menu__brands__list" x-bind:class="{ 'us-header__menu__brands__list--collapsed': !expanded }">
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-1.png" alt="Brand 1">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-2.png" alt="Brand 2">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-3.png" alt="Brand 3">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-4.png" alt="Brand 4">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-5.png" alt="Brand 5">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-6.png" alt="Brand 6">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-7.png" alt="Brand 7">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-8.png" alt="Brand 8">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-9.png" alt="Brand 9">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-10.png" alt="Brand 10">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-11.png" alt="Brand 11">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-12.png" alt="Brand 12">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-1.png" alt="Brand 13">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-2.png" alt="Brand 14">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-3.png" alt="Brand 15">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-4.png" alt="Brand 16">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-5.png" alt="Brand 17">
+                                    </a>
+                                </li>
+                                                            <li class="us-header__menu__brands__item">
+                                    <a class="us-header__menu__brands__link" href="#">
+                                        <img src="/images/brand-logos-6.png" alt="Brand 18">
+                                    </a>
+                                </li>
+                                                    </ul>
+
+                        <div class="us-header__menu__brands__more">
+                            <button class="us-button-show-more "
+        x-data="{ state: false }"
+        x-modelable="state"
+        x-on:click="state = !state"
+        x-bind:class="{ 'us-button-show-more--active': state }"
+         x-model="expanded"         
+>
+    <span x-text="state ? 'Згорнути' : 'Розгорнути'"></span>
+</button>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="us-header__search"
+         x-bind:class="{
+            'us-header__search--active': isSearchOpen,
+            'us-header__search--results': searchQuery.length > 3
+        }"
+    >
+        <div class="us-header__search__container">
+            <div class="us-header__search__input">
+                <input type="text" class="us-header__search__input__field" x-model="searchQuery" placeholder="Пошук товару...">
+                <div class="us-header__search__input__buttons">
+                    <button class="us-header__search__input__buttons__clear" x-on:click="searchQuery = ''"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.699219 0.700195L14.6992 14.7002M14.6992 0.700195L0.699219 14.7002" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</button>
+                    <button class="us-header__search__input__buttons__search"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.23 18.52C11.4305 18.528 13.5604 17.7435 15.23 16.31L20.23 21.31C20.3706 21.4505 20.5613 21.5293 20.76 21.5293C20.9588 21.5293 21.1494 21.4505 21.29 21.31C21.4305 21.1694 21.5093 20.9788 21.5093 20.78C21.5093 20.5813 21.4305 20.3906 21.29 20.25L16.29 15.25C17.7235 13.5804 18.508 11.4505 18.5 9.25C18.5 7.42053 17.9575 5.63213 16.9411 4.11098C15.9247 2.58982 14.48 1.40423 12.7898 0.704118C11.0996 0.00400788 9.23974 -0.179173 7.44542 0.17774C5.65109 0.534654 4.0029 1.41563 2.70927 2.70927C1.41563 4.0029 0.534654 5.65109 0.17774 7.44542C-0.179173 9.23974 0.00400788 11.0996 0.704118 12.7898C1.40423 14.48 2.58982 15.9247 4.11098 16.9411C5.63213 17.9575 7.42053 18.5 9.25 18.5L9.23 18.52ZM9.23 1.52C10.7628 1.52 12.2612 1.97453 13.5357 2.82611C14.8102 3.6777 15.8035 4.88808 16.3901 6.30421C16.9766 7.72034 17.1301 9.2786 16.8311 10.782C16.5321 12.2853 15.7939 13.6662 14.7101 14.7501C13.6262 15.8339 12.2453 16.5721 10.742 16.8711C9.2386 17.1701 7.68034 17.0166 6.26421 16.4301C4.84808 15.8435 3.6377 14.8502 2.78611 13.5757C1.93453 12.3012 1.48 10.8028 1.48 9.27C1.48265 7.21539 2.30001 5.24568 3.75285 3.79285C5.20568 2.34001 7.17539 1.52265 9.23 1.52Z" fill="#393939"/>
+<path d="M8.23047 15.0195C8.42938 15.0195 8.62015 14.9405 8.7608 14.7999C8.90145 14.6592 8.98047 14.4684 8.98047 14.2695C8.98047 14.0706 8.90145 13.8799 8.7608 13.7392C8.62015 13.5985 8.42938 13.5195 8.23047 13.5195C7.36933 13.5169 6.54421 13.1736 5.93529 12.5647C5.32636 11.9558 4.98311 11.1307 4.98047 10.2695C4.98047 10.0706 4.90145 9.87985 4.7608 9.7392C4.62015 9.59855 4.42938 9.51953 4.23047 9.51953C4.03156 9.51953 3.84079 9.59855 3.70014 9.7392C3.55949 9.87985 3.48047 10.0706 3.48047 10.2695C3.48047 11.5293 3.98091 12.7375 4.87171 13.6283C5.76251 14.5191 6.97069 15.0195 8.23047 15.0195Z" fill="#393939"/>
+</svg>
+</button>
+                </div>
+            </div>
+            <div class="us-header__search__results" x-bind:class="{ 'us-header__search__results--active': searchQuery.length > 3 }">
+                <div class="us-header__search__results__list">
+                    
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/images/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/images/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/images/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                    <div class="us-header__search__results__item">
+                        <div class="us-header__search__results__item__image">
+                            <img src="/images/product-card-1.png" alt="#">
+                        </div>
+                        <p class="us-header__search__results__item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</p>
+                        <span class="us-header__search__results__item__price">312 798 грн.</span>
+                    </div>
+                </div>
+                <p class="us-header__search__results__more">Переглянути всі товари</p>
+            </div>
+        </div>
+
+            <button class="us-button-round  us-button-round--v0  us-header__search__close"
+                         x-on:click="closeAll"                         
+    >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.699219 0.700195L14.6992 14.7002M14.6992 0.700195L0.699219 14.7002" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+    </button>
+    </div>
+</header>
+
+
+<main>    <div class="us-page-blog">
+        <div class="us-container">
+            <div class="us-page-blog__inner">
+                    <ul class="us-breadcrumbs us-page-blog__breadcrumbs">
+                    <li class="us-breadcrumbs__item">
+                <a href="" class="us-breadcrumbs__link ">Головна</a>
+            </li>
+                    <li class="us-breadcrumbs__item">
+                <a href="" class="us-breadcrumbs__link  us-breadcrumbs__link--current ">Блог</a>
+            </li>
+            </ul>
+
+                                    <div class="us-page-blog__list">
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                                    <div class="us-page-blog__item">
+                                <div class="us-page-blog__item__image">
+                                                                            <img src="/images/text-image-1.jpg" alt="Blog image 1">
+                                                                    </div>
+                                <div class="us-page-blog__item__content">
+                                    <h2 class="us-page-blog__item__title">
+                                        <a href="#">Широкий асортимент аксесуарів для справжнього досвіду бариста</a>
+                                    </h2>
+                                    <div class="us-page-blog__item__caption">
+                                        DomKofe – сучасний спеціалізований інтернет-магазин, в якому ви можете заказати каву, кавоварки, кавомолки, кавові аксесуари та чайники провідних світових виробників. Ми регулярно оновляємо та розширюємо асортимент товарів. Тому кожний відвідувач обов’язково знайде все, що тільки потрібно найдосвідченішому кавоману.В каталозі представлені професійні та побутові кавомашини, кава з різних куточків світу, в тому числі Бразилії, Колумбії, Перу, Ефіопії, Кот-де-д’Івуара, Ми регулярно оновляємо та розширюємо асортимент товарів. Ми регулярно оновляємо та розширюємо асортимент товарів. 
+                                    </div>
+
+                                    <a class="us-page-blog__item__link" href="#">Читати більше</a>
+                                </div>
+                            </div>
+                                            </div>
+                
+                    <ul class="us-pagination ">
+        <li>
+                <a href="#prev" class="us-button-arrow  us-button-arrow--v2  us-pagination__prev "></a>
+        </li>
+
+                    <li>
+                    <a href="#1"
+            class="us-button-round  us-button-round--v3   "
+                                    
+    >
+        1            </a>
+            </li>
+                    <li>
+                    <a href="#2"
+            class="us-button-round  us-button-round--v4   "
+                                    
+    >
+        2            </a>
+            </li>
+                    <li>
+                    <a href="#3"
+            class="us-button-round  us-button-round--v4   "
+                                    
+    >
+        3            </a>
+            </li>
+                    <li>
+                    <a href="#4"
+            class="us-button-round  us-button-round--v4   "
+                                    
+    >
+        4            </a>
+            </li>
+        
+        <li>
+                <a href="#next" class="us-button-arrow  us-button-arrow--v2  us-pagination__next "></a>
+        </li>
+    </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="us-footer">
+    <div class="us-container">
+        <div class="us-footer__inner">
+                           <a class="us-footer__logo" href="/home.html">
+                   <img class="us-footer__logo__img" src="/images/logo.png" alt="Site Logo" />
+               </a>
+            
+                            <nav class="us-footer__nav">
+                                            <h2 class="us-footer__title">Каталог</h2>
+                    
+                    <ul class="us-footer__nav-menu">
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Кавомашини</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Кавомолки</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Водопідготовка</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Інструменти бариста</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Термопоти</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Комплекти</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Вживане обладнання</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Сервіс</a>
+                            </li>
+                                            </ul>
+                </nav>
+            
+                            <nav class="us-footer__nav">
+                                            <h2 class="us-footer__title">Інформація</h2>
+                    
+                    <ul class="us-footer__nav-menu">
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Доставка та оплата</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Про нас</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Гарантія</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Політика конфіденційності</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Публічна оферта</a>
+                            </li>
+                                                    <li class="us-footer__nav-item">
+                                <a class="us-footer__nav-link" href="#">Мапа сайту</a>
+                            </li>
+                                            </ul>
+                </nav>
+            
+                            <div class="us-footer__contact">
+                                            <h2 class="us-footer__title">Контактна інформація</h2>
+                    
+                    <div class="us-footer__contact-content">
+                                                    <div class="us-footer__contact-phones">
+                                                                        <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+                                                                        <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380732222222' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380732222222' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+                                
+                                
+                                <button class="us-footer__contact-btn" x-data x-on:click="$store.ModalStore.open('us-modal-call')">Замовити дзвінок</button>
+                            </div>
+                        
+                                                    <div class="us-footer__contact-social">
+                                                                    <a class="us-footer__contact-social__link" href="#">
+                                        <img src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.0387%200H16.9613C7.59382%200%200%207.59383%200%2016.9613V17.0387C0%2026.4062%207.59382%2034%2016.9613%2034H17.0387C26.4062%2034%2034%2026.4062%2034%2017.0387V16.9613C34%207.59383%2026.4062%200%2017.0387%200Z'%20fill='%2300B0F2'/%3e%3cpath%20d='M6.43963%2016.4207C6.48728%2016.3969%206.53494%2016.3743%206.5814%2016.3528C7.38902%2015.9788%208.20737%2015.6286%209.02452%2015.2784C9.0686%2015.2784%209.14243%2015.2272%209.18412%2015.2105C9.24726%2015.1831%209.3104%2015.1569%209.37353%2015.1295L9.73685%2014.9734C9.97985%2014.8698%2010.2216%2014.7662%2010.4646%2014.6625C10.9495%2014.4553%2011.4343%2014.248%2011.9191%2014.0395C12.8887%2013.625%2013.8595%2013.2093%2014.8292%2012.7948C15.7988%2012.3802%2016.7696%2011.9645%2017.7392%2011.55C18.7089%2011.1354%2019.6797%2010.7197%2020.6493%2010.3052C21.6189%209.89065%2022.5897%209.47492%2023.5594%209.06039C23.775%208.96748%2024.0084%208.8293%2024.2395%208.7888C24.4337%208.75426%2024.6231%208.68755%2024.8184%208.65062C25.1889%208.58034%2025.5975%208.55175%2025.9524%208.70542C26.0751%208.75902%2026.1883%208.83406%2026.2824%208.92817C26.7327%209.37367%2026.6695%2010.1051%2026.5742%2010.7316C25.9107%2015.0985%2025.2473%2019.4666%2024.5826%2023.8335C24.4921%2024.4326%2024.3682%2025.0902%2023.8953%2025.469C23.495%2025.7894%2022.9256%2025.8251%2022.4313%2025.6893C21.937%2025.5523%2021.501%2025.2653%2021.0734%2024.983C19.2997%2023.8085%2017.5248%2022.6339%2015.7511%2021.4594C15.3295%2021.1807%2014.8601%2020.8162%2014.8649%2020.3099C14.8673%2020.005%2015.0495%2019.7334%2015.2354%2019.4916C16.7767%2017.4809%2019.0007%2016.0991%2020.6552%2014.1813C20.8887%2013.9109%2021.0722%2013.4225%2020.7517%2013.2665C20.5612%2013.1736%2020.342%2013.2998%2020.168%2013.4201C17.981%2014.9389%2015.7952%2016.4588%2013.6082%2017.9776C12.8947%2018.4731%2012.1466%2018.983%2011.2866%2019.1045C10.5171%2019.2141%209.74281%2018.9996%208.99832%2018.7805C8.37414%2018.597%207.75113%2018.4088%207.13052%2018.2146C6.80056%2018.1122%206.45988%2018.0014%206.20497%2017.7691C5.95005%2017.5369%205.80356%2017.1462%205.95722%2016.8364C6.05371%2016.6423%206.24073%2016.5196%206.43727%2016.4195L6.43963%2016.4207Z'%20fill='%23FEFFFC'/%3e%3c/svg%3e" alt="telegram" />
+                                    </a>
+                                                                    <a class="us-footer__contact-social__link" href="#">
+                                        <img src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_2029_15995)'%3e%3cpath%20d='M28.9%200H5.1C2.28335%200%200%202.28335%200%205.1V28.9C0%2031.7167%202.28335%2034%205.1%2034H28.9C31.7167%2034%2034%2031.7167%2034%2028.9V5.1C34%202.28335%2031.7167%200%2028.9%200Z'%20fill='%23665CA7'/%3e%3cpath%20d='M17.7214%2013.0338C17.9578%2013.0258%2018.1933%2013.0664%2018.4134%2013.153C18.6334%2013.2397%2018.8332%2013.3706%2019.0005%2013.5376C19.1677%2013.7046%2019.2988%2013.9042%2019.3856%2014.1239C19.4724%2014.3436%2019.5131%2014.5788%2019.5051%2014.8148M17.3186%2011.4826C17.8171%2011.482%2018.3105%2011.5825%2018.7689%2011.778C19.2273%2011.9735%2019.6412%2012.2598%2019.9855%2012.6197C20.3298%2012.9796%2020.5973%2013.4056%2020.7719%2013.8718C20.9465%2014.338%2021.0244%2014.8347%2021.0011%2015.3319M16.8008%209.98881C17.5785%209.97075%2018.3514%2010.1152%2019.0699%2010.413C19.7884%2010.7107%2020.4366%2011.1552%2020.973%2011.7178C21.5094%2012.2804%2021.922%2012.9488%2022.1845%2013.68C22.4469%2014.4112%2022.5534%2015.1891%2022.4971%2015.9639'%20stroke='white'%20stroke-width='0.664062'%20stroke-linecap='round'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M7.81994%2015.6262C7.81994%2010.4396%208.78927%207.24793%2017%207.24793C25.2107%207.24793%2026.1801%2010.4396%2026.1801%2015.6262C26.1801%2020.8127%2025.2107%2024.0044%2017%2024.0044L15.5175%2023.9474L12.4955%2027.5381C12.2674%2027.766%2012.0393%2027.5951%2012.0393%2027.3671V23.4344C11.6972%2023.4344%2010.2718%2022.7505%209.87263%2022.3515C8.61821%2021.0407%207.81994%2020.0717%207.81994%2015.6262ZM6.10938%2015.6262C6.10938%208.44482%209.24542%205.53809%2017%205.53809C24.7546%205.53809%2027.8906%208.44482%2027.8906%2015.6262C27.8906%2022.8075%2024.7546%2025.7142%2017%2025.7142C16.4298%2025.7142%2015.9737%2025.7142%2015.1754%2025.6002L13.0087%2028.051C12.6095%2028.507%2011.4121%2028.678%2011.4121%2027.3101V24.9163C11.07%2024.9163%2010.2718%2024.5743%209.1884%2023.8904C8.10504%2023.1495%206.10938%2021.3826%206.10938%2015.6262ZM18.8246%2018.0199C19.2047%2017.526%2019.6609%2017.45%2020.1931%2017.792L22.2457%2019.3308C22.5498%2019.7108%2022.4168%2020.2427%2021.8466%2020.9267C21.2764%2021.6106%2020.7442%2021.8956%2020.2501%2021.7816C18.2354%2021.3256%2016.2968%2020.1857%2014.4341%2018.3619C12.5715%2016.5381%2011.4121%2014.5623%2010.956%2012.4345C10.956%2011.6745%2011.4311%2011.0286%2012.3815%2010.4966C12.8756%2010.1547%2013.2938%2010.2497%2013.6359%2010.7816L15.0614%2012.7764C15.2894%2013.2324%2015.1564%2013.6503%2014.6622%2014.0303C12.4385%2014.8852%2017.5702%2020.4137%2018.8246%2018.0199Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_2029_15995'%3e%3crect%20width='34'%20height='34'%20rx='17'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="telegram" />
+                                    </a>
+                                                                    <a class="us-footer__contact-social__link" href="#">
+                                        <img src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.609%200.586914H17.5316C8.16414%200.586914%200.570312%208.18074%200.570312%2017.5482V17.6256C0.570312%2026.9931%208.16414%2034.5869%2017.5316%2034.5869H17.609C26.9765%2034.5869%2034.5703%2026.9931%2034.5703%2017.6256V17.5482C34.5703%208.18074%2026.9765%200.586914%2017.609%200.586914Z'%20fill='%2300E510'/%3e%3cpath%20d='M20.884%2022.5598C16.5326%2022.5598%2012.9924%2019.0184%2012.9912%2014.667C12.9924%2013.564%2013.8906%2012.667%2014.9912%2012.667C15.1044%2012.667%2015.2163%2012.6765%2015.3235%2012.6956C15.5594%2012.7349%2015.7834%2012.8147%2015.9894%2012.935C16.0192%2012.9529%2016.0395%2012.9815%2016.0442%2013.0148L16.504%2015.913C16.51%2015.9475%2016.4993%2015.9809%2016.4766%2016.0059C16.2229%2016.287%2015.8989%2016.4895%2015.538%2016.5908L15.3641%2016.6396L15.4296%2016.8076C16.0228%2018.318%2017.2306%2019.5246%2018.7423%2020.1202L18.9102%2020.1869L18.959%2020.013C19.0603%2019.6521%2019.2628%2019.3281%2019.5439%2019.0744C19.5642%2019.0553%2019.5916%2019.0458%2019.619%2019.0458C19.6249%2019.0458%2019.6309%2019.0458%2019.638%2019.047L22.5362%2019.5068C22.5707%2019.5127%2022.5993%2019.5318%2022.6172%2019.5616C22.7363%2019.7676%2022.8161%2019.9928%2022.8566%2020.2286C22.8757%2020.3335%2022.884%2020.4442%2022.884%2020.5598C22.884%2021.6616%2021.987%2022.5586%2020.884%2022.5598Z'%20fill='%23FDFDFD'/%3e%3cpath%20d='M28.6002%2016.6328C28.3655%2013.9812%2027.1505%2011.5214%2025.1791%209.70721C23.1958%207.88231%2020.6228%206.87695%2017.9319%206.87695C12.026%206.87695%207.22078%2011.6822%207.22078%2017.5881C7.22078%2019.5702%207.76752%2021.5011%208.80266%2023.1831L6.49414%2028.2933L13.8854%2027.5059C15.1707%2028.0324%2016.5311%2028.2992%2017.9307%2028.2992C18.2988%2028.2992%2018.6764%2028.2802%2019.0552%2028.2409C19.3887%2028.2051%2019.7258%2028.1527%2020.057%2028.086C25.0028%2027.0866%2028.6133%2022.6971%2028.6419%2017.6453V17.5881C28.6419%2017.2665%2028.6276%2016.9448%2028.599%2016.6328H28.6002ZM14.1701%2025.2629L10.0808%2025.6989L11.3018%2022.9937L11.0576%2022.6661C11.0397%2022.6423%2011.0218%2022.6185%2011.0016%2022.5911C9.94144%2021.1271%209.38157%2019.3975%209.38157%2017.5893C9.38157%2012.8746%2013.2172%209.03895%2017.9319%209.03895C22.3488%209.03895%2026.0927%2012.4851%2026.4536%2016.8841C26.4727%2017.12%2026.4834%2017.357%2026.4834%2017.5905C26.4834%2017.6572%2026.4822%2017.7227%2026.481%2017.793C26.3905%2021.737%2023.6353%2025.0866%2019.7806%2025.9395C19.4864%2026.005%2019.185%2026.055%2018.8849%2026.0872C18.5728%2026.1229%2018.2523%2026.1408%2017.9343%2026.1408C16.8015%2026.1408%2015.7008%2025.9216%2014.6609%2025.488C14.5454%2025.4416%2014.4322%2025.3915%2014.3262%2025.3403L14.1713%2025.2653L14.1701%2025.2629Z'%20fill='%23FDFDFD'/%3e%3c/svg%3e" alt="telegram" />
+                                    </a>
+                                                                    <a class="us-footer__contact-social__link" href="#">
+                                        <img src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.0387%200H16.9613C7.59383%200%200%207.59383%200%2016.9613V17.0387C0%2026.4062%207.59383%2034%2016.9613%2034H17.0387C26.4062%2034%2034%2026.4062%2034%2017.0387V16.9613C34%207.59383%2026.4062%200%2017.0387%200Z'%20fill='url(%23paint0_linear_2029_16006)'/%3e%3cpath%20d='M22.2613%206.91699H11.7407C8.83423%206.91699%206.46973%209.28149%206.46973%2012.188V21.8128C6.46973%2024.7193%208.83423%2027.0838%2011.7407%2027.0838H22.2613C25.1678%2027.0838%2027.5323%2024.7193%2027.5323%2021.8128V12.188C27.5323%209.28149%2025.1678%206.91699%2022.2613%206.91699ZM8.32917%2012.188C8.32917%2010.3071%209.85984%208.77643%2011.7407%208.77643H22.2613C24.1421%208.77643%2025.6728%2010.3071%2025.6728%2012.188V21.8128C25.6728%2023.6936%2024.1421%2025.2243%2022.2613%2025.2243H11.7407C9.85984%2025.2243%208.32917%2023.6936%208.32917%2021.8128V12.188Z'%20fill='white'/%3e%3cpath%20d='M17.0006%2021.9025C19.7034%2021.9025%2021.9035%2019.7036%2021.9035%2016.9996C21.9035%2014.2956%2019.7046%2012.0967%2017.0006%2012.0967C14.2966%2012.0967%2012.0977%2014.2956%2012.0977%2016.9996C12.0977%2019.7036%2014.2966%2021.9025%2017.0006%2021.9025ZM17.0006%2013.9573C18.679%2013.9573%2020.0441%2015.3224%2020.0441%2017.0008C20.0441%2018.6792%2018.679%2020.0443%2017.0006%2020.0443C15.3222%2020.0443%2013.9571%2018.6792%2013.9571%2017.0008C13.9571%2015.3224%2015.3222%2013.9573%2017.0006%2013.9573Z'%20fill='white'/%3e%3cpath%20d='M22.3577%2012.8881C23.0853%2012.8881%2023.6784%2012.2961%2023.6784%2011.5671C23.6784%2010.8381%2023.0865%2010.2461%2022.3577%2010.2461C21.629%2010.2461%2021.0371%2010.8381%2021.0371%2011.5671C21.0371%2012.2961%2021.629%2012.8881%2022.3577%2012.8881Z'%20fill='white'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_2029_16006'%20x1='4.96724'%20y1='29.0328'%20x2='29.0328'%20y2='4.96843'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23FAAD4F'/%3e%3cstop%20offset='0.35'%20stop-color='%23DD2A7B'/%3e%3cstop%20offset='0.62'%20stop-color='%239537B0'/%3e%3cstop%20offset='1'%20stop-color='%23515BD4'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="telegram" />
+                                    </a>
+                                                                    <a class="us-footer__contact-social__link" href="#">
+                                        <img src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.0387%200H16.9613C7.59383%200%200%207.59383%200%2016.9613V17.0387C0%2026.4062%207.59383%2034%2016.9613%2034H17.0387C26.4062%2034%2034%2026.4062%2034%2017.0387V16.9613C34%207.59383%2026.4062%200%2017.0387%200Z'%20fill='black'/%3e%3cpath%20d='M25.6194%2013.503V16.7132C25.0584%2016.6584%2024.3294%2016.531%2023.5229%2016.2356C22.4699%2015.8496%2021.6861%2015.3219%2021.1727%2014.9134V21.4017L21.1596%2021.3815C21.1679%2021.5101%2021.1727%2021.6412%2021.1727%2021.7734C21.1727%2024.9955%2018.5509%2027.6185%2015.3276%2027.6185C12.1042%2027.6185%209.48242%2024.9955%209.48242%2021.7734C9.48242%2018.5512%2012.1042%2015.9271%2015.3276%2015.9271C15.6432%2015.9271%2015.9529%2015.9521%2016.2555%2016.0009V19.1647C15.9649%2019.0611%2015.6528%2019.0051%2015.3276%2019.0051C13.8017%2019.0051%2012.5593%2020.2463%2012.5593%2021.7734C12.5593%2023.3005%2013.8017%2024.5417%2015.3276%2024.5417C16.8535%2024.5417%2018.0959%2023.2993%2018.0959%2021.7734C18.0959%2021.7162%2018.0947%2021.659%2018.0911%2021.6019V8.99316H21.299C21.3109%209.26475%2021.3216%209.53873%2021.3335%209.81032C21.355%2010.3452%2021.5456%2010.8586%2021.8779%2011.279C22.2674%2011.7734%2022.8428%2012.3475%2023.6504%2012.8061C24.4068%2013.235%2025.1167%2013.4184%2025.6194%2013.5054V13.503Z'%20fill='%23FF004F'/%3e%3cpath%20d='M24.5169%2010.897V14.1072C23.9558%2014.0524%2023.2268%2013.925%2022.4204%2013.6296C21.3674%2013.2436%2020.5836%2012.7159%2020.0702%2012.3073V18.7957L20.0571%2018.7755C20.0654%2018.9041%2020.0702%2019.0352%2020.0702%2019.1674C20.0702%2022.3895%2017.4484%2025.0125%2014.225%2025.0125C11.0017%2025.0125%208.37988%2022.3895%208.37988%2019.1674C8.37988%2015.9452%2011.0017%2013.321%2014.225%2013.321C14.5407%2013.321%2014.8504%2013.3461%2015.153%2013.3949V16.5587C14.8623%2016.455%2014.5502%2016.3991%2014.225%2016.3991C12.6991%2016.3991%2011.4567%2017.6403%2011.4567%2019.1674C11.4567%2020.6945%2012.6991%2021.9357%2014.225%2021.9357C15.7509%2021.9357%2016.9933%2020.6933%2016.9933%2019.1674C16.9933%2019.1102%2016.9921%2019.053%2016.9886%2018.9958V6.38477H20.1964C20.2083%206.65636%2020.2191%206.93033%2020.231%207.20192C20.2524%207.73676%2020.443%208.25016%2020.7754%208.67065C21.1649%209.16499%2021.7402%209.73914%2022.5478%2010.1977C23.3042%2010.6254%2024.0142%2010.81%2024.5169%2010.897Z'%20fill='%2300F7EF'/%3e%3cpath%20d='M25.218%2012.2999V15.5101C24.657%2015.4553%2023.928%2015.3279%2023.1216%2015.0324C22.0685%2014.6465%2021.2847%2014.1188%2020.7713%2013.7102V20.1986L20.7582%2020.1784C20.7666%2020.307%2020.7713%2020.438%2020.7713%2020.5703C20.7713%2023.7924%2018.1495%2026.4154%2014.9262%2026.4154C11.7029%2026.4154%209.08105%2023.7924%209.08105%2020.5703C9.08105%2017.3481%2011.7029%2014.7239%2014.9262%2014.7239C15.2419%2014.7239%2015.5516%2014.7489%2015.8541%2014.7978V17.9616C15.5635%2017.8579%2015.2514%2017.802%2014.9262%2017.802C13.4003%2017.802%2012.1579%2019.0432%2012.1579%2020.5703C12.1579%2022.0974%2013.4003%2023.3386%2014.9262%2023.3386C16.4521%2023.3386%2017.6945%2022.0962%2017.6945%2020.5703C17.6945%2020.5131%2017.6933%2020.4559%2017.6898%2020.3987V7.79004H20.8976C20.9095%208.06163%2020.9202%208.3356%2020.9322%208.60719C20.9536%209.14203%2021.1442%209.65543%2021.4765%2010.0759C21.866%2010.5703%2022.4414%2011.1444%2023.249%2011.603C24.0054%2012.0307%2024.7154%2012.2153%2025.218%2012.3022V12.2999Z'%20fill='white'/%3e%3c/svg%3e" alt="telegram" />
+                                    </a>
+                                                            </div>
+                        
+                        <div class="us-footer__contact-email">
+                                                            <a class="us-footer__contact-email-link" href="mailto:admin@mail.com">admin@mail.com</a>
+                            
+                                                            <p>м.Дніпро вул. Центральна 2А</p>
+                                                    </div>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</footer>
+
+<div class="us-modal us-modal--normal us-modal-call"
+     id="us-modal-call"
+     role="dialog"
+     aria-modal="true"
+     x-cloak
+     x-bind:class="{ 'us-modal--active': $store.ModalStore.active === 'us-modal-call' }"
+     x-on:keydown.escape.window="$store.ModalStore.close()"
+     x-data="ModalCallComponent('http://localhost:3000/call/')"
+     
+>
+    <div class="us-modal__overlay" x-on:click="$store.ModalStore.close()"></div>
+
+    <div class="us-modal__window">
+        <div class="us-modal__header">
+                                                <h2 class="us-modal__title">Оформлення зворотнього дзінка</h2>
+                
+                <button class="us-modal__close" x-on:click="$store.ModalStore.close()" aria-label="Закрыть"></button>
+                    </div>
+        <div class="us-modal__body">
+                <form class="us-modal-call__form" id="us-modal-call-form" x-show="!isSended">
+        <input class="us-modal-call__input" name="phone" type="text" placeholder="Номер телефону" x-model="formData.phone" x-bind:class="{ 'us-modal-call__input--error': errors.phone }">
+        <input class="us-modal-call__input" name="username" type="text" placeholder="Ім’я" x-model="formData.username" x-bind:class="{ 'us-modal-call__input--error': errors.username }">
+        <textarea class="us-modal-call__textarea" name="comment" placeholder="Коментар до замовлення" cols="30" rows="10" x-model="formData.comment"></textarea>
+    </form>
+
+    <div class="us-modal-call__message us-modal-call__message--hidden" id="us-modal-call-message" x-show="isSended" x-cloak>
+        <p>Замовлення оформлене.</p>
+        <p>Наш менеджер зв’яжеться з вами за декілька хвилин!</p>
+    </div>
+        </div>
+        <div class="us-modal__footer">
+                            
+                                                <button id="iiii" class="us-button-square  us-button-square--v3  us-modal-call"
+                type="button"
+                                 x-on:click="submit"                 
+        >
+            Передзвоніть мені
+        </button>
+                                        </div>
+    </div>
+</div>
+<div class="us-modal us-modal--right us-modal-cart"
+     id="us-modal-cart"
+     role="dialog"
+     aria-modal="true"
+     x-cloak
+     x-bind:class="{ 'us-modal--active': $store.ModalStore.active === 'us-modal-cart' }"
+     x-on:keydown.escape.window="$store.ModalStore.close()"
+     x-data=""
+     
+>
+    <div class="us-modal__overlay" x-on:click="$store.ModalStore.close()"></div>
+
+    <div class="us-modal__window">
+        <div class="us-modal__header">
+                                                <h2 class="us-modal__title">Кошик</h2>
+                
+                <button class="us-modal__close" x-on:click="$store.ModalStore.close()" aria-label="Закрыть"></button>
+                    </div>
+        <div class="us-modal__body">
+               <div class="us-modal-cart__list">
+                                 
+
+
+<div class="us-product-item custom-class" >
+    
+    <button class="us-product-item__close" type="button" ></button>
+
+    <div class="us-product-item__image">
+            <img class="us-image us-product-item__image__img" src="/images/product-card-1.png" alt="Product image">
+    </div>
+
+    <h3 class="us-product-item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</h3>
+
+    
+    
+
+
+
+<div class="us-quantity us-product-item__qty"
+     x-data="{ qty: 1 }"
+     x-modelable="qty"
+     >
+    <button class="us-quantity__minus" type="button" x-on:click="if(qty > 1) qty--"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.699219 0.700012H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</button>
+
+    <input class="us-quantity__input" name="" type="number" x-model.number="qty" x-on:input="if ($el.value < 1) qty = 1">
+
+    <button class="us-quantity__plus" type="button" x-on:click="qty++"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.69922 0.700012V10.7M0.699219 5.8852H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</button>
+</div>
+
+    <span class="us-product-item__price">312 798 грн.</span>
+</div>
+                          
+
+
+<div class="us-product-item custom-class" >
+    
+    <button class="us-product-item__close" type="button" ></button>
+
+    <div class="us-product-item__image">
+            <img class="us-image us-product-item__image__img" src="/images/product-card-2.png" alt="Product image">
+    </div>
+
+    <h3 class="us-product-item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</h3>
+
+    
+    
+
+
+
+<div class="us-quantity us-product-item__qty"
+     x-data="{ qty: 1 }"
+     x-modelable="qty"
+     >
+    <button class="us-quantity__minus" type="button" x-on:click="if(qty > 1) qty--"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.699219 0.700012H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</button>
+
+    <input class="us-quantity__input" name="" type="number" x-model.number="qty" x-on:input="if ($el.value < 1) qty = 1">
+
+    <button class="us-quantity__plus" type="button" x-on:click="qty++"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.69922 0.700012V10.7M0.699219 5.8852H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</button>
+</div>
+
+    <span class="us-product-item__price">312 798 грн.</span>
+</div>
+                          
+
+
+<div class="us-product-item custom-class" >
+    
+    <button class="us-product-item__close" type="button" ></button>
+
+    <div class="us-product-item__image">
+            <img class="us-image us-product-item__image__img" src="/images/product-card-3.png" alt="Product image">
+    </div>
+
+    <h3 class="us-product-item__title">Кавомашина La marzocco B1234 EE Electronic Dosage 1GR Stainless Steel B2020FR2IS3</h3>
+
+    
+    
+
+
+
+<div class="us-quantity us-product-item__qty"
+     x-data="{ qty: 1 }"
+     x-modelable="qty"
+     >
+    <button class="us-quantity__minus" type="button" x-on:click="if(qty > 1) qty--"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.699219 0.700012H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</button>
+
+    <input class="us-quantity__input" name="" type="number" x-model.number="qty" x-on:input="if ($el.value < 1) qty = 1">
+
+    <button class="us-quantity__plus" type="button" x-on:click="qty++"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.69922 0.700012V10.7M0.699219 5.8852H10.6992" stroke="#393939" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</button>
+</div>
+
+    <span class="us-product-item__price">312 798 грн.</span>
+</div>
+                     </div>
+
+    <div class="us-modal-cart__total">
+        <div class="us-modal-cart__price">
+            <span class="us-modal-cart__price__title">Сума:</span>
+            <span class="us-modal-cart__price__sum">12 798 грн.</span>
+        </div>
+
+        
+                    <a href="/checkout/" id="us-modal-cart"
+           class="us-button-square  us-button-square--v1   us-modal-cart__checkout-btn"
+                        
+        >
+            Оформити замовлення
+        </a>
+        </div>
+        </div>
+        <div class="us-modal__footer">
+                            
+                                    </div>
+    </div>
+</div>
+
+</body>
+</html>
