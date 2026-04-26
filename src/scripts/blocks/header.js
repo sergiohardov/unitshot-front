@@ -4,14 +4,13 @@ export default function HeaderBlock() {
     Alpine.data('HeaderBlock', () => ({
         isMenuOpen: false,
         isSearchOpen: false,
-        isNumberOpen: false,
 
         searchQuery: '',     // Для поиска (> 3 символов)
         activeMenuIndex: 0,  // Активный пункт меню (по дефолту первый)
 
         // оверлей, если открыто хоть что-то
         get isOverlayActive() {
-            return this.isMenuOpen || this.isSearchOpen || this.isNumberOpen;
+            return this.isMenuOpen || this.isSearchOpen;
         },
 
         init() {
@@ -24,7 +23,6 @@ export default function HeaderBlock() {
         closeAll() {
             this.isMenuOpen = false;
             this.isSearchOpen = false;
-            this.isNumberOpen = false;
         },
 
         toggleMenu() {
@@ -32,7 +30,6 @@ export default function HeaderBlock() {
 
             if (this.isMenuOpen) {
                 this.isSearchOpen = false;
-                this.isNumberOpen = false;
             }
         },
 
@@ -41,16 +38,6 @@ export default function HeaderBlock() {
 
             if (this.isSearchOpen) {
                 this.isMenuOpen = false;
-                this.isNumberOpen = false;
-            }
-        },
-
-        toggleNumber() {
-            this.isNumberOpen = !this.isNumberOpen;
-
-            if (this.isNumberOpen) {
-                this.isMenuOpen = false;
-                this.isSearchOpen = false;
             }
         },
 

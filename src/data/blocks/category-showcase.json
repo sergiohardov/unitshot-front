@@ -1,5 +1,6 @@
 {
   "template": "./src/twig/blocks/category-showcase.twig",
+  "link": "#",
   "title": "Кавомашини",
   "categories": [
     {

@@ -10,4 +10,16 @@
       gap: 12px;
     }
   }
+
+  &__link {
+    display: block;
+  }
+
+  &__title {
+    transition: var(--unitshot-transition-speed);
+
+    &:hover {
+      color: var(--unitshot-accent-pink);
+    }
+  }
 }
