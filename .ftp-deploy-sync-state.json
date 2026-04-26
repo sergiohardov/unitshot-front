@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1777196555652,
+    "generatedTime": 1777210319668,
     "data": [
         {
             "type": "folder",
@@ -256,8 +256,8 @@
         {
             "type": "file",
             "name": "css/main.css",
-            "size": 134060,
-            "hash": "7994ad610bbea8e71761f33973920141a7432186240a670544d9bd23caa6c50c"
+            "size": 134430,
+            "hash": "98397ec80f2056a8d575b662ebd8b5c2a4bd411e8f407cc793ca0430d6de723d"
         },
         {
             "type": "file",
@@ -453,15 +453,15 @@
         },
         {
             "type": "file",
-            "name": "images/client-logos-17.png",
-            "size": 6328,
-            "hash": "121fa87f81f9ece5bba4c90c6f6c68a866d4fa006fa7a9c0d7d190211cdc8f7f"
-        },
-        {
-            "type": "file",
             "name": "images/client-logos-16.png",
             "size": 10007,
             "hash": "424bad9be32796598f2572dcdcabbac2ad091bcd3b105cb2f6d599192913f01c"
+        },
+        {
+            "type": "file",
+            "name": "images/client-logos-17.png",
+            "size": 6328,
+            "hash": "121fa87f81f9ece5bba4c90c6f6c68a866d4fa006fa7a9c0d7d190211cdc8f7f"
         },
         {
             "type": "file",
@@ -640,8 +640,8 @@
         {
             "type": "file",
             "name": "pages/catalog.html",
-            "size": 114392,
-            "hash": "6121c19975a841a2be0c58a7de2e087ec801582edc1083a028f9b442961d4fa9"
+            "size": 115643,
+            "hash": "a9664177b2460b05b4206375770dc0ccea24dfc5c83dc9e8d8bed694f40ccf59"
         },
         {
             "type": "file",

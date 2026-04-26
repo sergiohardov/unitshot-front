@@ -1050,6 +1050,27 @@
                                                     </div>
                     </div>
                 
+                                    <div class="us-feedback-info__contacts-content">
+                        <span class="us-feedback-info__contacts-title">Подзвонити:</span>
+                        <div class="us-feedback-info__numbers">
+                                                                <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380731111111' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380731111111' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+                                                                <a class="us-phone-number "
+       x-data="{ revealed: false }"
+       x-bind:href="revealed ? 'tel:+380732222222' : null"
+       x-on:click="if (!revealed) { $event.preventDefault(); revealed = true; }">
+
+        <span x-text="revealed ? '+380732222222' : '+38073'">+38073</span>
+        <span class="us-phone-number__show-btn" x-show="!revealed">[Показати номер]</span>
+    </a>
+                                                    </div>
+                    </div>
                 
                 <div class="us-feedback-info__contacts-content" x-data>
                     <span class="us-feedback-info__contacts-title">Замовити дзвінок:</span>
