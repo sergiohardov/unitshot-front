@@ -67,6 +67,11 @@
       text-transform: uppercase;
       color: var(--unitshot-gray-main);
       @include font-suisse-semibold;
+      transition: var(--unitshot-transition-speed);
+
+      &:hover {
+        color: var(--unitshot-accent-pink);
+      }
 
       @include media-md() {
         font-size: 18px;
