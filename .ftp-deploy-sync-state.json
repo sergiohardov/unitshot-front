@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1777212768969,
+    "generatedTime": 1777242150788,
     "data": [
         {
             "type": "folder",
@@ -13,7 +13,7 @@
         },
         {
             "type": "folder",
-            "name": "css"
+            "name": "images"
         },
         {
             "type": "folder",
@@ -21,15 +21,15 @@
         },
         {
             "type": "folder",
-            "name": "images"
-        },
-        {
-            "type": "folder",
-            "name": "pages"
+            "name": "css"
         },
         {
             "type": "folder",
             "name": "js"
+        },
+        {
+            "type": "folder",
+            "name": "pages"
         },
         {
             "type": "file",
@@ -46,8 +46,8 @@
         {
             "type": "file",
             "name": "blocks/category-showcase.html",
-            "size": 13519,
-            "hash": "58c06655485ec15e20486efd52435602c8a48e40a3daf8d176d95e0168c9d000"
+            "size": 13627,
+            "hash": "49831c329dd9941b4004bc4fda7506764f4f659ed33edc3af40e1b63d09efb10"
         },
         {
             "type": "file",
@@ -70,8 +70,8 @@
         {
             "type": "file",
             "name": "blocks/header.html",
-            "size": 37584,
-            "hash": "26d277e209577bbb9f09af933f19633a91089bed533b161ce93179bb5c6088f0"
+            "size": 38480,
+            "hash": "815c46cf43c635ea372bf9b924331950a09876649144584efc2fdf85e53e93e4"
         },
         {
             "type": "file",
@@ -252,54 +252,6 @@
             "name": "components/slider-product-cards.html",
             "size": 7933,
             "hash": "81383c5cb26ba68d63077ff738829772d3ab11de5a7fba291509d82ed58e4781"
-        },
-        {
-            "type": "file",
-            "name": "css/main.css",
-            "size": 135584,
-            "hash": "0dfb3aefd38299e163496dcc6dbf12fb6a5aab316cd63f81345a89a49bd0e74d"
-        },
-        {
-            "type": "file",
-            "name": "fonts/DRKrapkaRound-Medium.woff",
-            "size": 279600,
-            "hash": "d5a0c006a1284d7bcb96655250d4d262db3f318bf1a49739a3bb286615e39969"
-        },
-        {
-            "type": "file",
-            "name": "fonts/PPNeueMontrealMono-Bold.woff",
-            "size": 109584,
-            "hash": "0d2a84920e38db2818e0f51ac163018a1ec2ec1bca445a73543632c26d185c5a"
-        },
-        {
-            "type": "file",
-            "name": "fonts/PPNeueMontrealMono-Medium.woff",
-            "size": 107720,
-            "hash": "fdba15b02afe180400e27ac98ec53270c444eaf7bc30d78f2e3d22792c7baac2"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-Bold.woff",
-            "size": 81652,
-            "hash": "fde2705627c9e38930cbce7982aa35c16f8a72479b968e9654ec818088899004"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-Medium.woff",
-            "size": 80852,
-            "hash": "7eea26edc3e99b7e473562887593a433662ae7e81037b1dfb5b7fa95ba3d2e76"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-Regular.woff",
-            "size": 81096,
-            "hash": "bea9722891e13c7b8d63d290297bf3f0b6913bc30050839ddd2f9e48517518f1"
-        },
-        {
-            "type": "file",
-            "name": "fonts/SuisseIntl-SemiBold.woff",
-            "size": 81784,
-            "hash": "6f87a913a1dd697bc54b59a5e329357eaa82bdf496ad190c7fbfcebd00dab1ba"
         },
         {
             "type": "file",
@@ -627,57 +579,105 @@
         },
         {
             "type": "file",
-            "name": "pages/blog.html",
-            "size": 85847,
-            "hash": "b849c750edda604cb39e3b7ea3d0379897231cc3826b74cdfc3e9bc969678a90"
+            "name": "fonts/DRKrapkaRound-Medium.woff",
+            "size": 279600,
+            "hash": "d5a0c006a1284d7bcb96655250d4d262db3f318bf1a49739a3bb286615e39969"
         },
         {
             "type": "file",
-            "name": "pages/checkout.html",
-            "size": 78544,
-            "hash": "0b269418cc111fb1b4ec82e730e8bd324d3d6afd785096e8f98066a7feec50bf"
+            "name": "fonts/PPNeueMontrealMono-Bold.woff",
+            "size": 109584,
+            "hash": "0d2a84920e38db2818e0f51ac163018a1ec2ec1bca445a73543632c26d185c5a"
+        },
+        {
+            "type": "file",
+            "name": "fonts/PPNeueMontrealMono-Medium.woff",
+            "size": 107720,
+            "hash": "fdba15b02afe180400e27ac98ec53270c444eaf7bc30d78f2e3d22792c7baac2"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-Bold.woff",
+            "size": 81652,
+            "hash": "fde2705627c9e38930cbce7982aa35c16f8a72479b968e9654ec818088899004"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-Medium.woff",
+            "size": 80852,
+            "hash": "7eea26edc3e99b7e473562887593a433662ae7e81037b1dfb5b7fa95ba3d2e76"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-Regular.woff",
+            "size": 81096,
+            "hash": "bea9722891e13c7b8d63d290297bf3f0b6913bc30050839ddd2f9e48517518f1"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SuisseIntl-SemiBold.woff",
+            "size": 81784,
+            "hash": "6f87a913a1dd697bc54b59a5e329357eaa82bdf496ad190c7fbfcebd00dab1ba"
+        },
+        {
+            "type": "file",
+            "name": "css/main.css",
+            "size": 136384,
+            "hash": "c3fae1e0734ebd7e6bdd7bad3de585cafe6fa730664527a97451a48d989520d5"
+        },
+        {
+            "type": "file",
+            "name": "js/main.js",
+            "size": 138899,
+            "hash": "0e4574f66f3d42dea4cdb094e6cf4388d6879450d5c9a41acbb7d35ec6a0cfbd"
+        },
+        {
+            "type": "file",
+            "name": "pages/blog.html",
+            "size": 86743,
+            "hash": "b351ed48ce2760234b12125e2ebb2c7fc551b3fb9ced8405fe653957eda6fc94"
         },
         {
             "type": "file",
             "name": "pages/catalog.html",
-            "size": 115655,
-            "hash": "c571570a04b70af7cd25ffbd931f89bb48c884d575cd6094f481ecf3a49a314a"
+            "size": 116551,
+            "hash": "b69e224bbb7bbf4a9aedf3ed70be545d91a238a09620120cfd3aed1275807b93"
+        },
+        {
+            "type": "file",
+            "name": "pages/checkout.html",
+            "size": 79440,
+            "hash": "71164f3113650ad4b29d7de0188af72df52044bade0cc4cba634a6df76dbc5b2"
         },
         {
             "type": "file",
             "name": "pages/contact.html",
-            "size": 80418,
-            "hash": "303894960a07195f2f6448e53b0f5b74fad6eef0edfeb269fca00c8ec585c738"
+            "size": 81314,
+            "hash": "3f979a5881fb0800f43bf4be547c26c1cb0717f39b1c7cfaa9918c85eb47a311"
         },
         {
             "type": "file",
             "name": "pages/home.html",
-            "size": 152932,
-            "hash": "406b8bc057f68e668bff7d951751fdc2f95b1c9565f445d3ab44f821d466d709"
+            "size": 154042,
+            "hash": "1f91af485cc966abafdaa913fc49c4dee368d44237361d9dc9854a7384f8f25a"
         },
         {
             "type": "file",
             "name": "pages/post.html",
-            "size": 77219,
-            "hash": "1f6f5b5026bc130d5b85d5e428099a9e4a9bd388def945b61f748e6f86c90d77"
+            "size": 78115,
+            "hash": "1475a1d0ddb17b8ce52079433bcf7496263bf76c8b02d877b9c222787752ca89"
         },
         {
             "type": "file",
             "name": "pages/product.html",
-            "size": 117161,
-            "hash": "c3a21755e469308f3440585d16cc6f3700ce7067c2da49905d190e55f3bd89c7"
+            "size": 118057,
+            "hash": "84c9c2be25a7bedf73df5fbea8bafb74b8eb8ff726d3f4059cf8e92e6803a60a"
         },
         {
             "type": "file",
             "name": "pages/ui.html",
             "size": 17678,
             "hash": "f48040c1ce859a87ae73c0d26162e7684a2367562b095319b011066c2aba6a36"
-        },
-        {
-            "type": "file",
-            "name": "js/main.js",
-            "size": 139111,
-            "hash": "8ce44ca84a49f634aeb47bf828a2bd52329afa65ebfed3a6c871897bf523a05a"
         }
     ]
 }
