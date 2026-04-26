@@ -20,17 +20,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # Замените на версию, которую используете в проекте
+          node-version: '24'
 
       # 3. Устанавливает зависимости и собирает проект
       - name: Install dependencies and Build
         run: |
           npm i
-          npm run build # Замените на npm build, если именно так указано в ваших скриптах package.json
+          npm run build
 
       # 4. Удаляем лишнее
       - name: Remove html files from dist
-        run: rm -rf dist/*.html
+        run: |
+          rm -rf blocks/
+          rm -rf components/
+          rm -rf pages/
 
       # 5. Перемещает содержимое папки dist в ветку module
       - name: Deploy dist to preview branch
